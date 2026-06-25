@@ -92,6 +92,24 @@
   .home-back-btn:active{ transform:translateY(1px); }
   .home-back-btn:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
 
+  /* ── 覚えにくい単語チェック（★）と「チェックだけ再生」ボタン（単語モード） ── */
+  #words-root .modebar-actions{ display:flex; gap:8px; align-items:center; }
+  #words-root .check-btn{
+    display:inline-flex; align-items:center; gap:7px; margin:20px auto 0;
+    padding:9px 18px; border-radius:999px;
+    border:1px solid var(--line); background:rgba(255,255,255,.03);
+    color:var(--muted); font:inherit; font-size:.9rem;
+    font-family:"Noto Sans JP",sans-serif; cursor:pointer;
+    transition:background .15s ease, color .15s ease, border-color .15s ease, transform .06s ease;
+    -webkit-tap-highlight-color:transparent;
+  }
+  #words-root .check-btn .ico{ font-size:1.05rem; line-height:1; }
+  #words-root .check-btn:active{ transform:translateY(1px); }
+  #words-root .check-btn.is-checked{
+    background:var(--accent-dim); border-color:rgba(232,179,106,.5); color:var(--accent);
+  }
+  #words-root #btn-checked:disabled{ opacity:.32; cursor:default; }
+
   /* ── データ読み込み中／エラー表示（各アプリ内の全面オーバーレイ） ── */
   .data-msg{
     position:fixed; inset:0; z-index:80;
@@ -624,9 +642,14 @@
       <button class="seg-btn" id="mode-b" type="button" role="tab" aria-selected="false">JP</button>
       <button class="seg-btn" id="mode-c" type="button" role="tab" aria-selected="false">EN</button>
     </div>
-    <button class="shuffle-btn" id="btn-shuffle" type="button" aria-pressed="false" aria-label="シャッフル">
-      <span class="ico" aria-hidden="true">🔀</span>
-    </button>
+    <div class="modebar-actions">
+      <button class="shuffle-btn" id="btn-checked" type="button" aria-pressed="false" aria-label="チェックした単語だけ再生" disabled>
+        <span class="ico" aria-hidden="true">★</span>
+      </button>
+      <button class="shuffle-btn" id="btn-shuffle" type="button" aria-pressed="false" aria-label="シャッフル">
+        <span class="ico" aria-hidden="true">🔀</span>
+      </button>
+    </div>
   </div>
 
   <main>
@@ -635,6 +658,10 @@
     </div>
     <div class="word" id="word">go</div>
     <div class="ja" id="ja">行く</div>
+    <button class="check-btn" id="btn-check" type="button" aria-pressed="false">
+      <span class="ico" id="check-ico" aria-hidden="true">☆</span>
+      <span class="lbl" id="check-lbl">チェック</span>
+    </button>
   </main>
 
   <footer>
@@ -1074,6 +1101,10 @@ class WordPlayer {
     genreGrid:   R.querySelector("#genre-grid"),
     genreAll:    R.querySelector("#genre-all"),
     gaCount:     R.querySelector("#ga-count"),
+    check:       R.querySelector("#btn-check"),
+    checkIco:    R.querySelector("#check-ico"),
+    checkLbl:    R.querySelector("#check-lbl"),
+    playChecked: R.querySelector("#btn-checked"),
   };
 
   const engine = new AudioEngine();
@@ -1086,6 +1117,81 @@ class WordPlayer {
   }
   player = makePlayer(WORDS);   // 初期はすべての語（ジャンル選択で差し替わる）
 
+  // ── 覚えにくい単語のチェック機能（端末内に保存／ジャンルごと） ──
+  const CHECK_KEY = "repeat_words_checked_v1";
+  function loadChecks(){
+    try { const r = localStorage.getItem(CHECK_KEY); return new Set(r ? JSON.parse(r) : []); }
+    catch(e){ return new Set(); }
+  }
+  function saveChecks(){
+    try { localStorage.setItem(CHECK_KEY, JSON.stringify([...checked])); } catch(e){}
+  }
+  const checked = loadChecks();
+  const keyOf = (w) => w.cat + "\u0000" + w.word;   // ジャンル+単語で一意化
+  let currentCat  = "all";    // 今開いているジャンル
+  let checkedOnly = false;    // 「チェックした単語だけ」モード中か
+
+  function paintCheck(w){
+    const on = checked.has(keyOf(w));
+    el.checkIco.textContent = on ? "★" : "☆";
+    el.checkLbl.textContent = on ? "チェック中" : "チェック";
+    el.check.classList.toggle("is-checked", on);
+    el.check.setAttribute("aria-pressed", on ? "true" : "false");
+  }
+  function genreWords(){
+    return (currentCat === "all") ? WORDS : WORDS.filter(w => w.cat === currentCat);
+  }
+  function checkedWordsInGenre(){
+    return genreWords().filter(w => checked.has(keyOf(w)));
+  }
+  function updateCheckedBtn(){
+    const has = checkedWordsInGenre().length > 0;
+    el.playChecked.disabled = !(has || checkedOnly);
+  }
+  function paintCheckedBtn(on){
+    el.playChecked.classList.toggle("is-active", on);
+    if (on){
+      el.playChecked.style.background  = "#e8b36a";
+      el.playChecked.style.borderColor = "#e8b36a";
+      el.playChecked.style.color       = "#1a130a";
+    } else {
+      el.playChecked.style.background  = "";
+      el.playChecked.style.borderColor = "";
+      el.playChecked.style.color       = "";
+    }
+    el.playChecked.setAttribute("aria-pressed", on ? "true" : "false");
+  }
+
+  // ★ボタン：今の単語のチェックをON/OFF
+  el.check.addEventListener("click", () => {
+    const w = player.current();
+    const k = keyOf(w);
+    if (checked.has(k)) checked.delete(k); else checked.add(k);
+    saveChecks();
+    paintCheck(w);
+    updateCheckedBtn();
+  });
+
+  // 「チェックした単語だけ再生」：今のジャンルのチェック語だけで反復。もう一度押すと解除
+  el.playChecked.addEventListener("click", () => {
+    if (!checkedOnly){
+      const list = checkedWordsInGenre();
+      if (!list.length){ el.statusText.textContent = "チェックした単語がありません"; return; }
+      if (player) player.stop();
+      checkedOnly = true;
+      paintCheckedBtn(true);
+      paintShuffle(false);
+      player = makePlayer(list);
+      el.posTotal.textContent = list.length;
+      renderWord(player);
+      renderPlaying(player);
+    } else {
+      checkedOnly = false;
+      paintCheckedBtn(false);
+      loadGenre(currentCat);   // ジャンル全体へ戻す
+    }
+  });
+
   function renderWord(p) {
     const w = p.current();
     el.emoji.textContent = w.emoji;
@@ -1094,6 +1200,7 @@ class WordPlayer {
     el.posCurrent.textContent = p.wordNumber();   // 3000語中の何番か
     el.prev.disabled = p.isFirst();   // 先頭で前へは無効
     el.next.disabled = p.isLast();    // 末尾で次へは無効
+    paintCheck(w);                    // ★ チェック状態を反映
   }
 
   function renderPlaying(p) {
@@ -1183,11 +1290,15 @@ class WordPlayer {
     const words = (catId === "all") ? WORDS : WORDS.filter(w => w.cat === catId);
     if (!words.length) return;
     if (player) player.stop();
+    currentCat = catId;            // 今のジャンルを記録
+    checkedOnly = false;           // ジャンル切替で「チェックだけ」は解除
+    paintCheckedBtn(false);
     player = makePlayer(words);
     el.posTotal.textContent = words.length;   // 総数はジャンルの語数に追従
     paintShuffle(false);
     renderWord(player);
     renderPlaying(player);
+    updateCheckedBtn();            // チェック有無でボタン活性を更新
     el.genreScreen.hidden = true;
   }
 
@@ -1207,6 +1318,7 @@ class WordPlayer {
   setMode("A");
   renderWord(player);
   renderPlaying(player);
+  updateCheckedBtn();
   el.genreScreen.hidden = false;
 
   engine.init().then(() => {
