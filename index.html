@@ -92,9 +92,9 @@
   .home-back-btn:active{ transform:translateY(1px); }
   .home-back-btn:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
 
-  /* ── 覚えにくい単語チェック（★）と「チェックだけ再生」ボタン（単語モード） ── */
-  #words-root .modebar-actions{ display:flex; gap:8px; align-items:center; }
-  #words-root .check-btn{
+  /* ── 覚えにくい項目チェック（★）と「チェックだけ再生」（単語・英作文 共通） ── */
+  #words-root .modebar-actions, #compose-root .modebar-actions{ display:flex; gap:8px; align-items:center; }
+  #words-root .check-btn, #compose-root .check-btn{
     display:inline-flex; align-items:center; gap:7px; margin:20px auto 0;
     padding:9px 18px; border-radius:999px;
     border:1px solid var(--line); background:rgba(255,255,255,.03);
@@ -103,12 +103,12 @@
     transition:background .15s ease, color .15s ease, border-color .15s ease, transform .06s ease;
     -webkit-tap-highlight-color:transparent;
   }
-  #words-root .check-btn .ico{ font-size:1.05rem; line-height:1; }
-  #words-root .check-btn:active{ transform:translateY(1px); }
-  #words-root .check-btn.is-checked{
+  #words-root .check-btn .ico, #compose-root .check-btn .ico{ font-size:1.05rem; line-height:1; }
+  #words-root .check-btn:active, #compose-root .check-btn:active{ transform:translateY(1px); }
+  #words-root .check-btn.is-checked, #compose-root .check-btn.is-checked{
     background:var(--accent-dim); border-color:rgba(232,179,106,.5); color:var(--accent);
   }
-  #words-root #btn-checked:disabled{ opacity:.32; cursor:default; }
+  .shuffle-btn:disabled{ opacity:.32; cursor:default; }
 
   /* ── 英作文モード（#compose-root） ── */
   #compose-root .mode-tag{ display:inline-block; margin-left:6px; padding:2px 8px; border:1px solid var(--accent-dim); border-radius:999px; color:var(--accent); font-size:.58rem; letter-spacing:.14em; vertical-align:middle; font-family:"Noto Sans JP",sans-serif; }
@@ -150,6 +150,15 @@
   }
   #compose-root .reveal-btn:active{ transform:translateY(1px); }
   #compose-root.is-revealed .reveal-btn{ background:rgba(255,255,255,.03); border-color:var(--line); color:var(--muted); }
+  #compose-root .compose-actions{ position:relative; z-index:1; display:flex; gap:12px; justify-content:center; align-items:center; flex-wrap:wrap; margin-top:30px; }
+  #compose-root .compose-actions .reveal-btn{ margin:0; }
+  #compose-root .compose-actions .check-btn{ margin:0; }
+  /* 語句タップで意味を表示 */
+  #compose-root .compose-en .gloss{ color:var(--accent); text-decoration:underline; text-decoration-style:dotted; text-decoration-thickness:1px; text-underline-offset:5px; cursor:pointer; -webkit-tap-highlight-color:transparent; }
+  #compose-root .compose-en .gloss:active{ opacity:.55; }
+  #compose-root .compose-gloss{ position:relative; z-index:1; min-height:24px; margin-top:14px; text-align:center; color:var(--text); font-size:.98rem; font-family:"Noto Sans JP",sans-serif; opacity:0; transition:opacity .2s ease; }
+  #compose-root .compose-gloss.show{ opacity:1; }
+  #compose-root .compose-gloss.is-hint{ color:var(--muted); font-size:.8rem; opacity:.5; }
 
   /* ── データ読み込み中／エラー表示（各アプリ内の全面オーバーレイ） ── */
   .data-msg{
@@ -1121,6 +1130,15 @@
     </div>
   </header>
 
+  <div class="modebar">
+    <div class="modebar-spacer"></div>
+    <div class="modebar-actions">
+      <button class="shuffle-btn" id="c-checked" type="button" aria-pressed="false" aria-label="チェックした文だけ再生" disabled>
+        <span class="ico" aria-hidden="true">★</span>
+      </button>
+    </div>
+  </div>
+
   <main>
     <div class="compose-glow" aria-hidden="true"></div>
     <div class="compose-label">日本語</div>
@@ -1129,10 +1147,17 @@
       <div class="compose-en" id="c-en">This is a big house.</div>
       <div class="compose-hint">タップで英語を表示</div>
     </div>
-    <button class="reveal-btn" id="c-reveal" type="button" aria-pressed="false">
-      <span class="ico" aria-hidden="true">👁</span>
-      <span class="lbl" id="c-reveal-lbl">英語を見る</span>
-    </button>
+    <div class="compose-gloss" id="c-gloss" aria-live="polite"></div>
+    <div class="compose-actions">
+      <button class="reveal-btn" id="c-reveal" type="button" aria-pressed="false">
+        <span class="ico" aria-hidden="true">👁</span>
+        <span class="lbl" id="c-reveal-lbl">英語を見る</span>
+      </button>
+      <button class="check-btn" id="c-check" type="button" aria-pressed="false">
+        <span class="ico" id="c-check-ico" aria-hidden="true">☆</span>
+        <span class="lbl" id="c-check-lbl">チェック</span>
+      </button>
+    </div>
   </main>
 
   <footer>
@@ -2343,8 +2368,13 @@ class ComposePlayer {
     body:   R,
     ja:     R.querySelector("#c-ja"),
     en:     R.querySelector("#c-en"),
+    gloss:  R.querySelector("#c-gloss"),
     reveal: R.querySelector("#c-reveal"),
     revealLbl: R.querySelector("#c-reveal-lbl"),
+    check:      R.querySelector("#c-check"),
+    checkIco:   R.querySelector("#c-check-ico"),
+    checkLbl:   R.querySelector("#c-check-lbl"),
+    playChecked:R.querySelector("#c-checked"),
     statusText: R.querySelector("#c-status-text"),
     posCurrent: R.querySelector("#c-pos-current"),
     posTotal:   R.querySelector("#c-pos-total"),
@@ -2370,20 +2400,111 @@ class ComposePlayer {
   }
   player = makePlayer(COMPOSITIONS);
 
+  // ── 覚えにくい文のチェック（端末内に保存／ジャンルごと） ──
+  const CHECK_KEY = "repeat_compose_checked_v1";
+  function loadChecks(){
+    try { const r = localStorage.getItem(CHECK_KEY); return new Set(r ? JSON.parse(r) : []); }
+    catch(e){ return new Set(); }
+  }
+  function saveChecks(){
+    try { localStorage.setItem(CHECK_KEY, JSON.stringify([...checked])); } catch(e){}
+  }
+  const checked = loadChecks();
+  const keyOf = (it) => it.cat + "\u0000" + it.ja;
+  let currentCat = "all";
+  let checkedOnly = false;
+
+  function paintCheck(it){
+    const on = checked.has(keyOf(it));
+    el.checkIco.textContent = on ? "★" : "☆";
+    el.checkLbl.textContent = on ? "チェック中" : "チェック";
+    el.check.classList.toggle("is-checked", on);
+    el.check.setAttribute("aria-pressed", on ? "true" : "false");
+  }
+  function genreItems(){
+    return (currentCat === "all") ? COMPOSITIONS : COMPOSITIONS.filter(it => it.cat === currentCat);
+  }
+  function checkedItemsInGenre(){
+    return genreItems().filter(it => checked.has(keyOf(it)));
+  }
+  function updateCheckedBtn(){
+    const has = checkedItemsInGenre().length > 0;
+    el.playChecked.disabled = !(has || checkedOnly);
+  }
+  function paintCheckedBtn(on){
+    el.playChecked.classList.toggle("is-active", on);
+    if (on){
+      el.playChecked.style.background  = "#e8b36a";
+      el.playChecked.style.borderColor = "#e8b36a";
+      el.playChecked.style.color       = "#1a130a";
+    } else {
+      el.playChecked.style.background  = "";
+      el.playChecked.style.borderColor = "";
+      el.playChecked.style.color       = "";
+    }
+    el.playChecked.setAttribute("aria-pressed", on ? "true" : "false");
+  }
+
+  // ── 語句タップで意味を表示（gloss） ──
+  function escapeHtml(s){
+    return s.replace(/[&<>"]/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;" }[c]));
+  }
+  function buildGlossHTML(en, gloss){
+    if (!gloss || !gloss.length) return escapeHtml(en);
+    const low = en.toLowerCase();
+    const ranges = [];
+    gloss.forEach(g => {
+      const i = low.indexOf(g.p.toLowerCase());
+      if (i >= 0) ranges.push({ start:i, end:i + g.p.length, m:g.m });
+    });
+    ranges.sort((a,b) => a.start - b.start);
+    const kept = []; let lastEnd = -1;
+    ranges.forEach(r => { if (r.start >= lastEnd){ kept.push(r); lastEnd = r.end; } });
+    let html = "", pos = 0;
+    kept.forEach(r => {
+      html += escapeHtml(en.slice(pos, r.start));
+      html += '<span class="gloss" role="button" tabindex="0" data-m="' + escapeHtml(r.m) + '">'
+            + escapeHtml(en.slice(r.start, r.end)) + '</span>';
+      pos = r.end;
+    });
+    html += escapeHtml(en.slice(pos));
+    return html;
+  }
+  function showGlossHint(){
+    el.gloss.textContent = "語句をタップで意味";
+    el.gloss.classList.add("show","is-hint");
+  }
+  function clearGloss(){
+    el.gloss.textContent = "";
+    el.gloss.classList.remove("show","is-hint");
+  }
+  function showGloss(phrase, meaning){
+    el.gloss.textContent = phrase + " ＝ " + meaning;
+    el.gloss.classList.add("show");
+    el.gloss.classList.remove("is-hint");
+  }
+  el.en.addEventListener("click", (e) => {
+    const t = e.target.closest(".gloss");
+    if (!t) return;
+    showGloss(t.textContent, t.getAttribute("data-m"));
+  });
+
   function setRevealed(on){
     revealed = on;
     el.body.classList.toggle("is-revealed", on);
     el.revealLbl.textContent = on ? "英語を隠す" : "英語を見る";
     el.reveal.setAttribute("aria-pressed", on ? "true" : "false");
+    if (on) showGlossHint(); else clearGloss();
   }
 
   function renderItem(p){
     const it = p.current();
     el.ja.textContent = it.ja;
-    el.en.textContent = it.en;
+    el.en.innerHTML = buildGlossHTML(it.en, it.gloss);   // 語句をタップ可能に
     el.posCurrent.textContent = p.number();
     el.prev.disabled = p.isFirst();
     el.next.disabled = p.isLast();
+    paintCheck(it);                // ★ チェック状態を反映
     setRevealed(false);            // 文が変わるたび英語は隠す（毎回テスト）
   }
   function renderPlaying(p){
@@ -2404,6 +2525,34 @@ class ComposePlayer {
   });
   el.prev.addEventListener("click", () => player.prev());
   el.next.addEventListener("click", () => player.next());
+
+  // ★ボタン：今の文のチェックをON/OFF
+  el.check.addEventListener("click", () => {
+    const it = player.current();
+    const k = keyOf(it);
+    if (checked.has(k)) checked.delete(k); else checked.add(k);
+    saveChecks();
+    paintCheck(it);
+    updateCheckedBtn();
+  });
+  // 「チェックした文だけ再生」：今のジャンルのチェック文だけで反復。もう一度押すと解除
+  el.playChecked.addEventListener("click", () => {
+    if (!checkedOnly){
+      const list = checkedItemsInGenre();
+      if (!list.length){ el.statusText.textContent = "チェックした文がありません"; return; }
+      if (player) player.stop();
+      checkedOnly = true;
+      paintCheckedBtn(true);
+      player = makePlayer(list);
+      el.posTotal.textContent = list.length;
+      renderItem(player);
+      renderPlaying(player);
+    } else {
+      checkedOnly = false;
+      paintCheckedBtn(false);
+      loadGenre(currentCat);
+    }
+  });
 
   el.home.addEventListener("click", () => { player.goToStart(); });
 
@@ -2434,10 +2583,14 @@ class ComposePlayer {
     const items = (catId === "all") ? COMPOSITIONS : COMPOSITIONS.filter(it => it.cat === catId);
     if (!items.length) return;
     if (player) player.stop();
+    currentCat = catId;
+    checkedOnly = false;
+    paintCheckedBtn(false);
     player = makePlayer(items);
     el.posTotal.textContent = items.length;
     renderItem(player);
     renderPlaying(player);
+    updateCheckedBtn();
     el.genreScreen.hidden = true;
   }
   function openGenres(){
@@ -2453,6 +2606,7 @@ class ComposePlayer {
   buildGenreScreen();
   renderItem(player);
   renderPlaying(player);
+  updateCheckedBtn();
   el.genreScreen.hidden = false;
 
   engine.init().then(() => {

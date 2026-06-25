@@ -2,501 +2,1329 @@
  {
   "ja": "これは大きな家だ。",
   "en": "This is a big house.",
-  "cat": "daily"
+  "cat": "daily",
+  "gloss": [
+   {
+    "p": "big",
+    "m": "大きい"
+   },
+   {
+    "p": "house",
+    "m": "家"
+   }
+  ]
  },
  {
   "ja": "私は毎朝コーヒーを飲む。",
   "en": "I drink coffee every morning.",
-  "cat": "daily"
+  "cat": "daily",
+  "gloss": [
+   {
+    "p": "drink",
+    "m": "飲む"
+   },
+   {
+    "p": "every morning",
+    "m": "毎朝"
+   }
+  ]
  },
  {
   "ja": "電気を消してください。",
   "en": "Please turn off the light.",
-  "cat": "daily"
+  "cat": "daily",
+  "gloss": [
+   {
+    "p": "turn off",
+    "m": "（電気などを）消す"
+   },
+   {
+    "p": "light",
+    "m": "明かり・電気"
+   }
+  ]
  },
  {
   "ja": "洗濯物を干さないと。",
   "en": "I have to hang up the laundry.",
-  "cat": "daily"
+  "cat": "daily",
+  "gloss": [
+   {
+    "p": "have to",
+    "m": "〜しなければならない"
+   },
+   {
+    "p": "hang up",
+    "m": "（洗濯物を）干す"
+   },
+   {
+    "p": "laundry",
+    "m": "洗濯物"
+   }
+  ]
  },
  {
   "ja": "もう寝る時間だよ。",
   "en": "It's time to go to bed.",
-  "cat": "daily"
+  "cat": "daily",
+  "gloss": [
+   {
+    "p": "It's time to",
+    "m": "〜する時間だ"
+   },
+   {
+    "p": "go to bed",
+    "m": "寝る"
+   }
+  ]
  },
  {
   "ja": "ゴミを出すのを忘れた。",
   "en": "I forgot to take out the trash.",
-  "cat": "daily"
+  "cat": "daily",
+  "gloss": [
+   {
+    "p": "forgot to",
+    "m": "〜し忘れた"
+   },
+   {
+    "p": "take out",
+    "m": "外に出す・持ち出す"
+   },
+   {
+    "p": "trash",
+    "m": "ごみ"
+   }
+  ]
  },
  {
   "ja": "部屋を掃除しているところだ。",
   "en": "I'm cleaning my room.",
-  "cat": "daily"
+  "cat": "daily",
+  "gloss": [
+   {
+    "p": "cleaning",
+    "m": "掃除している"
+   },
+   {
+    "p": "room",
+    "m": "部屋"
+   }
+  ]
  },
  {
   "ja": "鍵が見つからない。",
   "en": "I can't find my keys.",
-  "cat": "daily"
+  "cat": "daily",
+  "gloss": [
+   {
+    "p": "can't find",
+    "m": "見つけられない"
+   },
+   {
+    "p": "keys",
+    "m": "鍵"
+   }
+  ]
  },
  {
   "ja": "もう少しで終わります。",
   "en": "I'm almost done.",
-  "cat": "daily"
+  "cat": "daily",
+  "gloss": [
+   {
+    "p": "almost",
+    "m": "もうすぐ・ほぼ"
+   },
+   {
+    "p": "done",
+    "m": "終わった"
+   }
+  ]
  },
  {
   "ja": "窓を開けてもいいですか。",
   "en": "May I open the window?",
-  "cat": "daily"
+  "cat": "daily",
+  "gloss": [
+   {
+    "p": "May I",
+    "m": "〜してもいいですか"
+   },
+   {
+    "p": "open",
+    "m": "開ける"
+   },
+   {
+    "p": "window",
+    "m": "窓"
+   }
+  ]
  },
  {
   "ja": "今日はとても疲れた。",
   "en": "I'm very tired today.",
-  "cat": "daily"
+  "cat": "daily",
+  "gloss": [
+   {
+    "p": "tired",
+    "m": "疲れた"
+   }
+  ]
  },
  {
   "ja": "充電器を貸してくれる?",
   "en": "Can you lend me a charger?",
-  "cat": "daily"
+  "cat": "daily",
+  "gloss": [
+   {
+    "p": "lend",
+    "m": "貸す"
+   },
+   {
+    "p": "charger",
+    "m": "充電器"
+   }
+  ]
  },
  {
   "ja": "そろそろ出かけよう。",
   "en": "Let's get going soon.",
-  "cat": "daily"
+  "cat": "daily",
+  "gloss": [
+   {
+    "p": "get going",
+    "m": "出発する"
+   },
+   {
+    "p": "soon",
+    "m": "もうすぐ"
+   }
+  ]
  },
  {
   "ja": "雨が降りそうだ。",
   "en": "It looks like it's going to rain.",
-  "cat": "daily"
+  "cat": "daily",
+  "gloss": [
+   {
+    "p": "It looks like",
+    "m": "〜のようだ"
+   },
+   {
+    "p": "going to rain",
+    "m": "雨が降りそう"
+   }
+  ]
  },
  {
   "ja": "傘を持っていったほうがいい。",
   "en": "You should take an umbrella.",
-  "cat": "daily"
+  "cat": "daily",
+  "gloss": [
+   {
+    "p": "should",
+    "m": "〜したほうがいい"
+   },
+   {
+    "p": "umbrella",
+    "m": "傘"
+   }
+  ]
  },
  {
   "ja": "隣の人はとても親切だ。",
   "en": "My neighbor is very kind.",
-  "cat": "daily"
+  "cat": "daily",
+  "gloss": [
+   {
+    "p": "neighbor",
+    "m": "隣人"
+   },
+   {
+    "p": "kind",
+    "m": "親切な"
+   }
+  ]
  },
  {
   "ja": "週末は家でゆっくりする。",
   "en": "I relax at home on weekends.",
-  "cat": "daily"
+  "cat": "daily",
+  "gloss": [
+   {
+    "p": "relax",
+    "m": "くつろぐ"
+   },
+   {
+    "p": "on weekends",
+    "m": "週末に"
+   }
+  ]
  },
  {
   "ja": "駅はどこですか。",
   "en": "Where is the station?",
-  "cat": "travel"
+  "cat": "travel",
+  "gloss": [
+   {
+    "p": "Where",
+    "m": "どこ"
+   },
+   {
+    "p": "station",
+    "m": "駅"
+   }
+  ]
  },
  {
   "ja": "切符を2枚ください。",
   "en": "Two tickets, please.",
-  "cat": "travel"
+  "cat": "travel",
+  "gloss": [
+   {
+    "p": "tickets",
+    "m": "切符"
+   }
+  ]
  },
  {
   "ja": "この電車は東京に行きますか。",
   "en": "Does this train go to Tokyo?",
-  "cat": "travel"
+  "cat": "travel",
+  "gloss": [
+   {
+    "p": "train",
+    "m": "電車"
+   },
+   {
+    "p": "go to",
+    "m": "〜へ行く"
+   }
+  ]
  },
  {
   "ja": "写真を撮ってもらえますか。",
   "en": "Could you take a picture for me?",
-  "cat": "travel"
+  "cat": "travel",
+  "gloss": [
+   {
+    "p": "Could you",
+    "m": "〜してもらえますか"
+   },
+   {
+    "p": "take a picture",
+    "m": "写真を撮る"
+   }
+  ]
  },
  {
   "ja": "道に迷ってしまいました。",
   "en": "I'm lost.",
-  "cat": "travel"
+  "cat": "travel",
+  "gloss": [
+   {
+    "p": "lost",
+    "m": "道に迷った"
+   }
+  ]
  },
  {
   "ja": "ホテルまで歩いて行けますか。",
   "en": "Can I walk to the hotel?",
-  "cat": "travel"
+  "cat": "travel",
+  "gloss": [
+   {
+    "p": "walk to",
+    "m": "〜まで歩く"
+   },
+   {
+    "p": "hotel",
+    "m": "ホテル"
+   }
+  ]
  },
  {
   "ja": "次のバスは何時ですか。",
   "en": "What time is the next bus?",
-  "cat": "travel"
+  "cat": "travel",
+  "gloss": [
+   {
+    "p": "What time",
+    "m": "何時"
+   },
+   {
+    "p": "next",
+    "m": "次の"
+   }
+  ]
  },
  {
   "ja": "ここから近いですか。",
   "en": "Is it near here?",
-  "cat": "travel"
+  "cat": "travel",
+  "gloss": [
+   {
+    "p": "near",
+    "m": "近い"
+   }
+  ]
  },
  {
   "ja": "荷物を預けたいのですが。",
   "en": "I'd like to leave my luggage.",
-  "cat": "travel"
+  "cat": "travel",
+  "gloss": [
+   {
+    "p": "I'd like to",
+    "m": "〜したい"
+   },
+   {
+    "p": "leave",
+    "m": "預ける・置いていく"
+   },
+   {
+    "p": "luggage",
+    "m": "荷物"
+   }
+  ]
  },
  {
   "ja": "観光案内所を探しています。",
   "en": "I'm looking for the tourist information center.",
-  "cat": "travel"
+  "cat": "travel",
+  "gloss": [
+   {
+    "p": "looking for",
+    "m": "探している"
+   },
+   {
+    "p": "tourist information center",
+    "m": "観光案内所"
+   }
+  ]
  },
  {
   "ja": "この席は空いていますか。",
   "en": "Is this seat taken?",
-  "cat": "travel"
+  "cat": "travel",
+  "gloss": [
+   {
+    "p": "seat",
+    "m": "席"
+   },
+   {
+    "p": "taken",
+    "m": "ふさがっている"
+   }
+  ]
  },
  {
   "ja": "空港まで30分かかります。",
   "en": "It takes 30 minutes to the airport.",
-  "cat": "travel"
+  "cat": "travel",
+  "gloss": [
+   {
+    "p": "It takes",
+    "m": "（時間が）かかる"
+   },
+   {
+    "p": "airport",
+    "m": "空港"
+   }
+  ]
  },
  {
   "ja": "予約を確認したいです。",
   "en": "I'd like to confirm my reservation.",
-  "cat": "travel"
+  "cat": "travel",
+  "gloss": [
+   {
+    "p": "confirm",
+    "m": "確認する"
+   },
+   {
+    "p": "reservation",
+    "m": "予約"
+   }
+  ]
  },
  {
   "ja": "もう一度言ってもらえますか。",
   "en": "Could you say that again?",
-  "cat": "travel"
+  "cat": "travel",
+  "gloss": [
+   {
+    "p": "say that again",
+    "m": "もう一度言う"
+   }
+  ]
  },
  {
   "ja": "ここで写真を撮ってもいいですか。",
   "en": "May I take a photo here?",
-  "cat": "travel"
+  "cat": "travel",
+  "gloss": [
+   {
+    "p": "take a photo",
+    "m": "写真を撮る"
+   },
+   {
+    "p": "here",
+    "m": "ここで"
+   }
+  ]
  },
  {
   "ja": "おすすめの場所はありますか。",
   "en": "Do you have any recommendations?",
-  "cat": "travel"
+  "cat": "travel",
+  "gloss": [
+   {
+    "p": "recommendations",
+    "m": "おすすめ"
+   }
+  ]
  },
  {
   "ja": "楽しい旅行でした。",
   "en": "It was a wonderful trip.",
-  "cat": "travel"
+  "cat": "travel",
+  "gloss": [
+   {
+    "p": "wonderful",
+    "m": "すばらしい"
+   },
+   {
+    "p": "trip",
+    "m": "旅行"
+   }
+  ]
  },
  {
   "ja": "メニューを見せてください。",
   "en": "Could I see the menu?",
-  "cat": "food"
+  "cat": "food",
+  "gloss": [
+   {
+    "p": "Could I",
+    "m": "〜してもいいですか"
+   },
+   {
+    "p": "menu",
+    "m": "メニュー"
+   }
+  ]
  },
  {
   "ja": "これは何でできていますか。",
   "en": "What is this made of?",
-  "cat": "food"
+  "cat": "food",
+  "gloss": [
+   {
+    "p": "made of",
+    "m": "〜でできている"
+   }
+  ]
  },
  {
   "ja": "おすすめは何ですか。",
   "en": "What do you recommend?",
-  "cat": "food"
+  "cat": "food",
+  "gloss": [
+   {
+    "p": "recommend",
+    "m": "おすすめする"
+   }
+  ]
  },
  {
   "ja": "お会計をお願いします。",
   "en": "Check, please.",
-  "cat": "food"
+  "cat": "food",
+  "gloss": [
+   {
+    "p": "Check",
+    "m": "会計"
+   }
+  ]
  },
  {
   "ja": "持ち帰りでお願いします。",
   "en": "To go, please.",
-  "cat": "food"
+  "cat": "food",
+  "gloss": [
+   {
+    "p": "To go",
+    "m": "持ち帰りで"
+   }
+  ]
  },
  {
   "ja": "これをください。",
   "en": "I'll take this one.",
-  "cat": "food"
+  "cat": "food",
+  "gloss": [
+   {
+    "p": "take",
+    "m": "（これに）する・もらう"
+   }
+  ]
  },
  {
   "ja": "いくらですか。",
   "en": "How much is it?",
-  "cat": "food"
+  "cat": "food",
+  "gloss": [
+   {
+    "p": "How much",
+    "m": "いくら"
+   }
+  ]
  },
  {
   "ja": "もう少し安くなりますか。",
   "en": "Can you make it a little cheaper?",
-  "cat": "food"
+  "cat": "food",
+  "gloss": [
+   {
+    "p": "a little",
+    "m": "少し"
+   },
+   {
+    "p": "cheaper",
+    "m": "もっと安く"
+   }
+  ]
  },
  {
   "ja": "試着してもいいですか。",
   "en": "Can I try this on?",
-  "cat": "food"
+  "cat": "food",
+  "gloss": [
+   {
+    "p": "try this on",
+    "m": "試着する"
+   }
+  ]
  },
  {
   "ja": "別の色はありますか。",
   "en": "Do you have another color?",
-  "cat": "food"
+  "cat": "food",
+  "gloss": [
+   {
+    "p": "another",
+    "m": "別の"
+   },
+   {
+    "p": "color",
+    "m": "色"
+   }
+  ]
  },
  {
   "ja": "これは辛いですか。",
   "en": "Is this spicy?",
-  "cat": "food"
+  "cat": "food",
+  "gloss": [
+   {
+    "p": "spicy",
+    "m": "辛い"
+   }
+  ]
  },
  {
   "ja": "水をもう一杯ください。",
   "en": "Could I have another glass of water?",
-  "cat": "food"
+  "cat": "food",
+  "gloss": [
+   {
+    "p": "another glass of",
+    "m": "もう一杯の"
+   },
+   {
+    "p": "water",
+    "m": "水"
+   }
+  ]
  },
  {
   "ja": "とても美味しかったです。",
   "en": "It was really delicious.",
-  "cat": "food"
+  "cat": "food",
+  "gloss": [
+   {
+    "p": "really",
+    "m": "本当に"
+   },
+   {
+    "p": "delicious",
+    "m": "おいしい"
+   }
+  ]
  },
  {
   "ja": "食物アレルギーがあります。",
   "en": "I have a food allergy.",
-  "cat": "food"
+  "cat": "food",
+  "gloss": [
+   {
+    "p": "food allergy",
+    "m": "食物アレルギー"
+   }
+  ]
  },
  {
   "ja": "クレジットカードは使えますか。",
   "en": "Can I pay by credit card?",
-  "cat": "food"
+  "cat": "food",
+  "gloss": [
+   {
+    "p": "pay by",
+    "m": "〜で払う"
+   },
+   {
+    "p": "credit card",
+    "m": "クレジットカード"
+   }
+  ]
  },
  {
   "ja": "袋はいりません。",
   "en": "I don't need a bag.",
-  "cat": "food"
+  "cat": "food",
+  "gloss": [
+   {
+    "p": "need",
+    "m": "必要とする"
+   },
+   {
+    "p": "bag",
+    "m": "袋"
+   }
+  ]
  },
  {
   "ja": "お腹がいっぱいです。",
   "en": "I'm full.",
-  "cat": "food"
+  "cat": "food",
+  "gloss": [
+   {
+    "p": "full",
+    "m": "満腹の"
+   }
+  ]
  },
  {
   "ja": "会議は3時に始まります。",
   "en": "The meeting starts at three.",
-  "cat": "work"
+  "cat": "work",
+  "gloss": [
+   {
+    "p": "meeting",
+    "m": "会議"
+   },
+   {
+    "p": "starts",
+    "m": "始まる"
+   }
+  ]
  },
  {
   "ja": "このメールに返信してください。",
   "en": "Please reply to this email.",
-  "cat": "work"
+  "cat": "work",
+  "gloss": [
+   {
+    "p": "reply to",
+    "m": "〜に返信する"
+   },
+   {
+    "p": "email",
+    "m": "メール"
+   }
+  ]
  },
  {
   "ja": "締め切りはいつですか。",
   "en": "When is the deadline?",
-  "cat": "work"
+  "cat": "work",
+  "gloss": [
+   {
+    "p": "When",
+    "m": "いつ"
+   },
+   {
+    "p": "deadline",
+    "m": "締め切り"
+   }
+  ]
  },
  {
   "ja": "少し手伝ってもらえますか。",
   "en": "Could you help me a little?",
-  "cat": "work"
+  "cat": "work",
+  "gloss": [
+   {
+    "p": "help",
+    "m": "手伝う"
+   }
+  ]
  },
  {
   "ja": "資料を送ります。",
   "en": "I'll send you the documents.",
-  "cat": "work"
+  "cat": "work",
+  "gloss": [
+   {
+    "p": "send",
+    "m": "送る"
+   },
+   {
+    "p": "documents",
+    "m": "資料・書類"
+   }
+  ]
  },
  {
   "ja": "確認してから連絡します。",
   "en": "I'll let you know after I check.",
-  "cat": "work"
+  "cat": "work",
+  "gloss": [
+   {
+    "p": "let you know",
+    "m": "知らせる"
+   },
+   {
+    "p": "check",
+    "m": "確認する"
+   }
+  ]
  },
  {
   "ja": "すぐに対応します。",
   "en": "I'll take care of it right away.",
-  "cat": "work"
+  "cat": "work",
+  "gloss": [
+   {
+    "p": "take care of",
+    "m": "対応する"
+   },
+   {
+    "p": "right away",
+    "m": "すぐに"
+   }
+  ]
  },
  {
   "ja": "質問してもいいですか。",
   "en": "May I ask a question?",
-  "cat": "work"
+  "cat": "work",
+  "gloss": [
+   {
+    "p": "ask a question",
+    "m": "質問する"
+   }
+  ]
  },
  {
   "ja": "もう一度説明してください。",
   "en": "Could you explain it again?",
-  "cat": "work"
+  "cat": "work",
+  "gloss": [
+   {
+    "p": "explain",
+    "m": "説明する"
+   },
+   {
+    "p": "again",
+    "m": "もう一度"
+   }
+  ]
  },
  {
   "ja": "来週まで待ってください。",
   "en": "Please wait until next week.",
-  "cat": "work"
+  "cat": "work",
+  "gloss": [
+   {
+    "p": "wait",
+    "m": "待つ"
+   },
+   {
+    "p": "until",
+    "m": "〜まで"
+   }
+  ]
  },
  {
   "ja": "宿題を忘れました。",
   "en": "I forgot my homework.",
-  "cat": "work"
+  "cat": "work",
+  "gloss": [
+   {
+    "p": "forgot",
+    "m": "忘れた"
+   },
+   {
+    "p": "homework",
+    "m": "宿題"
+   }
+  ]
  },
  {
   "ja": "ノートを貸してくれますか。",
   "en": "Can you lend me your notebook?",
-  "cat": "work"
+  "cat": "work",
+  "gloss": [
+   {
+    "p": "lend",
+    "m": "貸す"
+   },
+   {
+    "p": "notebook",
+    "m": "ノート"
+   }
+  ]
  },
  {
   "ja": "試験に合格しました。",
   "en": "I passed the exam.",
-  "cat": "work"
+  "cat": "work",
+  "gloss": [
+   {
+    "p": "passed",
+    "m": "合格した"
+   },
+   {
+    "p": "exam",
+    "m": "試験"
+   }
+  ]
  },
  {
   "ja": "遅れてすみません。",
   "en": "I'm sorry I'm late.",
-  "cat": "work"
+  "cat": "work",
+  "gloss": [
+   {
+    "p": "late",
+    "m": "遅れた"
+   }
+  ]
  },
  {
   "ja": "今、手が離せません。",
   "en": "I'm tied up right now.",
-  "cat": "work"
+  "cat": "work",
+  "gloss": [
+   {
+    "p": "tied up",
+    "m": "手が離せない・忙しい"
+   },
+   {
+    "p": "right now",
+    "m": "今"
+   }
+  ]
  },
  {
   "ja": "お疲れさまでした。",
   "en": "Good job today.",
-  "cat": "work"
+  "cat": "work",
+  "gloss": [
+   {
+    "p": "Good job",
+    "m": "よくやった・お疲れさま"
+   }
+  ]
  },
  {
   "ja": "私はそう思います。",
   "en": "I think so.",
-  "cat": "feeling"
+  "cat": "feeling",
+  "gloss": [
+   {
+    "p": "think so",
+    "m": "そう思う"
+   }
+  ]
  },
  {
   "ja": "それは良い考えだ。",
   "en": "That's a good idea.",
-  "cat": "feeling"
+  "cat": "feeling",
+  "gloss": [
+   {
+    "p": "idea",
+    "m": "考え"
+   }
+  ]
  },
  {
   "ja": "私は賛成です。",
   "en": "I agree.",
-  "cat": "feeling"
+  "cat": "feeling",
+  "gloss": [
+   {
+    "p": "agree",
+    "m": "賛成する"
+   }
+  ]
  },
  {
   "ja": "私は反対です。",
   "en": "I disagree.",
-  "cat": "feeling"
+  "cat": "feeling",
+  "gloss": [
+   {
+    "p": "disagree",
+    "m": "反対する"
+   }
+  ]
  },
  {
   "ja": "それを聞いて嬉しい。",
   "en": "I'm glad to hear that.",
-  "cat": "feeling"
+  "cat": "feeling",
+  "gloss": [
+   {
+    "p": "glad",
+    "m": "うれしい"
+   },
+   {
+    "p": "hear",
+    "m": "聞く"
+   }
+  ]
  },
  {
   "ja": "それは残念だ。",
   "en": "That's too bad.",
-  "cat": "feeling"
+  "cat": "feeling",
+  "gloss": [
+   {
+    "p": "too bad",
+    "m": "残念"
+   }
+  ]
  },
  {
   "ja": "心配しないで。",
   "en": "Don't worry.",
-  "cat": "feeling"
+  "cat": "feeling",
+  "gloss": [
+   {
+    "p": "worry",
+    "m": "心配する"
+   }
+  ]
  },
  {
   "ja": "それは難しいと思う。",
   "en": "I think that's difficult.",
-  "cat": "feeling"
+  "cat": "feeling",
+  "gloss": [
+   {
+    "p": "difficult",
+    "m": "難しい"
+   }
+  ]
  },
  {
   "ja": "どちらでもいいです。",
   "en": "Either is fine with me.",
-  "cat": "feeling"
+  "cat": "feeling",
+  "gloss": [
+   {
+    "p": "Either",
+    "m": "どちらでも"
+   },
+   {
+    "p": "fine",
+    "m": "いい・大丈夫"
+   }
+  ]
  },
  {
   "ja": "本当にありがとう。",
   "en": "Thank you so much.",
-  "cat": "feeling"
+  "cat": "feeling",
+  "gloss": [
+   {
+    "p": "so much",
+    "m": "本当に・とても"
+   }
+  ]
  },
  {
   "ja": "気にしないで。",
   "en": "Never mind.",
-  "cat": "feeling"
+  "cat": "feeling",
+  "gloss": [
+   {
+    "p": "Never mind",
+    "m": "気にしないで"
+   }
+  ]
  },
  {
   "ja": "自信がありません。",
   "en": "I'm not sure.",
-  "cat": "feeling"
+  "cat": "feeling",
+  "gloss": [
+   {
+    "p": "not sure",
+    "m": "自信がない・確信がない"
+   }
+  ]
  },
  {
   "ja": "楽しみにしています。",
   "en": "I'm looking forward to it.",
-  "cat": "feeling"
+  "cat": "feeling",
+  "gloss": [
+   {
+    "p": "looking forward to",
+    "m": "楽しみにする"
+   }
+  ]
  },
  {
   "ja": "緊張しています。",
   "en": "I'm nervous.",
-  "cat": "feeling"
+  "cat": "feeling",
+  "gloss": [
+   {
+    "p": "nervous",
+    "m": "緊張して"
+   }
+  ]
  },
  {
   "ja": "やってみます。",
   "en": "I'll give it a try.",
-  "cat": "feeling"
+  "cat": "feeling",
+  "gloss": [
+   {
+    "p": "give it a try",
+    "m": "やってみる"
+   }
+  ]
  },
  {
   "ja": "それは私のせいです。",
   "en": "That's my fault.",
-  "cat": "feeling"
+  "cat": "feeling",
+  "gloss": [
+   {
+    "p": "fault",
+    "m": "責任・せい"
+   }
+  ]
  },
  {
   "ja": "あなたの言う通りだ。",
   "en": "You're right.",
-  "cat": "feeling"
+  "cat": "feeling",
+  "gloss": [
+   {
+    "p": "right",
+    "m": "正しい"
+   }
+  ]
  },
  {
   "ja": "久しぶりだね。",
   "en": "It's been a long time.",
-  "cat": "chat"
+  "cat": "chat",
+  "gloss": [
+   {
+    "p": "It's been a long time",
+    "m": "久しぶり"
+   }
+  ]
  },
  {
   "ja": "最近どう?",
   "en": "How have you been?",
-  "cat": "chat"
+  "cat": "chat",
+  "gloss": [
+   {
+    "p": "How have you been",
+    "m": "元気だった?・最近どう?"
+   }
+  ]
  },
  {
   "ja": "週末は何をしたの?",
   "en": "What did you do over the weekend?",
-  "cat": "chat"
+  "cat": "chat",
+  "gloss": [
+   {
+    "p": "over the weekend",
+    "m": "週末に"
+   }
+  ]
  },
  {
   "ja": "趣味は何ですか。",
   "en": "What are your hobbies?",
-  "cat": "chat"
+  "cat": "chat",
+  "gloss": [
+   {
+    "p": "hobbies",
+    "m": "趣味"
+   }
+  ]
  },
  {
   "ja": "また会えて嬉しい。",
   "en": "It's nice to see you again.",
-  "cat": "chat"
+  "cat": "chat",
+  "gloss": [
+   {
+    "p": "nice to see you",
+    "m": "会えてうれしい"
+   },
+   {
+    "p": "again",
+    "m": "また"
+   }
+  ]
  },
  {
   "ja": "連絡してね。",
   "en": "Keep in touch.",
-  "cat": "chat"
+  "cat": "chat",
+  "gloss": [
+   {
+    "p": "Keep in touch",
+    "m": "連絡を取り合おう"
+   }
+  ]
  },
  {
   "ja": "気をつけて帰ってね。",
   "en": "Get home safe.",
-  "cat": "chat"
+  "cat": "chat",
+  "gloss": [
+   {
+    "p": "Get home",
+    "m": "帰宅する"
+   },
+   {
+    "p": "safe",
+    "m": "無事に"
+   }
+  ]
  },
  {
   "ja": "今度一緒に食事しよう。",
   "en": "Let's have a meal together sometime.",
-  "cat": "chat"
+  "cat": "chat",
+  "gloss": [
+   {
+    "p": "have a meal",
+    "m": "食事する"
+   },
+   {
+    "p": "sometime",
+    "m": "いつか"
+   }
+  ]
  },
  {
   "ja": "誕生日おめでとう。",
   "en": "Happy birthday.",
-  "cat": "chat"
+  "cat": "chat",
+  "gloss": [
+   {
+    "p": "birthday",
+    "m": "誕生日"
+   }
+  ]
  },
  {
   "ja": "手伝ってくれてありがとう。",
   "en": "Thank you for your help.",
-  "cat": "chat"
+  "cat": "chat",
+  "gloss": [
+   {
+    "p": "help",
+    "m": "助け・手伝い"
+   }
+  ]
  },
  {
   "ja": "お先にどうぞ。",
   "en": "After you.",
-  "cat": "chat"
+  "cat": "chat",
+  "gloss": [
+   {
+    "p": "After you",
+    "m": "お先にどうぞ"
+   }
+  ]
  },
  {
   "ja": "調子はどう?",
   "en": "How's it going?",
-  "cat": "chat"
+  "cat": "chat",
+  "gloss": [
+   {
+    "p": "How's it going",
+    "m": "調子はどう?"
+   }
+  ]
  },
  {
   "ja": "それはおもしろいね。",
   "en": "That's interesting.",
-  "cat": "chat"
+  "cat": "chat",
+  "gloss": [
+   {
+    "p": "interesting",
+    "m": "おもしろい"
+   }
+  ]
  },
  {
   "ja": "私もそう思う。",
   "en": "I think so too.",
-  "cat": "chat"
+  "cat": "chat",
+  "gloss": [
+   {
+    "p": "too",
+    "m": "〜も"
+   }
+  ]
  },
  {
   "ja": "また今度ね。",
   "en": "See you next time.",
-  "cat": "chat"
+  "cat": "chat",
+  "gloss": [
+   {
+    "p": "See you",
+    "m": "またね"
+   },
+   {
+    "p": "next time",
+    "m": "今度"
+   }
+  ]
  },
  {
   "ja": "楽しかったよ。",
   "en": "I had a good time.",
-  "cat": "chat"
+  "cat": "chat",
+  "gloss": [
+   {
+    "p": "had a good time",
+    "m": "楽しい時間を過ごした"
+   }
+  ]
  }
 ]
