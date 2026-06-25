@@ -1,0 +1,502 @@
+[
+ {
+  "ja": "これは大きな家だ。",
+  "en": "This is a big house.",
+  "cat": "daily"
+ },
+ {
+  "ja": "私は毎朝コーヒーを飲む。",
+  "en": "I drink coffee every morning.",
+  "cat": "daily"
+ },
+ {
+  "ja": "電気を消してください。",
+  "en": "Please turn off the light.",
+  "cat": "daily"
+ },
+ {
+  "ja": "洗濯物を干さないと。",
+  "en": "I have to hang up the laundry.",
+  "cat": "daily"
+ },
+ {
+  "ja": "もう寝る時間だよ。",
+  "en": "It's time to go to bed.",
+  "cat": "daily"
+ },
+ {
+  "ja": "ゴミを出すのを忘れた。",
+  "en": "I forgot to take out the trash.",
+  "cat": "daily"
+ },
+ {
+  "ja": "部屋を掃除しているところだ。",
+  "en": "I'm cleaning my room.",
+  "cat": "daily"
+ },
+ {
+  "ja": "鍵が見つからない。",
+  "en": "I can't find my keys.",
+  "cat": "daily"
+ },
+ {
+  "ja": "もう少しで終わります。",
+  "en": "I'm almost done.",
+  "cat": "daily"
+ },
+ {
+  "ja": "窓を開けてもいいですか。",
+  "en": "May I open the window?",
+  "cat": "daily"
+ },
+ {
+  "ja": "今日はとても疲れた。",
+  "en": "I'm very tired today.",
+  "cat": "daily"
+ },
+ {
+  "ja": "充電器を貸してくれる?",
+  "en": "Can you lend me a charger?",
+  "cat": "daily"
+ },
+ {
+  "ja": "そろそろ出かけよう。",
+  "en": "Let's get going soon.",
+  "cat": "daily"
+ },
+ {
+  "ja": "雨が降りそうだ。",
+  "en": "It looks like it's going to rain.",
+  "cat": "daily"
+ },
+ {
+  "ja": "傘を持っていったほうがいい。",
+  "en": "You should take an umbrella.",
+  "cat": "daily"
+ },
+ {
+  "ja": "隣の人はとても親切だ。",
+  "en": "My neighbor is very kind.",
+  "cat": "daily"
+ },
+ {
+  "ja": "週末は家でゆっくりする。",
+  "en": "I relax at home on weekends.",
+  "cat": "daily"
+ },
+ {
+  "ja": "駅はどこですか。",
+  "en": "Where is the station?",
+  "cat": "travel"
+ },
+ {
+  "ja": "切符を2枚ください。",
+  "en": "Two tickets, please.",
+  "cat": "travel"
+ },
+ {
+  "ja": "この電車は東京に行きますか。",
+  "en": "Does this train go to Tokyo?",
+  "cat": "travel"
+ },
+ {
+  "ja": "写真を撮ってもらえますか。",
+  "en": "Could you take a picture for me?",
+  "cat": "travel"
+ },
+ {
+  "ja": "道に迷ってしまいました。",
+  "en": "I'm lost.",
+  "cat": "travel"
+ },
+ {
+  "ja": "ホテルまで歩いて行けますか。",
+  "en": "Can I walk to the hotel?",
+  "cat": "travel"
+ },
+ {
+  "ja": "次のバスは何時ですか。",
+  "en": "What time is the next bus?",
+  "cat": "travel"
+ },
+ {
+  "ja": "ここから近いですか。",
+  "en": "Is it near here?",
+  "cat": "travel"
+ },
+ {
+  "ja": "荷物を預けたいのですが。",
+  "en": "I'd like to leave my luggage.",
+  "cat": "travel"
+ },
+ {
+  "ja": "観光案内所を探しています。",
+  "en": "I'm looking for the tourist information center.",
+  "cat": "travel"
+ },
+ {
+  "ja": "この席は空いていますか。",
+  "en": "Is this seat taken?",
+  "cat": "travel"
+ },
+ {
+  "ja": "空港まで30分かかります。",
+  "en": "It takes 30 minutes to the airport.",
+  "cat": "travel"
+ },
+ {
+  "ja": "予約を確認したいです。",
+  "en": "I'd like to confirm my reservation.",
+  "cat": "travel"
+ },
+ {
+  "ja": "もう一度言ってもらえますか。",
+  "en": "Could you say that again?",
+  "cat": "travel"
+ },
+ {
+  "ja": "ここで写真を撮ってもいいですか。",
+  "en": "May I take a photo here?",
+  "cat": "travel"
+ },
+ {
+  "ja": "おすすめの場所はありますか。",
+  "en": "Do you have any recommendations?",
+  "cat": "travel"
+ },
+ {
+  "ja": "楽しい旅行でした。",
+  "en": "It was a wonderful trip.",
+  "cat": "travel"
+ },
+ {
+  "ja": "メニューを見せてください。",
+  "en": "Could I see the menu?",
+  "cat": "food"
+ },
+ {
+  "ja": "これは何でできていますか。",
+  "en": "What is this made of?",
+  "cat": "food"
+ },
+ {
+  "ja": "おすすめは何ですか。",
+  "en": "What do you recommend?",
+  "cat": "food"
+ },
+ {
+  "ja": "お会計をお願いします。",
+  "en": "Check, please.",
+  "cat": "food"
+ },
+ {
+  "ja": "持ち帰りでお願いします。",
+  "en": "To go, please.",
+  "cat": "food"
+ },
+ {
+  "ja": "これをください。",
+  "en": "I'll take this one.",
+  "cat": "food"
+ },
+ {
+  "ja": "いくらですか。",
+  "en": "How much is it?",
+  "cat": "food"
+ },
+ {
+  "ja": "もう少し安くなりますか。",
+  "en": "Can you make it a little cheaper?",
+  "cat": "food"
+ },
+ {
+  "ja": "試着してもいいですか。",
+  "en": "Can I try this on?",
+  "cat": "food"
+ },
+ {
+  "ja": "別の色はありますか。",
+  "en": "Do you have another color?",
+  "cat": "food"
+ },
+ {
+  "ja": "これは辛いですか。",
+  "en": "Is this spicy?",
+  "cat": "food"
+ },
+ {
+  "ja": "水をもう一杯ください。",
+  "en": "Could I have another glass of water?",
+  "cat": "food"
+ },
+ {
+  "ja": "とても美味しかったです。",
+  "en": "It was really delicious.",
+  "cat": "food"
+ },
+ {
+  "ja": "食物アレルギーがあります。",
+  "en": "I have a food allergy.",
+  "cat": "food"
+ },
+ {
+  "ja": "クレジットカードは使えますか。",
+  "en": "Can I pay by credit card?",
+  "cat": "food"
+ },
+ {
+  "ja": "袋はいりません。",
+  "en": "I don't need a bag.",
+  "cat": "food"
+ },
+ {
+  "ja": "お腹がいっぱいです。",
+  "en": "I'm full.",
+  "cat": "food"
+ },
+ {
+  "ja": "会議は3時に始まります。",
+  "en": "The meeting starts at three.",
+  "cat": "work"
+ },
+ {
+  "ja": "このメールに返信してください。",
+  "en": "Please reply to this email.",
+  "cat": "work"
+ },
+ {
+  "ja": "締め切りはいつですか。",
+  "en": "When is the deadline?",
+  "cat": "work"
+ },
+ {
+  "ja": "少し手伝ってもらえますか。",
+  "en": "Could you help me a little?",
+  "cat": "work"
+ },
+ {
+  "ja": "資料を送ります。",
+  "en": "I'll send you the documents.",
+  "cat": "work"
+ },
+ {
+  "ja": "確認してから連絡します。",
+  "en": "I'll let you know after I check.",
+  "cat": "work"
+ },
+ {
+  "ja": "すぐに対応します。",
+  "en": "I'll take care of it right away.",
+  "cat": "work"
+ },
+ {
+  "ja": "質問してもいいですか。",
+  "en": "May I ask a question?",
+  "cat": "work"
+ },
+ {
+  "ja": "もう一度説明してください。",
+  "en": "Could you explain it again?",
+  "cat": "work"
+ },
+ {
+  "ja": "来週まで待ってください。",
+  "en": "Please wait until next week.",
+  "cat": "work"
+ },
+ {
+  "ja": "宿題を忘れました。",
+  "en": "I forgot my homework.",
+  "cat": "work"
+ },
+ {
+  "ja": "ノートを貸してくれますか。",
+  "en": "Can you lend me your notebook?",
+  "cat": "work"
+ },
+ {
+  "ja": "試験に合格しました。",
+  "en": "I passed the exam.",
+  "cat": "work"
+ },
+ {
+  "ja": "遅れてすみません。",
+  "en": "I'm sorry I'm late.",
+  "cat": "work"
+ },
+ {
+  "ja": "今、手が離せません。",
+  "en": "I'm tied up right now.",
+  "cat": "work"
+ },
+ {
+  "ja": "お疲れさまでした。",
+  "en": "Good job today.",
+  "cat": "work"
+ },
+ {
+  "ja": "私はそう思います。",
+  "en": "I think so.",
+  "cat": "feeling"
+ },
+ {
+  "ja": "それは良い考えだ。",
+  "en": "That's a good idea.",
+  "cat": "feeling"
+ },
+ {
+  "ja": "私は賛成です。",
+  "en": "I agree.",
+  "cat": "feeling"
+ },
+ {
+  "ja": "私は反対です。",
+  "en": "I disagree.",
+  "cat": "feeling"
+ },
+ {
+  "ja": "それを聞いて嬉しい。",
+  "en": "I'm glad to hear that.",
+  "cat": "feeling"
+ },
+ {
+  "ja": "それは残念だ。",
+  "en": "That's too bad.",
+  "cat": "feeling"
+ },
+ {
+  "ja": "心配しないで。",
+  "en": "Don't worry.",
+  "cat": "feeling"
+ },
+ {
+  "ja": "それは難しいと思う。",
+  "en": "I think that's difficult.",
+  "cat": "feeling"
+ },
+ {
+  "ja": "どちらでもいいです。",
+  "en": "Either is fine with me.",
+  "cat": "feeling"
+ },
+ {
+  "ja": "本当にありがとう。",
+  "en": "Thank you so much.",
+  "cat": "feeling"
+ },
+ {
+  "ja": "気にしないで。",
+  "en": "Never mind.",
+  "cat": "feeling"
+ },
+ {
+  "ja": "自信がありません。",
+  "en": "I'm not sure.",
+  "cat": "feeling"
+ },
+ {
+  "ja": "楽しみにしています。",
+  "en": "I'm looking forward to it.",
+  "cat": "feeling"
+ },
+ {
+  "ja": "緊張しています。",
+  "en": "I'm nervous.",
+  "cat": "feeling"
+ },
+ {
+  "ja": "やってみます。",
+  "en": "I'll give it a try.",
+  "cat": "feeling"
+ },
+ {
+  "ja": "それは私のせいです。",
+  "en": "That's my fault.",
+  "cat": "feeling"
+ },
+ {
+  "ja": "あなたの言う通りだ。",
+  "en": "You're right.",
+  "cat": "feeling"
+ },
+ {
+  "ja": "久しぶりだね。",
+  "en": "It's been a long time.",
+  "cat": "chat"
+ },
+ {
+  "ja": "最近どう?",
+  "en": "How have you been?",
+  "cat": "chat"
+ },
+ {
+  "ja": "週末は何をしたの?",
+  "en": "What did you do over the weekend?",
+  "cat": "chat"
+ },
+ {
+  "ja": "趣味は何ですか。",
+  "en": "What are your hobbies?",
+  "cat": "chat"
+ },
+ {
+  "ja": "また会えて嬉しい。",
+  "en": "It's nice to see you again.",
+  "cat": "chat"
+ },
+ {
+  "ja": "連絡してね。",
+  "en": "Keep in touch.",
+  "cat": "chat"
+ },
+ {
+  "ja": "気をつけて帰ってね。",
+  "en": "Get home safe.",
+  "cat": "chat"
+ },
+ {
+  "ja": "今度一緒に食事しよう。",
+  "en": "Let's have a meal together sometime.",
+  "cat": "chat"
+ },
+ {
+  "ja": "誕生日おめでとう。",
+  "en": "Happy birthday.",
+  "cat": "chat"
+ },
+ {
+  "ja": "手伝ってくれてありがとう。",
+  "en": "Thank you for your help.",
+  "cat": "chat"
+ },
+ {
+  "ja": "お先にどうぞ。",
+  "en": "After you.",
+  "cat": "chat"
+ },
+ {
+  "ja": "調子はどう?",
+  "en": "How's it going?",
+  "cat": "chat"
+ },
+ {
+  "ja": "それはおもしろいね。",
+  "en": "That's interesting.",
+  "cat": "chat"
+ },
+ {
+  "ja": "私もそう思う。",
+  "en": "I think so too.",
+  "cat": "chat"
+ },
+ {
+  "ja": "また今度ね。",
+  "en": "See you next time.",
+  "cat": "chat"
+ },
+ {
+  "ja": "楽しかったよ。",
+  "en": "I had a good time.",
+  "cat": "chat"
+ }
+]

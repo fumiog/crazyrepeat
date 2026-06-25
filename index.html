@@ -55,11 +55,11 @@
   .home-brand{ font-family:"Lora",Georgia,serif; font-size:clamp(2.4rem,9vw,3.2rem); font-weight:600; letter-spacing:.005em; line-height:1; }
   .home-brand .dot{ color:var(--accent); }
   .home-sub{ color:var(--muted); font-size:.92rem; margin-top:12px; letter-spacing:.06em; font-family:"Noto Sans JP",sans-serif; }
-  .home-cards{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .home-cards{ display:flex; flex-direction:column; gap:12px; }
   .home-card{
     -webkit-appearance:none; appearance:none; cursor:pointer; text-align:left;
-    display:flex; flex-direction:column; align-items:flex-start; gap:10px;
-    padding:24px 20px 20px; min-height:188px;
+    display:flex; flex-direction:row; align-items:center; gap:18px;
+    padding:20px 22px; min-height:0;
     border:1px solid var(--line); border-radius:18px;
     background:rgba(255,255,255,.018);
     color:var(--text); font:inherit;
@@ -69,11 +69,11 @@
   .home-card:hover{ background:rgba(232,179,106,.07); border-color:var(--accent-dim); }
   .home-card:active{ transform:translateY(1px); }
   .home-card:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
-  .home-card .hc-emoji{ font-size:2.5rem; line-height:1; filter:drop-shadow(0 6px 16px rgba(0,0,0,.35)); }
-  .home-card .hc-name{ font-family:"Lora",Georgia,serif; font-size:1.45rem; line-height:1.15; margin-top:auto; }
-  .home-card .hc-desc{ font-size:.8rem; color:var(--muted); line-height:1.5; font-family:"Noto Sans JP",sans-serif; }
-  .home-card .hc-meta{ font-size:.66rem; color:var(--muted); letter-spacing:.12em; text-transform:uppercase; }
-  @media (max-width:380px){ .home-cards{ grid-template-columns:1fr; } .home-card{ min-height:0; } }
+  .home-card .hc-emoji{ font-size:2.3rem; line-height:1; flex:0 0 auto; filter:drop-shadow(0 6px 16px rgba(0,0,0,.35)); }
+  .home-card .hc-body{ display:flex; flex-direction:column; gap:5px; }
+  .home-card .hc-name{ font-family:"Lora",Georgia,serif; font-size:1.4rem; line-height:1.1; }
+  .home-card .hc-desc{ font-size:.78rem; color:var(--muted); line-height:1.5; font-family:"Noto Sans JP",sans-serif; }
+  .home-card .hc-meta{ font-size:.64rem; color:var(--muted); letter-spacing:.12em; text-transform:uppercase; }
   @media (prefers-reduced-motion: reduce){ .home-glow{ animation:none; } }
 
   /* ── ジャンル選択画面の「← ホーム」ボタン ── */
@@ -109,6 +109,47 @@
     background:var(--accent-dim); border-color:rgba(232,179,106,.5); color:var(--accent);
   }
   #words-root #btn-checked:disabled{ opacity:.32; cursor:default; }
+
+  /* ── 英作文モード（#compose-root） ── */
+  #compose-root .mode-tag{ display:inline-block; margin-left:6px; padding:2px 8px; border:1px solid var(--accent-dim); border-radius:999px; color:var(--accent); font-size:.58rem; letter-spacing:.14em; vertical-align:middle; font-family:"Noto Sans JP",sans-serif; }
+  #compose-root #c-genre-screen{
+    position:fixed; inset:0; z-index:50; overflow-y:auto;
+    background:
+      radial-gradient(120% 80% at 50% 16%, var(--bg-glow) 0%, var(--bg) 58%),
+      var(--bg);
+    display:flex; flex-direction:column; align-items:center;
+    padding:clamp(28px,6vh,56px) 20px clamp(28px,5vh,48px);
+    animation:gfade .28s ease;
+  }
+  #compose-root #c-btn-toggle{ background:var(--accent); border-color:var(--accent); color:#1a130a; }
+  #compose-root #c-btn-toggle .lbl{ color:#3a2c12; }
+  #compose-root #c-btn-toggle:hover:not(:disabled){ background:#efc07e; border-color:#efc07e; }
+  #compose-root #c-pos-total{ color:var(--muted); }
+  #compose-root main{ padding:0 22px; }
+  #compose-root .compose-glow{
+    position:fixed; left:50%; top:42%; width:300px; height:300px; transform:translate(-50%,-50%);
+    pointer-events:none; z-index:0;
+    background:radial-gradient(circle, var(--accent-dim) 0%, transparent 70%);
+    opacity:0; transition:opacity .4s ease;
+  }
+  #compose-root.is-playing .compose-glow{ opacity:1; animation:breathe 3.4s ease-in-out infinite; }
+  #compose-root .compose-label{ position:relative; z-index:1; text-align:center; color:var(--muted); font-size:.7rem; letter-spacing:.18em; text-transform:uppercase; margin-bottom:14px; font-family:"Noto Sans JP",sans-serif; }
+  #compose-root .compose-ja{ position:relative; z-index:1; text-align:center; font-family:"Noto Sans JP",sans-serif; font-weight:500; font-size:clamp(1.5rem,5.5vw,2rem); line-height:1.55; color:var(--text); }
+  #compose-root .compose-answer{ position:relative; z-index:1; margin-top:26px; min-height:74px; display:flex; align-items:center; justify-content:center; text-align:center; }
+  #compose-root .compose-en{ display:none; font-family:"Lora",Georgia,serif; font-size:clamp(1.3rem,5vw,1.8rem); line-height:1.4; color:var(--accent); }
+  #compose-root .compose-hint{ color:var(--muted); font-size:.85rem; font-family:"Noto Sans JP",sans-serif; opacity:.55; }
+  #compose-root.is-revealed .compose-en{ display:block; }
+  #compose-root.is-revealed .compose-hint{ display:none; }
+  #compose-root .reveal-btn{
+    position:relative; z-index:1; display:inline-flex; align-items:center; gap:8px; margin:28px auto 0;
+    padding:11px 24px; border-radius:999px;
+    border:1px solid var(--accent-dim); background:var(--accent-dim); color:var(--accent);
+    font:inherit; font-size:.95rem; font-family:"Noto Sans JP",sans-serif; cursor:pointer;
+    transition:background .15s ease, border-color .15s ease, color .15s ease, transform .06s ease;
+    -webkit-tap-highlight-color:transparent;
+  }
+  #compose-root .reveal-btn:active{ transform:translateY(1px); }
+  #compose-root.is-revealed .reveal-btn{ background:rgba(255,255,255,.03); border-color:var(--line); color:var(--muted); }
 
   /* ── データ読み込み中／エラー表示（各アプリ内の全面オーバーレイ） ── */
   .data-msg{
@@ -570,6 +611,263 @@
 #phrases-root .scene-grid{ grid-template-columns:1fr; }
 }
 
+/* ===================== 英作文（scoped: #compose-root） ===================== */
+#compose-root{
+    background:
+      radial-gradient(120% 80% at 50% 18%, var(--bg-glow) 0%, var(--bg) 55%) fixed,
+      var(--bg);
+    color:var(--text);
+    font-family:-apple-system, "Segoe UI", Roboto, "Noto Sans JP", system-ui, sans-serif;
+    min-height:100dvh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-between;
+    padding:clamp(20px, 4vh, 48px) 20px;
+    -webkit-font-smoothing:antialiased;
+  }
+#compose-root header{
+    width:100%;
+    max-width:560px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    letter-spacing:.02em;
+  }
+#compose-root .brand{
+    font-family:"Lora", Georgia, serif;
+    font-size:1.05rem;
+    font-weight:500;
+    color:var(--text);
+  }
+#compose-root .brand .dot{ color:var(--accent); }
+#compose-root .status{
+    display:flex; align-items:center; gap:.5em;
+    font-size:.8rem; color:var(--muted);
+    letter-spacing:.04em;
+  }
+#compose-root .header-right{
+    display:flex; flex-direction:column; align-items:flex-end; gap:3px;
+  }
+#compose-root .position{
+    font-size:.92rem; color:var(--text); letter-spacing:.04em;
+    font-variant-numeric:tabular-nums;
+  }
+#compose-root .position .pos-sep, #compose-root #pos-total{ color:var(--muted); }
+#compose-root .pos-row{ display:flex; align-items:center; gap:8px; }
+#compose-root .home-btn{
+    -webkit-appearance:none; appearance:none;
+    display:inline-flex; align-items:center; justify-content:center;
+    width:26px; height:26px; padding:0;
+    border:1px solid var(--line); border-radius:999px;
+    background:transparent; color:var(--muted);
+    font-size:.95rem; line-height:1; cursor:pointer;
+    transition:background .15s ease, color .15s ease, border-color .15s ease;
+    -webkit-tap-highlight-color:transparent;
+  }
+#compose-root .home-btn:hover{ background:var(--press); color:var(--text); }
+#compose-root .home-btn:active{ transform:translateY(1px); }
+#compose-root .home-btn:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+#compose-root .status .led{
+    width:7px; height:7px; border-radius:50%;
+    background:var(--muted); opacity:.5;
+    transition:background .25s ease, opacity .25s ease;
+  }
+#compose-root.is-playing .status .led{ background:var(--accent); opacity:1; }
+#compose-root.is-playing .status{ color:var(--accent); }
+#compose-root .modebar{
+    width:100%; max-width:560px;
+    display:flex; justify-content:center; align-items:center; gap:10px;
+    margin-top:14px;
+  }
+#compose-root .shuffle-btn{
+    -webkit-appearance:none; appearance:none;
+    display:inline-flex; align-items:center; justify-content:center;
+    width:40px; height:40px; padding:0;
+    border:1px solid var(--line); border-radius:999px;
+    background:rgba(255,255,255,.03); color:var(--muted);
+    cursor:pointer; font-size:1.05rem; line-height:1;
+    transition:background .15s ease, color .15s ease, border-color .15s ease;
+    -webkit-tap-highlight-color:transparent;
+  }
+#compose-root .shuffle-btn:not(.is-active):hover{ background:var(--press); color:var(--text); }
+#compose-root .shuffle-btn:focus-visible{ outline:2px solid rgba(255,255,255,.35); outline-offset:2px; }
+#compose-root .shuffle-btn.is-active{
+    background:var(--accent);
+    border-color:var(--accent);
+    color:#1a130a;
+  }
+#compose-root .seg{
+    display:inline-flex; gap:4px; padding:4px;
+    border:1px solid var(--line); border-radius:999px;
+    background:rgba(255,255,255,.03);
+  }
+#compose-root .seg-btn{
+    border:none; background:transparent; color:var(--muted);
+    font:inherit; font-size:.82rem; letter-spacing:.03em;
+    padding:7px 16px; border-radius:999px; cursor:pointer;
+    font-family:"Noto Sans JP", sans-serif;
+    transition:background .15s ease, color .15s ease;
+    -webkit-tap-highlight-color:transparent;
+  }
+#compose-root .seg-btn.is-active{ background:var(--accent); color:#1a130a; }
+#compose-root .seg-btn:not(.is-active):hover{ color:var(--text); background:var(--press); }
+#compose-root .seg-btn:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+#compose-root.mode-b .word{ display:none; }
+#compose-root.mode-c .ja{ display:none; }
+#compose-root main{
+    flex:1;
+    width:100%;
+    max-width:560px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:clamp(12px, 3vh, 28px);
+    text-align:center;
+  }
+#compose-root .stage{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+#compose-root .stage::before{
+    content:"";
+    position:absolute;
+    width:220px; height:220px;
+    border-radius:50%;
+    background:radial-gradient(circle, var(--accent-dim) 0%, transparent 68%);
+    opacity:.35;
+    transform:scale(.9);
+    transition:opacity .4s ease;
+    pointer-events:none;
+  }
+#compose-root.is-playing .stage::before{
+    opacity:1;
+    animation:breathe 2.4s ease-in-out infinite;
+  }
+@keyframes breathe{
+    0%,100%{ transform:scale(.85); opacity:.55; }
+    50%    { transform:scale(1.08); opacity:1;  }
+  }
+#compose-root .emoji{
+    font-size:clamp(72px, 18vw, 104px);
+    line-height:1;
+    position:relative;
+    filter:drop-shadow(0 6px 20px rgba(0,0,0,.35));
+  }
+#compose-root .word{
+    font-family:"Lora", Georgia, serif;
+    font-weight:400;
+    font-size:clamp(3rem, 13vw, 5.5rem);
+    line-height:1;
+    letter-spacing:-.01em;
+    color:var(--text);
+  }
+#compose-root .ja{
+    font-family:"Noto Sans JP", sans-serif;
+    font-weight:400;
+    font-size:clamp(1.05rem, 4.5vw, 1.35rem);
+    color:var(--muted);
+    letter-spacing:.04em;
+  }
+#compose-root footer{
+    width:100%;
+    max-width:560px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:14px;
+  }
+#compose-root .controls{
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:10px;
+  }
+#compose-root button{
+    font:inherit;
+    color:var(--text);
+    background:transparent;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:14px 8px;
+    cursor:pointer;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:5px;
+    letter-spacing:.02em;
+    transition:background .15s ease, border-color .15s ease, transform .06s ease, opacity .2s ease, color .15s ease;
+    -webkit-tap-highlight-color:transparent;
+  }
+#compose-root button .ico{ font-size:1.15rem; line-height:1; }
+#compose-root button .lbl{ font-size:.78rem; color:var(--muted); }
+#compose-root button:hover:not(:disabled){ background:var(--press); border-color:rgba(255,255,255,.16); }
+#compose-root button:active:not(:disabled){ transform:translateY(1px); }
+#compose-root button:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+#compose-root button:disabled{ opacity:.32; cursor:default; }
+#compose-root #btn-toggle{
+    background:var(--accent);
+    border-color:var(--accent);
+    color:#1a130a;
+  }
+#compose-root #btn-toggle .lbl{ color:#3a2c12; }
+#compose-root #btn-toggle:hover:not(:disabled){ background:#efc07e; border-color:#efc07e; }
+#compose-root .voice-note{
+    font-size:.72rem;
+    color:var(--muted);
+    opacity:.7;
+    text-align:center;
+    letter-spacing:.03em;
+    min-height:1em;
+    font-family:"Noto Sans JP", sans-serif;
+  }
+@media (prefers-reduced-motion: reduce){
+#compose-root.is-playing .stage::before{ animation:none; opacity:1; transform:scale(1); }
+}
+#compose-root #genre-screen{
+    position:fixed; inset:0; z-index:50; overflow-y:auto;
+    background:
+      radial-gradient(120% 80% at 50% 16%, var(--bg-glow) 0%, var(--bg) 58%),
+      var(--bg);
+    display:flex; flex-direction:column; align-items:center;
+    padding:clamp(28px,6vh,56px) 20px clamp(28px,5vh,48px);
+    animation:gfade .28s ease;
+  }
+@keyframes gfade{ from{ opacity:0; } to{ opacity:1; } }
+#compose-root .genre-inner{ width:100%; max-width:560px; margin:auto 0; }
+#compose-root .genre-head{ text-align:center; margin-bottom:clamp(20px,5vh,36px); }
+#compose-root .genre-head .brand{ font-family:"Lora",Georgia,serif; font-size:1.1rem; }
+#compose-root .genre-title{ font-family:"Lora",Georgia,serif; font-size:clamp(1.5rem,6vw,1.9rem); font-weight:600; letter-spacing:.01em; margin-top:14px; }
+#compose-root .genre-sub{ color:var(--muted); font-size:.9rem; margin-top:8px; font-family:"Noto Sans JP",sans-serif; }
+#compose-root .genre-all{
+    width:100%; margin-bottom:14px;
+    flex-direction:row; align-items:center; justify-content:flex-start; gap:14px;
+    padding:16px 18px; border-radius:16px;
+    border:1px solid var(--accent); background:var(--accent-dim); text-align:left;
+  }
+#compose-root .genre-all:hover{ background:rgba(232,179,106,.22); }
+#compose-root .genre-all .ga-emoji{ font-size:1.6rem; line-height:1; }
+#compose-root .genre-all .ga-text{ display:flex; flex-direction:column; align-items:flex-start; gap:2px; flex:1 1 auto; }
+#compose-root .genre-all .ga-name{ font-family:"Lora",Georgia,serif; font-size:1.12rem; color:var(--text); }
+#compose-root .genre-all .ga-count{ font-size:.74rem; color:var(--muted); letter-spacing:.06em; }
+#compose-root .genre-all .ga-chev{ color:var(--muted); font-size:1.1rem; }
+#compose-root .genre-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:11px; }
+#compose-root .genre-card{
+    flex-direction:column; align-items:flex-start; justify-content:flex-start; text-align:left;
+    gap:7px; padding:15px 14px; min-height:108px;
+    border:1px solid var(--line); border-radius:15px; background:rgba(255,255,255,.015);
+  }
+#compose-root .genre-card:hover{ background:rgba(232,179,106,.06); border-color:var(--accent-dim); }
+#compose-root .gc-emoji{ font-size:1.55rem; line-height:1; }
+#compose-root .gc-name{ font-family:"Lora",Georgia,serif; font-size:.98rem; color:var(--text); line-height:1.3; }
+#compose-root .gc-count{ margin-top:auto; font-size:.66rem; color:var(--muted); letter-spacing:.1em; text-transform:uppercase; font-family:-apple-system,system-ui,sans-serif; }
+@media (max-width:360px){
+#compose-root .genre-grid{ grid-template-columns:1fr; }
+}
+
 </style>
 </head>
 <body>
@@ -585,15 +883,27 @@
       <div class="home-cards">
         <button class="home-card" id="home-words" type="button">
           <span class="hc-emoji" aria-hidden="true">📖</span>
-          <span class="hc-meta">Words</span>
-          <span class="hc-name">単語</span>
-          <span class="hc-desc">1語ずつ無限リピート。聞き流しで語彙を体に入れる。</span>
+          <span class="hc-body">
+            <span class="hc-meta">Words</span>
+            <span class="hc-name">単語</span>
+            <span class="hc-desc">1語ずつ無限リピート。聞き流しで語彙を体に入れる。</span>
+          </span>
         </button>
         <button class="home-card" id="home-phrases" type="button">
           <span class="hc-emoji" aria-hidden="true">💬</span>
-          <span class="hc-meta">Phrases</span>
-          <span class="hc-name">フレーズ</span>
-          <span class="hc-desc">会話を全文→1行→仕上げで反復。シャドーイングまで。</span>
+          <span class="hc-body">
+            <span class="hc-meta">Phrases</span>
+            <span class="hc-name">フレーズ</span>
+            <span class="hc-desc">会話を全文→1行→仕上げで反復。シャドーイングまで。</span>
+          </span>
+        </button>
+        <button class="home-card" id="home-compose" type="button">
+          <span class="hc-emoji" aria-hidden="true">📝</span>
+          <span class="hc-body">
+            <span class="hc-meta">Composition</span>
+            <span class="hc-name">英作文</span>
+            <span class="hc-desc">日本語を見て英語にする瞬間英作文。答えと音声で確認。</span>
+          </span>
         </button>
       </div>
     </div>
@@ -774,6 +1084,74 @@
 
   </div>
 
+  <!-- 英作文 -->
+  <div id="compose-root" hidden>
+
+  <!-- ジャンル選択画面 -->
+  <section id="c-genre-screen" aria-label="ジャンル選択">
+    <div class="genre-inner">
+      <div class="home-topbar"><button id="c-genre-home" class="home-back-btn" type="button">← ホーム</button></div>
+      <div class="genre-head">
+        <div class="brand">Repeat<span class="dot">.</span> <span class="mode-tag">COMPOSE</span></div>
+        <div class="genre-title">ジャンルを選ぶ</div>
+        <div class="genre-sub">日本語を見て英語にする練習です</div>
+      </div>
+      <button class="genre-all" id="c-genre-all" type="button" data-cat="all">
+        <span class="ga-emoji" aria-hidden="true">📝</span>
+        <span class="ga-text"><span class="ga-name">すべて</span><span class="ga-count" id="c-ga-count"></span></span>
+        <span class="ga-chev" aria-hidden="true">›</span>
+      </button>
+      <div class="genre-grid" id="c-genre-grid"></div>
+    </div>
+  </section>
+
+  <header>
+    <div class="brand">Repeat<span class="dot">.</span> <span class="mode-tag">COMPOSE</span></div>
+    <div class="header-right">
+      <div class="pos-row">
+        <button id="c-mode-home" class="home-btn" type="button" aria-label="モード選択へ">⌂</button>
+        <button id="c-genres" class="home-btn" type="button" aria-label="ジャンル一覧へ">☰</button>
+        <button id="c-home" class="home-btn" type="button" aria-label="1番目に戻る">↺</button>
+        <div class="position" aria-live="polite"><span id="c-pos-current">1</span><span class="pos-sep"> / </span><span id="c-pos-total">100</span></div>
+      </div>
+      <div class="status" aria-live="polite">
+        <span class="led" aria-hidden="true"></span>
+        <span id="c-status-text">停止中</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="compose-glow" aria-hidden="true"></div>
+    <div class="compose-label">日本語</div>
+    <div class="compose-ja" id="c-ja">これは大きな家だ。</div>
+    <div class="compose-answer">
+      <div class="compose-en" id="c-en">This is a big house.</div>
+      <div class="compose-hint">タップで英語を表示</div>
+    </div>
+    <button class="reveal-btn" id="c-reveal" type="button" aria-pressed="false">
+      <span class="ico" aria-hidden="true">👁</span>
+      <span class="lbl" id="c-reveal-lbl">英語を見る</span>
+    </button>
+  </main>
+
+  <footer>
+    <div class="controls">
+      <button id="c-btn-prev" type="button" aria-label="前の文へ">
+        <span class="ico" aria-hidden="true">⏮</span><span class="lbl">前へ</span>
+      </button>
+      <button id="c-btn-toggle" type="button" aria-label="再生">
+        <span class="ico" id="c-toggle-ico" aria-hidden="true">▶</span><span class="lbl" id="c-toggle-lbl">再生</span>
+      </button>
+      <button id="c-btn-next" type="button" aria-label="次の文へ">
+        <span class="ico" aria-hidden="true">⏭</span><span class="lbl">次へ</span>
+      </button>
+    </div>
+    <div class="voice-note" id="c-voice-note">音声を準備しています…</div>
+  </footer>
+
+  </div>
+
 <script>
 "use strict";
 /* ====== 各アプリ（独立スコープ：定数・クラス・声は元のまま） ====== */
@@ -815,6 +1193,7 @@ const CATEGORIES = [
   { id:"travel",  emoji:"🚗", name:"乗り物・旅行" },
   { id:"place",   emoji:"🏙️", name:"街・建物・場所" },
   { id:"work",    emoji:"💼", name:"仕事・お金・社会" },
+  { id:"business",emoji:"📊", name:"ビジネス・TOEIC" },
   { id:"learn",   emoji:"🏫", name:"学び・ことば・本" },
   { id:"science", emoji:"🔬", name:"科学・技術・宇宙" },
   { id:"art",     emoji:"🎨", name:"芸術・音楽・娯楽" },
@@ -1834,21 +2213,278 @@ class PhrasePlayer {
 
 }
 
+function init_compose_root(){
+  const R = document.getElementById("compose-root");
+"use strict";
+/* =========================================================
+   英作文（Composition）モジュール
+   日本語を見る → 英語を考える → ボタンで答え合わせ → 音声で確認
+   データは compositions.json（起動時に読み込み）
+   ========================================================= */
+const C_GAP_MS     = 600;   // 文と文の「間」の目標
+const C_MIN_GAP_MS = 200;
+const C_RATE       = 1.0;   // 文章なので単語より少しゆっくり
+const C_PITCH      = 1.0;
+const C_VOLUME     = 1.0;
+const C_LANG       = "en-US";
+const C_PREFER_LOCAL_VOICE = false;
+
+const COMPOSITIONS = (window.__COMPOSE_DATA || []);
+const cwait = (ms) => new Promise((r) => setTimeout(r, ms));
+
+const COMPOSE_CATEGORIES = [
+  { id:"daily",   emoji:"🏠", name:"日常・暮らし" },
+  { id:"travel",  emoji:"✈️", name:"旅行・おでかけ" },
+  { id:"food",    emoji:"🍽️", name:"食事・買い物" },
+  { id:"work",    emoji:"💼", name:"仕事・学校" },
+  { id:"feeling", emoji:"😊", name:"気持ち・意見" },
+  { id:"chat",    emoji:"💬", name:"雑談・人間関係" },
+];
+
+/* ===== AudioEngine（英語1声。単語モードと同じ作り） ===== */
+class CAudioEngine {
+  constructor() { this.voice = null; this._currentUtterance = null; this.ready = false; }
+  init() {
+    return new Promise((resolve) => {
+      if (!("speechSynthesis" in window)) { resolve(); return; }
+      const tryLoad = () => {
+        const voices = window.speechSynthesis.getVoices();
+        if (voices && voices.length) { this.voice = this._pickVoice(voices); this.ready = true; return true; }
+        return false;
+      };
+      if (tryLoad()) { resolve(); return; }
+      let settled = false;
+      const onVoices = () => {
+        if (settled) return;
+        if (tryLoad()) { settled = true; window.speechSynthesis.removeEventListener("voiceschanged", onVoices); resolve(); }
+      };
+      window.speechSynthesis.addEventListener("voiceschanged", onVoices);
+      setTimeout(() => { if (settled) return; settled = true; tryLoad(); this.ready = true; resolve(); }, 2000);
+    });
+  }
+  _pickVoice(voices) {
+    const en   = voices.filter((v) => /^en[-_]?/i.test(v.lang));
+    const enUS = en.filter((v) => /en[-_]?us/i.test(v.lang));
+    let pool   = enUS.length ? enUS : en;
+    if (C_PREFER_LOCAL_VOICE) { const local = pool.filter((v) => v.localService); if (local.length) pool = local; }
+    const find = (re) => pool.find((v) => re.test(v.name));
+    return find(/natural/i) || find(/online/i) || find(/google us english/i) || pool[0] || enUS[0] || en[0] || voices[0] || null;
+  }
+  speakOnce(text) {
+    return new Promise((resolve) => {
+      if (!("speechSynthesis" in window)) { resolve({ startLatency: null }); return; }
+      const utt = new SpeechSynthesisUtterance(text);
+      if (this.voice) utt.voice = this.voice;
+      utt.lang = C_LANG; utt.rate = C_RATE; utt.pitch = C_PITCH; utt.volume = C_VOLUME;
+      this._currentUtterance = utt;
+      const callTime = performance.now();
+      let onsetTime = null, done = false, watchdog = null;
+      const finish = () => {
+        if (done) return; done = true;
+        if (watchdog) clearTimeout(watchdog);
+        const startLatency = (onsetTime !== null) ? (onsetTime - callTime) : null;
+        resolve({ startLatency });
+      };
+      utt.onstart = () => { onsetTime = performance.now(); };
+      utt.onend = finish; utt.onerror = finish;
+      watchdog = setTimeout(finish, 3000 + text.length * 150);
+      window.speechSynthesis.speak(utt);
+    });
+  }
+  stop() { if ("speechSynthesis" in window) window.speechSynthesis.cancel(); }
+}
+
+/* ===== ComposePlayer：index管理・英文の無限ループ再生・前へ/次へ ===== */
+class ComposePlayer {
+  constructor(items, engine, handlers) {
+    this.items = items;
+    this.engine = engine;
+    this.handlers = handlers || {};
+    this.pos = 0;
+    this.isPlaying = false;
+    this._token = 0;
+    this._latencyMs = 90;
+  }
+  current() { return this.items[this.pos]; }
+  number()  { return this.pos + 1; }
+  isFirst() { return this.pos === 0; }
+  isLast()  { return this.pos === this.items.length - 1; }
+  _emitChange()  { if (this.handlers.onChange)  this.handlers.onChange(this); }
+  _emitPlaying() { if (this.handlers.onPlaying) this.handlers.onPlaying(this); }
+
+  async play() {
+    if (this.isPlaying) return;
+    this.isPlaying = true;
+    const myToken = ++this._token;
+    this._emitPlaying();
+    const text = this.current().en;     // 音声は英文を読む
+    while (this.isPlaying && myToken === this._token) {
+      const { startLatency } = await this.engine.speakOnce(text);
+      if (!this.isPlaying || myToken !== this._token) break;
+      if (startLatency !== null && startLatency >= 0 && startLatency < 2000) {
+        this._latencyMs = this._latencyMs * 0.7 + startLatency * 0.3;
+      }
+      let gap = C_GAP_MS - this._latencyMs;
+      if (gap < C_MIN_GAP_MS) gap = C_MIN_GAP_MS;
+      await cwait(gap);
+    }
+  }
+  stop() { this.isPlaying = false; this._token++; this.engine.stop(); this._emitPlaying(); }
+  prev() { if (this.isFirst()) return; this.stop(); this.pos -= 1; this._emitChange(); }
+  next() { if (this.isLast()) return; this.stop(); this.pos += 1; this._emitChange(); }
+  goToStart() { this.pos = 0; this.stop(); this._emitChange(); }
+}
+
+/* =========================================================
+   UI 配線
+   ========================================================= */
+(function main() {
+  const el = {
+    body:   R,
+    ja:     R.querySelector("#c-ja"),
+    en:     R.querySelector("#c-en"),
+    reveal: R.querySelector("#c-reveal"),
+    revealLbl: R.querySelector("#c-reveal-lbl"),
+    statusText: R.querySelector("#c-status-text"),
+    posCurrent: R.querySelector("#c-pos-current"),
+    posTotal:   R.querySelector("#c-pos-total"),
+    voiceNote:  R.querySelector("#c-voice-note"),
+    prev:   R.querySelector("#c-btn-prev"),
+    toggle:    R.querySelector("#c-btn-toggle"),
+    toggleIco: R.querySelector("#c-toggle-ico"),
+    toggleLbl: R.querySelector("#c-toggle-lbl"),
+    next:   R.querySelector("#c-btn-next"),
+    home:    R.querySelector("#c-home"),
+    genres:  R.querySelector("#c-genres"),
+    genreScreen: R.querySelector("#c-genre-screen"),
+    genreGrid:   R.querySelector("#c-genre-grid"),
+    genreAll:    R.querySelector("#c-genre-all"),
+    gaCount:     R.querySelector("#c-ga-count"),
+  };
+
+  const engine = new CAudioEngine();
+  let player;
+  let revealed = false;
+  function makePlayer(items){
+    return new ComposePlayer(items, engine, { onChange: renderItem, onPlaying: renderPlaying });
+  }
+  player = makePlayer(COMPOSITIONS);
+
+  function setRevealed(on){
+    revealed = on;
+    el.body.classList.toggle("is-revealed", on);
+    el.revealLbl.textContent = on ? "英語を隠す" : "英語を見る";
+    el.reveal.setAttribute("aria-pressed", on ? "true" : "false");
+  }
+
+  function renderItem(p){
+    const it = p.current();
+    el.ja.textContent = it.ja;
+    el.en.textContent = it.en;
+    el.posCurrent.textContent = p.number();
+    el.prev.disabled = p.isFirst();
+    el.next.disabled = p.isLast();
+    setRevealed(false);            // 文が変わるたび英語は隠す（毎回テスト）
+  }
+  function renderPlaying(p){
+    el.body.classList.toggle("is-playing", p.isPlaying);
+    el.statusText.textContent = p.isPlaying ? "再生中" : "停止中";
+    el.toggleIco.textContent = p.isPlaying ? "⏸" : "▶";
+    el.toggleLbl.textContent = p.isPlaying ? "停止" : "再生";
+    el.toggle.setAttribute("aria-label", p.isPlaying ? "停止" : "再生");
+  }
+
+  // 英語を見る/隠す（答え合わせ）。音声は鳴らさない＝自分で考えてから確認
+  el.reveal.addEventListener("click", () => setRevealed(!revealed));
+
+  // 再生：英文を読み上げ（無限ループ）。同時に英語を表示する
+  el.toggle.addEventListener("click", () => {
+    if (player.isPlaying) { player.stop(); }
+    else { setRevealed(true); player.play(); }
+  });
+  el.prev.addEventListener("click", () => player.prev());
+  el.next.addEventListener("click", () => player.next());
+
+  el.home.addEventListener("click", () => { player.goToStart(); });
+
+  // ── ジャンル選択 ──
+  function buildGenreScreen(){
+    const counts = {};
+    COMPOSITIONS.forEach(it => { counts[it.cat] = (counts[it.cat] || 0) + 1; });
+    el.gaCount.textContent = COMPOSITIONS.length + " 文";
+    el.genreGrid.innerHTML = "";
+    COMPOSE_CATEGORIES.forEach(cat => {
+      const n = counts[cat.id] || 0;
+      if (!n) return;
+      const card = document.createElement("button");
+      card.type = "button";
+      card.className = "genre-card";
+      card.innerHTML =
+        '<span class="gc-emoji" aria-hidden="true"></span>' +
+        '<span class="gc-name"></span>' +
+        '<span class="gc-count"></span>';
+      card.querySelector(".gc-emoji").textContent = cat.emoji;
+      card.querySelector(".gc-name").textContent  = cat.name;
+      card.querySelector(".gc-count").textContent = n + " sentences";
+      card.addEventListener("click", () => loadGenre(cat.id));
+      el.genreGrid.appendChild(card);
+    });
+  }
+  function loadGenre(catId){
+    const items = (catId === "all") ? COMPOSITIONS : COMPOSITIONS.filter(it => it.cat === catId);
+    if (!items.length) return;
+    if (player) player.stop();
+    player = makePlayer(items);
+    el.posTotal.textContent = items.length;
+    renderItem(player);
+    renderPlaying(player);
+    el.genreScreen.hidden = true;
+  }
+  function openGenres(){
+    if (player) player.stop();
+    renderPlaying(player);
+    el.genreScreen.hidden = false;
+    el.genreScreen.scrollTop = 0;
+  }
+  el.genres.addEventListener("click", openGenres);
+  el.genreAll.addEventListener("click", () => loadGenre("all"));
+
+  // 起動
+  buildGenreScreen();
+  renderItem(player);
+  renderPlaying(player);
+  el.genreScreen.hidden = false;
+
+  engine.init().then(() => {
+    if (engine.voice) {
+      const kind = engine.voice.localService ? "端末内蔵・間が均一" : "オンライン・間が少し揺れる";
+      el.voiceNote.textContent = "声: " + engine.voice.name + "（" + kind + "）";
+    } else {
+      el.voiceNote.textContent = "声: ブラウザ既定（英語の声が見つかりませんでした）";
+    }
+  });
+  window.__COMPOSE_STOP = () => { try{ if (typeof player !== "undefined" && player) player.stop(); }catch(e){} };
+})();
+
+}
+
 
 /* ====== ルーター：ホーム ⇄ 単語 / フレーズ（起動時にJSONデータを取得） ====== */
 (function router(){
   const home   = document.getElementById("home-screen");
   const wRoot  = document.getElementById("words-root");
   const pRoot  = document.getElementById("phrases-root");
-  let wReady = false, pReady = false, wBusy = false, pBusy = false;
+  const cRoot  = document.getElementById("compose-root");
+  let wReady = false, pReady = false, cReady = false, wBusy = false, pBusy = false, cBusy = false;
 
   function stopAll(){
     try{ window.__WORD_STOP && window.__WORD_STOP(); }catch(e){}
     try{ window.__PHRASE_STOP && window.__PHRASE_STOP(); }catch(e){}
+    try{ window.__COMPOSE_STOP && window.__COMPOSE_STOP(); }catch(e){}
   }
   function showHome(){
     stopAll();
-    wRoot.hidden = true; pRoot.hidden = true; home.hidden = false;
+    wRoot.hidden = true; pRoot.hidden = true; cRoot.hidden = true; home.hidden = false;
     home.scrollTop = 0;
   }
 
@@ -1873,7 +2509,7 @@ class PhrasePlayer {
 
   async function openWords(){
     stopAll();
-    home.hidden = true; pRoot.hidden = true; wRoot.hidden = false;
+    home.hidden = true; pRoot.hidden = true; cRoot.hidden = true; wRoot.hidden = false;
     if(wReady || wBusy) return;
     wBusy = true; showLoading(wRoot);
     try{
@@ -1885,7 +2521,7 @@ class PhrasePlayer {
   }
   async function openPhrases(){
     stopAll();
-    home.hidden = true; wRoot.hidden = true; pRoot.hidden = false;
+    home.hidden = true; wRoot.hidden = true; cRoot.hidden = true; pRoot.hidden = false;
     if(pReady || pBusy) return;
     pBusy = true; showLoading(pRoot);
     try{
@@ -1895,13 +2531,28 @@ class PhrasePlayer {
     }catch(e){ showError(pRoot, "scenes.json"); }
     finally{ pBusy = false; }
   }
+  async function openCompose(){
+    stopAll();
+    home.hidden = true; wRoot.hidden = true; pRoot.hidden = true; cRoot.hidden = false;
+    if(cReady || cBusy) return;
+    cBusy = true; showLoading(cRoot);
+    try{
+      window.__COMPOSE_DATA = await loadJSON("compositions.json");
+      hideMsg(cRoot);
+      init_compose_root(); cReady = true;
+    }catch(e){ showError(cRoot, "compositions.json"); }
+    finally{ cBusy = false; }
+  }
 
   document.getElementById("home-words").addEventListener("click", openWords);
   document.getElementById("home-phrases").addEventListener("click", openPhrases);
+  document.getElementById("home-compose").addEventListener("click", openCompose);
   document.getElementById("w-to-home").addEventListener("click", showHome);
   document.getElementById("p-to-home").addEventListener("click", showHome);
+  document.getElementById("c-mode-home").addEventListener("click", showHome);
   document.getElementById("w-genre-home").addEventListener("click", showHome);
   document.getElementById("p-genre-home").addEventListener("click", showHome);
+  document.getElementById("c-genre-home").addEventListener("click", showHome);
 })();
 </script>
 </body>

@@ -17998,5 +17998,635 @@
   "ja": "トロンボーン",
   "emoji": "🎺",
   "cat": "art"
+ },
+ {
+  "word": "agenda",
+  "ja": "議題",
+  "emoji": "📋",
+  "cat": "business"
+ },
+ {
+  "word": "schedule",
+  "ja": "予定・スケジュール",
+  "emoji": "📅",
+  "cat": "business"
+ },
+ {
+  "word": "reschedule",
+  "ja": "予定を変更する",
+  "emoji": "🔁",
+  "cat": "business"
+ },
+ {
+  "word": "postpone",
+  "ja": "延期する",
+  "emoji": "⏳",
+  "cat": "business"
+ },
+ {
+  "word": "attend",
+  "ja": "出席する",
+  "emoji": "🙋",
+  "cat": "business"
+ },
+ {
+  "word": "conference",
+  "ja": "会議・会談",
+  "emoji": "🏛️",
+  "cat": "business"
+ },
+ {
+  "word": "presentation",
+  "ja": "プレゼン・発表",
+  "emoji": "📊",
+  "cat": "business"
+ },
+ {
+  "word": "minutes",
+  "ja": "議事録",
+  "emoji": "📝",
+  "cat": "business"
+ },
+ {
+  "word": "negotiate",
+  "ja": "交渉する",
+  "emoji": "🤝",
+  "cat": "business"
+ },
+ {
+  "word": "proposal",
+  "ja": "提案",
+  "emoji": "💡",
+  "cat": "business"
+ },
+ {
+  "word": "discuss",
+  "ja": "話し合う",
+  "emoji": "💬",
+  "cat": "business"
+ },
+ {
+  "word": "confirm",
+  "ja": "確認する",
+  "emoji": "✅",
+  "cat": "business"
+ },
+ {
+  "word": "arrange",
+  "ja": "手配する",
+  "emoji": "🗂️",
+  "cat": "business"
+ },
+ {
+  "word": "participant",
+  "ja": "参加者",
+  "emoji": "👥",
+  "cat": "business"
+ },
+ {
+  "word": "attach",
+  "ja": "添付する",
+  "emoji": "📎",
+  "cat": "business"
+ },
+ {
+  "word": "attachment",
+  "ja": "添付ファイル",
+  "emoji": "🗎",
+  "cat": "business"
+ },
+ {
+  "word": "reply",
+  "ja": "返信する",
+  "emoji": "↩️",
+  "cat": "business"
+ },
+ {
+  "word": "forward",
+  "ja": "転送する",
+  "emoji": "➡️",
+  "cat": "business"
+ },
+ {
+  "word": "recipient",
+  "ja": "受取人",
+  "emoji": "📨",
+  "cat": "business"
+ },
+ {
+  "word": "deadline",
+  "ja": "締め切り",
+  "emoji": "⏰",
+  "cat": "business"
+ },
+ {
+  "word": "document",
+  "ja": "書類",
+  "emoji": "📄",
+  "cat": "business"
+ },
+ {
+  "word": "draft",
+  "ja": "下書き・草案",
+  "emoji": "🖊️",
+  "cat": "business"
+ },
+ {
+  "word": "submit",
+  "ja": "提出する",
+  "emoji": "📤",
+  "cat": "business"
+ },
+ {
+  "word": "signature",
+  "ja": "署名",
+  "emoji": "✍️",
+  "cat": "business"
+ },
+ {
+  "word": "approve",
+  "ja": "承認する",
+  "emoji": "👍",
+  "cat": "business"
+ },
+ {
+  "word": "request",
+  "ja": "依頼・要求",
+  "emoji": "🙏",
+  "cat": "business"
+ },
+ {
+  "word": "inquiry",
+  "ja": "問い合わせ",
+  "emoji": "❓",
+  "cat": "business"
+ },
+ {
+  "word": "notify",
+  "ja": "通知する",
+  "emoji": "🔔",
+  "cat": "business"
+ },
+ {
+  "word": "remind",
+  "ja": "思い出させる",
+  "emoji": "📣",
+  "cat": "business"
+ },
+ {
+  "word": "contract",
+  "ja": "契約",
+  "emoji": "📜",
+  "cat": "business"
+ },
+ {
+  "word": "agreement",
+  "ja": "合意・契約",
+  "emoji": "🤝",
+  "cat": "business"
+ },
+ {
+  "word": "terms",
+  "ja": "条件",
+  "emoji": "📑",
+  "cat": "business"
+ },
+ {
+  "word": "clause",
+  "ja": "条項",
+  "emoji": "📑",
+  "cat": "business"
+ },
+ {
+  "word": "renew",
+  "ja": "更新する",
+  "emoji": "🔄",
+  "cat": "business"
+ },
+ {
+  "word": "expire",
+  "ja": "期限が切れる",
+  "emoji": "⌛",
+  "cat": "business"
+ },
+ {
+  "word": "client",
+  "ja": "顧客・クライアント",
+  "emoji": "🧑‍💼",
+  "cat": "business"
+ },
+ {
+  "word": "vendor",
+  "ja": "業者・販売元",
+  "emoji": "🏪",
+  "cat": "business"
+ },
+ {
+  "word": "supplier",
+  "ja": "供給業者",
+  "emoji": "🚚",
+  "cat": "business"
+ },
+ {
+  "word": "quote",
+  "ja": "見積もり",
+  "emoji": "🧾",
+  "cat": "business"
+ },
+ {
+  "word": "estimate",
+  "ja": "見積もる",
+  "emoji": "🧮",
+  "cat": "business"
+ },
+ {
+  "word": "bid",
+  "ja": "入札",
+  "emoji": "🙋",
+  "cat": "business"
+ },
+ {
+  "word": "deal",
+  "ja": "取引",
+  "emoji": "🤝",
+  "cat": "business"
+ },
+ {
+  "word": "invoice",
+  "ja": "請求書",
+  "emoji": "🧾",
+  "cat": "business"
+ },
+ {
+  "word": "payment",
+  "ja": "支払い",
+  "emoji": "💳",
+  "cat": "business"
+ },
+ {
+  "word": "refund",
+  "ja": "払い戻し",
+  "emoji": "💸",
+  "cat": "business"
+ },
+ {
+  "word": "budget",
+  "ja": "予算",
+  "emoji": "💰",
+  "cat": "business"
+ },
+ {
+  "word": "expense",
+  "ja": "経費",
+  "emoji": "💴",
+  "cat": "business"
+ },
+ {
+  "word": "revenue",
+  "ja": "収益",
+  "emoji": "📈",
+  "cat": "business"
+ },
+ {
+  "word": "profit",
+  "ja": "利益",
+  "emoji": "💹",
+  "cat": "business"
+ },
+ {
+  "word": "cost",
+  "ja": "費用",
+  "emoji": "💲",
+  "cat": "business"
+ },
+ {
+  "word": "fee",
+  "ja": "料金",
+  "emoji": "🪙",
+  "cat": "business"
+ },
+ {
+  "word": "discount",
+  "ja": "割引",
+  "emoji": "🏷️",
+  "cat": "business"
+ },
+ {
+  "word": "deposit",
+  "ja": "預金・手付金",
+  "emoji": "🏧",
+  "cat": "business"
+ },
+ {
+  "word": "account",
+  "ja": "口座・取引先",
+  "emoji": "🏦",
+  "cat": "business"
+ },
+ {
+  "word": "receipt",
+  "ja": "領収書",
+  "emoji": "🧾",
+  "cat": "business"
+ },
+ {
+  "word": "reimburse",
+  "ja": "精算する・払い戻す",
+  "emoji": "💵",
+  "cat": "business"
+ },
+ {
+  "word": "fund",
+  "ja": "資金",
+  "emoji": "💰",
+  "cat": "business"
+ },
+ {
+  "word": "employee",
+  "ja": "従業員",
+  "emoji": "👔",
+  "cat": "business"
+ },
+ {
+  "word": "employer",
+  "ja": "雇用主",
+  "emoji": "🧑‍💼",
+  "cat": "business"
+ },
+ {
+  "word": "applicant",
+  "ja": "応募者",
+  "emoji": "📝",
+  "cat": "business"
+ },
+ {
+  "word": "candidate",
+  "ja": "候補者",
+  "emoji": "🧑",
+  "cat": "business"
+ },
+ {
+  "word": "resume",
+  "ja": "履歴書",
+  "emoji": "📄",
+  "cat": "business"
+ },
+ {
+  "word": "interview",
+  "ja": "面接",
+  "emoji": "🗣️",
+  "cat": "business"
+ },
+ {
+  "word": "hire",
+  "ja": "雇う",
+  "emoji": "🤝",
+  "cat": "business"
+ },
+ {
+  "word": "recruit",
+  "ja": "採用する",
+  "emoji": "📢",
+  "cat": "business"
+ },
+ {
+  "word": "promote",
+  "ja": "昇進させる",
+  "emoji": "⬆️",
+  "cat": "business"
+ },
+ {
+  "word": "resign",
+  "ja": "辞職する",
+  "emoji": "🚪",
+  "cat": "business"
+ },
+ {
+  "word": "salary",
+  "ja": "給料",
+  "emoji": "💴",
+  "cat": "business"
+ },
+ {
+  "word": "wage",
+  "ja": "賃金",
+  "emoji": "💵",
+  "cat": "business"
+ },
+ {
+  "word": "benefit",
+  "ja": "福利厚生・利益",
+  "emoji": "🎁",
+  "cat": "business"
+ },
+ {
+  "word": "colleague",
+  "ja": "同僚",
+  "emoji": "👥",
+  "cat": "business"
+ },
+ {
+  "word": "supervisor",
+  "ja": "上司・監督者",
+  "emoji": "🧑‍💼",
+  "cat": "business"
+ },
+ {
+  "word": "department",
+  "ja": "部署",
+  "emoji": "🏢",
+  "cat": "business"
+ },
+ {
+  "word": "position",
+  "ja": "役職・職",
+  "emoji": "💺",
+  "cat": "business"
+ },
+ {
+  "word": "staff",
+  "ja": "職員・スタッフ",
+  "emoji": "👥",
+  "cat": "business"
+ },
+ {
+  "word": "shipment",
+  "ja": "出荷・発送",
+  "emoji": "📦",
+  "cat": "business"
+ },
+ {
+  "word": "deliver",
+  "ja": "配達する",
+  "emoji": "🚚",
+  "cat": "business"
+ },
+ {
+  "word": "delivery",
+  "ja": "配達",
+  "emoji": "📦",
+  "cat": "business"
+ },
+ {
+  "word": "warehouse",
+  "ja": "倉庫",
+  "emoji": "🏭",
+  "cat": "business"
+ },
+ {
+  "word": "inventory",
+  "ja": "在庫",
+  "emoji": "📦",
+  "cat": "business"
+ },
+ {
+  "word": "supply",
+  "ja": "供給",
+  "emoji": "🔄",
+  "cat": "business"
+ },
+ {
+  "word": "order",
+  "ja": "注文",
+  "emoji": "🛒",
+  "cat": "business"
+ },
+ {
+  "word": "product",
+  "ja": "製品",
+  "emoji": "📦",
+  "cat": "business"
+ },
+ {
+  "word": "manufacture",
+  "ja": "製造する",
+  "emoji": "🏭",
+  "cat": "business"
+ },
+ {
+  "word": "warranty",
+  "ja": "保証",
+  "emoji": "🛡️",
+  "cat": "business"
+ },
+ {
+  "word": "reservation",
+  "ja": "予約",
+  "emoji": "🛎️",
+  "cat": "business"
+ },
+ {
+  "word": "itinerary",
+  "ja": "旅程",
+  "emoji": "🗺️",
+  "cat": "business"
+ },
+ {
+  "word": "accommodation",
+  "ja": "宿泊施設",
+  "emoji": "🏨",
+  "cat": "business"
+ },
+ {
+  "word": "departure",
+  "ja": "出発",
+  "emoji": "🛫",
+  "cat": "business"
+ },
+ {
+  "word": "launch",
+  "ja": "立ち上げる・発売する",
+  "emoji": "🚀",
+  "cat": "business"
+ },
+ {
+  "word": "manage",
+  "ja": "管理する",
+  "emoji": "🧑‍💼",
+  "cat": "business"
+ },
+ {
+  "word": "project",
+  "ja": "計画・案件",
+  "emoji": "📊",
+  "cat": "business"
+ },
+ {
+  "word": "implement",
+  "ja": "実施する",
+  "emoji": "⚙️",
+  "cat": "business"
+ },
+ {
+  "word": "achieve",
+  "ja": "達成する",
+  "emoji": "🎯",
+  "cat": "business"
+ },
+ {
+  "word": "increase",
+  "ja": "増やす",
+  "emoji": "📈",
+  "cat": "business"
+ },
+ {
+  "word": "reduce",
+  "ja": "減らす",
+  "emoji": "📉",
+  "cat": "business"
+ },
+ {
+  "word": "improve",
+  "ja": "改善する",
+  "emoji": "🔧",
+  "cat": "business"
+ },
+ {
+  "word": "provide",
+  "ja": "提供する",
+  "emoji": "🤲",
+  "cat": "business"
+ },
+ {
+  "word": "require",
+  "ja": "必要とする",
+  "emoji": "❗",
+  "cat": "business"
+ },
+ {
+  "word": "ensure",
+  "ja": "確実にする",
+  "emoji": "✔️",
+  "cat": "business"
+ },
+ {
+  "word": "expand",
+  "ja": "拡大する",
+  "emoji": "🔼",
+  "cat": "business"
+ },
+ {
+  "word": "register",
+  "ja": "登録する",
+  "emoji": "🗒️",
+  "cat": "business"
+ },
+ {
+  "word": "available",
+  "ja": "利用可能な・空いている",
+  "emoji": "🆓",
+  "cat": "business"
+ },
+ {
+  "word": "responsible",
+  "ja": "責任がある",
+  "emoji": "🫡",
+  "cat": "business"
+ },
+ {
+  "word": "efficient",
+  "ja": "効率的な",
+  "emoji": "⚡",
+  "cat": "business"
  }
 ]
