@@ -10358,5 +10358,42 @@
     "ja": "コーヒーおごってくれれば。"
    }
   ]
+ },
+ {
+  "title": "空港でチェックインする",
+  "emoji": "🛫",
+  "cat": "travel",
+  "lines": [
+   {
+    "role": "Staff",
+    "en": "May I see your passport, please?",
+    "ja": "パスポートを見せていただけますか？"
+   },
+   {
+    "role": "You",
+    "en": "Sure, here it is.",
+    "ja": "はい、どうぞ。"
+   },
+   {
+    "role": "Staff",
+    "en": "Are you checking any bags?",
+    "ja": "預ける荷物はありますか？"
+   },
+   {
+    "role": "You",
+    "en": "Just one suitcase.",
+    "ja": "スーツケースが1つだけです。"
+   },
+   {
+    "role": "Staff",
+    "en": "Here's your boarding pass. The gate is 12.",
+    "ja": "搭乗券です。ゲートは12番です。"
+   },
+   {
+    "role": "You",
+    "en": "Thank you. Which way is the gate?",
+    "ja": "ありがとう。ゲートはどちらですか？"
+   }
+  ]
  }
 ]
