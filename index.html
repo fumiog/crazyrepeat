@@ -1,0 +1,1776 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Repeat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --bg:        #12171b;
+    --bg-glow:   #1a2228;
+    --text:      #edeae3;
+    --muted:     #7e8a90;
+    --line:      rgba(255,255,255,.08);
+    --accent:    #e8b36a;
+    --accent-dim:rgba(232,179,106,.16);
+    --staff:     #6fa8c7;
+    --you:       #e8b36a;
+    --press:     rgba(255,255,255,.06);
+    --radius:    14px;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html,body{ height:100%; }
+  body{
+    background:
+      radial-gradient(120% 80% at 50% 18%, var(--bg-glow) 0%, var(--bg) 55%) fixed,
+      var(--bg);
+    color:var(--text);
+    font-family:-apple-system,"Segoe UI",Roboto,"Noto Sans JP",system-ui,sans-serif;
+    min-height:100dvh;
+    -webkit-font-smoothing:antialiased;
+  }
+  [hidden]{ display:none !important; }
+
+  /* ── ホーム（モード選択）画面 ── */
+  #home-screen{
+    position:fixed; inset:0; z-index:60; overflow-y:auto;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    padding:clamp(28px,6vh,56px) 20px;
+    animation:homeFade .3s ease;
+  }
+  @keyframes homeFade{ from{ opacity:0; } to{ opacity:1; } }
+  .home-inner{ width:100%; max-width:560px; }
+  .home-head{ text-align:center; margin-bottom:clamp(26px,6vh,44px); position:relative; }
+  .home-glow{
+    position:absolute; left:50%; top:48%; width:240px; height:240px;
+    transform:translate(-50%,-50%); pointer-events:none; z-index:-1;
+    background:radial-gradient(circle, var(--accent-dim) 0%, transparent 68%);
+    opacity:.7; animation:homeBreathe 3.2s ease-in-out infinite;
+  }
+  @keyframes homeBreathe{ 0%,100%{ transform:translate(-50%,-50%) scale(.9); opacity:.5; } 50%{ transform:translate(-50%,-50%) scale(1.06); opacity:.85; } }
+  .home-brand{ font-family:"Lora",Georgia,serif; font-size:clamp(2.4rem,9vw,3.2rem); font-weight:600; letter-spacing:.005em; line-height:1; }
+  .home-brand .dot{ color:var(--accent); }
+  .home-sub{ color:var(--muted); font-size:.92rem; margin-top:12px; letter-spacing:.06em; font-family:"Noto Sans JP",sans-serif; }
+  .home-cards{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .home-card{
+    -webkit-appearance:none; appearance:none; cursor:pointer; text-align:left;
+    display:flex; flex-direction:column; align-items:flex-start; gap:10px;
+    padding:24px 20px 20px; min-height:188px;
+    border:1px solid var(--line); border-radius:18px;
+    background:rgba(255,255,255,.018);
+    color:var(--text); font:inherit;
+    transition:background .18s ease, border-color .18s ease, transform .06s ease;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .home-card:hover{ background:rgba(232,179,106,.07); border-color:var(--accent-dim); }
+  .home-card:active{ transform:translateY(1px); }
+  .home-card:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+  .home-card .hc-emoji{ font-size:2.5rem; line-height:1; filter:drop-shadow(0 6px 16px rgba(0,0,0,.35)); }
+  .home-card .hc-name{ font-family:"Lora",Georgia,serif; font-size:1.45rem; line-height:1.15; margin-top:auto; }
+  .home-card .hc-desc{ font-size:.8rem; color:var(--muted); line-height:1.5; font-family:"Noto Sans JP",sans-serif; }
+  .home-card .hc-meta{ font-size:.66rem; color:var(--muted); letter-spacing:.12em; text-transform:uppercase; }
+  @media (max-width:380px){ .home-cards{ grid-template-columns:1fr; } .home-card{ min-height:0; } }
+  @media (prefers-reduced-motion: reduce){ .home-glow{ animation:none; } }
+
+  /* ── データ読み込み中／エラー表示（各アプリ内の全面オーバーレイ） ── */
+  .data-msg{
+    position:fixed; inset:0; z-index:80;
+    display:flex; align-items:center; justify-content:center; text-align:center;
+    padding:40px 28px; line-height:1.8;
+    background:
+      radial-gradient(120% 80% at 50% 18%, var(--bg-glow) 0%, var(--bg) 55%),
+      var(--bg);
+    color:var(--muted); font-size:.95rem; letter-spacing:.03em;
+    font-family:"Noto Sans JP",sans-serif;
+  }
+
+/* ===================== 単語アプリ（scoped: #words-root） ===================== */
+#words-root{
+    background:
+      radial-gradient(120% 80% at 50% 18%, var(--bg-glow) 0%, var(--bg) 55%) fixed,
+      var(--bg);
+    color:var(--text);
+    font-family:-apple-system, "Segoe UI", Roboto, "Noto Sans JP", system-ui, sans-serif;
+    min-height:100dvh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-between;
+    padding:clamp(20px, 4vh, 48px) 20px;
+    -webkit-font-smoothing:antialiased;
+  }
+#words-root header{
+    width:100%;
+    max-width:560px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    letter-spacing:.02em;
+  }
+#words-root .brand{
+    font-family:"Lora", Georgia, serif;
+    font-size:1.05rem;
+    font-weight:500;
+    color:var(--text);
+  }
+#words-root .brand .dot{ color:var(--accent); }
+#words-root .status{
+    display:flex; align-items:center; gap:.5em;
+    font-size:.8rem; color:var(--muted);
+    letter-spacing:.04em;
+  }
+#words-root .header-right{
+    display:flex; flex-direction:column; align-items:flex-end; gap:3px;
+  }
+#words-root .position{
+    font-size:.92rem; color:var(--text); letter-spacing:.04em;
+    font-variant-numeric:tabular-nums;
+  }
+#words-root .position .pos-sep, #words-root #pos-total{ color:var(--muted); }
+#words-root .pos-row{ display:flex; align-items:center; gap:8px; }
+#words-root .home-btn{
+    -webkit-appearance:none; appearance:none;
+    display:inline-flex; align-items:center; justify-content:center;
+    width:26px; height:26px; padding:0;
+    border:1px solid var(--line); border-radius:999px;
+    background:transparent; color:var(--muted);
+    font-size:.95rem; line-height:1; cursor:pointer;
+    transition:background .15s ease, color .15s ease, border-color .15s ease;
+    -webkit-tap-highlight-color:transparent;
+  }
+#words-root .home-btn:hover{ background:var(--press); color:var(--text); }
+#words-root .home-btn:active{ transform:translateY(1px); }
+#words-root .home-btn:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+#words-root .status .led{
+    width:7px; height:7px; border-radius:50%;
+    background:var(--muted); opacity:.5;
+    transition:background .25s ease, opacity .25s ease;
+  }
+#words-root.is-playing .status .led{ background:var(--accent); opacity:1; }
+#words-root.is-playing .status{ color:var(--accent); }
+#words-root .modebar{
+    width:100%; max-width:560px;
+    display:flex; justify-content:center; align-items:center; gap:10px;
+    margin-top:14px;
+  }
+#words-root .shuffle-btn{
+    -webkit-appearance:none; appearance:none;
+    display:inline-flex; align-items:center; justify-content:center;
+    width:40px; height:40px; padding:0;
+    border:1px solid var(--line); border-radius:999px;
+    background:rgba(255,255,255,.03); color:var(--muted);
+    cursor:pointer; font-size:1.05rem; line-height:1;
+    transition:background .15s ease, color .15s ease, border-color .15s ease;
+    -webkit-tap-highlight-color:transparent;
+  }
+#words-root .shuffle-btn:not(.is-active):hover{ background:var(--press); color:var(--text); }
+#words-root .shuffle-btn:focus-visible{ outline:2px solid rgba(255,255,255,.35); outline-offset:2px; }
+#words-root .shuffle-btn.is-active{
+    background:var(--accent);
+    border-color:var(--accent);
+    color:#1a130a;
+  }
+#words-root .seg{
+    display:inline-flex; gap:4px; padding:4px;
+    border:1px solid var(--line); border-radius:999px;
+    background:rgba(255,255,255,.03);
+  }
+#words-root .seg-btn{
+    border:none; background:transparent; color:var(--muted);
+    font:inherit; font-size:.82rem; letter-spacing:.03em;
+    padding:7px 16px; border-radius:999px; cursor:pointer;
+    font-family:"Noto Sans JP", sans-serif;
+    transition:background .15s ease, color .15s ease;
+    -webkit-tap-highlight-color:transparent;
+  }
+#words-root .seg-btn.is-active{ background:var(--accent); color:#1a130a; }
+#words-root .seg-btn:not(.is-active):hover{ color:var(--text); background:var(--press); }
+#words-root .seg-btn:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+#words-root.mode-b .word{ display:none; }
+#words-root.mode-c .ja{ display:none; }
+#words-root main{
+    flex:1;
+    width:100%;
+    max-width:560px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:clamp(12px, 3vh, 28px);
+    text-align:center;
+  }
+#words-root .stage{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+#words-root .stage::before{
+    content:"";
+    position:absolute;
+    width:220px; height:220px;
+    border-radius:50%;
+    background:radial-gradient(circle, var(--accent-dim) 0%, transparent 68%);
+    opacity:.35;
+    transform:scale(.9);
+    transition:opacity .4s ease;
+    pointer-events:none;
+  }
+#words-root.is-playing .stage::before{
+    opacity:1;
+    animation:breathe 2.4s ease-in-out infinite;
+  }
+@keyframes breathe{
+    0%,100%{ transform:scale(.85); opacity:.55; }
+    50%    { transform:scale(1.08); opacity:1;  }
+  }
+#words-root .emoji{
+    font-size:clamp(72px, 18vw, 104px);
+    line-height:1;
+    position:relative;
+    filter:drop-shadow(0 6px 20px rgba(0,0,0,.35));
+  }
+#words-root .word{
+    font-family:"Lora", Georgia, serif;
+    font-weight:400;
+    font-size:clamp(3rem, 13vw, 5.5rem);
+    line-height:1;
+    letter-spacing:-.01em;
+    color:var(--text);
+  }
+#words-root .ja{
+    font-family:"Noto Sans JP", sans-serif;
+    font-weight:400;
+    font-size:clamp(1.05rem, 4.5vw, 1.35rem);
+    color:var(--muted);
+    letter-spacing:.04em;
+  }
+#words-root footer{
+    width:100%;
+    max-width:560px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:14px;
+  }
+#words-root .controls{
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:10px;
+  }
+#words-root button{
+    font:inherit;
+    color:var(--text);
+    background:transparent;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:14px 8px;
+    cursor:pointer;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:5px;
+    letter-spacing:.02em;
+    transition:background .15s ease, border-color .15s ease, transform .06s ease, opacity .2s ease, color .15s ease;
+    -webkit-tap-highlight-color:transparent;
+  }
+#words-root button .ico{ font-size:1.15rem; line-height:1; }
+#words-root button .lbl{ font-size:.78rem; color:var(--muted); }
+#words-root button:hover:not(:disabled){ background:var(--press); border-color:rgba(255,255,255,.16); }
+#words-root button:active:not(:disabled){ transform:translateY(1px); }
+#words-root button:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+#words-root button:disabled{ opacity:.32; cursor:default; }
+#words-root #btn-toggle{
+    background:var(--accent);
+    border-color:var(--accent);
+    color:#1a130a;
+  }
+#words-root #btn-toggle .lbl{ color:#3a2c12; }
+#words-root #btn-toggle:hover:not(:disabled){ background:#efc07e; border-color:#efc07e; }
+#words-root .voice-note{
+    font-size:.72rem;
+    color:var(--muted);
+    opacity:.7;
+    text-align:center;
+    letter-spacing:.03em;
+    min-height:1em;
+    font-family:"Noto Sans JP", sans-serif;
+  }
+@media (prefers-reduced-motion: reduce){
+#words-root.is-playing .stage::before{ animation:none; opacity:1; transform:scale(1); }
+}
+#words-root #genre-screen{
+    position:fixed; inset:0; z-index:50; overflow-y:auto;
+    background:
+      radial-gradient(120% 80% at 50% 16%, var(--bg-glow) 0%, var(--bg) 58%),
+      var(--bg);
+    display:flex; flex-direction:column; align-items:center;
+    padding:clamp(28px,6vh,56px) 20px clamp(28px,5vh,48px);
+    animation:gfade .28s ease;
+  }
+@keyframes gfade{ from{ opacity:0; } to{ opacity:1; } }
+#words-root .genre-inner{ width:100%; max-width:560px; margin:auto 0; }
+#words-root .genre-head{ text-align:center; margin-bottom:clamp(20px,5vh,36px); }
+#words-root .genre-head .brand{ font-family:"Lora",Georgia,serif; font-size:1.1rem; }
+#words-root .genre-title{ font-family:"Lora",Georgia,serif; font-size:clamp(1.5rem,6vw,1.9rem); font-weight:600; letter-spacing:.01em; margin-top:14px; }
+#words-root .genre-sub{ color:var(--muted); font-size:.9rem; margin-top:8px; font-family:"Noto Sans JP",sans-serif; }
+#words-root .genre-all{
+    width:100%; margin-bottom:14px;
+    flex-direction:row; align-items:center; justify-content:flex-start; gap:14px;
+    padding:16px 18px; border-radius:16px;
+    border:1px solid var(--accent); background:var(--accent-dim); text-align:left;
+  }
+#words-root .genre-all:hover{ background:rgba(232,179,106,.22); }
+#words-root .genre-all .ga-emoji{ font-size:1.6rem; line-height:1; }
+#words-root .genre-all .ga-text{ display:flex; flex-direction:column; align-items:flex-start; gap:2px; flex:1 1 auto; }
+#words-root .genre-all .ga-name{ font-family:"Lora",Georgia,serif; font-size:1.12rem; color:var(--text); }
+#words-root .genre-all .ga-count{ font-size:.74rem; color:var(--muted); letter-spacing:.06em; }
+#words-root .genre-all .ga-chev{ color:var(--muted); font-size:1.1rem; }
+#words-root .genre-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:11px; }
+#words-root .genre-card{
+    flex-direction:column; align-items:flex-start; justify-content:flex-start; text-align:left;
+    gap:7px; padding:15px 14px; min-height:108px;
+    border:1px solid var(--line); border-radius:15px; background:rgba(255,255,255,.015);
+  }
+#words-root .genre-card:hover{ background:rgba(232,179,106,.06); border-color:var(--accent-dim); }
+#words-root .gc-emoji{ font-size:1.55rem; line-height:1; }
+#words-root .gc-name{ font-family:"Lora",Georgia,serif; font-size:.98rem; color:var(--text); line-height:1.3; }
+#words-root .gc-count{ margin-top:auto; font-size:.66rem; color:var(--muted); letter-spacing:.1em; text-transform:uppercase; font-family:-apple-system,system-ui,sans-serif; }
+@media (max-width:360px){
+#words-root .genre-grid{ grid-template-columns:1fr; }
+}
+
+/* ===================== フレーズアプリ（scoped: #phrases-root） ===================== */
+#phrases-root{
+    background:
+      radial-gradient(120% 80% at 50% 18%, var(--bg-glow) 0%, var(--bg) 55%) fixed,
+      var(--bg);
+    color:var(--text);
+    font-family:-apple-system,"Segoe UI",Roboto,"Noto Sans JP",system-ui,sans-serif;
+    min-height:100dvh; display:flex; flex-direction:column;
+    align-items:center; justify-content:space-between;
+    padding:clamp(20px,4vh,40px) 20px; -webkit-font-smoothing:antialiased;
+  }
+#phrases-root header{ width:100%; max-width:600px; display:flex; align-items:flex-start; justify-content:space-between; }
+#phrases-root .brand{ font-family:"Lora",Georgia,serif; font-size:1.05rem; font-weight:500; display:flex; align-items:baseline; gap:8px; }
+#phrases-root .brand .tag{
+    font-family:-apple-system,system-ui,sans-serif; font-size:.62rem; letter-spacing:.12em;
+    color:var(--accent); border:1px solid var(--accent-dim); border-radius:999px; padding:2px 7px; text-transform:uppercase;
+  }
+#phrases-root .header-right{ display:flex; flex-direction:column; align-items:flex-end; gap:4px; text-align:right; }
+#phrases-root .step-label{ font-size:.86rem; color:var(--text); letter-spacing:.03em; }
+#phrases-root .step-label .n{ color:var(--muted); }
+#phrases-root .status{ display:flex; align-items:center; gap:.5em; font-size:.78rem; color:var(--muted); letter-spacing:.04em; }
+#phrases-root .status .led{ width:7px; height:7px; border-radius:50%; background:var(--muted); opacity:.5; transition:.25s; }
+#phrases-root.is-playing .status .led{ background:var(--accent); opacity:1; }
+#phrases-root.is-playing .status{ color:var(--accent); }
+#phrases-root .convo-bar{
+    width:100%; max-width:600px; margin-top:10px;
+    display:flex; align-items:center; justify-content:center; gap:12px;
+  }
+#phrases-root .convo-title{ text-align:center; color:var(--text); font-size:.9rem; letter-spacing:.04em; }
+#phrases-root .convo-title .convo-pos{ color:var(--muted); font-size:.78rem; margin-left:6px; }
+#phrases-root .convo-arrow{
+    -webkit-appearance:none; appearance:none;
+    width:34px; height:34px; flex:0 0 auto; padding:0;
+    display:inline-flex; align-items:center; justify-content:center;
+    border:1px solid var(--line); border-radius:999px; background:transparent;
+    color:var(--muted); font-size:.8rem; cursor:pointer;
+    transition:background .15s, color .15s, border-color .15s; -webkit-tap-highlight-color:transparent;
+  }
+#phrases-root .convo-arrow:hover:not(:disabled){ background:var(--press); color:var(--text); }
+#phrases-root .convo-arrow:active:not(:disabled){ transform:translateY(1px); }
+#phrases-root .convo-arrow:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+#phrases-root .convo-arrow:disabled{ opacity:.28; cursor:default; }
+#phrases-root main{ flex:1; width:100%; max-width:600px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:18px; padding:18px 0; }
+#phrases-root .full-view{ width:100%; display:flex; flex-direction:column; gap:14px; }
+#phrases-root .full-hint{ text-align:center; color:var(--muted); font-size:.85rem; }
+#phrases-root .full-hint b{ color:var(--accent); font-weight:600; }
+#phrases-root .disp-toggle{ display:flex; gap:6px; justify-content:center; flex-wrap:wrap; }
+#phrases-root .disp-btn{
+    -webkit-appearance:none; appearance:none; font:inherit;
+    padding:6px 14px; border-radius:999px; border:1px solid var(--line);
+    background:transparent; color:var(--muted); font-size:.72rem; letter-spacing:.08em;
+    text-transform:uppercase; cursor:pointer; white-space:nowrap;
+    transition:background .15s,color .15s,border-color .15s; -webkit-tap-highlight-color:transparent;
+  }
+#phrases-root .disp-btn:hover{ background:var(--press); color:var(--text); }
+#phrases-root .disp-btn:active{ transform:translateY(1px); }
+#phrases-root .disp-btn:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+#phrases-root .disp-btn.active{ background:var(--accent-dim); border-color:var(--accent); color:var(--accent); }
+#phrases-root .bubble.en-hidden .en{ display:none; }
+#phrases-root .dialogue{ display:flex; flex-direction:column; gap:12px; }
+#phrases-root .bubble{ max-width:86%; padding:11px 14px; border-radius:14px; border:1px solid var(--line); transition:opacity .25s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease; }
+#phrases-root .bubble.staff{ align-self:flex-start; background:rgba(111,168,199,.08); border-color:rgba(111,168,199,.22); }
+#phrases-root .bubble.you{   align-self:flex-end;   background:rgba(232,179,106,.10); border-color:rgba(232,179,106,.28); text-align:right; }
+#phrases-root .bubble .role{ font-size:.66rem; letter-spacing:.12em; text-transform:uppercase; margin-bottom:3px; }
+#phrases-root .bubble.staff .role{ color:var(--staff); }
+#phrases-root .bubble.you   .role{ color:var(--you); }
+#phrases-root .bubble .en{ font-family:"Lora",Georgia,serif; font-size:1.05rem; line-height:1.35; }
+#phrases-root .bubble .ja{ font-family:"Noto Sans JP",sans-serif; font-size:.82rem; color:var(--muted); margin-top:3px; }
+#phrases-root .bubble.active{ opacity:1; }
+#phrases-root .bubble.staff.active{
+    border-color:var(--staff);
+    background:rgba(111,168,199,.18);
+    box-shadow:0 0 0 2px var(--staff), 0 0 20px 2px rgba(111,168,199,.40);
+  }
+#phrases-root .bubble.you.active{
+    border-color:var(--accent);
+    background:rgba(232,179,106,.20);
+    box-shadow:0 0 0 2px var(--accent), 0 0 20px 2px rgba(232,179,106,.40);
+  }
+
+  @media (prefers-reduced-motion: no-preference){
+#phrases-root .bubble.staff.active{ animation:liveStaff 1.6s ease-in-out infinite; }
+#phrases-root .bubble.you.active{   animation:liveYou   1.6s ease-in-out infinite; }
+@keyframes liveStaff{
+      0%,100%{ box-shadow:0 0 0 2px var(--staff), 0 0 14px 1px rgba(111,168,199,.30); }
+      50%    { box-shadow:0 0 0 2px var(--staff), 0 0 26px 5px rgba(111,168,199,.55); }
+    }
+@keyframes liveYou{
+      0%,100%{ box-shadow:0 0 0 2px var(--accent), 0 0 14px 1px rgba(232,179,106,.30); }
+      50%    { box-shadow:0 0 0 2px var(--accent), 0 0 26px 5px rgba(232,179,106,.55); }
+    }
+}
+#phrases-root .line-view{ width:100%; display:flex; flex-direction:column; align-items:center; text-align:center; gap:14px; }
+#phrases-root .line-role{ font-size:.72rem; letter-spacing:.16em; text-transform:uppercase; padding:4px 12px; border-radius:999px; border:1px solid var(--line); }
+#phrases-root .line-role.staff{ color:var(--staff); border-color:rgba(111,168,199,.35); }
+#phrases-root .line-role.you{   color:var(--you);   border-color:rgba(232,179,106,.40); }
+#phrases-root .line-en{ font-family:"Lora",Georgia,serif; font-size:clamp(1.6rem,6.5vw,2.6rem); line-height:1.3; }
+#phrases-root .line-ja{ font-family:"Noto Sans JP",sans-serif; font-size:clamp(1rem,4vw,1.2rem); color:var(--muted); }
+#phrases-root .line-hint{ color:var(--muted); font-size:.85rem; margin-top:4px; }
+#phrases-root .line-hint b{ color:var(--accent); font-weight:600; }
+#phrases-root footer{ width:100%; max-width:600px; display:flex; flex-direction:column; align-items:center; gap:12px; }
+#phrases-root .rep{ font-size:.86rem; color:var(--muted); letter-spacing:.05em; font-variant-numeric:tabular-nums; }
+#phrases-root .rep b{ color:var(--text); }
+#phrases-root .controls{ width:100%; display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; }
+#phrases-root button{
+    -webkit-appearance:none; appearance:none;
+    font:inherit; color:var(--text); background:transparent; border:1px solid var(--line); border-radius:var(--radius);
+    padding:14px 8px; cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:5px; letter-spacing:.02em;
+    transition:background .15s, border-color .15s, transform .06s, color .15s; -webkit-tap-highlight-color:transparent;
+  }
+#phrases-root button .ico{ font-size:1.15rem; line-height:1; }
+#phrases-root button .lbl{ font-size:.78rem; color:var(--muted); }
+#phrases-root button:hover:not(:disabled){ background:var(--press); border-color:rgba(255,255,255,.16); }
+#phrases-root button:active:not(:disabled){ transform:translateY(1px); }
+#phrases-root button:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+#phrases-root button:disabled{ opacity:.32; cursor:default; }
+#phrases-root #p-btn-toggle{ background:var(--accent); border-color:var(--accent); color:#1a130a; }
+#phrases-root #p-btn-toggle .lbl{ color:#3a2c12; }
+#phrases-root #p-btn-toggle:hover:not(:disabled){ background:#efc07e; border-color:#efc07e; }
+#phrases-root .voice-note{ font-size:.72rem; color:var(--muted); opacity:.7; text-align:center; font-family:"Noto Sans JP",sans-serif; min-height:1em; }
+#phrases-root .convo-bar{ justify-content:space-between; gap:8px; }
+#phrases-root .convo-side{ flex:1 1 0; display:flex; align-items:center; min-width:0; }
+#phrases-root .convo-side.right{ justify-content:flex-end; }
+#phrases-root .convo-nav{ flex:0 0 auto; display:flex; align-items:center; gap:12px; }
+#phrases-root .convo-list-btn{
+    -webkit-appearance:none; appearance:none; font:inherit;
+    flex-direction:row; gap:6px; padding:7px 12px; border-radius:999px;
+    border:1px solid var(--line); background:transparent; color:var(--muted);
+    font-size:.78rem; letter-spacing:.04em; cursor:pointer; white-space:nowrap;
+    transition:background .15s, color .15s, border-color .15s; -webkit-tap-highlight-color:transparent;
+  }
+#phrases-root .convo-list-btn:hover{ background:var(--press); color:var(--text); }
+#phrases-root .convo-list-btn:active{ transform:translateY(1px); }
+#phrases-root .convo-list-btn:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+#phrases-root .convo-list-btn .ico{ font-size:.95rem; line-height:1; }
+#phrases-root #select-screen{
+    position:fixed; inset:0; z-index:50; overflow-y:auto;
+    background:
+      radial-gradient(120% 80% at 50% 14%, var(--bg-glow) 0%, var(--bg) 58%),
+      var(--bg);
+    display:flex; flex-direction:column; align-items:center;
+    padding:clamp(28px,6vh,56px) 20px clamp(28px,5vh,48px);
+    animation:fadeIn .28s ease;
+  }
+@keyframes fadeIn{ from{ opacity:0; } to{ opacity:1; } }
+#phrases-root .select-inner{ width:100%; max-width:600px; margin:auto 0; }
+#phrases-root .select-head{ text-align:center; margin-bottom:clamp(22px,5vh,38px); }
+#phrases-root .select-head .brand{ justify-content:center; margin-bottom:18px; }
+#phrases-root .select-title{ font-family:"Lora",Georgia,serif; font-size:clamp(1.5rem,6vw,1.9rem); font-weight:600; letter-spacing:.01em; }
+#phrases-root .select-sub{ color:var(--muted); font-size:.9rem; margin-top:8px; font-family:"Noto Sans JP",sans-serif; }
+#phrases-root .genre-grid{ display:flex; flex-direction:column; gap:12px; }
+#phrases-root .genre-card{
+    flex-direction:row; align-items:center; justify-content:flex-start; gap:14px;
+    padding:18px; border-radius:16px; border:1px solid var(--line);
+    background:rgba(255,255,255,.015); text-align:left;
+  }
+#phrases-root .genre-card:hover:not(:disabled){ background:rgba(232,179,106,.06); border-color:var(--accent-dim); }
+#phrases-root .genre-card:active:not(:disabled){ transform:translateY(1px); }
+#phrases-root .genre-emoji{ font-size:1.7rem; line-height:1; flex:0 0 auto; }
+#phrases-root .genre-text{ display:flex; flex-direction:column; align-items:flex-start; gap:3px; flex:1 1 auto; min-width:0; }
+#phrases-root .genre-name{ font-family:"Lora",Georgia,serif; font-size:1.12rem; color:var(--text); }
+#phrases-root .genre-count{ font-size:.68rem; color:var(--muted); letter-spacing:.1em; text-transform:uppercase; font-family:-apple-system,system-ui,sans-serif; }
+#phrases-root .genre-chevron{ color:var(--muted); font-size:1.2rem; flex:0 0 auto; }
+#phrases-root .scene-head{ display:flex; align-items:center; gap:12px; margin-bottom:22px; }
+#phrases-root .back-btn{
+    -webkit-appearance:none; appearance:none; font:inherit; flex:0 0 auto;
+    padding:7px 13px; border-radius:999px; border:1px solid var(--line);
+    background:transparent; color:var(--muted); font-size:.78rem; letter-spacing:.03em;
+    cursor:pointer; white-space:nowrap;
+    transition:background .15s,color .15s,border-color .15s; -webkit-tap-highlight-color:transparent;
+  }
+#phrases-root .back-btn:hover{ background:var(--press); color:var(--text); }
+#phrases-root .back-btn:active{ transform:translateY(1px); }
+#phrases-root .back-btn:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+#phrases-root .scene-head-title{ font-family:"Lora",Georgia,serif; font-size:1.2rem; color:var(--text); display:flex; align-items:center; gap:8px; min-width:0; }
+#phrases-root .scene-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+#phrases-root .scene-card{
+    flex-direction:column; align-items:flex-start; text-align:left;
+    justify-content:flex-start; gap:9px; padding:16px 14px; min-height:120px;
+    border:1px solid var(--line); border-radius:16px; background:rgba(255,255,255,.015);
+  }
+#phrases-root .scene-card:hover:not(:disabled){ background:rgba(232,179,106,.06); border-color:var(--accent-dim); }
+#phrases-root .scene-card:active:not(:disabled){ transform:translateY(1px); }
+#phrases-root .scene-emoji{ font-size:1.7rem; line-height:1; }
+#phrases-root .scene-name{ font-family:"Lora",Georgia,serif; font-size:1.02rem; color:var(--text); line-height:1.32; }
+#phrases-root .scene-meta{ margin-top:auto; font-size:.66rem; color:var(--muted); letter-spacing:.1em; text-transform:uppercase; font-family:-apple-system,system-ui,sans-serif; }
+#phrases-root .select-foot{ text-align:center; color:var(--muted); font-size:.78rem; margin-top:22px; letter-spacing:.05em; }
+@media (max-width:360px){
+#phrases-root .scene-grid{ grid-template-columns:1fr; }
+}
+
+</style>
+</head>
+<body>
+
+  <!-- ホーム：学習モードを選ぶ -->
+  <section id="home-screen" aria-label="学習モード選択">
+    <div class="home-inner">
+      <div class="home-head">
+        <div class="home-glow" aria-hidden="true"></div>
+        <div class="home-brand">Repeat<span class="dot">.</span></div>
+        <div class="home-sub">学習モードを選んでください</div>
+      </div>
+      <div class="home-cards">
+        <button class="home-card" id="home-words" type="button">
+          <span class="hc-emoji" aria-hidden="true">📖</span>
+          <span class="hc-meta">Words</span>
+          <span class="hc-name">単語</span>
+          <span class="hc-desc">1語ずつ無限リピート。聞き流しで語彙を体に入れる。</span>
+        </button>
+        <button class="home-card" id="home-phrases" type="button">
+          <span class="hc-emoji" aria-hidden="true">💬</span>
+          <span class="hc-meta">Phrases</span>
+          <span class="hc-name">フレーズ</span>
+          <span class="hc-desc">会話を全文→1行→仕上げで反復。シャドーイングまで。</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 単語アプリ -->
+  <div id="words-root" hidden>
+
+  <!-- ジャンル選択画面（起動時に表示。カードはJSで生成） -->
+  <section id="genre-screen" aria-label="ジャンル選択">
+    <div class="genre-inner">
+      <div class="genre-head">
+        <div class="brand">Repeat<span class="dot">.</span></div>
+        <div class="genre-title">ジャンルを選ぶ</div>
+        <div class="genre-sub">学習したいジャンルを選んでください</div>
+      </div>
+      <button class="genre-all" id="genre-all" type="button" data-cat="all">
+        <span class="ga-emoji" aria-hidden="true">📚</span>
+        <span class="ga-text"><span class="ga-name">すべて</span><span class="ga-count" id="ga-count"></span></span>
+        <span class="ga-chev" aria-hidden="true">›</span>
+      </button>
+      <div class="genre-grid" id="genre-grid"></div>
+    </div>
+  </section>
+
+  <header>
+    <div class="brand">Repeat<span class="dot">.</span></div>
+    <div class="header-right">
+      <div class="pos-row">
+        <button id="w-to-home" class="home-btn" type="button" aria-label="モード選択へ">⌂</button>
+        <button id="btn-genres" class="home-btn" type="button" aria-label="ジャンル一覧へ">☰</button>
+        <button id="btn-home" class="home-btn" type="button" aria-label="1番目に戻る">↺</button>
+        <div class="position" aria-live="polite"><span id="pos-current">1</span><span class="pos-sep"> / </span><span id="pos-total">3000</span></div>
+      </div>
+      <div class="status" aria-live="polite">
+        <span class="led" aria-hidden="true"></span>
+        <span id="status-text">停止中</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="modebar">
+    <div class="seg" role="tablist" aria-label="表示モード">
+      <button class="seg-btn is-active" id="mode-a" type="button" role="tab" aria-selected="true">ALL</button>
+      <button class="seg-btn" id="mode-b" type="button" role="tab" aria-selected="false">JP</button>
+      <button class="seg-btn" id="mode-c" type="button" role="tab" aria-selected="false">EN</button>
+    </div>
+    <button class="shuffle-btn" id="btn-shuffle" type="button" aria-pressed="false" aria-label="シャッフル">
+      <span class="ico" aria-hidden="true">🔀</span>
+    </button>
+  </div>
+
+  <main>
+    <div class="stage">
+      <div class="emoji" id="emoji" aria-hidden="true">🚶</div>
+    </div>
+    <div class="word" id="word">go</div>
+    <div class="ja" id="ja">行く</div>
+  </main>
+
+  <footer>
+    <div class="controls">
+      <button id="btn-prev" type="button" aria-label="前の単語へ">
+        <span class="ico" aria-hidden="true">⏮</span><span class="lbl">前へ</span>
+      </button>
+      <button id="btn-toggle" type="button" aria-label="再生">
+        <span class="ico" id="toggle-ico" aria-hidden="true">▶</span><span class="lbl" id="toggle-lbl">再生</span>
+      </button>
+      <button id="btn-next" type="button" aria-label="次の単語へ">
+        <span class="ico" aria-hidden="true">⏭</span><span class="lbl">次へ</span>
+      </button>
+    </div>
+    <div class="voice-note" id="voice-note">音声を準備しています…</div>
+  </footer>
+
+
+  </div>
+
+  <!-- フレーズアプリ -->
+  <div id="phrases-root" hidden>
+
+  <!-- 選択画面（起動時に表示。① ジャンル → ② シーン の2段階） -->
+  <section id="select-screen" aria-label="シーン選択">
+    <div class="select-inner">
+
+      <!-- ① ジャンルを選ぶ -->
+      <div id="genre-view">
+        <div class="select-head">
+          <div class="brand">Repeat<span class="tag">Phrase</span></div>
+          <div class="select-title">ジャンルを選ぶ</div>
+          <div class="select-sub">練習したいジャンルを選んでください</div>
+        </div>
+        <div class="genre-grid" id="p-genre-grid"></div>
+        <div class="select-foot" id="genre-foot"></div>
+      </div>
+
+      <!-- ② ジャンル内のシーンを選ぶ -->
+      <div id="scene-view" hidden>
+        <div class="scene-head">
+          <button id="to-genres" class="back-btn" type="button" aria-label="ジャンル一覧へ戻る">← ジャンル</button>
+          <div class="scene-head-title">
+            <span id="scene-view-emoji" aria-hidden="true"></span>
+            <span id="scene-view-name"></span>
+          </div>
+        </div>
+        <div class="scene-grid" id="scene-grid"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <header>
+    <div class="brand">Repeat<span class="tag">Phrase</span></div>
+    <div class="header-right">
+      <div class="step-label"><span id="step-name">全文 ×5</span> <span class="n" id="step-pos"></span></div>
+      <div class="status" aria-live="polite"><span class="led" aria-hidden="true"></span><span id="p-status-text">停止中</span></div>
+    </div>
+  </header>
+  <div class="convo-bar">
+    <div class="convo-side">
+      <button id="to-select" class="convo-list-btn" type="button" aria-label="シーン一覧へ戻る">
+        <span class="ico" aria-hidden="true">☰</span><span>一覧</span>
+      </button>
+    </div>
+    <div class="convo-nav">
+      <div class="convo-title"><span id="convo-name">カフェで注文する</span></div>
+    </div>
+    <div class="convo-side right"><button id="p-to-home" class="convo-list-btn" type="button" aria-label="モード選択へ"><span class="ico" aria-hidden="true">⌂</span><span>モード</span></button></div>
+  </div>
+
+  <main>
+    <!-- 全文ビュー -->
+    <div class="full-view" id="full-view">
+      <div class="full-hint">この会話を <b>5回</b> 通して聞きます</div>
+      <div class="disp-toggle" id="disp-toggle" role="group" aria-label="表示モード">
+        <button class="disp-btn" type="button" data-mode="all">All</button>
+        <button class="disp-btn" type="button" data-mode="you">You</button>
+        <button class="disp-btn" type="button" data-mode="partner" id="disp-partner"></button>
+      </div>
+      <div class="dialogue" id="dialogue"></div>
+    </div>
+    <!-- 1フレーズビュー -->
+    <div class="line-view" id="line-view" hidden>
+      <div class="line-role" id="line-role">Staff</div>
+      <div class="line-en" id="line-en"></div>
+      <div class="line-ja" id="line-ja"></div>
+      <div class="line-hint">このフレーズを <b>30回</b> リピート</div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="rep" id="rep">リピート <b>0</b> / 5</div>
+    <div class="controls">
+      <button id="p-btn-prev" type="button" aria-label="前のステップへ">
+        <span class="ico" aria-hidden="true">⏮</span><span class="lbl">前へ</span>
+      </button>
+      <button id="p-btn-toggle" type="button" aria-label="再生">
+        <span class="ico" id="p-toggle-ico" aria-hidden="true">▶</span><span class="lbl" id="p-toggle-lbl">再生</span>
+      </button>
+      <button id="p-btn-next" type="button" aria-label="次のステップへ">
+        <span class="ico" aria-hidden="true">⏭</span><span class="lbl">次へ</span>
+      </button>
+    </div>
+    <div class="voice-note" id="p-voice-note">音声を準備しています…</div>
+  </footer>
+
+
+  </div>
+
+<script>
+"use strict";
+/* ====== 各アプリ（独立スコープ：定数・クラス・声は元のまま） ====== */
+function init_words_root(){
+  const R = document.getElementById("words-root");
+"use strict";
+
+/* =========================================================
+   定数
+   ========================================================= */
+const GAP_MS     = 250;  // 単語と単語の「間（無音）」の目標値。これを毎回そろえる
+const MIN_GAP_MS = 60;   // 間の下限（遅れ補正で詰めすぎても最低これだけは空ける）
+
+// 間を均一にしたいなら true。端末内蔵(オフライン)の声を優先する。
+// 内蔵の声は鳴り始めが速く一定なので「間」がそろう（音質は Online 系より素朴）。
+// false なら従来どおり Natural / Online を優先（音質優先・間は少し揺れる）。
+const PREFER_LOCAL_VOICE = false;
+
+const RATE     = 1.1;   // 読み上げ速度。毎回同じ値＝速度は完全に均一。速すぎ/遅すぎはここだけ調整
+const PITCH    = 1.0;
+const VOLUME   = 1.0;
+const LANG     = "en-US";
+
+/* =========================================================
+   単語データ（10語のみ）
+   ========================================================= */
+const WORDS = (window.__WORDS_DATA || []);
+
+const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+
+/* ===== テーマ（ジャンル）。選択画面はこの順で並ぶ。idは各単語の cat と対応 ===== */
+const CATEGORIES = [
+  { id:"food",    emoji:"🍽️", name:"食べ物・飲み物" },
+  { id:"animal",  emoji:"🐶", name:"動物・生き物" },
+  { id:"nature",  emoji:"🌿", name:"自然・天気・地理" },
+  { id:"body",    emoji:"🧍", name:"体・健康" },
+  { id:"home",    emoji:"🏠", name:"家・暮らしの物" },
+  { id:"cloth",   emoji:"👕", name:"衣類・素材" },
+  { id:"travel",  emoji:"🚗", name:"乗り物・旅行" },
+  { id:"place",   emoji:"🏙️", name:"街・建物・場所" },
+  { id:"work",    emoji:"💼", name:"仕事・お金・社会" },
+  { id:"learn",   emoji:"🏫", name:"学び・ことば・本" },
+  { id:"science", emoji:"🔬", name:"科学・技術・宇宙" },
+  { id:"art",     emoji:"🎨", name:"芸術・音楽・娯楽" },
+  { id:"sport",   emoji:"⚽", name:"スポーツ・運動" },
+  { id:"action",  emoji:"🏃", name:"動作・行動" },
+  { id:"quality", emoji:"✨", name:"性質・様子" },
+  { id:"feeling", emoji:"😊", name:"気持ち・心" },
+  { id:"misc",    emoji:"🕐", name:"その他・抽象" },
+];
+
+/* =========================================================
+   AudioEngine
+   音を鳴らす処理だけを担当。init / speakOnce / stop の3つ。
+   UI や WordPlayer は speechSynthesis を直接触らない。
+   将来 mp3 / Web Audio に差し替えても、この3つの形は同じ。
+   ========================================================= */
+class AudioEngine {
+  constructor() {
+    this.voice = null;             // 起動時に1つだけ選んで固定する声
+    this._currentUtterance = null; // 今鳴っている Utterance への参照（GC で消えるのを防ぐ）
+    this.ready = false;
+  }
+
+  /* 声を読み込んで1つに固定する */
+  init() {
+    return new Promise((resolve) => {
+      if (!("speechSynthesis" in window)) { resolve(); return; }
+
+      const tryLoad = () => {
+        const voices = window.speechSynthesis.getVoices();
+        if (voices && voices.length) {
+          this.voice = this._pickVoice(voices);
+          this.ready = true;
+          return true;
+        }
+        return false;
+      };
+
+      if (tryLoad()) { resolve(); return; }
+
+      let settled = false;
+      const onVoices = () => {
+        if (settled) return;
+        if (tryLoad()) {
+          settled = true;
+          window.speechSynthesis.removeEventListener("voiceschanged", onVoices);
+          resolve();
+        }
+      };
+      window.speechSynthesis.addEventListener("voiceschanged", onVoices);
+
+      // 保険：2秒で来なくても先へ進む（voice は null=ブラウザ既定でも動く）
+      setTimeout(() => {
+        if (settled) return;
+        settled = true;
+        tryLoad();
+        this.ready = true;
+        resolve();
+      }, 2000);
+    });
+  }
+
+  /* 1つの声を選んで固定する。
+     通常：Natural > Online > Google US English > その他en-US > 最初のen
+     PREFER_LOCAL_VOICE=true：まず端末内蔵(オフライン)の声に絞る（間が均一になりやすい） */
+  _pickVoice(voices) {
+    const en   = voices.filter((v) => /^en[-_]?/i.test(v.lang));
+    const enUS = en.filter((v) => /en[-_]?us/i.test(v.lang));
+    let pool   = enUS.length ? enUS : en;
+
+    if (PREFER_LOCAL_VOICE) {
+      const local = pool.filter((v) => v.localService);  // 内蔵＝鳴り始めが速く一定
+      if (local.length) pool = local;
+    }
+
+    const find = (re) => pool.find((v) => re.test(v.name));
+    return (
+      find(/natural/i) ||
+      find(/online/i)  ||
+      find(/google us english/i) ||
+      pool[0] ||
+      enUS[0] ||
+      en[0]   ||
+      voices[0] ||
+      null
+    );
+  }
+
+  /* テキストを1回だけ鳴らす。鳴り終わったら resolve。
+     「間」を均一にするため、speak()呼び出しから実際に鳴り始めるまでの
+     遅れ(startLatency)も測って返す（回数もループも持たない）。 */
+  speakOnce(text) {
+    return new Promise((resolve) => {
+      if (!("speechSynthesis" in window)) { resolve({ startLatency: null }); return; }
+
+      const utt = new SpeechSynthesisUtterance(text);
+      if (this.voice) utt.voice = this.voice;
+      utt.lang   = LANG;
+      utt.rate   = RATE;
+      utt.pitch  = PITCH;
+      utt.volume = VOLUME;
+
+      // 参照を1つ保持（一部ブラウザは参照が消えると onend が来なくなる）
+      this._currentUtterance = utt;
+
+      const callTime = performance.now();   // speak() を呼んだ時刻
+      let onsetTime  = null;                // 実際に音が鳴り始めた時刻（onstart）
+      let done = false;
+      let watchdog = null;
+      const finish = () => {
+        if (done) return;            // onend / onerror / ウォッチドッグの二重発火を防ぐ
+        done = true;
+        if (watchdog) clearTimeout(watchdog);
+        // 開始の遅れ＝onset − speak呼び出し。次の「間」を詰めて均一化するのに使う
+        const startLatency = (onsetTime !== null) ? (onsetTime - callTime) : null;
+        resolve({ startLatency });
+      };
+
+      utt.onstart = () => { onsetTime = performance.now(); };  // 実際の開始時刻を記録
+      utt.onend   = finish;          // 正常終了
+      utt.onerror = finish;          // エラー（cancel含む）でも止めず次へ
+
+      // ウォッチドッグ：万一 onend / onerror が来なくてもループを固めない保険
+      const watchdogMs = 3000 + text.length * 150;
+      watchdog = setTimeout(finish, watchdogMs);
+
+      window.speechSynthesis.speak(utt);
+    });
+  }
+
+  /* 今の音を即座に止める。cancel() はここ（＝意図的な停止）だけで呼ぶ */
+  stop() {
+    if (!("speechSynthesis" in window)) return;
+    window.speechSynthesis.cancel();
+  }
+}
+
+/* =========================================================
+   WordPlayer
+   index管理・再生/停止・前へ/次へ・無限ループ だけを担当。
+   実際に音を鳴らすのは AudioEngine に委譲する。
+   ========================================================= */
+class WordPlayer {
+  constructor(words, engine, handlers) {
+    this.words     = words;
+    this.engine    = engine;
+    this.handlers  = handlers || {};
+    this.sequence  = words.map((_, i) => i); // 訪れた/たどる単語のインデックス列。順番モードは [0..N-1]
+    this.pos       = 0;                       // sequence 内の現在位置
+    this.shuffled  = false;                   // シャッフル中か
+    this.isPlaying = false;
+    this._token    = 0;    // 古いループを無効化するための世代カウンタ
+    this._latencyMs = 90;  // 開始の遅れの推定値（移動平均で学習し、間の補正に使う）
+  }
+
+  current() { return this.words[this.sequence[this.pos]]; }
+  wordNumber() { return this.sequence[this.pos] + 1; } // 3000語中の何番か（現在地表示用）
+  isFirst() { return this.pos === 0; }
+  // 次へが無効になるのは「順番モードで末尾」のときだけ（シャッフル中は常にジャンプ可）
+  isLast()  { return !this.shuffled && this.pos === this.sequence.length - 1; }
+
+  _randomWordIndex() {
+    const n = this.words.length;
+    if (n <= 1) return 0;
+    const cur = this.sequence[this.pos];
+    let i = cur;
+    while (i === cur) i = Math.floor(Math.random() * n); // 直前と同じ語は避ける
+    return i;
+  }
+
+  _emitChange()  { if (this.handlers.onChange)  this.handlers.onChange(this); }
+  _emitPlaying() { if (this.handlers.onPlaying) this.handlers.onPlaying(this); }
+
+  /* 再生：現在の単語を先頭から無限ループ。停止後に押しても必ず先頭から */
+  async play() {
+    if (this.isPlaying) return;          // 既に再生中なら何もしない（＝既に先頭から回っている）
+    this.isPlaying = true;
+    const myToken = ++this._token;       // このループの世代を確定
+    this._emitPlaying();
+
+    const text = this.current().word;    // 音声は word を読む
+
+    // 回数は数えない。isPlaying が続く限り、同じ音を延々と鳴らす
+    while (this.isPlaying && myToken === this._token) {
+      const { startLatency } = await this.engine.speakOnce(text);  // 1回 → onend を待つ
+      if (!this.isPlaying || myToken !== this._token) break;       // 止められた／世代が変わった
+
+      // 開始の遅れを学習（移動平均）。毎回ばらつく遅れを平均で吸収する
+      if (startLatency !== null && startLatency >= 0 && startLatency < 2000) {
+        this._latencyMs = this._latencyMs * 0.7 + startLatency * 0.3;
+      }
+      // 次の音の「鳴り始め」が前の終わりから常に GAP_MS 後になるよう、
+      // 遅れぶんだけ早く待つ＝間（無音）を均一にする
+      let gap = GAP_MS - this._latencyMs;
+      if (gap < MIN_GAP_MS) gap = MIN_GAP_MS;
+      await wait(gap);
+    }
+  }
+
+  /* 停止：cancel はここ経由でだけ起きる */
+  stop() {
+    this.isPlaying = false;
+    this._token++;          // 走っているループを無効化
+    this.engine.stop();
+    this._emitPlaying();
+  }
+
+  /* 前へ：履歴を1つ戻る（直前に聞いた語へ）。自動再生。先頭では無効 */
+  prev() {
+    if (this.isFirst()) return;
+    this.stop();
+    this.pos -= 1;
+    this._emitChange();
+    this.play();
+  }
+
+  /* 次へ：自動再生。
+     順番モード＝次の語へ。
+     シャッフル中＝（戻っていれば履歴を前進、先端なら）ランダムな語へジャンプして履歴に追加。 */
+  next() {
+    if (this.isLast()) return;       // 順番モードの末尾のみ無効
+    this.stop();
+    if (this.shuffled && this.pos === this.sequence.length - 1) {
+      this.sequence.push(this._randomWordIndex()); // ランダムジャンプ＝履歴に追加
+    }
+    this.pos += 1;
+    this._emitChange();
+    this.play();
+  }
+
+  /* 最初（1/3000）へ戻る：順番モードに戻し、1語目で停止 */
+  goToStart() {
+    this.shuffled = false;
+    this.sequence = this.words.map((_, i) => i);
+    this.pos = 0;
+    this.stop();
+    this._emitChange();
+  }
+
+  /* シャッフル切替：
+     on  → 今の単語を起点にランダムジャンプのセッションを開始（以後 次へ でランダムに飛ぶ）
+     off → 元の順番に戻り、今の単語の位置から続行
+     どちらも今表示中の単語は画面に残す。再生は止める。 */
+  setShuffle(on) {
+    const curWordIndex = this.sequence[this.pos];
+    this.shuffled = on;
+    if (on) {
+      this.sequence = [curWordIndex];            // 履歴を今の語1つで開始
+      this.pos = 0;
+    } else {
+      this.sequence = this.words.map((_, i) => i); // 順番に戻す
+      this.pos = curWordIndex;                      // 今の語の位置から
+    }
+    this.stop();
+    this._emitChange();
+  }
+}
+
+/* =========================================================
+   UI 配線
+   ========================================================= */
+(function main() {
+  const el = {
+    body:   R,
+    emoji:  R.querySelector("#emoji"),
+    word:   R.querySelector("#word"),
+    ja:     R.querySelector("#ja"),
+    statusText: R.querySelector("#status-text"),
+    posCurrent: R.querySelector("#pos-current"),
+    posTotal:   R.querySelector("#pos-total"),
+    voiceNote:  R.querySelector("#voice-note"),
+    prev:   R.querySelector("#btn-prev"),
+    toggle:    R.querySelector("#btn-toggle"),
+    toggleIco: R.querySelector("#toggle-ico"),
+    toggleLbl: R.querySelector("#toggle-lbl"),
+    next:   R.querySelector("#btn-next"),
+    modeA:  R.querySelector("#mode-a"),
+    modeB:  R.querySelector("#mode-b"),
+    modeC:  R.querySelector("#mode-c"),
+    shuffle: R.querySelector("#btn-shuffle"),
+    home:    R.querySelector("#btn-home"),
+    genres:  R.querySelector("#btn-genres"),
+    genreScreen: R.querySelector("#genre-screen"),
+    genreGrid:   R.querySelector("#genre-grid"),
+    genreAll:    R.querySelector("#genre-all"),
+    gaCount:     R.querySelector("#ga-count"),
+  };
+
+  const engine = new AudioEngine();
+  let player;
+  function makePlayer(words){
+    return new WordPlayer(words, engine, {
+      onChange:  renderWord,
+      onPlaying: renderPlaying,
+    });
+  }
+  player = makePlayer(WORDS);   // 初期はすべての語（ジャンル選択で差し替わる）
+
+  function renderWord(p) {
+    const w = p.current();
+    el.emoji.textContent = w.emoji;
+    el.word.textContent  = w.word;
+    el.ja.textContent    = w.ja;
+    el.posCurrent.textContent = p.wordNumber();   // 3000語中の何番か
+    el.prev.disabled = p.isFirst();   // 先頭で前へは無効
+    el.next.disabled = p.isLast();    // 末尾で次へは無効
+  }
+
+  function renderPlaying(p) {
+    el.body.classList.toggle("is-playing", p.isPlaying);
+    el.statusText.textContent = p.isPlaying ? "再生中" : "停止中";
+    // 中央ボタンを再生⇄停止で切り替え
+    el.toggleIco.textContent = p.isPlaying ? "⏸" : "▶";
+    el.toggleLbl.textContent = p.isPlaying ? "停止" : "再生";
+    el.toggle.setAttribute("aria-label", p.isPlaying ? "停止" : "再生");
+  }
+
+  // A/B/C 表示モード（音声・再生には一切影響しない。文字の表示/非表示だけ）
+  //   A=英語+日本語 / B=日本語のみ / C=英語のみ
+  function setMode(m) {
+    el.body.classList.toggle("mode-b", m === "B");
+    el.body.classList.toggle("mode-c", m === "C");
+    el.modeA.classList.toggle("is-active", m === "A");
+    el.modeB.classList.toggle("is-active", m === "B");
+    el.modeC.classList.toggle("is-active", m === "C");
+    el.modeA.setAttribute("aria-selected", m === "A");
+    el.modeB.setAttribute("aria-selected", m === "B");
+    el.modeC.setAttribute("aria-selected", m === "C");
+  }
+
+  el.prev.addEventListener("click", () => player.prev());
+  el.toggle.addEventListener("click", () => {
+    if (player.isPlaying) player.stop(); else player.play();
+  });
+  el.next.addEventListener("click", () => player.next());
+  el.modeA.addEventListener("click", () => setMode("A"));
+  el.modeB.addEventListener("click", () => setMode("B"));
+  el.modeC.addEventListener("click", () => setMode("C"));
+
+  // シャッフル切替（ONで毎回ランダムジャンプ、もう一度押すと元の順番へ戻る）
+  function paintShuffle(on) {
+    el.shuffle.classList.toggle("is-active", on);
+    // インラインで直接塗る（プレビュー/WebViewでも確実に中まで黄色くなる）
+    if (on) {
+      el.shuffle.style.background  = "#e8b36a";
+      el.shuffle.style.borderColor = "#e8b36a";
+      el.shuffle.style.color       = "#1a130a";
+    } else {
+      el.shuffle.style.background  = "";
+      el.shuffle.style.borderColor = "";
+      el.shuffle.style.color       = "";
+    }
+    el.shuffle.setAttribute("aria-pressed", on ? "true" : "false");
+  }
+  el.shuffle.addEventListener("click", () => {
+    const on = !player.shuffled;
+    paintShuffle(on);          // ★ 先に塗る
+    player.setShuffle(on);
+  });
+
+  // 最初（1番目）へ戻る
+  el.home.addEventListener("click", () => {
+    player.goToStart();
+    paintShuffle(false);       // シャッフル解除をボタン表示にも反映
+  });
+
+  // ── ジャンル選択 ──
+  function buildGenreScreen(){
+    const counts = {};
+    WORDS.forEach(w => { counts[w.cat] = (counts[w.cat] || 0) + 1; });
+    el.gaCount.textContent = WORDS.length + " 語";
+    el.genreGrid.innerHTML = "";
+    CATEGORIES.forEach(cat => {
+      const n = counts[cat.id] || 0;
+      if (!n) return;
+      const card = document.createElement("button");
+      card.type = "button";
+      card.className = "genre-card";
+      card.innerHTML =
+        '<span class="gc-emoji" aria-hidden="true"></span>' +
+        '<span class="gc-name"></span>' +
+        '<span class="gc-count"></span>';
+      card.querySelector(".gc-emoji").textContent = cat.emoji;
+      card.querySelector(".gc-name").textContent  = cat.name;
+      card.querySelector(".gc-count").textContent = n + " words";
+      card.addEventListener("click", () => loadGenre(cat.id));
+      el.genreGrid.appendChild(card);
+    });
+  }
+
+  // ジャンルを選んで練習画面へ（先頭・停止状態で開始）
+  function loadGenre(catId){
+    const words = (catId === "all") ? WORDS : WORDS.filter(w => w.cat === catId);
+    if (!words.length) return;
+    if (player) player.stop();
+    player = makePlayer(words);
+    el.posTotal.textContent = words.length;   // 総数はジャンルの語数に追従
+    paintShuffle(false);
+    renderWord(player);
+    renderPlaying(player);
+    el.genreScreen.hidden = true;
+  }
+
+  // ジャンル一覧へ戻る（再生は止める）
+  function openGenres(){
+    if (player) player.stop();
+    renderPlaying(player);
+    el.genreScreen.hidden = false;
+    el.genreScreen.scrollTop = 0;
+  }
+
+  el.genres.addEventListener("click", openGenres);
+  el.genreAll.addEventListener("click", () => loadGenre("all"));
+
+  // 起動：ジャンル選択画面を表示。練習画面は裏で初期化（ジャンル選択で前面化）
+  buildGenreScreen();
+  setMode("A");
+  renderWord(player);
+  renderPlaying(player);
+  el.genreScreen.hidden = false;
+
+  engine.init().then(() => {
+    if (engine.voice) {
+      const kind = engine.voice.localService ? "端末内蔵・間が均一" : "オンライン・間が少し揺れる";
+      el.voiceNote.textContent = "声: " + engine.voice.name + "（" + kind + "）";
+    } else {
+      el.voiceNote.textContent = "声: ブラウザ既定（英語の声が見つかりませんでした）";
+    }
+  });
+  window.__WORD_STOP = () => { try{ if (typeof player !== "undefined" && player) player.stop(); }catch(e){} };
+})();
+
+}
+
+function init_phrases_root(){
+  const R = document.getElementById("phrases-root");
+"use strict";
+
+/* ===== 定数 ===== */
+const FULL_REPEATS = 5;     // 全文を通す回数
+const LINE_REPEATS = 30;    // 各フレーズのリピート回数
+const LINE_GAP_MS  = 350;   // フレーズ反復の間（無音）
+const TURN_GAP_MS  = 600;   // 全文中、セリフ間の間（会話のターン）
+const FULL_GAP_MS  = 1000;  // 全文を通すごとの間
+const MIN_GAP_MS   = 80;
+const RATE = 1.0, PITCH = 1.0, VOLUME = 1.0, LANG = "en-US";
+
+/* ===== 会話データ（複数。2人の登場人物。You=Daniel声/暖色・右、相手=Samantha声/青・左） ===== */
+const CONVERSATIONS = (window.__SCENES_DATA || []);
+
+const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+
+/* ===== ジャンル（場面の種類）。選択画面はこの順でセクション表示 ===== */
+const CATEGORIES = [
+  { id:"travel", emoji:"🧳", name:"旅行・移動" },
+  { id:"food",   emoji:"🍽️", name:"食事・買い物" },
+  { id:"life",   emoji:"🏠", name:"暮らし・手続き" },
+  { id:"health", emoji:"🩺", name:"健康・病院" },
+  { id:"school", emoji:"🏫", name:"学校・学び" },
+  { id:"social", emoji:"💬", name:"雑談・人間関係" },
+  { id:"outing", emoji:"🎟️", name:"おでかけ・チケット" },
+  { id:"event",  emoji:"🎉", name:"イベント・お祝い" },
+  { id:"work",   emoji:"💼", name:"仕事" },
+  { id:"trouble",emoji:"🆘", name:"困ったとき・トラブル" },
+  { id:"slang",  emoji:"😎", name:"スラング・くだけた表現" },
+];
+
+/* =========================================================
+   AudioEngine — 音を鳴らすだけ（役ごとに声を使い分け可）
+   ========================================================= */
+class AudioEngine {
+  constructor(){ this.voiceStaff=null; this.voiceYou=null; this._cur=null; this.ready=false; }
+
+  init(){
+    return new Promise((resolve)=>{
+      if(!("speechSynthesis" in window)){ resolve(); return; }
+      const tryLoad=()=>{
+        const vs=window.speechSynthesis.getVoices();
+        if(vs && vs.length){ this._pick(vs); this.ready=true; return true; }
+        return false;
+      };
+      if(tryLoad()){ resolve(); return; }
+      let settled=false;
+      const on=()=>{ if(settled)return; if(tryLoad()){ settled=true; window.speechSynthesis.removeEventListener("voiceschanged",on); resolve(); } };
+      window.speechSynthesis.addEventListener("voiceschanged",on);
+      setTimeout(()=>{ if(settled)return; settled=true; tryLoad(); this.ready=true; resolve(); },2000);
+    });
+  }
+
+  _pick(voices){
+    const en   = voices.filter(v=>/^en[-_]?/i.test(v.lang));
+    const enUS = en.filter(v=>/en[-_]?us/i.test(v.lang));
+    const pool = enUS.length ? enUS : en;
+    const find = re => pool.find(v=>re.test(v.name));
+
+    // Staff＝高品質な声（端末既定の良い声。多くの場合 Samantha など）
+    const primary = find(/natural/i)||find(/online/i)||find(/google us english/i)||pool[0]||voices[0]||null;
+    this.voiceStaff = primary;
+
+    // You＝ハンサムな男性の声を優先選択
+    // 古い/ネタ声・子供・おじいさん声などは除外
+    const AVOID = /(fred|albert|ralph|grandpa|grandma|junior|bad news|good news|bahh|bells|boing|bubbles|cellos|deranged|hysterical|jester|organ|superstar|trinoids|whisper|wobble|zarvox|princess|kathy|bruce|agnes|vicki|victoria|novelty|eloquence|rocko|shelley)/i;
+    // よく入っている「良い男性の声」の名前（優先度つき）
+    const MALE_PREF = [
+      /aaron/i,                                   // Apple Siri 男性(US)・自然
+      /\balex\b/i,                                // Apple 高品質男性(US)
+      /(guy|christopher|eric|roger|steffan|brandon|davis|jason|tony|andrew|brian)/i, // Microsoft Natural 男性
+      /(daniel|oliver|arthur|tom|evan|nathan|gordon|lee|rishi|reed|eddy)/i,          // Apple ほか男性
+      /(david|mark|james|john|michael|paul|peter|richard|robert|thomas|william|liam|noah|ethan|gary)/i,
+    ];
+    const ok = v => !AVOID.test(v.name) && (!primary || v.name!==primary.name);
+    let male = null;
+    // ★ Daniel を最優先（英語の声全体から探す。en-GB でも採用）
+    male = en.find(v => /daniel/i.test(v.name) && !AVOID.test(v.name));
+    // 見つからなければ：en-US を優先し、品質(Natural/Online)も加味して良い男性声を探す
+    if(!male){
+      for(const list of [enUS, en]){
+        for(const re of MALE_PREF){
+          const cands = list.filter(v=>ok(v) && re.test(v.name));
+          male = cands.find(v=>/natural|online/i.test(v.name)) || cands[0];
+          if(male) break;
+        }
+        if(male) break;
+      }
+    }
+    // 見つからなければ：古い/ネタ声でない別の声 → それも無ければ primary
+    if(!male) male = pool.find(ok) || primary;
+    this.voiceYou = male;
+  }
+
+  voiceFor(role){ return role==="You" ? this.voiceYou : this.voiceStaff; }
+
+  /* テキストを1回鳴らす。開始の遅れ(startLatency)も返す（間の均一化用） */
+  speakOnce(text, voice){
+    return new Promise((resolve)=>{
+      if(!("speechSynthesis" in window)){ resolve({startLatency:null}); return; }
+      const utt=new SpeechSynthesisUtterance(text);
+      if(voice) utt.voice=voice;
+      utt.lang=LANG; utt.rate=RATE; utt.pitch=PITCH; utt.volume=VOLUME;
+      this._cur=utt;
+      const callTime=performance.now();
+      let onsetTime=null, done=false, watchdog=null;
+      const finish=()=>{ if(done)return; done=true; if(watchdog)clearTimeout(watchdog);
+        resolve({ startLatency: onsetTime!==null ? onsetTime-callTime : null }); };
+      utt.onstart=()=>{ onsetTime=performance.now(); };
+      utt.onend=finish; utt.onerror=finish;
+      watchdog=setTimeout(finish, 4000 + text.length*120);
+      window.speechSynthesis.speak(utt);
+    });
+  }
+
+  stop(){ if("speechSynthesis" in window) window.speechSynthesis.cancel(); }
+}
+
+/* =========================================================
+   PhrasePlayer — ステップ進行（全文×5 → 各行×30 → 全文×5）
+   ========================================================= */
+class PhrasePlayer {
+  constructor(convo, engine, handlers){
+    this.engine = engine;
+    this.handlers = handlers || {};
+    this._token = 0;
+    this._latencyMs = 90;
+    this.isPlaying = false;
+    this.mutedRole = null;   // 仕上げ全文で「自分で言う」ため音声を消す役（null=なし）
+    this.loadConversation(convo);
+  }
+
+  /* 会話を読み込む（切り替え時にも使う）。ステップ＝[全文][行0]…[行N-1][全文]。先頭で停止。 */
+  loadConversation(convo){
+    this.convo = convo;
+    this.steps = [{ type:"full" }];
+    convo.lines.forEach((_, i)=> this.steps.push({ type:"line", lineIndex:i }));
+    this.steps.push({ type:"full" });
+    this.stepIndex = 0;
+    this.isPlaying = false;
+    this._token++;          // 走っているループを無効化
+    this.engine.stop();
+  }
+
+  step(){ return this.steps[this.stepIndex]; }
+  isFirst(){ return this.stepIndex === 0; }
+  isLast(){ return this.stepIndex === this.steps.length - 1; }
+  repeatsOf(s){ return s.type==="full" ? FULL_REPEATS : LINE_REPEATS; }
+
+  // 1回ぶんに読む単位（{text, role}）の配列
+  _units(s){
+    if(s.type==="full") return this.convo.lines.map(l=>({text:l.en, role:l.role}));
+    const l=this.convo.lines[s.lineIndex]; return [{text:l.en, role:l.role}];
+  }
+
+  // 「自分で言う」ための無音の間（だいたいその英文を言うのにかかる時間）
+  _selfPauseMs(text){
+    const words = text.trim().split(/\s+/).filter(Boolean).length;
+    return Math.max(1000, words * 380);
+  }
+
+  _emitChange(){ this.handlers.onChange && this.handlers.onChange(this); }
+  _emitPlaying(){ this.handlers.onPlaying && this.handlers.onPlaying(this); }
+  _emitProgress(done,total){ this.handlers.onProgress && this.handlers.onProgress(done,total,this); }
+  _emitLine(i){ this.handlers.onLine && this.handlers.onLine(i,this); } // 全文中、今読んでいる行
+
+  async play(){
+    if(this.isPlaying) return;
+    this.isPlaying = true;
+    const token = ++this._token;
+    this._emitPlaying();
+
+    const s = this.step();
+    const units = this._units(s);
+    const reps = this.repeatsOf(s);
+    const isFull = s.type==="full";
+    // 仕上げ（最後の全文×5）でだけ、指定した役の音声を消す
+    const muteActive = isFull && this.isLast() && this.mutedRole!==null;
+    this._emitProgress(0, reps);
+
+    for(let r=0; r<reps; r++){
+      for(let u=0; u<units.length; u++){
+        if(!this.isPlaying || token!==this._token) return;
+        if(isFull) this._emitLine(u);           // 全文：今読んでいる行を強調
+        const muted = muteActive && units[u].role===this.mutedRole;
+        if(muted){
+          // 音声を出さず、自分で言うための無音の間をとる
+          await wait(this._selfPauseMs(units[u].text));
+          if(!this.isPlaying || token!==this._token) return;
+        } else {
+          const { startLatency } = await this.engine.speakOnce(units[u].text, this.engine.voiceFor(units[u].role));
+          if(!this.isPlaying || token!==this._token) return;
+          if(startLatency!==null && startLatency>=0 && startLatency<2000){
+            this._latencyMs = this._latencyMs*0.7 + startLatency*0.3;
+          }
+        }
+        const lastUnit = (u === units.length-1);
+        let gap;
+        if(!lastUnit)            gap = TURN_GAP_MS;                    // 会話のセリフ間
+        else if(r < reps-1)      gap = isFull ? FULL_GAP_MS : LINE_GAP_MS; // 反復の間
+        else                     gap = 0;                             // 最後
+        gap = Math.max(MIN_GAP_MS, gap - this._latencyMs);
+        if(gap>0) await wait(gap);
+      }
+      if(!this.isPlaying || token!==this._token) return;
+      this._emitProgress(r+1, reps);
+    }
+    // 規定回数を再生し終えたら停止
+    if(isFull) this._emitLine(-1);
+    this.isPlaying = false;
+    this._emitPlaying();
+  }
+
+  stop(){
+    this.isPlaying = false;
+    this._token++;
+    this.engine.stop();
+    this._emitLine(-1);
+    this._emitPlaying();
+  }
+
+  prev(){
+    if(this.isFirst()) return;
+    this.stop();
+    this.stepIndex -= 1;
+    this._emitChange();
+    this.play();   // 前のステップを自動再生
+  }
+  next(){
+    if(this.isLast()) return;
+    this.stop();
+    this.stepIndex += 1;
+    this._emitChange();
+    this.play();   // 次のステップを自動再生
+  }
+}
+
+/* =========================================================
+   UI 配線
+   ========================================================= */
+(function main(){
+  const el = {
+    body: R,
+    convoName: R.querySelector("#convo-name"),
+    stepName: R.querySelector("#step-name"),
+    stepPos:  R.querySelector("#step-pos"),
+    statusText: R.querySelector("#p-status-text"),
+    fullView: R.querySelector("#full-view"),
+    dispToggle: R.querySelector("#disp-toggle"),
+    dispPartner: R.querySelector("#disp-partner"),
+    dialogue: R.querySelector("#dialogue"),
+    lineView: R.querySelector("#line-view"),
+    lineRole: R.querySelector("#line-role"),
+    lineEn:   R.querySelector("#line-en"),
+    lineJa:   R.querySelector("#line-ja"),
+    rep:      R.querySelector("#rep"),
+    prev:     R.querySelector("#p-btn-prev"),
+    toggle:   R.querySelector("#p-btn-toggle"),
+    toggleIco:R.querySelector("#p-toggle-ico"),
+    toggleLbl:R.querySelector("#p-toggle-lbl"),
+    next:     R.querySelector("#p-btn-next"),
+    voiceNote:R.querySelector("#p-voice-note"),
+    selectScreen:R.querySelector("#select-screen"),
+    genreView:R.querySelector("#genre-view"),
+    genreGrid:R.querySelector("#p-genre-grid"),
+    genreFoot:R.querySelector("#genre-foot"),
+    sceneView:R.querySelector("#scene-view"),
+    sceneGrid:R.querySelector("#scene-grid"),
+    sceneViewEmoji:R.querySelector("#scene-view-emoji"),
+    sceneViewName:R.querySelector("#scene-view-name"),
+    toGenres:R.querySelector("#to-genres"),
+    toSelect: R.querySelector("#to-select"),
+  };
+
+  let convoIndex = 0;
+  const engine = new AudioEngine();
+  const player = new PhrasePlayer(CONVERSATIONS[convoIndex], engine, {
+    onChange: renderStep,
+    onPlaying: renderPlaying,
+    onProgress: renderProgress,
+    onLine: highlightLine,
+  });
+
+  // 全文ビューの吹き出しを（会話ごとに）作り直す
+  function buildDialogue(convo){
+    el.dialogue.innerHTML = "";
+    return convo.lines.map((l, i)=>{
+      const b=document.createElement("div");
+      b.className = "bubble " + (l.role==="You" ? "you" : "staff");
+      b.dataset.line = i;
+      b.innerHTML = `<div class="role">${l.role}</div><div class="en"></div><div class="ja"></div>`;
+      b.querySelector(".en").textContent = l.en;
+      b.querySelector(".ja").textContent = l.ja;
+      el.dialogue.appendChild(b);
+      return b;
+    });
+  }
+  let bubbles = buildDialogue(player.convo);
+  let hideEnRole = null;  // null=ALL / "You" / 相手役名 … その役の英文を隠して日本語のみ表示
+
+  // 現在の会話の「相手役」名（You 以外の最初の役）
+  function partnerRoleOf(convo){
+    const l = convo.lines.find(x=>x.role!=="You");
+    return l ? l.role : "";
+  }
+  // 各吹き出しに「英文を隠す」状態を反映（隠すのは仕上げ＝最後の全文×5 のときだけ）
+  function applyHideMode(){
+    const s = player.step();
+    const effective = (s.type==="full" && player.isLast()) ? hideEnRole : null;
+    bubbles.forEach((b, i)=>{
+      const role = player.convo.lines[i].role;
+      b.classList.toggle("en-hidden", effective!==null && role===effective);
+    });
+  }
+  // 切り替えボタンの相手役ラベルとアクティブ表示を更新
+  function renderDispToggle(){
+    const partner = partnerRoleOf(player.convo);
+    el.dispPartner.textContent = partner;
+    el.dispToggle.querySelectorAll(".disp-btn").forEach(btn=>{
+      const role = btn.dataset.mode==="all" ? null
+                 : btn.dataset.mode==="you" ? "You" : partner;
+      btn.classList.toggle("active", role===hideEnRole);
+    });
+  }
+
+  function renderConvoBar(){
+    el.convoName.textContent = player.convo.title;
+  }
+
+  // ── シーン選択画面（ジャンル別セクション） ──
+  function makeSceneCard(c, i){
+    const other = (c.lines.find(l=>l.role!=="You") || {}).role || "";
+    const card = document.createElement("button");
+    card.type = "button";
+    card.className = "scene-card";
+    card.innerHTML =
+      '<span class="scene-emoji" aria-hidden="true"></span>' +
+      '<span class="scene-name"></span>' +
+      '<span class="scene-meta"></span>';
+    card.querySelector(".scene-emoji").textContent = c.emoji || "💬";
+    card.querySelector(".scene-name").textContent = c.title;
+    card.querySelector(".scene-meta").textContent = other + " · " + c.lines.length + " phrases";
+    card.addEventListener("click", ()=> selectScene(i));
+    return card;
+  }
+
+  // ① ジャンル一覧を作る
+  function buildGenreGrid(){
+    el.genreGrid.innerHTML = "";
+    CATEGORIES.forEach(cat=>{
+      const count = CONVERSATIONS.filter(c=> c.cat===cat.id).length;
+      if(!count) return;
+      const card = document.createElement("button");
+      card.type = "button";
+      card.className = "genre-card";
+      card.innerHTML =
+        '<span class="genre-emoji" aria-hidden="true"></span>' +
+        '<span class="genre-text"><span class="genre-name"></span><span class="genre-count"></span></span>' +
+        '<span class="genre-chevron" aria-hidden="true">›</span>';
+      card.querySelector(".genre-emoji").textContent = cat.emoji;
+      card.querySelector(".genre-name").textContent = cat.name;
+      card.querySelector(".genre-count").textContent = count + " scenes";
+      card.addEventListener("click", ()=> openGenre(cat.id));
+      el.genreGrid.appendChild(card);
+    });
+    el.genreFoot.textContent = "全 " + CONVERSATIONS.length + " シーン / " + CATEGORIES.length + " ジャンル";
+  }
+
+  // ② 選んだジャンルのシーン一覧を表示
+  function openGenre(catId){
+    const cat = CATEGORIES.find(c=> c.id===catId) || CATEGORIES[0];
+    el.sceneViewEmoji.textContent = cat.emoji;
+    el.sceneViewName.textContent  = cat.name;
+    el.sceneGrid.innerHTML = "";
+    CONVERSATIONS.forEach((c, i)=>{
+      if(c.cat===cat.id) el.sceneGrid.appendChild(makeSceneCard(c, i));
+    });
+    el.genreView.hidden = true;
+    el.sceneView.hidden = false;
+    el.selectScreen.scrollTop = 0;
+  }
+
+  // ジャンル一覧に戻る
+  function showGenres(){
+    el.sceneView.hidden = true;
+    el.genreView.hidden = false;
+    el.selectScreen.scrollTop = 0;
+  }
+
+  // カードを選んで練習画面へ（先頭ステップ・停止状態で開始）
+  function selectScene(index){
+    convoIndex = index;
+    hideEnRole = null;   // シーンを選び直したら ALL に戻す
+    player.mutedRole = null;
+    player.loadConversation(CONVERSATIONS[convoIndex]);
+    bubbles = buildDialogue(player.convo);
+    renderConvoBar();
+    renderStep(player);
+    renderPlaying(player);
+    el.selectScreen.hidden = true;
+  }
+
+  // 一覧に戻る（再生は止め、今のシーンが属するジャンルのシーン一覧を表示）
+  function openSelect(){
+    player.stop();
+    renderPlaying(player);
+    openGenre(CONVERSATIONS[convoIndex].cat);
+    el.selectScreen.hidden = false;
+  }
+
+  function renderStep(p){
+    const s = p.step();
+    if(s.type==="full"){
+      el.fullView.hidden = false;
+      el.lineView.hidden = true;
+      el.stepName.textContent = "全文 ×" + FULL_REPEATS;
+      el.dispToggle.hidden = !p.isLast();   // 仕上げ（最後の全文×5）だけ表示
+      renderDispToggle();
+      applyHideMode();
+    } else {
+      const l = p.convo.lines[s.lineIndex];
+      el.fullView.hidden = true;
+      el.lineView.hidden = false;
+      el.lineRole.textContent = l.role;
+      el.lineRole.className = "line-role " + (l.role==="You" ? "you" : "staff");
+      el.lineEn.textContent = l.en;
+      el.lineJa.textContent = l.ja;
+      el.stepName.textContent = l.role + " ×" + LINE_REPEATS;
+    }
+    // ステップ位置（行ステップのみ ◯/全行 を表示）
+    if(s.type==="line"){
+      el.stepPos.textContent = "（フレーズ " + (s.lineIndex+1) + "/" + p.convo.lines.length + "）";
+    } else {
+      el.stepPos.textContent = (p.isFirst() ? "（最初）" : "（仕上げ）");
+    }
+    el.prev.disabled = p.isFirst();
+    el.next.disabled = p.isLast();
+    renderProgress(0, p.repeatsOf(s));
+    highlightLine(-1);
+  }
+
+  function renderProgress(done, total){
+    el.rep.innerHTML = "リピート <b>" + done + "</b> / " + total;
+  }
+
+  function highlightLine(i){
+    bubbles.forEach((b, idx)=> b.classList.toggle("active", idx===i));
+  }
+
+  function renderPlaying(p){
+    el.body.classList.toggle("is-playing", p.isPlaying);
+    el.statusText.textContent = p.isPlaying ? "再生中" : "停止中";
+    el.toggleIco.textContent = p.isPlaying ? "⏸" : "▶";
+    el.toggleLbl.textContent = p.isPlaying ? "停止" : "再生";
+    el.toggle.setAttribute("aria-label", p.isPlaying ? "停止" : "再生");
+  }
+
+  el.prev.addEventListener("click", ()=> player.prev());
+  el.next.addEventListener("click", ()=> player.next());
+  el.toggle.addEventListener("click", ()=>{ if(player.isPlaying) player.stop(); else player.play(); });
+  el.toSelect.addEventListener("click", openSelect);
+  el.toGenres.addEventListener("click", showGenres);
+  el.dispToggle.addEventListener("click", (e)=>{
+    const btn = e.target.closest(".disp-btn");
+    if(!btn) return;
+    const partner = partnerRoleOf(player.convo);
+    hideEnRole = btn.dataset.mode==="all" ? null
+               : btn.dataset.mode==="you" ? "You" : partner;
+    player.mutedRole = hideEnRole;   // 日本語のみの役は音声も消す
+    applyHideMode();
+    renderDispToggle();
+    player.stop();    // 現在の再生を止め、
+    player.play();    // 新しい表示で最初から自動再生（リピートは0からやり直し）
+  });
+
+  // 起動：① ジャンル一覧を表示。練習画面は裏で初期化しておく（シーン選択で前面化）
+  buildGenreGrid();
+  showGenres();
+  renderConvoBar();
+  renderStep(player);
+  renderPlaying(player);
+  el.selectScreen.hidden = false;
+
+  engine.init().then(()=>{
+    const a = engine.voiceStaff, b = engine.voiceYou;
+    if(a){
+      el.voiceNote.textContent = (a===b)
+        ? "声: " + a.name + "（Staff/You 共通）"
+        : "声: Staff=" + a.name + " / You=" + b.name;
+    } else {
+      el.voiceNote.textContent = "声: ブラウザ既定";
+    }
+  });
+  window.__PHRASE_STOP = () => { try{ if (typeof player !== "undefined" && player) player.stop(); }catch(e){} };
+})();
+
+}
+
+
+/* ====== ルーター：ホーム ⇄ 単語 / フレーズ（起動時にJSONデータを取得） ====== */
+(function router(){
+  const home   = document.getElementById("home-screen");
+  const wRoot  = document.getElementById("words-root");
+  const pRoot  = document.getElementById("phrases-root");
+  let wReady = false, pReady = false, wBusy = false, pBusy = false;
+
+  function stopAll(){
+    try{ window.__WORD_STOP && window.__WORD_STOP(); }catch(e){}
+    try{ window.__PHRASE_STOP && window.__PHRASE_STOP(); }catch(e){}
+  }
+  function showHome(){
+    stopAll();
+    wRoot.hidden = true; pRoot.hidden = true; home.hidden = false;
+    home.scrollTop = 0;
+  }
+
+  /* 毎回いちばん新しいデータを取りに行く（キャッシュさせない＝開き直すと反映） */
+  async function loadJSON(name){
+    const res = await fetch(name + "?v=" + Date.now(), { cache: "no-store" });
+    if(!res.ok) throw new Error(name + " HTTP " + res.status);
+    return await res.json();
+  }
+  function msgEl(root){
+    let m = root.querySelector(".data-msg");
+    if(!m){ m = document.createElement("div"); m.className = "data-msg"; root.appendChild(m); }
+    return m;
+  }
+  function showLoading(root){ const m = msgEl(root); m.textContent = "データを読み込み中…"; m.hidden = false; }
+  function hideMsg(root){ const m = root.querySelector(".data-msg"); if(m) m.hidden = true; }
+  function showError(root, name){
+    const m = msgEl(root);
+    m.innerHTML = "「" + name + "」を読み込めませんでした。<br>電波を確認して、アプリを開き直してください。";
+    m.hidden = false;
+  }
+
+  async function openWords(){
+    stopAll();
+    home.hidden = true; pRoot.hidden = true; wRoot.hidden = false;
+    if(wReady || wBusy) return;
+    wBusy = true; showLoading(wRoot);
+    try{
+      window.__WORDS_DATA = await loadJSON("words.json");
+      hideMsg(wRoot);
+      init_words_root(); wReady = true;
+    }catch(e){ showError(wRoot, "words.json"); }
+    finally{ wBusy = false; }
+  }
+  async function openPhrases(){
+    stopAll();
+    home.hidden = true; wRoot.hidden = true; pRoot.hidden = false;
+    if(pReady || pBusy) return;
+    pBusy = true; showLoading(pRoot);
+    try{
+      window.__SCENES_DATA = await loadJSON("scenes.json");
+      hideMsg(pRoot);
+      init_phrases_root(); pReady = true;
+    }catch(e){ showError(pRoot, "scenes.json"); }
+    finally{ pBusy = false; }
+  }
+
+  document.getElementById("home-words").addEventListener("click", openWords);
+  document.getElementById("home-phrases").addEventListener("click", openPhrases);
+  document.getElementById("w-to-home").addEventListener("click", showHome);
+  document.getElementById("p-to-home").addEventListener("click", showHome);
+})();
+</script>
+</body>
+</html>

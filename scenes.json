@@ -1,0 +1,10362 @@
+[
+ {
+  "title": "カフェで注文する",
+  "cat": "food",
+  "emoji": "☕",
+  "lines": [
+   {
+    "role": "Staff",
+    "en": "Hi, what can I get for you?",
+    "ja": "いらっしゃいませ。ご注文は？"
+   },
+   {
+    "role": "You",
+    "en": "Can I get a latte, please?",
+    "ja": "ラテをください。"
+   },
+   {
+    "role": "Staff",
+    "en": "What size would you like?",
+    "ja": "サイズはいかがしますか？"
+   },
+   {
+    "role": "You",
+    "en": "Medium, please.",
+    "ja": "Mサイズでお願いします。"
+   },
+   {
+    "role": "Staff",
+    "en": "Anything else?",
+    "ja": "他にはございますか？"
+   },
+   {
+    "role": "You",
+    "en": "That's all, thank you.",
+    "ja": "以上です。ありがとうございます。"
+   }
+  ]
+ },
+ {
+  "title": "道を尋ねる",
+  "cat": "travel",
+  "emoji": "🗺️",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Excuse me, how do I get to the station?",
+    "ja": "すみません、駅へはどう行きますか？"
+   },
+   {
+    "role": "Local",
+    "en": "Go straight and turn left at the corner.",
+    "ja": "まっすぐ進んで、角を左に曲がってください。"
+   },
+   {
+    "role": "You",
+    "en": "How long does it take?",
+    "ja": "どのくらいかかりますか？"
+   },
+   {
+    "role": "Local",
+    "en": "About five minutes on foot.",
+    "ja": "徒歩で5分くらいです。"
+   },
+   {
+    "role": "You",
+    "en": "Is it near the bank?",
+    "ja": "銀行の近くですか？"
+   },
+   {
+    "role": "Local",
+    "en": "Yes, it's right next to it.",
+    "ja": "はい、すぐ隣です。"
+   }
+  ]
+ },
+ {
+  "title": "レストランで食事する",
+  "cat": "food",
+  "emoji": "🍽️",
+  "lines": [
+   {
+    "role": "Server",
+    "en": "Good evening. Do you have a reservation?",
+    "ja": "こんばんは。ご予約はありますか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, a table for two under Tanaka.",
+    "ja": "はい、田中で2名予約しています。"
+   },
+   {
+    "role": "Server",
+    "en": "Right this way. Here are your menus.",
+    "ja": "こちらへどうぞ。メニューです。"
+   },
+   {
+    "role": "You",
+    "en": "Could you recommend something?",
+    "ja": "おすすめはありますか？"
+   },
+   {
+    "role": "Server",
+    "en": "The grilled salmon is very popular.",
+    "ja": "グリルサーモンが人気です。"
+   },
+   {
+    "role": "You",
+    "en": "I'll have that, please.",
+    "ja": "それをお願いします。"
+   }
+  ]
+ },
+ {
+  "title": "ホテルにチェックインする",
+  "cat": "travel",
+  "emoji": "🏨",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Hi, I'd like to check in, please.",
+    "ja": "こんにちは、チェックインをお願いします。"
+   },
+   {
+    "role": "Front Desk",
+    "en": "May I have your name?",
+    "ja": "お名前をいただけますか？"
+   },
+   {
+    "role": "You",
+    "en": "It's Sato. I booked a single room.",
+    "ja": "佐藤です。シングルルームを予約しました。"
+   },
+   {
+    "role": "Front Desk",
+    "en": "You're on the fifth floor. Here's your key.",
+    "ja": "5階です。こちらが鍵です。"
+   },
+   {
+    "role": "You",
+    "en": "What time is breakfast?",
+    "ja": "朝食は何時からですか？"
+   },
+   {
+    "role": "Front Desk",
+    "en": "From seven to ten in the morning.",
+    "ja": "朝7時から10時までです。"
+   }
+  ]
+ },
+ {
+  "title": "服を試着する",
+  "cat": "food",
+  "emoji": "👕",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Excuse me, can I try this on?",
+    "ja": "すみません、これを試着できますか？"
+   },
+   {
+    "role": "Clerk",
+    "en": "Of course. The fitting room is over there.",
+    "ja": "もちろんです。試着室はあちらです。"
+   },
+   {
+    "role": "You",
+    "en": "Do you have this in a smaller size?",
+    "ja": "これの小さいサイズはありますか？"
+   },
+   {
+    "role": "Clerk",
+    "en": "Let me check for you.",
+    "ja": "お調べしますね。"
+   },
+   {
+    "role": "You",
+    "en": "How much is it?",
+    "ja": "おいくらですか？"
+   },
+   {
+    "role": "Clerk",
+    "en": "It's thirty dollars.",
+    "ja": "30ドルです。"
+   }
+  ]
+ },
+ {
+  "title": "体調を伝える",
+  "cat": "life",
+  "emoji": "🩺",
+  "lines": [
+   {
+    "role": "Doctor",
+    "en": "What seems to be the problem?",
+    "ja": "どうされましたか？"
+   },
+   {
+    "role": "You",
+    "en": "I have a headache and a fever.",
+    "ja": "頭痛と熱があります。"
+   },
+   {
+    "role": "Doctor",
+    "en": "How long have you felt this way?",
+    "ja": "いつからですか？"
+   },
+   {
+    "role": "You",
+    "en": "Since yesterday morning.",
+    "ja": "昨日の朝からです。"
+   },
+   {
+    "role": "Doctor",
+    "en": "Take this medicine and get some rest.",
+    "ja": "この薬を飲んで、休んでください。"
+   },
+   {
+    "role": "You",
+    "en": "Thank you, doctor.",
+    "ja": "ありがとうございます、先生。"
+   }
+  ]
+ },
+ {
+  "title": "友達を映画に誘う",
+  "cat": "social",
+  "emoji": "🎬",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Are you free this weekend?",
+    "ja": "今週末、空いてる？"
+   },
+   {
+    "role": "Friend",
+    "en": "I think so. What's up?",
+    "ja": "たぶんね。どうしたの？"
+   },
+   {
+    "role": "You",
+    "en": "Do you want to see a movie?",
+    "ja": "映画でも見に行かない？"
+   },
+   {
+    "role": "Friend",
+    "en": "Sure! What time?",
+    "ja": "いいね！何時？"
+   },
+   {
+    "role": "You",
+    "en": "How about seven on Saturday?",
+    "ja": "土曜の7時はどう？"
+   },
+   {
+    "role": "Friend",
+    "en": "Sounds good. See you then.",
+    "ja": "いいね。じゃあその時に。"
+   }
+  ]
+ },
+ {
+  "title": "タクシーに乗る",
+  "cat": "travel",
+  "emoji": "🚕",
+  "lines": [
+   {
+    "role": "Driver",
+    "en": "Where to?",
+    "ja": "どちらまで？"
+   },
+   {
+    "role": "You",
+    "en": "To the airport, please.",
+    "ja": "空港までお願いします。"
+   },
+   {
+    "role": "Driver",
+    "en": "Sure. Are you in a hurry?",
+    "ja": "承知しました。お急ぎですか？"
+   },
+   {
+    "role": "You",
+    "en": "A little. My flight is at noon.",
+    "ja": "少し。正午の便なんです。"
+   },
+   {
+    "role": "Driver",
+    "en": "We'll get there in twenty minutes.",
+    "ja": "20分で着きますよ。"
+   },
+   {
+    "role": "You",
+    "en": "Thank you. Keep the change.",
+    "ja": "ありがとう。おつりは取っておいてください。"
+   }
+  ]
+ },
+ {
+  "title": "電話で予約する",
+  "cat": "life",
+  "emoji": "📞",
+  "lines": [
+   {
+    "role": "Receptionist",
+    "en": "Thank you for calling. How can I help?",
+    "ja": "お電話ありがとうございます。ご用件は？"
+   },
+   {
+    "role": "You",
+    "en": "I'd like to make a reservation for tonight.",
+    "ja": "今夜の予約をお願いしたいのですが。"
+   },
+   {
+    "role": "Receptionist",
+    "en": "For how many people?",
+    "ja": "何名様ですか？"
+   },
+   {
+    "role": "You",
+    "en": "Four people at eight o'clock.",
+    "ja": "8時に4名です。"
+   },
+   {
+    "role": "Receptionist",
+    "en": "Could I get your name?",
+    "ja": "お名前をいただけますか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, it's Yamada. Thank you.",
+    "ja": "はい、山田です。よろしくお願いします。"
+   }
+  ]
+ },
+ {
+  "title": "初対面で自己紹介する",
+  "cat": "social",
+  "emoji": "👋",
+  "lines": [
+   {
+    "role": "Anna",
+    "en": "Hi, are you the new member?",
+    "ja": "こんにちは、新しいメンバーの方ですか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, nice to meet you. I'm Ken.",
+    "ja": "はい、はじめまして。ケンです。"
+   },
+   {
+    "role": "Anna",
+    "en": "Welcome! Where are you from?",
+    "ja": "ようこそ！ご出身はどちらですか？"
+   },
+   {
+    "role": "You",
+    "en": "I'm from Osaka, Japan.",
+    "ja": "日本の大阪出身です。"
+   },
+   {
+    "role": "Anna",
+    "en": "Great. Let me show you around.",
+    "ja": "いいですね。案内しますね。"
+   },
+   {
+    "role": "You",
+    "en": "Thank you. I appreciate it.",
+    "ja": "ありがとうございます。助かります。"
+   }
+  ]
+ },
+ {
+  "title": "空港でチェックインする",
+  "cat": "travel",
+  "emoji": "✈️",
+  "lines": [
+   {
+    "role": "Agent",
+    "en": "May I see your passport, please?",
+    "ja": "パスポートを拝見できますか？"
+   },
+   {
+    "role": "You",
+    "en": "Sure, here you are.",
+    "ja": "はい、どうぞ。"
+   },
+   {
+    "role": "Agent",
+    "en": "Are you checking any bags?",
+    "ja": "お預けの荷物はありますか？"
+   },
+   {
+    "role": "You",
+    "en": "Just one suitcase.",
+    "ja": "スーツケースが1つだけです。"
+   },
+   {
+    "role": "Agent",
+    "en": "Here's your boarding pass. Gate 12.",
+    "ja": "搭乗券です。12番ゲートです。"
+   },
+   {
+    "role": "You",
+    "en": "Thank you very much.",
+    "ja": "ありがとうございます。"
+   }
+  ]
+ },
+ {
+  "title": "駅で切符を買う",
+  "cat": "travel",
+  "emoji": "🚆",
+  "lines": [
+   {
+    "role": "You",
+    "en": "One ticket to Kyoto, please.",
+    "ja": "京都まで1枚お願いします。"
+   },
+   {
+    "role": "Clerk",
+    "en": "One way or round trip?",
+    "ja": "片道ですか、往復ですか？"
+   },
+   {
+    "role": "You",
+    "en": "Round trip, please.",
+    "ja": "往復でお願いします。"
+   },
+   {
+    "role": "Clerk",
+    "en": "That'll be sixty dollars.",
+    "ja": "60ドルになります。"
+   },
+   {
+    "role": "You",
+    "en": "Which platform is it?",
+    "ja": "何番ホームですか？"
+   },
+   {
+    "role": "Clerk",
+    "en": "Platform three, on your left.",
+    "ja": "3番ホーム、左手です。"
+   }
+  ]
+ },
+ {
+  "title": "スーパーで会計する",
+  "cat": "food",
+  "emoji": "🛒",
+  "lines": [
+   {
+    "role": "Cashier",
+    "en": "Did you find everything okay?",
+    "ja": "お探しのものは見つかりましたか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, thank you.",
+    "ja": "はい、大丈夫です。"
+   },
+   {
+    "role": "Cashier",
+    "en": "Do you need a bag?",
+    "ja": "袋はご利用になりますか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, please.",
+    "ja": "はい、お願いします。"
+   },
+   {
+    "role": "Cashier",
+    "en": "That's twelve dollars.",
+    "ja": "12ドルです。"
+   },
+   {
+    "role": "You",
+    "en": "Here's my card.",
+    "ja": "カードでお願いします。"
+   }
+  ]
+ },
+ {
+  "title": "美容院で髪を切る",
+  "cat": "life",
+  "emoji": "✂️",
+  "lines": [
+   {
+    "role": "Stylist",
+    "en": "How would you like your hair today?",
+    "ja": "今日はどんな感じにしますか？"
+   },
+   {
+    "role": "You",
+    "en": "Just a trim, please.",
+    "ja": "少し整えるだけでお願いします。"
+   },
+   {
+    "role": "Stylist",
+    "en": "How short on the sides?",
+    "ja": "サイドはどのくらい短くしますか？"
+   },
+   {
+    "role": "You",
+    "en": "Not too short.",
+    "ja": "短くしすぎないでください。"
+   },
+   {
+    "role": "Stylist",
+    "en": "How's this length?",
+    "ja": "この長さはいかがですか？"
+   },
+   {
+    "role": "You",
+    "en": "That looks great, thanks.",
+    "ja": "いい感じです、ありがとう。"
+   }
+  ]
+ },
+ {
+  "title": "銀行で口座を開く",
+  "cat": "life",
+  "emoji": "🏦",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to open an account.",
+    "ja": "口座を開きたいのですが。"
+   },
+   {
+    "role": "Teller",
+    "en": "Do you have an ID with you?",
+    "ja": "身分証はお持ちですか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, here's my passport.",
+    "ja": "はい、パスポートがあります。"
+   },
+   {
+    "role": "Teller",
+    "en": "Please fill out this form.",
+    "ja": "こちらの用紙にご記入ください。"
+   },
+   {
+    "role": "You",
+    "en": "Sure. Is there a fee?",
+    "ja": "はい。手数料はかかりますか？"
+   },
+   {
+    "role": "Teller",
+    "en": "No, it's free to open.",
+    "ja": "いいえ、開設は無料です。"
+   }
+  ]
+ },
+ {
+  "title": "天気について話す",
+  "cat": "social",
+  "emoji": "☀️",
+  "lines": [
+   {
+    "role": "Coworker",
+    "en": "Nice weather today, isn't it?",
+    "ja": "今日はいい天気だね。"
+   },
+   {
+    "role": "You",
+    "en": "Yes, it's really sunny.",
+    "ja": "うん、すごく晴れてるね。"
+   },
+   {
+    "role": "Coworker",
+    "en": "Did you bring an umbrella?",
+    "ja": "傘は持ってきた？"
+   },
+   {
+    "role": "You",
+    "en": "No, I didn't need one.",
+    "ja": "ううん、いらなかったよ。"
+   },
+   {
+    "role": "Coworker",
+    "en": "They say it'll rain tomorrow.",
+    "ja": "明日は雨らしいよ。"
+   },
+   {
+    "role": "You",
+    "en": "Really? I'll bring one then.",
+    "ja": "そうなんだ。じゃあ持っていくよ。"
+   }
+  ]
+ },
+ {
+  "title": "趣味について話す",
+  "cat": "social",
+  "emoji": "🎸",
+  "lines": [
+   {
+    "role": "Mike",
+    "en": "What do you do in your free time?",
+    "ja": "暇なときは何をしてるの？"
+   },
+   {
+    "role": "You",
+    "en": "I usually play the guitar.",
+    "ja": "たいていギターを弾いてるよ。"
+   },
+   {
+    "role": "Mike",
+    "en": "Cool! How long have you played?",
+    "ja": "いいね！どのくらい弾いてるの？"
+   },
+   {
+    "role": "You",
+    "en": "For about three years.",
+    "ja": "3年くらいかな。"
+   },
+   {
+    "role": "Mike",
+    "en": "We should jam sometime.",
+    "ja": "今度一緒に演奏しようよ。"
+   },
+   {
+    "role": "You",
+    "en": "Sounds fun. Let's do it.",
+    "ja": "楽しそう。やろうよ。"
+   }
+  ]
+ },
+ {
+  "title": "仕事で電話に出る",
+  "cat": "work",
+  "emoji": "💼",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Hello, this is Sales. How can I help?",
+    "ja": "お電話ありがとうございます、営業部です。"
+   },
+   {
+    "role": "Caller",
+    "en": "Hi, is Mr. Brown available?",
+    "ja": "もしもし、ブラウンさんはいらっしゃいますか？"
+   },
+   {
+    "role": "You",
+    "en": "He's in a meeting right now.",
+    "ja": "ただいま会議中です。"
+   },
+   {
+    "role": "Caller",
+    "en": "Could you take a message?",
+    "ja": "伝言をお願いできますか？"
+   },
+   {
+    "role": "You",
+    "en": "Of course. May I have your name?",
+    "ja": "もちろんです。お名前をいただけますか？"
+   },
+   {
+    "role": "Caller",
+    "en": "It's Mr. Lee from ABC.",
+    "ja": "ABC社のリーです。"
+   }
+  ]
+ },
+ {
+  "title": "写真を頼まれる",
+  "cat": "travel",
+  "emoji": "📷",
+  "lines": [
+   {
+    "role": "Tourist",
+    "en": "Excuse me, could you take our photo?",
+    "ja": "すみません、写真を撮ってもらえますか？"
+   },
+   {
+    "role": "You",
+    "en": "Sure, no problem.",
+    "ja": "もちろん、いいですよ。"
+   },
+   {
+    "role": "Tourist",
+    "en": "Just press this button.",
+    "ja": "このボタンを押すだけです。"
+   },
+   {
+    "role": "You",
+    "en": "Okay. Say cheese!",
+    "ja": "わかりました。はい、チーズ！"
+   },
+   {
+    "role": "Tourist",
+    "en": "Could you take one more?",
+    "ja": "もう1枚お願いできますか？"
+   },
+   {
+    "role": "You",
+    "en": "Of course. Here you go.",
+    "ja": "もちろん。はい、どうぞ。"
+   }
+  ]
+ },
+ {
+  "title": "薬局で薬を買う",
+  "cat": "food",
+  "emoji": "💊",
+  "lines": [
+   {
+    "role": "Pharmacist",
+    "en": "What are your symptoms?",
+    "ja": "どんな症状ですか？"
+   },
+   {
+    "role": "You",
+    "en": "I have a sore throat and a cough.",
+    "ja": "のどの痛みと咳があります。"
+   },
+   {
+    "role": "Pharmacist",
+    "en": "Try this. Take it after meals.",
+    "ja": "これをどうぞ。食後に飲んでください。"
+   },
+   {
+    "role": "You",
+    "en": "How many times a day?",
+    "ja": "1日に何回ですか？"
+   },
+   {
+    "role": "Pharmacist",
+    "en": "Three times a day.",
+    "ja": "1日3回です。"
+   },
+   {
+    "role": "You",
+    "en": "Thank you. I'll try it.",
+    "ja": "ありがとう。試してみます。"
+   }
+  ]
+ },
+ {
+  "title": "レンタカーを借りる",
+  "emoji": "🚗",
+  "cat": "travel",
+  "lines": [
+   {
+    "role": "Agent",
+    "en": "Hi, do you have a reservation?",
+    "ja": "こんにちは、ご予約はありますか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, under Tanaka.",
+    "ja": "はい、田中で予約しています。"
+   },
+   {
+    "role": "Agent",
+    "en": "For how many days?",
+    "ja": "何日間のご利用ですか？"
+   },
+   {
+    "role": "You",
+    "en": "Three days, please.",
+    "ja": "3日間でお願いします。"
+   },
+   {
+    "role": "Agent",
+    "en": "Please return it with a full tank.",
+    "ja": "満タンにして返却してください。"
+   },
+   {
+    "role": "You",
+    "en": "Got it. Thank you.",
+    "ja": "わかりました。ありがとう。"
+   }
+  ]
+ },
+ {
+  "title": "観光案内所で聞く",
+  "emoji": "ℹ️",
+  "cat": "travel",
+  "lines": [
+   {
+    "role": "You",
+    "en": "What's worth seeing around here?",
+    "ja": "この辺りで見どころはありますか？"
+   },
+   {
+    "role": "Guide",
+    "en": "The old castle is very popular.",
+    "ja": "古いお城が人気ですよ。"
+   },
+   {
+    "role": "You",
+    "en": "How do I get there?",
+    "ja": "そこへはどう行きますか？"
+   },
+   {
+    "role": "Guide",
+    "en": "Take bus number five.",
+    "ja": "5番のバスに乗ってください。"
+   },
+   {
+    "role": "You",
+    "en": "Do you have a map?",
+    "ja": "地図はありますか？"
+   },
+   {
+    "role": "Guide",
+    "en": "Sure, here's a free one.",
+    "ja": "はい、無料のものをどうぞ。"
+   }
+  ]
+ },
+ {
+  "title": "入国審査を受ける",
+  "emoji": "🛂",
+  "cat": "travel",
+  "lines": [
+   {
+    "role": "Officer",
+    "en": "What's the purpose of your visit?",
+    "ja": "訪問の目的は何ですか？"
+   },
+   {
+    "role": "You",
+    "en": "Sightseeing.",
+    "ja": "観光です。"
+   },
+   {
+    "role": "Officer",
+    "en": "How long will you stay?",
+    "ja": "どのくらい滞在しますか？"
+   },
+   {
+    "role": "You",
+    "en": "For one week.",
+    "ja": "1週間です。"
+   },
+   {
+    "role": "Officer",
+    "en": "Where are you staying?",
+    "ja": "どこに泊まりますか？"
+   },
+   {
+    "role": "You",
+    "en": "At a hotel downtown.",
+    "ja": "中心街のホテルです。"
+   }
+  ]
+ },
+ {
+  "title": "ファストフードで注文する",
+  "emoji": "🍔",
+  "cat": "food",
+  "lines": [
+   {
+    "role": "Crew",
+    "en": "Hi, for here or to go?",
+    "ja": "こんにちは、店内ですか、お持ち帰りですか？"
+   },
+   {
+    "role": "You",
+    "en": "To go, please.",
+    "ja": "持ち帰りでお願いします。"
+   },
+   {
+    "role": "Crew",
+    "en": "Anything to drink?",
+    "ja": "お飲み物はいかがですか？"
+   },
+   {
+    "role": "You",
+    "en": "A small cola, please.",
+    "ja": "コーラのSサイズをください。"
+   },
+   {
+    "role": "Crew",
+    "en": "That's seven dollars.",
+    "ja": "7ドルです。"
+   },
+   {
+    "role": "You",
+    "en": "Here you are.",
+    "ja": "はい、どうぞ。"
+   }
+  ]
+ },
+ {
+  "title": "バーで注文する",
+  "emoji": "🍺",
+  "cat": "food",
+  "lines": [
+   {
+    "role": "Bartender",
+    "en": "What can I get you?",
+    "ja": "何にしますか？"
+   },
+   {
+    "role": "You",
+    "en": "A beer, please.",
+    "ja": "ビールをください。"
+   },
+   {
+    "role": "Bartender",
+    "en": "Draft or bottle?",
+    "ja": "生ですか、瓶ですか？"
+   },
+   {
+    "role": "You",
+    "en": "Draft, please.",
+    "ja": "生でお願いします。"
+   },
+   {
+    "role": "Bartender",
+    "en": "Want to start a tab?",
+    "ja": "お会計はまとめにしますか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, please.",
+    "ja": "はい、お願いします。"
+   }
+  ]
+ },
+ {
+  "title": "お店で返品する",
+  "emoji": "🔁",
+  "cat": "food",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to return this, please.",
+    "ja": "これを返品したいのですが。"
+   },
+   {
+    "role": "Clerk",
+    "en": "Do you have the receipt?",
+    "ja": "レシートはお持ちですか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, here it is.",
+    "ja": "はい、これです。"
+   },
+   {
+    "role": "Clerk",
+    "en": "What's the reason?",
+    "ja": "理由をうかがえますか？"
+   },
+   {
+    "role": "You",
+    "en": "It's the wrong size.",
+    "ja": "サイズが合いませんでした。"
+   },
+   {
+    "role": "Clerk",
+    "en": "No problem. I'll refund you.",
+    "ja": "大丈夫です。返金しますね。"
+   }
+  ]
+ },
+ {
+  "title": "郵便局で荷物を送る",
+  "emoji": "📮",
+  "cat": "life",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to send this package.",
+    "ja": "この荷物を送りたいのですが。"
+   },
+   {
+    "role": "Clerk",
+    "en": "Where to?",
+    "ja": "どちらまでですか？"
+   },
+   {
+    "role": "You",
+    "en": "To Japan, please.",
+    "ja": "日本までお願いします。"
+   },
+   {
+    "role": "Clerk",
+    "en": "Regular or express?",
+    "ja": "普通便ですか、速達ですか？"
+   },
+   {
+    "role": "You",
+    "en": "Express, please.",
+    "ja": "速達でお願いします。"
+   },
+   {
+    "role": "Clerk",
+    "en": "It'll arrive in three days.",
+    "ja": "3日で届きますよ。"
+   }
+  ]
+ },
+ {
+  "title": "携帯ショップで契約する",
+  "emoji": "📱",
+  "cat": "life",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to buy a SIM card.",
+    "ja": "SIMカードを買いたいのですが。"
+   },
+   {
+    "role": "Staff",
+    "en": "How long will you stay?",
+    "ja": "どのくらい滞在されますか？"
+   },
+   {
+    "role": "You",
+    "en": "About a month.",
+    "ja": "1か月くらいです。"
+   },
+   {
+    "role": "Staff",
+    "en": "This plan works best.",
+    "ja": "このプランがおすすめです。"
+   },
+   {
+    "role": "You",
+    "en": "How much is it?",
+    "ja": "いくらですか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Thirty dollars a month.",
+    "ja": "月30ドルです。"
+   }
+  ]
+ },
+ {
+  "title": "ジムに入会する",
+  "emoji": "🏋️",
+  "cat": "life",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to join the gym.",
+    "ja": "ジムに入会したいのですが。"
+   },
+   {
+    "role": "Staff",
+    "en": "Sure. Monthly or yearly?",
+    "ja": "かしこまりました。月額ですか、年額ですか？"
+   },
+   {
+    "role": "You",
+    "en": "Monthly, please.",
+    "ja": "月額でお願いします。"
+   },
+   {
+    "role": "Staff",
+    "en": "Can I see some ID?",
+    "ja": "身分証を見せてもらえますか？"
+   },
+   {
+    "role": "You",
+    "en": "Here's my ID.",
+    "ja": "はい、これです。"
+   },
+   {
+    "role": "Staff",
+    "en": "Welcome! Here's your pass.",
+    "ja": "ようこそ！こちらが会員証です。"
+   }
+  ]
+ },
+ {
+  "title": "久しぶりに再会する",
+  "emoji": "🤝",
+  "cat": "social",
+  "lines": [
+   {
+    "role": "Friend",
+    "en": "Hey, long time no see!",
+    "ja": "やあ、久しぶり！"
+   },
+   {
+    "role": "You",
+    "en": "Yeah, it's been a while.",
+    "ja": "うん、ほんと久しぶり。"
+   },
+   {
+    "role": "Friend",
+    "en": "How have you been?",
+    "ja": "元気にしてた？"
+   },
+   {
+    "role": "You",
+    "en": "Pretty good, thanks.",
+    "ja": "うん、元気だよ。"
+   },
+   {
+    "role": "Friend",
+    "en": "Let's catch up sometime.",
+    "ja": "今度ゆっくり話そうよ。"
+   },
+   {
+    "role": "You",
+    "en": "Sounds great.",
+    "ja": "いいね。"
+   }
+  ]
+ },
+ {
+  "title": "誘いを断る",
+  "emoji": "🙇",
+  "cat": "social",
+  "lines": [
+   {
+    "role": "Friend",
+    "en": "Want to come to the party?",
+    "ja": "パーティーに来ない？"
+   },
+   {
+    "role": "You",
+    "en": "Sorry, I can't make it.",
+    "ja": "ごめん、行けないんだ。"
+   },
+   {
+    "role": "Friend",
+    "en": "Oh, that's too bad.",
+    "ja": "そっか、残念。"
+   },
+   {
+    "role": "You",
+    "en": "I have other plans.",
+    "ja": "別の予定があって。"
+   },
+   {
+    "role": "Friend",
+    "en": "Maybe next time.",
+    "ja": "じゃあ、また今度。"
+   },
+   {
+    "role": "You",
+    "en": "Yeah, thanks for asking.",
+    "ja": "うん、誘ってくれてありがとう。"
+   }
+  ]
+ },
+ {
+  "title": "面接を受ける",
+  "emoji": "🧑‍💼",
+  "cat": "work",
+  "lines": [
+   {
+    "role": "Interviewer",
+    "en": "Tell me about yourself.",
+    "ja": "自己紹介をお願いします。"
+   },
+   {
+    "role": "You",
+    "en": "I have five years of experience.",
+    "ja": "5年の経験があります。"
+   },
+   {
+    "role": "Interviewer",
+    "en": "Why do you want this job?",
+    "ja": "なぜこの仕事を希望しますか？"
+   },
+   {
+    "role": "You",
+    "en": "I want to grow my skills.",
+    "ja": "スキルを伸ばしたいからです。"
+   },
+   {
+    "role": "Interviewer",
+    "en": "Do you have any questions?",
+    "ja": "何か質問はありますか？"
+   },
+   {
+    "role": "You",
+    "en": "When will I hear back?",
+    "ja": "結果はいつ分かりますか？"
+   }
+  ]
+ },
+ {
+  "title": "会議で意見を言う",
+  "emoji": "🗣️",
+  "cat": "work",
+  "lines": [
+   {
+    "role": "Lead",
+    "en": "What do you think about this plan?",
+    "ja": "この案についてどう思いますか？"
+   },
+   {
+    "role": "You",
+    "en": "I think it's a good idea.",
+    "ja": "良い案だと思います。"
+   },
+   {
+    "role": "Lead",
+    "en": "Any concerns?",
+    "ja": "懸念はありますか？"
+   },
+   {
+    "role": "You",
+    "en": "We might need more time.",
+    "ja": "もう少し時間が必要かもしれません。"
+   },
+   {
+    "role": "Lead",
+    "en": "Good point. Let's discuss it.",
+    "ja": "なるほど。話し合いましょう。"
+   },
+   {
+    "role": "You",
+    "en": "Thank you.",
+    "ja": "ありがとうございます。"
+   }
+  ]
+ },
+ {
+  "title": "同僚に手伝いを頼む",
+  "emoji": "🤲",
+  "cat": "work",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Could you help me with this?",
+    "ja": "これ、手伝ってもらえますか？"
+   },
+   {
+    "role": "Colleague",
+    "en": "Sure, what do you need?",
+    "ja": "もちろん、何が必要ですか？"
+   },
+   {
+    "role": "You",
+    "en": "Can you check this report?",
+    "ja": "このレポートを確認してもらえますか？"
+   },
+   {
+    "role": "Colleague",
+    "en": "No problem. When is it due?",
+    "ja": "いいですよ。締め切りはいつですか？"
+   },
+   {
+    "role": "You",
+    "en": "By tomorrow morning.",
+    "ja": "明日の朝までです。"
+   },
+   {
+    "role": "Colleague",
+    "en": "Okay, I'll take a look.",
+    "ja": "了解、見ておきます。"
+   }
+  ]
+ },
+ {
+  "title": "落とし物を相談する",
+  "emoji": "🔎",
+  "cat": "trouble",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I think I lost my wallet.",
+    "ja": "財布をなくしたみたいです。"
+   },
+   {
+    "role": "Staff",
+    "en": "Where did you last see it?",
+    "ja": "最後にどこで見ましたか？"
+   },
+   {
+    "role": "You",
+    "en": "On the train, maybe.",
+    "ja": "たぶん電車の中です。"
+   },
+   {
+    "role": "Staff",
+    "en": "What does it look like?",
+    "ja": "どんな見た目ですか？"
+   },
+   {
+    "role": "You",
+    "en": "It's a brown leather wallet.",
+    "ja": "茶色い革の財布です。"
+   },
+   {
+    "role": "Staff",
+    "en": "Let me check for you.",
+    "ja": "お調べしますね。"
+   }
+  ]
+ },
+ {
+  "title": "道に迷って助けを求める",
+  "emoji": "🧭",
+  "cat": "trouble",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Excuse me, I think I'm lost.",
+    "ja": "すみません、道に迷ったみたいです。"
+   },
+   {
+    "role": "Local",
+    "en": "Where are you trying to go?",
+    "ja": "どこへ行きたいんですか？"
+   },
+   {
+    "role": "You",
+    "en": "To the train station.",
+    "ja": "駅へ行きたいです。"
+   },
+   {
+    "role": "Local",
+    "en": "It's the opposite way.",
+    "ja": "反対方向ですよ。"
+   },
+   {
+    "role": "You",
+    "en": "Oh no. Is it far?",
+    "ja": "えっ。遠いですか？"
+   },
+   {
+    "role": "Local",
+    "en": "About ten minutes back.",
+    "ja": "戻って10分くらいです。"
+   }
+  ]
+ },
+ {
+  "title": "急に体調が悪くなる",
+  "emoji": "🤒",
+  "cat": "trouble",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Excuse me, I don't feel well.",
+    "ja": "すみません、気分が悪いです。"
+   },
+   {
+    "role": "Staff",
+    "en": "Are you okay? What's wrong?",
+    "ja": "大丈夫ですか？どうしました？"
+   },
+   {
+    "role": "You",
+    "en": "I feel dizzy.",
+    "ja": "めまいがします。"
+   },
+   {
+    "role": "Staff",
+    "en": "Please sit down here.",
+    "ja": "こちらに座ってください。"
+   },
+   {
+    "role": "You",
+    "en": "Could you get me some water?",
+    "ja": "お水をもらえますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Of course. I'll be right back.",
+    "ja": "もちろん。すぐ戻ります。"
+   }
+  ]
+ },
+ {
+  "title": "電車の遅れを駅員に聞く",
+  "emoji": "🚉",
+  "cat": "trouble",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Excuse me, is the train delayed?",
+    "ja": "すみません、電車は遅れていますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Yes, by about ten minutes.",
+    "ja": "はい、10分ほど遅れています。"
+   },
+   {
+    "role": "You",
+    "en": "What's the reason?",
+    "ja": "理由は何ですか？"
+   },
+   {
+    "role": "Staff",
+    "en": "There was an accident.",
+    "ja": "事故がありました。"
+   },
+   {
+    "role": "You",
+    "en": "Will I miss my connection?",
+    "ja": "乗り換えに間に合いますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "You should still make it.",
+    "ja": "たぶん間に合いますよ。"
+   }
+  ]
+ },
+ {
+  "title": "病院を予約する",
+  "emoji": "🏥",
+  "cat": "health",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to make an appointment.",
+    "ja": "診察の予約をしたいのですが。"
+   },
+   {
+    "role": "Receptionist",
+    "en": "Have you been here before?",
+    "ja": "当院は初めてですか？"
+   },
+   {
+    "role": "You",
+    "en": "No, it's my first time.",
+    "ja": "はい、初めてです。"
+   },
+   {
+    "role": "Receptionist",
+    "en": "How about Monday at ten?",
+    "ja": "月曜の10時はいかがですか？"
+   },
+   {
+    "role": "You",
+    "en": "That works for me.",
+    "ja": "それで大丈夫です。"
+   },
+   {
+    "role": "Receptionist",
+    "en": "Please bring your ID.",
+    "ja": "身分証をお持ちください。"
+   }
+  ]
+ },
+ {
+  "title": "歯医者で診てもらう",
+  "emoji": "🦷",
+  "cat": "health",
+  "lines": [
+   {
+    "role": "Dentist",
+    "en": "What brings you in today?",
+    "ja": "今日はどうされましたか？"
+   },
+   {
+    "role": "You",
+    "en": "I have a toothache.",
+    "ja": "歯が痛いんです。"
+   },
+   {
+    "role": "Dentist",
+    "en": "Which tooth hurts?",
+    "ja": "どの歯が痛みますか？"
+   },
+   {
+    "role": "You",
+    "en": "This one, in the back.",
+    "ja": "この奥の歯です。"
+   },
+   {
+    "role": "Dentist",
+    "en": "You have a small cavity.",
+    "ja": "小さい虫歯がありますね。"
+   },
+   {
+    "role": "You",
+    "en": "Can you treat it today?",
+    "ja": "今日治療できますか？"
+   }
+  ]
+ },
+ {
+  "title": "メガネ店で視力を測る",
+  "emoji": "👓",
+  "cat": "health",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to get new glasses.",
+    "ja": "新しいメガネを作りたいです。"
+   },
+   {
+    "role": "Staff",
+    "en": "Let's check your eyes first.",
+    "ja": "まず視力を測りましょう。"
+   },
+   {
+    "role": "You",
+    "en": "Okay, sounds good.",
+    "ja": "はい、お願いします。"
+   },
+   {
+    "role": "Staff",
+    "en": "Can you read this line?",
+    "ja": "この行は読めますか？"
+   },
+   {
+    "role": "You",
+    "en": "It's a little blurry.",
+    "ja": "少しぼやけて見えます。"
+   },
+   {
+    "role": "Staff",
+    "en": "Let's try a stronger lens.",
+    "ja": "もう少し強いレンズを試しましょう。"
+   }
+  ]
+ },
+ {
+  "title": "救急で症状を伝える",
+  "emoji": "🚑",
+  "cat": "health",
+  "lines": [
+   {
+    "role": "Nurse",
+    "en": "What happened?",
+    "ja": "どうされましたか？"
+   },
+   {
+    "role": "You",
+    "en": "I hurt my ankle.",
+    "ja": "足首をけがしました。"
+   },
+   {
+    "role": "Nurse",
+    "en": "Can you walk on it?",
+    "ja": "その足で歩けますか？"
+   },
+   {
+    "role": "You",
+    "en": "No, it really hurts.",
+    "ja": "いいえ、とても痛いです。"
+   },
+   {
+    "role": "Nurse",
+    "en": "We'll take an X-ray.",
+    "ja": "レントゲンを撮りますね。"
+   },
+   {
+    "role": "You",
+    "en": "Thank you.",
+    "ja": "お願いします。"
+   }
+  ]
+ },
+ {
+  "title": "健康診断を受ける",
+  "emoji": "🩺",
+  "cat": "health",
+  "lines": [
+   {
+    "role": "Nurse",
+    "en": "Please step on the scale.",
+    "ja": "体重計に乗ってください。"
+   },
+   {
+    "role": "You",
+    "en": "Okay.",
+    "ja": "はい。"
+   },
+   {
+    "role": "Nurse",
+    "en": "Now I'll check your blood pressure.",
+    "ja": "次に血圧を測ります。"
+   },
+   {
+    "role": "You",
+    "en": "Is it normal?",
+    "ja": "正常ですか？"
+   },
+   {
+    "role": "Nurse",
+    "en": "Yes, it looks fine.",
+    "ja": "はい、問題なさそうです。"
+   },
+   {
+    "role": "You",
+    "en": "That's a relief.",
+    "ja": "よかったです。"
+   }
+  ]
+ },
+ {
+  "title": "誕生日を祝う",
+  "emoji": "🎂",
+  "cat": "event",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Happy birthday!",
+    "ja": "お誕生日おめでとう！"
+   },
+   {
+    "role": "Friend",
+    "en": "Thank you so much!",
+    "ja": "ありがとう！"
+   },
+   {
+    "role": "You",
+    "en": "This is for you.",
+    "ja": "これ、プレゼント。"
+   },
+   {
+    "role": "Friend",
+    "en": "You didn't have to!",
+    "ja": "気を使わなくてよかったのに！"
+   },
+   {
+    "role": "You",
+    "en": "I hope you like it.",
+    "ja": "気に入ってくれるといいな。"
+   },
+   {
+    "role": "Friend",
+    "en": "I love it. Thanks!",
+    "ja": "すごく好き。ありがとう！"
+   }
+  ]
+ },
+ {
+  "title": "結婚式に招待する",
+  "emoji": "💍",
+  "cat": "event",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'm getting married next month.",
+    "ja": "来月結婚するんだ。"
+   },
+   {
+    "role": "Friend",
+    "en": "Congratulations!",
+    "ja": "おめでとう！"
+   },
+   {
+    "role": "You",
+    "en": "I'd love for you to come.",
+    "ja": "ぜひ来てほしいな。"
+   },
+   {
+    "role": "Friend",
+    "en": "Of course I'll be there.",
+    "ja": "もちろん行くよ。"
+   },
+   {
+    "role": "You",
+    "en": "I'll send you the details.",
+    "ja": "詳細を送るね。"
+   },
+   {
+    "role": "Friend",
+    "en": "Can't wait!",
+    "ja": "楽しみにしてる！"
+   }
+  ]
+ },
+ {
+  "title": "昇進をお祝いする",
+  "emoji": "🎊",
+  "cat": "event",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I heard you got promoted!",
+    "ja": "昇進したんだってね！"
+   },
+   {
+    "role": "Colleague",
+    "en": "Yes, just last week.",
+    "ja": "うん、先週ね。"
+   },
+   {
+    "role": "You",
+    "en": "Congratulations! You earned it.",
+    "ja": "おめでとう！努力の成果だね。"
+   },
+   {
+    "role": "Colleague",
+    "en": "Thanks, that means a lot.",
+    "ja": "ありがとう、うれしいよ。"
+   },
+   {
+    "role": "You",
+    "en": "Let's celebrate sometime.",
+    "ja": "今度お祝いしようよ。"
+   },
+   {
+    "role": "Colleague",
+    "en": "I'd like that.",
+    "ja": "いいね、ぜひ。"
+   }
+  ]
+ },
+ {
+  "title": "パーティーに招待する",
+  "emoji": "🥳",
+  "cat": "event",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'm having a party on Saturday.",
+    "ja": "土曜にパーティーをするんだ。"
+   },
+   {
+    "role": "Friend",
+    "en": "Sounds fun! Can I come?",
+    "ja": "楽しそう！行ってもいい？"
+   },
+   {
+    "role": "You",
+    "en": "Of course! Bring a friend.",
+    "ja": "もちろん！友達も連れてきて。"
+   },
+   {
+    "role": "Friend",
+    "en": "What should I bring?",
+    "ja": "何か持っていこうか？"
+   },
+   {
+    "role": "You",
+    "en": "Just yourself.",
+    "ja": "手ぶらでいいよ。"
+   },
+   {
+    "role": "Friend",
+    "en": "Great, see you then!",
+    "ja": "じゃあ、当日ね！"
+   }
+  ]
+ },
+ {
+  "title": "ホテルをチェックアウトする",
+  "emoji": "🧳",
+  "cat": "travel",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to check out, please.",
+    "ja": "チェックアウトをお願いします。"
+   },
+   {
+    "role": "Front Desk",
+    "en": "How was your stay?",
+    "ja": "ご滞在はいかがでしたか？"
+   },
+   {
+    "role": "You",
+    "en": "It was great, thank you.",
+    "ja": "とても良かったです。"
+   },
+   {
+    "role": "Front Desk",
+    "en": "Here's your bill.",
+    "ja": "こちらが請求書です。"
+   },
+   {
+    "role": "You",
+    "en": "Can I leave my bags here?",
+    "ja": "荷物を預けられますか？"
+   },
+   {
+    "role": "Front Desk",
+    "en": "Sure, until five o'clock.",
+    "ja": "はい、5時まで大丈夫です。"
+   }
+  ]
+ },
+ {
+  "title": "お金を両替する",
+  "emoji": "💱",
+  "cat": "travel",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to exchange some money.",
+    "ja": "両替をお願いしたいのですが。"
+   },
+   {
+    "role": "Teller",
+    "en": "From yen to dollars?",
+    "ja": "円からドルへですか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, two hundred dollars.",
+    "ja": "はい、200ドルぶんお願いします。"
+   },
+   {
+    "role": "Teller",
+    "en": "Here's your cash and receipt.",
+    "ja": "現金とレシートです。"
+   },
+   {
+    "role": "You",
+    "en": "Could I get smaller bills?",
+    "ja": "小さいお札にできますか？"
+   },
+   {
+    "role": "Teller",
+    "en": "Of course.",
+    "ja": "もちろんです。"
+   }
+  ]
+ },
+ {
+  "title": "アレルギーを伝える",
+  "emoji": "🥜",
+  "cat": "food",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I have a peanut allergy.",
+    "ja": "ピーナッツアレルギーがあります。"
+   },
+   {
+    "role": "Server",
+    "en": "Thank you for telling me.",
+    "ja": "教えていただきありがとうございます。"
+   },
+   {
+    "role": "You",
+    "en": "Is this dish safe?",
+    "ja": "この料理は大丈夫ですか？"
+   },
+   {
+    "role": "Server",
+    "en": "Let me ask the chef.",
+    "ja": "シェフに確認します。"
+   },
+   {
+    "role": "You",
+    "en": "I'd appreciate that.",
+    "ja": "助かります。"
+   },
+   {
+    "role": "Server",
+    "en": "It's safe to eat.",
+    "ja": "こちら、お召し上がりいただけます。"
+   }
+  ]
+ },
+ {
+  "title": "商品の場所を聞く",
+  "emoji": "🛒",
+  "cat": "food",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Excuse me, where's the milk?",
+    "ja": "すみません、牛乳はどこですか？"
+   },
+   {
+    "role": "Staff",
+    "en": "It's in aisle three.",
+    "ja": "3番通路にあります。"
+   },
+   {
+    "role": "You",
+    "en": "Do you have soy milk too?",
+    "ja": "豆乳もありますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Yes, right next to it.",
+    "ja": "はい、すぐ隣です。"
+   },
+   {
+    "role": "You",
+    "en": "Thank you for your help.",
+    "ja": "ありがとうございます。"
+   },
+   {
+    "role": "Staff",
+    "en": "No problem.",
+    "ja": "どういたしまして。"
+   }
+  ]
+ },
+ {
+  "title": "お礼を伝える",
+  "emoji": "🙏",
+  "cat": "social",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Thanks for your help yesterday.",
+    "ja": "昨日は助けてくれてありがとう。"
+   },
+   {
+    "role": "Friend",
+    "en": "No problem at all.",
+    "ja": "全然いいよ。"
+   },
+   {
+    "role": "You",
+    "en": "I really appreciate it.",
+    "ja": "本当に感謝してる。"
+   },
+   {
+    "role": "Friend",
+    "en": "That's what friends are for.",
+    "ja": "友達だからね。"
+   },
+   {
+    "role": "You",
+    "en": "Let me treat you to lunch.",
+    "ja": "お礼にランチおごるよ。"
+   },
+   {
+    "role": "Friend",
+    "en": "Sounds great!",
+    "ja": "いいね！"
+   }
+  ]
+ },
+ {
+  "title": "遅刻・欠勤を連絡する",
+  "emoji": "📲",
+  "cat": "work",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'm sorry, I'll be late today.",
+    "ja": "すみません、今日は遅れます。"
+   },
+   {
+    "role": "Boss",
+    "en": "What happened?",
+    "ja": "どうしました？"
+   },
+   {
+    "role": "You",
+    "en": "My train is delayed.",
+    "ja": "電車が遅れていて。"
+   },
+   {
+    "role": "Boss",
+    "en": "Okay, thanks for letting me know.",
+    "ja": "了解、連絡ありがとう。"
+   },
+   {
+    "role": "You",
+    "en": "I'll be there by ten.",
+    "ja": "10時までには着きます。"
+   },
+   {
+    "role": "Boss",
+    "en": "No worries. See you soon.",
+    "ja": "大丈夫。じゃあ後でね。"
+   }
+  ]
+ },
+ {
+  "title": "機内でお願いする",
+  "emoji": "✈️",
+  "cat": "travel",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Excuse me, could I have some water?",
+    "ja": "すみません、お水をいただけますか？"
+   },
+   {
+    "role": "Attendant",
+    "en": "Sure. Anything else?",
+    "ja": "はい。他にはいかがですか？"
+   },
+   {
+    "role": "You",
+    "en": "Do you have a blanket?",
+    "ja": "毛布はありますか？"
+   },
+   {
+    "role": "Attendant",
+    "en": "Of course, here you are.",
+    "ja": "もちろんです、どうぞ。"
+   },
+   {
+    "role": "You",
+    "en": "What time do we land?",
+    "ja": "何時に着きますか？"
+   },
+   {
+    "role": "Attendant",
+    "en": "In about two hours.",
+    "ja": "あと2時間ほどです。"
+   }
+  ]
+ },
+ {
+  "title": "バスの行き先を確認する",
+  "emoji": "🚌",
+  "cat": "travel",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Does this bus go downtown?",
+    "ja": "このバスは中心街に行きますか？"
+   },
+   {
+    "role": "Driver",
+    "en": "Yes, it does.",
+    "ja": "はい、行きますよ。"
+   },
+   {
+    "role": "You",
+    "en": "How much is the fare?",
+    "ja": "運賃はいくらですか？"
+   },
+   {
+    "role": "Driver",
+    "en": "Two dollars, exact change.",
+    "ja": "2ドル、ちょうどでお願いします。"
+   },
+   {
+    "role": "You",
+    "en": "Could you tell me when to get off?",
+    "ja": "降りる場所を教えてもらえますか？"
+   },
+   {
+    "role": "Driver",
+    "en": "Sure, I'll let you know.",
+    "ja": "はい、お知らせします。"
+   }
+  ]
+ },
+ {
+  "title": "お会計を別々にする",
+  "emoji": "💳",
+  "cat": "food",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Could we split the bill?",
+    "ja": "会計を別々にできますか？"
+   },
+   {
+    "role": "Server",
+    "en": "Sure, how would you like to split it?",
+    "ja": "はい、どう分けますか？"
+   },
+   {
+    "role": "You",
+    "en": "Just down the middle.",
+    "ja": "半分ずつでお願いします。"
+   },
+   {
+    "role": "Server",
+    "en": "No problem.",
+    "ja": "大丈夫です。"
+   },
+   {
+    "role": "You",
+    "en": "Can I pay by card?",
+    "ja": "カードで払えますか？"
+   },
+   {
+    "role": "Server",
+    "en": "Yes, of course.",
+    "ja": "はい、もちろんです。"
+   }
+  ]
+ },
+ {
+  "title": "持ち帰りにする",
+  "emoji": "🥡",
+  "cat": "food",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Could I get a box for this?",
+    "ja": "これ、持ち帰り用の箱をもらえますか？"
+   },
+   {
+    "role": "Server",
+    "en": "Of course. I'll wrap it up.",
+    "ja": "もちろんです。お包みします。"
+   },
+   {
+    "role": "You",
+    "en": "Thank you. It was delicious.",
+    "ja": "ありがとう。おいしかったです。"
+   },
+   {
+    "role": "Server",
+    "en": "I'm glad you enjoyed it.",
+    "ja": "喜んでいただけてよかったです。"
+   },
+   {
+    "role": "You",
+    "en": "Could we get the check too?",
+    "ja": "お会計もお願いできますか？"
+   },
+   {
+    "role": "Server",
+    "en": "Right away.",
+    "ja": "すぐにお持ちします。"
+   }
+  ]
+ },
+ {
+  "title": "部屋を内見する",
+  "emoji": "🔑",
+  "cat": "life",
+  "lines": [
+   {
+    "role": "Agent",
+    "en": "This is the living room.",
+    "ja": "こちらがリビングです。"
+   },
+   {
+    "role": "You",
+    "en": "It's bright and spacious.",
+    "ja": "明るくて広いですね。"
+   },
+   {
+    "role": "Agent",
+    "en": "Utilities are included.",
+    "ja": "光熱費は込みです。"
+   },
+   {
+    "role": "You",
+    "en": "How much is the rent?",
+    "ja": "家賃はいくらですか？"
+   },
+   {
+    "role": "Agent",
+    "en": "Nine hundred a month.",
+    "ja": "月900ドルです。"
+   },
+   {
+    "role": "You",
+    "en": "Can I think about it?",
+    "ja": "少し考えてもいいですか？"
+   }
+  ]
+ },
+ {
+  "title": "クリーニングに出す",
+  "emoji": "👔",
+  "cat": "life",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to get this cleaned.",
+    "ja": "これをクリーニングしたいのですが。"
+   },
+   {
+    "role": "Staff",
+    "en": "There's a stain here.",
+    "ja": "ここにシミがありますね。"
+   },
+   {
+    "role": "You",
+    "en": "Can you remove it?",
+    "ja": "落とせますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "We'll do our best.",
+    "ja": "できる限りやってみます。"
+   },
+   {
+    "role": "You",
+    "en": "When will it be ready?",
+    "ja": "いつできますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "By Friday afternoon.",
+    "ja": "金曜の午後にはできます。"
+   }
+  ]
+ },
+ {
+  "title": "授業で質問する",
+  "emoji": "✋",
+  "cat": "school",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Excuse me, I have a question.",
+    "ja": "すみません、質問があります。"
+   },
+   {
+    "role": "Teacher",
+    "en": "Sure, go ahead.",
+    "ja": "どうぞ。"
+   },
+   {
+    "role": "You",
+    "en": "Could you explain that again?",
+    "ja": "もう一度説明してもらえますか？"
+   },
+   {
+    "role": "Teacher",
+    "en": "Of course. Which part?",
+    "ja": "もちろん。どの部分ですか？"
+   },
+   {
+    "role": "You",
+    "en": "The last example.",
+    "ja": "最後の例です。"
+   },
+   {
+    "role": "Teacher",
+    "en": "Let me go over it.",
+    "ja": "では説明し直しますね。"
+   }
+  ]
+ },
+ {
+  "title": "図書館で本を借りる",
+  "emoji": "📚",
+  "cat": "school",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to borrow this book.",
+    "ja": "この本を借りたいです。"
+   },
+   {
+    "role": "Librarian",
+    "en": "Do you have a library card?",
+    "ja": "図書カードはお持ちですか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, here it is.",
+    "ja": "はい、これです。"
+   },
+   {
+    "role": "Librarian",
+    "en": "It's due in two weeks.",
+    "ja": "返却は2週間後です。"
+   },
+   {
+    "role": "You",
+    "en": "Can I renew it online?",
+    "ja": "オンラインで延長できますか？"
+   },
+   {
+    "role": "Librarian",
+    "en": "Yes, you can.",
+    "ja": "はい、できますよ。"
+   }
+  ]
+ },
+ {
+  "title": "クラスメイトに教わる",
+  "emoji": "🧑‍🎓",
+  "cat": "school",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Did you understand today's lesson?",
+    "ja": "今日の授業、分かった？"
+   },
+   {
+    "role": "Classmate",
+    "en": "Mostly, yeah.",
+    "ja": "だいたいはね。"
+   },
+   {
+    "role": "You",
+    "en": "Can you help me with this part?",
+    "ja": "この部分、教えてもらえる？"
+   },
+   {
+    "role": "Classmate",
+    "en": "Sure, it's not too hard.",
+    "ja": "いいよ、そんなに難しくないよ。"
+   },
+   {
+    "role": "You",
+    "en": "Thanks, that really helps.",
+    "ja": "ありがとう、助かる。"
+   },
+   {
+    "role": "Classmate",
+    "en": "Anytime.",
+    "ja": "いつでもどうぞ。"
+   }
+  ]
+ },
+ {
+  "title": "連絡先を交換する",
+  "emoji": "📇",
+  "cat": "social",
+  "lines": [
+   {
+    "role": "You",
+    "en": "It was great talking with you.",
+    "ja": "お話しできて楽しかったです。"
+   },
+   {
+    "role": "Sam",
+    "en": "Same here!",
+    "ja": "こちらこそ！"
+   },
+   {
+    "role": "You",
+    "en": "Can we exchange contacts?",
+    "ja": "連絡先を交換しませんか？"
+   },
+   {
+    "role": "Sam",
+    "en": "Sure, what's your number?",
+    "ja": "いいですよ、番号は？"
+   },
+   {
+    "role": "You",
+    "en": "Here, let me write it down.",
+    "ja": "じゃあ、書きますね。"
+   },
+   {
+    "role": "Sam",
+    "en": "Thanks, I'll text you.",
+    "ja": "ありがとう、連絡するね。"
+   }
+  ]
+ },
+ {
+  "title": "遅れたことを謝る",
+  "emoji": "🙇",
+  "cat": "social",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'm really sorry I'm late.",
+    "ja": "遅れて本当にごめん。"
+   },
+   {
+    "role": "Friend",
+    "en": "It's okay. What happened?",
+    "ja": "大丈夫だよ。どうしたの？"
+   },
+   {
+    "role": "You",
+    "en": "I missed the bus.",
+    "ja": "バスに乗り遅れて。"
+   },
+   {
+    "role": "Friend",
+    "en": "Don't worry about it.",
+    "ja": "気にしないで。"
+   },
+   {
+    "role": "You",
+    "en": "Let me buy you a coffee.",
+    "ja": "コーヒーおごるよ。"
+   },
+   {
+    "role": "Friend",
+    "en": "Sounds good.",
+    "ja": "いいね。"
+   }
+  ]
+ },
+ {
+  "title": "乾杯のあいさつをする",
+  "emoji": "🥂",
+  "cat": "event",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Could I have your attention, please?",
+    "ja": "少しよろしいでしょうか。"
+   },
+   {
+    "role": "Guest",
+    "en": "Of course!",
+    "ja": "どうぞ！"
+   },
+   {
+    "role": "You",
+    "en": "Thank you all for coming.",
+    "ja": "来てくれてありがとう。"
+   },
+   {
+    "role": "Guest",
+    "en": "Thank you for having us.",
+    "ja": "招いてくれてありがとう。"
+   },
+   {
+    "role": "You",
+    "en": "Let's raise a glass. Cheers!",
+    "ja": "では、乾杯しましょう。乾杯！"
+   },
+   {
+    "role": "Guest",
+    "en": "Cheers!",
+    "ja": "乾杯！"
+   }
+  ]
+ },
+ {
+  "title": "休暇を申請する",
+  "emoji": "🏖️",
+  "cat": "work",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to take next Friday off.",
+    "ja": "来週の金曜に休みを取りたいのですが。"
+   },
+   {
+    "role": "Boss",
+    "en": "Is everything okay?",
+    "ja": "何か問題でも？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, it's a personal matter.",
+    "ja": "はい、私用です。"
+   },
+   {
+    "role": "Boss",
+    "en": "That should be fine.",
+    "ja": "大丈夫だと思いますよ。"
+   },
+   {
+    "role": "You",
+    "en": "Thank you. I'll finish my tasks first.",
+    "ja": "ありがとうございます。先に仕事を片付けます。"
+   },
+   {
+    "role": "Boss",
+    "en": "Sounds good.",
+    "ja": "いいですね。"
+   }
+  ]
+ },
+ {
+  "title": "名刺交換をする",
+  "emoji": "🤝",
+  "cat": "work",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Nice to meet you. Here's my card.",
+    "ja": "はじめまして。名刺です。"
+   },
+   {
+    "role": "Client",
+    "en": "Thank you. Here's mine.",
+    "ja": "ありがとうございます。こちらもどうぞ。"
+   },
+   {
+    "role": "You",
+    "en": "I look forward to working with you.",
+    "ja": "よろしくお願いします。"
+   },
+   {
+    "role": "Client",
+    "en": "Likewise.",
+    "ja": "こちらこそ。"
+   },
+   {
+    "role": "You",
+    "en": "Shall we get started?",
+    "ja": "さっそく始めましょうか？"
+   },
+   {
+    "role": "Client",
+    "en": "Yes, let's.",
+    "ja": "はい、そうしましょう。"
+   }
+  ]
+ },
+ {
+  "title": "注文と違うものが来た",
+  "emoji": "😟",
+  "cat": "trouble",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Excuse me, this isn't what I ordered.",
+    "ja": "すみません、注文したものと違います。"
+   },
+   {
+    "role": "Server",
+    "en": "Oh, I'm so sorry.",
+    "ja": "あっ、申し訳ございません。"
+   },
+   {
+    "role": "You",
+    "en": "I ordered the chicken.",
+    "ja": "チキンを頼みました。"
+   },
+   {
+    "role": "Server",
+    "en": "I'll bring the right one.",
+    "ja": "正しいものをお持ちします。"
+   },
+   {
+    "role": "You",
+    "en": "Thank you.",
+    "ja": "お願いします。"
+   },
+   {
+    "role": "Server",
+    "en": "It won't take long.",
+    "ja": "すぐにご用意します。"
+   }
+  ]
+ },
+ {
+  "title": "部屋の不具合を伝える",
+  "emoji": "🔧",
+  "cat": "trouble",
+  "lines": [
+   {
+    "role": "You",
+    "en": "The air conditioner isn't working.",
+    "ja": "エアコンが効かないんです。"
+   },
+   {
+    "role": "Front Desk",
+    "en": "I'm sorry for the trouble.",
+    "ja": "ご不便をおかけしてすみません。"
+   },
+   {
+    "role": "You",
+    "en": "Could someone take a look?",
+    "ja": "見てもらえますか？"
+   },
+   {
+    "role": "Front Desk",
+    "en": "I'll send someone right away.",
+    "ja": "すぐに人を向かわせます。"
+   },
+   {
+    "role": "You",
+    "en": "Thank you.",
+    "ja": "お願いします。"
+   },
+   {
+    "role": "Front Desk",
+    "en": "Again, I apologize.",
+    "ja": "重ねてお詫びします。"
+   }
+  ]
+ },
+ {
+  "title": "提出の延長を頼む",
+  "emoji": "📝",
+  "cat": "school",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Could I have more time on the assignment?",
+    "ja": "課題の提出を延ばしてもらえますか？"
+   },
+   {
+    "role": "Teacher",
+    "en": "What's the reason?",
+    "ja": "理由は何ですか？"
+   },
+   {
+    "role": "You",
+    "en": "I've been sick this week.",
+    "ja": "今週、体調を崩していて。"
+   },
+   {
+    "role": "Teacher",
+    "en": "Okay, two more days.",
+    "ja": "わかりました、あと2日ですよ。"
+   },
+   {
+    "role": "You",
+    "en": "Thank you so much.",
+    "ja": "ありがとうございます。"
+   },
+   {
+    "role": "Teacher",
+    "en": "Feel better soon.",
+    "ja": "お大事に。"
+   }
+  ]
+ },
+ {
+  "title": "オンライン授業に参加する",
+  "emoji": "💻",
+  "cat": "school",
+  "lines": [
+   {
+    "role": "Teacher",
+    "en": "Can everyone hear me?",
+    "ja": "みなさん、聞こえますか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, loud and clear.",
+    "ja": "はい、はっきり聞こえます。"
+   },
+   {
+    "role": "Teacher",
+    "en": "Please turn on your camera.",
+    "ja": "カメラをオンにしてください。"
+   },
+   {
+    "role": "You",
+    "en": "Sorry, give me a second.",
+    "ja": "すみません、少々お待ちを。"
+   },
+   {
+    "role": "Teacher",
+    "en": "No rush.",
+    "ja": "ゆっくりで大丈夫です。"
+   },
+   {
+    "role": "You",
+    "en": "Okay, it's on now.",
+    "ja": "はい、オンになりました。"
+   }
+  ]
+ },
+ {
+  "title": "言葉の意味を尋ねる",
+  "emoji": "📖",
+  "cat": "school",
+  "lines": [
+   {
+    "role": "You",
+    "en": "What does this word mean?",
+    "ja": "この単語はどういう意味ですか？"
+   },
+   {
+    "role": "Teacher",
+    "en": "It means 'grateful.'",
+    "ja": "「感謝している」という意味です。"
+   },
+   {
+    "role": "You",
+    "en": "How do you use it?",
+    "ja": "どう使いますか？"
+   },
+   {
+    "role": "Teacher",
+    "en": "Like, 'I'm grateful for your help.'",
+    "ja": "例えば「助けに感謝します」のように。"
+   },
+   {
+    "role": "You",
+    "en": "I see. Thank you.",
+    "ja": "なるほど。ありがとうございます。"
+   },
+   {
+    "role": "Teacher",
+    "en": "Good question.",
+    "ja": "いい質問ですね。"
+   }
+  ]
+ },
+ {
+  "title": "予防接種を受ける",
+  "emoji": "💉",
+  "cat": "health",
+  "lines": [
+   {
+    "role": "Nurse",
+    "en": "Have you had any reactions before?",
+    "ja": "以前、副反応はありましたか？"
+   },
+   {
+    "role": "You",
+    "en": "No, never.",
+    "ja": "いいえ、ありません。"
+   },
+   {
+    "role": "Nurse",
+    "en": "This may sting a little.",
+    "ja": "少しチクッとしますよ。"
+   },
+   {
+    "role": "You",
+    "en": "Okay, I'm ready.",
+    "ja": "はい、大丈夫です。"
+   },
+   {
+    "role": "Nurse",
+    "en": "All done. Please wait here.",
+    "ja": "終わりました。こちらでお待ちください。"
+   },
+   {
+    "role": "You",
+    "en": "For how long?",
+    "ja": "どのくらいですか？"
+   }
+  ]
+ },
+ {
+  "title": "処方薬を受け取る",
+  "emoji": "💊",
+  "cat": "health",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'm here to pick up my prescription.",
+    "ja": "処方薬を受け取りに来ました。"
+   },
+   {
+    "role": "Pharmacist",
+    "en": "May I have your name?",
+    "ja": "お名前をいただけますか？"
+   },
+   {
+    "role": "You",
+    "en": "It's Suzuki.",
+    "ja": "鈴木です。"
+   },
+   {
+    "role": "Pharmacist",
+    "en": "Take one pill after breakfast.",
+    "ja": "朝食後に1錠飲んでください。"
+   },
+   {
+    "role": "You",
+    "en": "Are there any side effects?",
+    "ja": "副作用はありますか？"
+   },
+   {
+    "role": "Pharmacist",
+    "en": "It may make you sleepy.",
+    "ja": "眠くなることがあります。"
+   }
+  ]
+ },
+ {
+  "title": "整体を受ける",
+  "emoji": "💆",
+  "cat": "health",
+  "lines": [
+   {
+    "role": "Therapist",
+    "en": "Where does it hurt?",
+    "ja": "どこが痛みますか？"
+   },
+   {
+    "role": "You",
+    "en": "My lower back.",
+    "ja": "腰です。"
+   },
+   {
+    "role": "Therapist",
+    "en": "Does this hurt?",
+    "ja": "ここは痛いですか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, right there.",
+    "ja": "はい、そこです。"
+   },
+   {
+    "role": "Therapist",
+    "en": "Try to relax.",
+    "ja": "力を抜いてくださいね。"
+   },
+   {
+    "role": "You",
+    "en": "That feels better.",
+    "ja": "楽になりました。"
+   }
+  ]
+ },
+ {
+  "title": "送別会であいさつする",
+  "emoji": "👋",
+  "cat": "event",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Thank you all for everything.",
+    "ja": "今まで本当にありがとう。"
+   },
+   {
+    "role": "Colleague",
+    "en": "We'll miss you.",
+    "ja": "寂しくなるよ。"
+   },
+   {
+    "role": "You",
+    "en": "I've learned so much here.",
+    "ja": "ここで多くを学びました。"
+   },
+   {
+    "role": "Colleague",
+    "en": "Keep in touch, okay?",
+    "ja": "連絡してね。"
+   },
+   {
+    "role": "You",
+    "en": "Of course I will.",
+    "ja": "もちろん。"
+   },
+   {
+    "role": "Colleague",
+    "en": "Good luck!",
+    "ja": "これからも頑張って！"
+   }
+  ]
+ },
+ {
+  "title": "お土産を渡す",
+  "emoji": "🎁",
+  "cat": "event",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I got you a souvenir.",
+    "ja": "お土産を買ってきたよ。"
+   },
+   {
+    "role": "Friend",
+    "en": "Aw, you're so thoughtful!",
+    "ja": "わぁ、優しいね！"
+   },
+   {
+    "role": "You",
+    "en": "It's from Japan.",
+    "ja": "日本のものなんだ。"
+   },
+   {
+    "role": "Friend",
+    "en": "What is it?",
+    "ja": "何これ？"
+   },
+   {
+    "role": "You",
+    "en": "It's a local snack.",
+    "ja": "地元のお菓子だよ。"
+   },
+   {
+    "role": "Friend",
+    "en": "I can't wait to try it!",
+    "ja": "食べるの楽しみ！"
+   }
+  ]
+ },
+ {
+  "title": "記念日を祝う",
+  "emoji": "💐",
+  "cat": "event",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Happy anniversary!",
+    "ja": "記念日おめでとう！"
+   },
+   {
+    "role": "Partner",
+    "en": "I can't believe it's been a year.",
+    "ja": "もう1年だなんて信じられないね。"
+   },
+   {
+    "role": "You",
+    "en": "I made a reservation tonight.",
+    "ja": "今夜、予約しておいたよ。"
+   },
+   {
+    "role": "Partner",
+    "en": "That's so sweet.",
+    "ja": "うれしい。"
+   },
+   {
+    "role": "You",
+    "en": "These flowers are for you.",
+    "ja": "これ、君に花束。"
+   },
+   {
+    "role": "Partner",
+    "en": "They're beautiful. Thank you.",
+    "ja": "きれい。ありがとう。"
+   }
+  ]
+ },
+ {
+  "title": "地下鉄の乗り換えを聞く",
+  "emoji": "🚇",
+  "cat": "travel",
+  "lines": [
+   {
+    "role": "You",
+    "en": "How do I get to Central Station?",
+    "ja": "中央駅へはどう行きますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Take the blue line.",
+    "ja": "青の路線に乗ってください。"
+   },
+   {
+    "role": "You",
+    "en": "Do I need to transfer?",
+    "ja": "乗り換えは必要ですか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Yes, at Park Street.",
+    "ja": "はい、パークストリートで。"
+   },
+   {
+    "role": "You",
+    "en": "How many stops is it?",
+    "ja": "いくつ目の駅ですか？"
+   },
+   {
+    "role": "Staff",
+    "en": "It's the fourth stop.",
+    "ja": "4つ目です。"
+   }
+  ]
+ },
+ {
+  "title": "現地ツアーを予約する",
+  "emoji": "🗺️",
+  "cat": "travel",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to book a city tour.",
+    "ja": "市内ツアーを予約したいです。"
+   },
+   {
+    "role": "Agent",
+    "en": "We have one at nine a.m.",
+    "ja": "午前9時のがありますよ。"
+   },
+   {
+    "role": "You",
+    "en": "How long does it last?",
+    "ja": "どのくらいかかりますか？"
+   },
+   {
+    "role": "Agent",
+    "en": "About three hours.",
+    "ja": "3時間ほどです。"
+   },
+   {
+    "role": "You",
+    "en": "Is lunch included?",
+    "ja": "昼食は含まれますか？"
+   },
+   {
+    "role": "Agent",
+    "en": "Yes, it is.",
+    "ja": "はい、含まれます。"
+   }
+  ]
+ },
+ {
+  "title": "飲み物のおかわりを頼む",
+  "emoji": "☕",
+  "cat": "food",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Could I get a refill, please?",
+    "ja": "おかわりをもらえますか？"
+   },
+   {
+    "role": "Server",
+    "en": "Sure, same as before?",
+    "ja": "はい、同じものでよろしいですか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, please.",
+    "ja": "はい、お願いします。"
+   },
+   {
+    "role": "Server",
+    "en": "Here you go.",
+    "ja": "どうぞ。"
+   },
+   {
+    "role": "You",
+    "en": "Thank you. Is it free?",
+    "ja": "ありがとう。無料ですか？"
+   },
+   {
+    "role": "Server",
+    "en": "Yes, refills are free.",
+    "ja": "はい、おかわりは無料です。"
+   }
+  ]
+ },
+ {
+  "title": "市場で値段を交渉する",
+  "emoji": "🧺",
+  "cat": "food",
+  "lines": [
+   {
+    "role": "You",
+    "en": "How much for these apples?",
+    "ja": "このりんごはいくらですか？"
+   },
+   {
+    "role": "Vendor",
+    "en": "Five dollars a bag.",
+    "ja": "1袋5ドルです。"
+   },
+   {
+    "role": "You",
+    "en": "Can you make it cheaper?",
+    "ja": "もう少し安くなりますか？"
+   },
+   {
+    "role": "Vendor",
+    "en": "Four dollars, just for you.",
+    "ja": "あなたには4ドルにしますよ。"
+   },
+   {
+    "role": "You",
+    "en": "I'll take two bags.",
+    "ja": "2袋ください。"
+   },
+   {
+    "role": "Vendor",
+    "en": "Good choice!",
+    "ja": "まいど！"
+   }
+  ]
+ },
+ {
+  "title": "再配達を頼む",
+  "emoji": "📦",
+  "cat": "life",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I missed my delivery.",
+    "ja": "荷物を受け取れませんでした。"
+   },
+   {
+    "role": "Staff",
+    "en": "Do you have the tracking number?",
+    "ja": "追跡番号はお持ちですか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, here it is.",
+    "ja": "はい、これです。"
+   },
+   {
+    "role": "Staff",
+    "en": "When should we redeliver?",
+    "ja": "いつ再配達しましょうか？"
+   },
+   {
+    "role": "You",
+    "en": "Tomorrow evening, please.",
+    "ja": "明日の夕方にお願いします。"
+   },
+   {
+    "role": "Staff",
+    "en": "All set.",
+    "ja": "承知しました。"
+   }
+  ]
+ },
+ {
+  "title": "近所の人と立ち話する",
+  "emoji": "🏘️",
+  "cat": "social",
+  "lines": [
+   {
+    "role": "Neighbor",
+    "en": "Good morning! Nice day, isn't it?",
+    "ja": "おはよう！いい天気だね。"
+   },
+   {
+    "role": "You",
+    "en": "Morning! Yes, it's lovely.",
+    "ja": "おはよう！ほんと、気持ちいいね。"
+   },
+   {
+    "role": "Neighbor",
+    "en": "Did you just move in?",
+    "ja": "最近引っ越してきたの？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, last week.",
+    "ja": "うん、先週ね。"
+   },
+   {
+    "role": "Neighbor",
+    "en": "Welcome to the neighborhood!",
+    "ja": "ようこそご近所へ！"
+   },
+   {
+    "role": "You",
+    "en": "Thank you so much.",
+    "ja": "ありがとうございます。"
+   }
+  ]
+ },
+ {
+  "title": "会議の日程を調整する",
+  "emoji": "📅",
+  "cat": "work",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Can we move the meeting?",
+    "ja": "会議をずらせますか？"
+   },
+   {
+    "role": "Colleague",
+    "en": "Sure. When works for you?",
+    "ja": "いいですよ。いつがいいですか？"
+   },
+   {
+    "role": "You",
+    "en": "How about Thursday afternoon?",
+    "ja": "木曜の午後はどうですか？"
+   },
+   {
+    "role": "Colleague",
+    "en": "Let me check my calendar.",
+    "ja": "予定を確認しますね。"
+   },
+   {
+    "role": "You",
+    "en": "Take your time.",
+    "ja": "ゆっくりどうぞ。"
+   },
+   {
+    "role": "Colleague",
+    "en": "Thursday works. Let's do it.",
+    "ja": "木曜で大丈夫です。それで。"
+   }
+  ]
+ },
+ {
+  "title": "映画館でチケットを買う",
+  "emoji": "🎬",
+  "cat": "outing",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Two tickets for the seven o'clock show.",
+    "ja": "7時の回を2枚ください。"
+   },
+   {
+    "role": "Staff",
+    "en": "Where would you like to sit?",
+    "ja": "お席はどちらがよろしいですか？"
+   },
+   {
+    "role": "You",
+    "en": "Somewhere in the middle.",
+    "ja": "真ん中あたりで。"
+   },
+   {
+    "role": "Staff",
+    "en": "How about row F?",
+    "ja": "F列はいかがですか？"
+   },
+   {
+    "role": "You",
+    "en": "That's perfect.",
+    "ja": "それでお願いします。"
+   },
+   {
+    "role": "Staff",
+    "en": "Enjoy the movie!",
+    "ja": "映画をお楽しみください。"
+   }
+  ]
+ },
+ {
+  "title": "美術館で聞く",
+  "emoji": "🖼️",
+  "cat": "outing",
+  "lines": [
+   {
+    "role": "You",
+    "en": "How much is admission?",
+    "ja": "入館料はいくらですか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Fifteen dollars for adults.",
+    "ja": "大人15ドルです。"
+   },
+   {
+    "role": "You",
+    "en": "Can I take photos?",
+    "ja": "写真は撮れますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Yes, but no flash.",
+    "ja": "はい、フラッシュはご遠慮ください。"
+   },
+   {
+    "role": "You",
+    "en": "Is there an audio guide?",
+    "ja": "音声ガイドはありますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Yes, it's by the entrance.",
+    "ja": "はい、入口にございます。"
+   }
+  ]
+ },
+ {
+  "title": "コンサートの座席を選ぶ",
+  "emoji": "🎵",
+  "cat": "outing",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like tickets for Saturday.",
+    "ja": "土曜のチケットがほしいです。"
+   },
+   {
+    "role": "Agent",
+    "en": "How many people?",
+    "ja": "何名様ですか？"
+   },
+   {
+    "role": "You",
+    "en": "Two, please.",
+    "ja": "2枚お願いします。"
+   },
+   {
+    "role": "Agent",
+    "en": "We have seats near the stage.",
+    "ja": "ステージ近くの席がありますよ。"
+   },
+   {
+    "role": "You",
+    "en": "How much are they?",
+    "ja": "いくらですか？"
+   },
+   {
+    "role": "Agent",
+    "en": "Eighty dollars each.",
+    "ja": "1枚80ドルです。"
+   }
+  ]
+ },
+ {
+  "title": "スポーツ観戦のチケットを買う",
+  "emoji": "⚽",
+  "cat": "outing",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Are there any tickets left for today?",
+    "ja": "今日のチケットはまだありますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Yes, a few seats.",
+    "ja": "はい、少し残っています。"
+   },
+   {
+    "role": "You",
+    "en": "I'd like one, please.",
+    "ja": "1枚お願いします。"
+   },
+   {
+    "role": "Staff",
+    "en": "Which side would you like?",
+    "ja": "どちら側がよろしいですか？"
+   },
+   {
+    "role": "You",
+    "en": "Behind the home team.",
+    "ja": "ホーム側でお願いします。"
+   },
+   {
+    "role": "Staff",
+    "en": "Here's your ticket. Enjoy!",
+    "ja": "こちらです。お楽しみください！"
+   }
+  ]
+ },
+ {
+  "title": "遊園地でアトラクションを聞く",
+  "emoji": "🎢",
+  "cat": "outing",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Where's the roller coaster?",
+    "ja": "ジェットコースターはどこですか？"
+   },
+   {
+    "role": "Staff",
+    "en": "It's straight ahead.",
+    "ja": "まっすぐ進んだところです。"
+   },
+   {
+    "role": "You",
+    "en": "How long is the wait?",
+    "ja": "待ち時間はどのくらいですか？"
+   },
+   {
+    "role": "Staff",
+    "en": "About thirty minutes.",
+    "ja": "30分ほどです。"
+   },
+   {
+    "role": "You",
+    "en": "Is there a faster line?",
+    "ja": "早く乗れる列はありますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Yes, with a fast pass.",
+    "ja": "はい、ファストパスがあれば。"
+   }
+  ]
+ },
+ {
+  "title": "ガソリンスタンドで給油する",
+  "emoji": "⛽",
+  "cat": "travel",
+  "lines": [
+   {
+    "role": "Attendant",
+    "en": "How much would you like?",
+    "ja": "どのくらい入れますか？"
+   },
+   {
+    "role": "You",
+    "en": "Fill it up, please.",
+    "ja": "満タンでお願いします。"
+   },
+   {
+    "role": "Attendant",
+    "en": "Regular or premium?",
+    "ja": "レギュラーですか、ハイオクですか？"
+   },
+   {
+    "role": "You",
+    "en": "Regular is fine.",
+    "ja": "レギュラーで大丈夫です。"
+   },
+   {
+    "role": "Attendant",
+    "en": "That's forty dollars.",
+    "ja": "40ドルになります。"
+   },
+   {
+    "role": "You",
+    "en": "Here's my card.",
+    "ja": "カードでお願いします。"
+   }
+  ]
+ },
+ {
+  "title": "駐車場を探す",
+  "emoji": "🅿️",
+  "cat": "travel",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Is there parking nearby?",
+    "ja": "近くに駐車場はありますか？"
+   },
+   {
+    "role": "Attendant",
+    "en": "Yes, just around the corner.",
+    "ja": "はい、角を曲がってすぐです。"
+   },
+   {
+    "role": "You",
+    "en": "How much per hour?",
+    "ja": "1時間いくらですか？"
+   },
+   {
+    "role": "Attendant",
+    "en": "Three dollars an hour.",
+    "ja": "1時間3ドルです。"
+   },
+   {
+    "role": "You",
+    "en": "Is it open all night?",
+    "ja": "一晩中開いていますか？"
+   },
+   {
+    "role": "Attendant",
+    "en": "Yes, twenty-four hours.",
+    "ja": "はい、24時間です。"
+   }
+  ]
+ },
+ {
+  "title": "席が空いているか聞く",
+  "emoji": "🍴",
+  "cat": "food",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Do you have a table for two?",
+    "ja": "2人の席はありますか？"
+   },
+   {
+    "role": "Host",
+    "en": "Do you have a reservation?",
+    "ja": "ご予約はありますか？"
+   },
+   {
+    "role": "You",
+    "en": "No, we don't.",
+    "ja": "いいえ、ありません。"
+   },
+   {
+    "role": "Host",
+    "en": "There's a short wait.",
+    "ja": "少しお待ちいただきます。"
+   },
+   {
+    "role": "You",
+    "en": "How long is it?",
+    "ja": "どのくらいですか？"
+   },
+   {
+    "role": "Host",
+    "en": "About ten minutes.",
+    "ja": "10分ほどです。"
+   }
+  ]
+ },
+ {
+  "title": "注文を細かく頼む",
+  "emoji": "☕",
+  "cat": "food",
+  "lines": [
+   {
+    "role": "Barista",
+    "en": "What can I get you?",
+    "ja": "ご注文は？"
+   },
+   {
+    "role": "You",
+    "en": "An iced latte, please.",
+    "ja": "アイスラテをお願いします。"
+   },
+   {
+    "role": "Barista",
+    "en": "What size?",
+    "ja": "サイズは？"
+   },
+   {
+    "role": "You",
+    "en": "Large, with less ice.",
+    "ja": "Lサイズ、氷少なめで。"
+   },
+   {
+    "role": "Barista",
+    "en": "Any milk preference?",
+    "ja": "ミルクのご希望は？"
+   },
+   {
+    "role": "You",
+    "en": "Oat milk, please.",
+    "ja": "オーツミルクでお願いします。"
+   }
+  ]
+ },
+ {
+  "title": "ネット回線を契約する",
+  "emoji": "🌐",
+  "cat": "life",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to set up internet.",
+    "ja": "ネット回線を申し込みたいのですが。"
+   },
+   {
+    "role": "Staff",
+    "en": "For a house or apartment?",
+    "ja": "一軒家ですか、アパートですか？"
+   },
+   {
+    "role": "You",
+    "en": "An apartment.",
+    "ja": "アパートです。"
+   },
+   {
+    "role": "Staff",
+    "en": "This plan is fast and cheap.",
+    "ja": "このプランが速くて安いですよ。"
+   },
+   {
+    "role": "You",
+    "en": "When can it be installed?",
+    "ja": "いつ開通できますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Next Tuesday.",
+    "ja": "来週の火曜です。"
+   }
+  ]
+ },
+ {
+  "title": "ATMの使い方を聞く",
+  "emoji": "🏧",
+  "cat": "life",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Excuse me, how do I use this ATM?",
+    "ja": "すみません、このATMの使い方は？"
+   },
+   {
+    "role": "Staff",
+    "en": "First, insert your card.",
+    "ja": "まずカードを入れてください。"
+   },
+   {
+    "role": "You",
+    "en": "Okay, then what?",
+    "ja": "はい、その次は？"
+   },
+   {
+    "role": "Staff",
+    "en": "Enter your PIN.",
+    "ja": "暗証番号を入力してください。"
+   },
+   {
+    "role": "You",
+    "en": "Can I withdraw cash here?",
+    "ja": "ここで現金を引き出せますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Yes, you can.",
+    "ja": "はい、できますよ。"
+   }
+  ]
+ },
+ {
+  "title": "服装をほめる",
+  "emoji": "😊",
+  "cat": "social",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I love your jacket!",
+    "ja": "そのジャケット、素敵だね！"
+   },
+   {
+    "role": "Friend",
+    "en": "Oh, thank you!",
+    "ja": "わぁ、ありがとう！"
+   },
+   {
+    "role": "You",
+    "en": "Where did you get it?",
+    "ja": "どこで買ったの？"
+   },
+   {
+    "role": "Friend",
+    "en": "At a shop downtown.",
+    "ja": "街のお店だよ。"
+   },
+   {
+    "role": "You",
+    "en": "It really suits you.",
+    "ja": "すごく似合ってる。"
+   },
+   {
+    "role": "Friend",
+    "en": "That's so kind of you.",
+    "ja": "うれしい、ありがとう。"
+   }
+  ]
+ },
+ {
+  "title": "プレゼンを始める",
+  "emoji": "📊",
+  "cat": "work",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Thank you all for coming today.",
+    "ja": "本日はお集まりいただきありがとうございます。"
+   },
+   {
+    "role": "Audience",
+    "en": "We're looking forward to it.",
+    "ja": "楽しみにしています。"
+   },
+   {
+    "role": "You",
+    "en": "Let me start with an overview.",
+    "ja": "まず概要からお話しします。"
+   },
+   {
+    "role": "Audience",
+    "en": "Please go ahead.",
+    "ja": "どうぞ。"
+   },
+   {
+    "role": "You",
+    "en": "Feel free to ask questions.",
+    "ja": "質問はいつでもどうぞ。"
+   },
+   {
+    "role": "Audience",
+    "en": "Will do, thanks.",
+    "ja": "はい、ありがとうございます。"
+   }
+  ]
+ },
+ {
+  "title": "ネットがつながらない",
+  "emoji": "📶",
+  "cat": "trouble",
+  "lines": [
+   {
+    "role": "You",
+    "en": "My internet isn't working.",
+    "ja": "ネットがつながらないんです。"
+   },
+   {
+    "role": "Support",
+    "en": "Have you restarted the router?",
+    "ja": "ルーターは再起動しましたか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, but it didn't help.",
+    "ja": "はい、でも直りませんでした。"
+   },
+   {
+    "role": "Support",
+    "en": "Let me check your connection.",
+    "ja": "接続を確認します。"
+   },
+   {
+    "role": "You",
+    "en": "How long will it take?",
+    "ja": "どのくらいかかりますか？"
+   },
+   {
+    "role": "Support",
+    "en": "Just a few minutes.",
+    "ja": "数分です。"
+   }
+  ]
+ },
+ {
+  "title": "部屋に入れなくなる",
+  "emoji": "🔑",
+  "cat": "trouble",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'm locked out of my room.",
+    "ja": "部屋に入れなくなってしまいました。"
+   },
+   {
+    "role": "Front Desk",
+    "en": "May I have your room number?",
+    "ja": "お部屋番号をお願いします。"
+   },
+   {
+    "role": "You",
+    "en": "Room 305.",
+    "ja": "305号室です。"
+   },
+   {
+    "role": "Front Desk",
+    "en": "Can I see some ID?",
+    "ja": "身分証を見せていただけますか？"
+   },
+   {
+    "role": "You",
+    "en": "Sure, here it is.",
+    "ja": "はい、これです。"
+   },
+   {
+    "role": "Front Desk",
+    "en": "I'll make you a new key.",
+    "ja": "新しい鍵をお作りします。"
+   }
+  ]
+ },
+ {
+  "title": "荷物を預ける",
+  "emoji": "🧳",
+  "cat": "travel",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Can I leave my luggage here?",
+    "ja": "荷物を預けられますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Sure. For how long?",
+    "ja": "はい。どのくらいですか？"
+   },
+   {
+    "role": "You",
+    "en": "Until this evening.",
+    "ja": "今晩までです。"
+   },
+   {
+    "role": "Staff",
+    "en": "That'll be five dollars.",
+    "ja": "5ドルになります。"
+   },
+   {
+    "role": "You",
+    "en": "Okay, here you are.",
+    "ja": "はい、どうぞ。"
+   },
+   {
+    "role": "Staff",
+    "en": "Here's your claim ticket.",
+    "ja": "こちらが引換券です。"
+   }
+  ]
+ },
+ {
+  "title": "電車で席を譲る",
+  "emoji": "🚃",
+  "cat": "travel",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Excuse me, would you like to sit?",
+    "ja": "よければ、お座りになりますか？"
+   },
+   {
+    "role": "Passenger",
+    "en": "Oh, thank you so much.",
+    "ja": "あら、ありがとうございます。"
+   },
+   {
+    "role": "You",
+    "en": "No problem at all.",
+    "ja": "いえいえ。"
+   },
+   {
+    "role": "Passenger",
+    "en": "That's very kind.",
+    "ja": "ご親切に。"
+   },
+   {
+    "role": "You",
+    "en": "Have a nice day.",
+    "ja": "よい一日を。"
+   },
+   {
+    "role": "Passenger",
+    "en": "You too.",
+    "ja": "あなたも。"
+   }
+  ]
+ },
+ {
+  "title": "パン屋で注文する",
+  "emoji": "🥐",
+  "cat": "food",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Could I get two croissants?",
+    "ja": "クロワッサンを2つください。"
+   },
+   {
+    "role": "Staff",
+    "en": "Anything else?",
+    "ja": "他にはいかがですか？"
+   },
+   {
+    "role": "You",
+    "en": "Is the bread fresh?",
+    "ja": "パンは焼きたてですか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Yes, baked this morning.",
+    "ja": "はい、今朝焼きました。"
+   },
+   {
+    "role": "You",
+    "en": "I'll take a loaf too.",
+    "ja": "では1斤もください。"
+   },
+   {
+    "role": "Staff",
+    "en": "That's eight dollars.",
+    "ja": "8ドルです。"
+   }
+  ]
+ },
+ {
+  "title": "デザートを頼む",
+  "emoji": "🍰",
+  "cat": "food",
+  "lines": [
+   {
+    "role": "Server",
+    "en": "Would you like any dessert?",
+    "ja": "デザートはいかがですか？"
+   },
+   {
+    "role": "You",
+    "en": "What do you recommend?",
+    "ja": "おすすめは何ですか？"
+   },
+   {
+    "role": "Server",
+    "en": "The cheesecake is popular.",
+    "ja": "チーズケーキが人気です。"
+   },
+   {
+    "role": "You",
+    "en": "I'll have that.",
+    "ja": "それをください。"
+   },
+   {
+    "role": "Server",
+    "en": "With coffee or tea?",
+    "ja": "コーヒーと紅茶、どちらに？"
+   },
+   {
+    "role": "You",
+    "en": "Coffee, please.",
+    "ja": "コーヒーをお願いします。"
+   }
+  ]
+ },
+ {
+  "title": "合鍵を作る",
+  "emoji": "🔑",
+  "cat": "life",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Could you make a copy of this key?",
+    "ja": "この鍵の合鍵を作れますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Sure, just one?",
+    "ja": "はい、1本でいいですか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, please.",
+    "ja": "はい、お願いします。"
+   },
+   {
+    "role": "Staff",
+    "en": "It'll take ten minutes.",
+    "ja": "10分ほどかかります。"
+   },
+   {
+    "role": "You",
+    "en": "How much is it?",
+    "ja": "いくらですか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Four dollars.",
+    "ja": "4ドルです。"
+   }
+  ]
+ },
+ {
+  "title": "役所で手続きをする",
+  "emoji": "🏛️",
+  "cat": "life",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to change my address.",
+    "ja": "住所変更をしたいのですが。"
+   },
+   {
+    "role": "Clerk",
+    "en": "Please fill out this form.",
+    "ja": "こちらの用紙にご記入ください。"
+   },
+   {
+    "role": "You",
+    "en": "Do I need my ID?",
+    "ja": "身分証は必要ですか？"
+   },
+   {
+    "role": "Clerk",
+    "en": "Yes, and proof of address.",
+    "ja": "はい、住所の証明も必要です。"
+   },
+   {
+    "role": "You",
+    "en": "I have both here.",
+    "ja": "どちらもあります。"
+   },
+   {
+    "role": "Clerk",
+    "en": "Great. Just a moment.",
+    "ja": "では、少々お待ちください。"
+   }
+  ]
+ },
+ {
+  "title": "病院の受付をする",
+  "emoji": "📋",
+  "cat": "health",
+  "lines": [
+   {
+    "role": "Receptionist",
+    "en": "Do you have an appointment?",
+    "ja": "ご予約はありますか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, at three o'clock.",
+    "ja": "はい、3時です。"
+   },
+   {
+    "role": "Receptionist",
+    "en": "Please fill out this form.",
+    "ja": "こちらの問診票をご記入ください。"
+   },
+   {
+    "role": "You",
+    "en": "Where do I wait?",
+    "ja": "どこで待てばいいですか？"
+   },
+   {
+    "role": "Receptionist",
+    "en": "Please have a seat there.",
+    "ja": "あちらにおかけください。"
+   },
+   {
+    "role": "You",
+    "en": "Thank you.",
+    "ja": "ありがとうございます。"
+   }
+  ]
+ },
+ {
+  "title": "診察の結果を聞く",
+  "emoji": "🩻",
+  "cat": "health",
+  "lines": [
+   {
+    "role": "Doctor",
+    "en": "Your test results are back.",
+    "ja": "検査の結果が出ました。"
+   },
+   {
+    "role": "You",
+    "en": "How am I doing?",
+    "ja": "どうでしたか？"
+   },
+   {
+    "role": "Doctor",
+    "en": "Everything looks normal.",
+    "ja": "すべて正常です。"
+   },
+   {
+    "role": "You",
+    "en": "That's a relief.",
+    "ja": "安心しました。"
+   },
+   {
+    "role": "Doctor",
+    "en": "Just get plenty of rest.",
+    "ja": "しっかり休んでくださいね。"
+   },
+   {
+    "role": "You",
+    "en": "I will. Thank you.",
+    "ja": "はい。ありがとうございます。"
+   }
+  ]
+ },
+ {
+  "title": "入学について問い合わせる",
+  "emoji": "🎒",
+  "cat": "school",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to know about your courses.",
+    "ja": "コースについて知りたいのですが。"
+   },
+   {
+    "role": "Staff",
+    "en": "Are you a beginner?",
+    "ja": "初心者ですか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, I am.",
+    "ja": "はい、そうです。"
+   },
+   {
+    "role": "Staff",
+    "en": "We have a class for you.",
+    "ja": "ぴったりのクラスがありますよ。"
+   },
+   {
+    "role": "You",
+    "en": "When does it start?",
+    "ja": "いつ始まりますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Next month.",
+    "ja": "来月です。"
+   }
+  ]
+ },
+ {
+  "title": "試験について尋ねる",
+  "emoji": "📝",
+  "cat": "school",
+  "lines": [
+   {
+    "role": "You",
+    "en": "When is the next test?",
+    "ja": "次の試験はいつですか？"
+   },
+   {
+    "role": "Teacher",
+    "en": "It's next Friday.",
+    "ja": "来週の金曜です。"
+   },
+   {
+    "role": "You",
+    "en": "What will it cover?",
+    "ja": "範囲はどこですか？"
+   },
+   {
+    "role": "Teacher",
+    "en": "Chapters one to three.",
+    "ja": "1章から3章までです。"
+   },
+   {
+    "role": "You",
+    "en": "Can we use notes?",
+    "ja": "ノートは使えますか？"
+   },
+   {
+    "role": "Teacher",
+    "en": "No, it's closed book.",
+    "ja": "いいえ、持ち込み不可です。"
+   }
+  ]
+ },
+ {
+  "title": "落ち込む友達を励ます",
+  "emoji": "🤗",
+  "cat": "social",
+  "lines": [
+   {
+    "role": "Friend",
+    "en": "I failed my driving test.",
+    "ja": "運転免許の試験に落ちちゃった。"
+   },
+   {
+    "role": "You",
+    "en": "Oh no, I'm sorry.",
+    "ja": "えっ、残念だね。"
+   },
+   {
+    "role": "Friend",
+    "en": "I feel terrible.",
+    "ja": "すごく落ち込んでる。"
+   },
+   {
+    "role": "You",
+    "en": "Don't be too hard on yourself.",
+    "ja": "そんなに自分を責めないで。"
+   },
+   {
+    "role": "Friend",
+    "en": "Thanks for listening.",
+    "ja": "聞いてくれてありがとう。"
+   },
+   {
+    "role": "You",
+    "en": "You'll get it next time.",
+    "ja": "次はきっと受かるよ。"
+   }
+  ]
+ },
+ {
+  "title": "週末の予定を話す",
+  "emoji": "🗓️",
+  "cat": "social",
+  "lines": [
+   {
+    "role": "Friend",
+    "en": "Any plans this weekend?",
+    "ja": "今週末、予定ある？"
+   },
+   {
+    "role": "You",
+    "en": "I'm going hiking.",
+    "ja": "ハイキングに行くんだ。"
+   },
+   {
+    "role": "Friend",
+    "en": "That sounds fun!",
+    "ja": "楽しそう！"
+   },
+   {
+    "role": "You",
+    "en": "You should come along.",
+    "ja": "一緒に来なよ。"
+   },
+   {
+    "role": "Friend",
+    "en": "I'd love to!",
+    "ja": "ぜひ！"
+   },
+   {
+    "role": "You",
+    "en": "Great, I'll text you.",
+    "ja": "じゃあ連絡するね。"
+   }
+  ]
+ },
+ {
+  "title": "水族館で聞く",
+  "emoji": "🐠",
+  "cat": "outing",
+  "lines": [
+   {
+    "role": "You",
+    "en": "What time is the dolphin show?",
+    "ja": "イルカショーは何時ですか？"
+   },
+   {
+    "role": "Staff",
+    "en": "At two and four.",
+    "ja": "2時と4時です。"
+   },
+   {
+    "role": "You",
+    "en": "Where is it held?",
+    "ja": "どこで開催されますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "In the main hall.",
+    "ja": "メインホールです。"
+   },
+   {
+    "role": "You",
+    "en": "Can we touch the fish?",
+    "ja": "魚に触れますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Yes, at the touch pool.",
+    "ja": "はい、タッチプールで。"
+   }
+  ]
+ },
+ {
+  "title": "カラオケを予約する",
+  "emoji": "🎤",
+  "cat": "outing",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Do you have a room for four?",
+    "ja": "4人用の部屋はありますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Yes, for how long?",
+    "ja": "はい、何時間ですか？"
+   },
+   {
+    "role": "You",
+    "en": "Two hours, please.",
+    "ja": "2時間でお願いします。"
+   },
+   {
+    "role": "Staff",
+    "en": "Would you like drinks?",
+    "ja": "ドリンクはいかがですか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, a drink bar.",
+    "ja": "はい、飲み放題で。"
+   },
+   {
+    "role": "Staff",
+    "en": "Room five, this way.",
+    "ja": "5番の部屋へどうぞ。"
+   }
+  ]
+ },
+ {
+  "title": "新年のあいさつをする",
+  "emoji": "🎍",
+  "cat": "event",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Happy New Year!",
+    "ja": "あけましておめでとう！"
+   },
+   {
+    "role": "Friend",
+    "en": "Happy New Year to you too!",
+    "ja": "おめでとう！"
+   },
+   {
+    "role": "You",
+    "en": "Did you have a good holiday?",
+    "ja": "休みは楽しめた？"
+   },
+   {
+    "role": "Friend",
+    "en": "Yes, very relaxing.",
+    "ja": "うん、のんびりできたよ。"
+   },
+   {
+    "role": "You",
+    "en": "Let's hang out this year.",
+    "ja": "今年も遊ぼうね。"
+   },
+   {
+    "role": "Friend",
+    "en": "Definitely!",
+    "ja": "もちろん！"
+   }
+  ]
+ },
+ {
+  "title": "赤ちゃんの誕生を祝う",
+  "emoji": "👶",
+  "cat": "event",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Congratulations on your baby!",
+    "ja": "ご出産おめでとう！"
+   },
+   {
+    "role": "Friend",
+    "en": "Thank you so much!",
+    "ja": "ありがとう！"
+   },
+   {
+    "role": "You",
+    "en": "Boy or girl?",
+    "ja": "男の子？女の子？"
+   },
+   {
+    "role": "Friend",
+    "en": "It's a girl.",
+    "ja": "女の子なんだ。"
+   },
+   {
+    "role": "You",
+    "en": "What's her name?",
+    "ja": "名前は？"
+   },
+   {
+    "role": "Friend",
+    "en": "We named her Emma.",
+    "ja": "エマって名付けたよ。"
+   }
+  ]
+ },
+ {
+  "title": "上司に進捗を報告する",
+  "emoji": "📈",
+  "cat": "work",
+  "lines": [
+   {
+    "role": "Boss",
+    "en": "How's the project going?",
+    "ja": "プロジェクトの進み具合は？"
+   },
+   {
+    "role": "You",
+    "en": "It's almost finished.",
+    "ja": "もうすぐ完成です。"
+   },
+   {
+    "role": "Boss",
+    "en": "Any problems?",
+    "ja": "何か問題は？"
+   },
+   {
+    "role": "You",
+    "en": "No, it's on schedule.",
+    "ja": "いいえ、予定通りです。"
+   },
+   {
+    "role": "Boss",
+    "en": "Great work.",
+    "ja": "よくやってるね。"
+   },
+   {
+    "role": "You",
+    "en": "Thank you.",
+    "ja": "ありがとうございます。"
+   }
+  ]
+ },
+ {
+  "title": "手伝いを申し出る",
+  "emoji": "🤝",
+  "cat": "work",
+  "lines": [
+   {
+    "role": "You",
+    "en": "You look busy. Need a hand?",
+    "ja": "忙しそうだね。手伝おうか？"
+   },
+   {
+    "role": "Colleague",
+    "en": "That would be great.",
+    "ja": "助かるよ。"
+   },
+   {
+    "role": "You",
+    "en": "What can I do?",
+    "ja": "何をすればいい？"
+   },
+   {
+    "role": "Colleague",
+    "en": "Could you check these numbers?",
+    "ja": "この数字を確認してくれる？"
+   },
+   {
+    "role": "You",
+    "en": "Sure, leave it to me.",
+    "ja": "うん、任せて。"
+   },
+   {
+    "role": "Colleague",
+    "en": "Thanks, you're a lifesaver.",
+    "ja": "ありがとう、助かる。"
+   }
+  ]
+ },
+ {
+  "title": "盗難を届ける",
+  "emoji": "🚓",
+  "cat": "trouble",
+  "lines": [
+   {
+    "role": "You",
+    "en": "My bag was stolen.",
+    "ja": "かばんを盗まれました。"
+   },
+   {
+    "role": "Officer",
+    "en": "Where did it happen?",
+    "ja": "どこで起きましたか？"
+   },
+   {
+    "role": "You",
+    "en": "At the station.",
+    "ja": "駅でです。"
+   },
+   {
+    "role": "Officer",
+    "en": "What was inside?",
+    "ja": "中には何が？"
+   },
+   {
+    "role": "You",
+    "en": "My wallet and phone.",
+    "ja": "財布とスマホです。"
+   },
+   {
+    "role": "Officer",
+    "en": "Let's file a report.",
+    "ja": "では、被害届を出しましょう。"
+   }
+  ]
+ },
+ {
+  "title": "飛行機に乗り遅れる",
+  "emoji": "🛫",
+  "cat": "trouble",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I missed my flight.",
+    "ja": "飛行機に乗り遅れました。"
+   },
+   {
+    "role": "Agent",
+    "en": "When was your flight?",
+    "ja": "何時の便でしたか？"
+   },
+   {
+    "role": "You",
+    "en": "The ten o'clock to London.",
+    "ja": "10時のロンドン行きです。"
+   },
+   {
+    "role": "Agent",
+    "en": "There's another at noon.",
+    "ja": "正午にもう1便あります。"
+   },
+   {
+    "role": "You",
+    "en": "Can I change to that one?",
+    "ja": "それに変更できますか？"
+   },
+   {
+    "role": "Agent",
+    "en": "Yes, for a small fee.",
+    "ja": "はい、少し手数料がかかります。"
+   }
+  ]
+ },
+ {
+  "title": "フェリーのチケットを買う",
+  "emoji": "⛴️",
+  "cat": "travel",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Two tickets to the island, please.",
+    "ja": "島まで2枚お願いします。"
+   },
+   {
+    "role": "Staff",
+    "en": "One way or round trip?",
+    "ja": "片道ですか、往復ですか？"
+   },
+   {
+    "role": "You",
+    "en": "Round trip, please.",
+    "ja": "往復でお願いします。"
+   },
+   {
+    "role": "Staff",
+    "en": "The next ferry leaves at noon.",
+    "ja": "次の便は正午発です。"
+   },
+   {
+    "role": "You",
+    "en": "How long is the ride?",
+    "ja": "どのくらいかかりますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "About forty minutes.",
+    "ja": "40分ほどです。"
+   }
+  ]
+ },
+ {
+  "title": "自転車を借りる",
+  "emoji": "🚲",
+  "cat": "travel",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to rent a bike.",
+    "ja": "自転車を借りたいです。"
+   },
+   {
+    "role": "Staff",
+    "en": "For how many hours?",
+    "ja": "何時間ですか？"
+   },
+   {
+    "role": "You",
+    "en": "Just for the afternoon.",
+    "ja": "午後だけです。"
+   },
+   {
+    "role": "Staff",
+    "en": "Please wear this helmet.",
+    "ja": "このヘルメットを着けてください。"
+   },
+   {
+    "role": "You",
+    "en": "Where can I return it?",
+    "ja": "どこに返せばいいですか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Anywhere on this map.",
+    "ja": "この地図のどこでも大丈夫です。"
+   }
+  ]
+ },
+ {
+  "title": "アイスを注文する",
+  "emoji": "🍦",
+  "cat": "food",
+  "lines": [
+   {
+    "role": "Staff",
+    "en": "What flavor would you like?",
+    "ja": "どの味にしますか？"
+   },
+   {
+    "role": "You",
+    "en": "Chocolate, please.",
+    "ja": "チョコレートをお願いします。"
+   },
+   {
+    "role": "Staff",
+    "en": "Cone or cup?",
+    "ja": "コーンですか、カップですか？"
+   },
+   {
+    "role": "You",
+    "en": "A cone, please.",
+    "ja": "コーンでお願いします。"
+   },
+   {
+    "role": "Staff",
+    "en": "One scoop or two?",
+    "ja": "1段ですか、2段ですか？"
+   },
+   {
+    "role": "You",
+    "en": "Two scoops.",
+    "ja": "2段で。"
+   }
+  ]
+ },
+ {
+  "title": "ピザを宅配で頼む",
+  "emoji": "🍕",
+  "cat": "food",
+  "lines": [
+   {
+    "role": "Staff",
+    "en": "Thanks for calling. Your order?",
+    "ja": "お電話ありがとうございます。ご注文は？"
+   },
+   {
+    "role": "You",
+    "en": "One large pepperoni pizza.",
+    "ja": "Lサイズのペパロニを1枚。"
+   },
+   {
+    "role": "Staff",
+    "en": "Anything to drink?",
+    "ja": "お飲み物は？"
+   },
+   {
+    "role": "You",
+    "en": "A bottle of cola.",
+    "ja": "コーラを1本。"
+   },
+   {
+    "role": "Staff",
+    "en": "It'll be there in thirty minutes.",
+    "ja": "30分でお届けします。"
+   },
+   {
+    "role": "You",
+    "en": "Great, thank you.",
+    "ja": "ありがとう。"
+   }
+  ]
+ },
+ {
+  "title": "引っ越しの見積もりを頼む",
+  "emoji": "🚚",
+  "cat": "life",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I need a moving quote.",
+    "ja": "引っ越しの見積もりをお願いしたいです。"
+   },
+   {
+    "role": "Staff",
+    "en": "How big is your place?",
+    "ja": "どのくらいの広さですか？"
+   },
+   {
+    "role": "You",
+    "en": "A one-bedroom apartment.",
+    "ja": "1LDKのアパートです。"
+   },
+   {
+    "role": "Staff",
+    "en": "When are you moving?",
+    "ja": "いつ引っ越されますか？"
+   },
+   {
+    "role": "You",
+    "en": "At the end of the month.",
+    "ja": "月末です。"
+   },
+   {
+    "role": "Staff",
+    "en": "I'll email you an estimate.",
+    "ja": "見積もりをメールします。"
+   }
+  ]
+ },
+ {
+  "title": "電気の開通を申し込む",
+  "emoji": "💡",
+  "cat": "life",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to start electricity service.",
+    "ja": "電気の開通を申し込みたいです。"
+   },
+   {
+    "role": "Staff",
+    "en": "What's the address?",
+    "ja": "ご住所は？"
+   },
+   {
+    "role": "You",
+    "en": "12 Park Street.",
+    "ja": "パークストリート12番地です。"
+   },
+   {
+    "role": "Staff",
+    "en": "When should it start?",
+    "ja": "いつから使いますか？"
+   },
+   {
+    "role": "You",
+    "en": "From this Friday.",
+    "ja": "今週の金曜からです。"
+   },
+   {
+    "role": "Staff",
+    "en": "All set. You're good to go.",
+    "ja": "手続き完了です。ご利用いただけます。"
+   }
+  ]
+ },
+ {
+  "title": "眼科で診てもらう",
+  "emoji": "👁️",
+  "cat": "health",
+  "lines": [
+   {
+    "role": "Doctor",
+    "en": "What seems to be the trouble?",
+    "ja": "どうされましたか？"
+   },
+   {
+    "role": "You",
+    "en": "My eyes feel itchy.",
+    "ja": "目がかゆいんです。"
+   },
+   {
+    "role": "Doctor",
+    "en": "How long has it been?",
+    "ja": "いつからですか？"
+   },
+   {
+    "role": "You",
+    "en": "About three days.",
+    "ja": "3日ほどです。"
+   },
+   {
+    "role": "Doctor",
+    "en": "It looks like an allergy.",
+    "ja": "アレルギーのようですね。"
+   },
+   {
+    "role": "You",
+    "en": "Can you give me eye drops?",
+    "ja": "目薬をもらえますか？"
+   }
+  ]
+ },
+ {
+  "title": "診察の予約を変更する",
+  "emoji": "📅",
+  "cat": "health",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to change my appointment.",
+    "ja": "予約を変更したいのですが。"
+   },
+   {
+    "role": "Receptionist",
+    "en": "What's your name?",
+    "ja": "お名前は？"
+   },
+   {
+    "role": "You",
+    "en": "It's Kato, on Monday.",
+    "ja": "月曜の加藤です。"
+   },
+   {
+    "role": "Receptionist",
+    "en": "When would you prefer?",
+    "ja": "いつがよろしいですか？"
+   },
+   {
+    "role": "You",
+    "en": "Wednesday, if possible.",
+    "ja": "できれば水曜に。"
+   },
+   {
+    "role": "Receptionist",
+    "en": "Two o'clock works.",
+    "ja": "2時なら空いています。"
+   }
+  ]
+ },
+ {
+  "title": "発音を直してもらう",
+  "emoji": "🗣️",
+  "cat": "school",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Is my pronunciation okay?",
+    "ja": "発音は大丈夫ですか？"
+   },
+   {
+    "role": "Teacher",
+    "en": "Almost. Try this sound.",
+    "ja": "惜しいです。この音を出してみて。"
+   },
+   {
+    "role": "You",
+    "en": "Like this?",
+    "ja": "こんな感じ？"
+   },
+   {
+    "role": "Teacher",
+    "en": "A little softer.",
+    "ja": "もう少し柔らかく。"
+   },
+   {
+    "role": "You",
+    "en": "How about now?",
+    "ja": "今のは？"
+   },
+   {
+    "role": "Teacher",
+    "en": "Perfect! Well done.",
+    "ja": "完璧です！よくできました。"
+   }
+  ]
+ },
+ {
+  "title": "グループ課題の相談をする",
+  "emoji": "👥",
+  "cat": "school",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Should we start the project?",
+    "ja": "課題、始めようか？"
+   },
+   {
+    "role": "Classmate",
+    "en": "Sure. Who does what?",
+    "ja": "うん。誰が何をやる？"
+   },
+   {
+    "role": "You",
+    "en": "I'll do the research.",
+    "ja": "私は調べものをするよ。"
+   },
+   {
+    "role": "Classmate",
+    "en": "I'll make the slides.",
+    "ja": "じゃあ僕はスライドを作る。"
+   },
+   {
+    "role": "You",
+    "en": "Let's meet on Friday.",
+    "ja": "金曜に集まろう。"
+   },
+   {
+    "role": "Classmate",
+    "en": "Sounds good.",
+    "ja": "いいね。"
+   }
+  ]
+ },
+ {
+  "title": "ばったり知り合いに会う",
+  "emoji": "👀",
+  "cat": "social",
+  "lines": [
+   {
+    "role": "Friend",
+    "en": "Wow, what a surprise!",
+    "ja": "わぁ、びっくり！"
+   },
+   {
+    "role": "You",
+    "en": "I didn't expect to see you here!",
+    "ja": "こんなところで会うとは！"
+   },
+   {
+    "role": "Friend",
+    "en": "Do you live nearby?",
+    "ja": "この辺に住んでるの？"
+   },
+   {
+    "role": "You",
+    "en": "Yeah, just around the corner.",
+    "ja": "うん、すぐそこ。"
+   },
+   {
+    "role": "Friend",
+    "en": "We should grab coffee sometime.",
+    "ja": "今度コーヒーでも行こうよ。"
+   },
+   {
+    "role": "You",
+    "en": "Definitely!",
+    "ja": "ぜひ！"
+   }
+  ]
+ },
+ {
+  "title": "食事に誘う",
+  "emoji": "🍽️",
+  "cat": "social",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Are you free for dinner tonight?",
+    "ja": "今夜、夕飯どう？"
+   },
+   {
+    "role": "Friend",
+    "en": "Sure! What do you feel like?",
+    "ja": "いいね！何が食べたい？"
+   },
+   {
+    "role": "You",
+    "en": "How about Italian?",
+    "ja": "イタリアンはどう？"
+   },
+   {
+    "role": "Friend",
+    "en": "Perfect. Where?",
+    "ja": "いいね。どこで？"
+   },
+   {
+    "role": "You",
+    "en": "There's a nice place nearby.",
+    "ja": "近くにいいお店があるんだ。"
+   },
+   {
+    "role": "Friend",
+    "en": "Let's go!",
+    "ja": "行こう！"
+   }
+  ]
+ },
+ {
+  "title": "ボウリング場で受付する",
+  "emoji": "🎳",
+  "cat": "outing",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Can we get a lane for two?",
+    "ja": "2人でレーンを使えますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Sure. What shoe size?",
+    "ja": "はい。靴のサイズは？"
+   },
+   {
+    "role": "You",
+    "en": "Size nine, please.",
+    "ja": "9サイズでお願いします。"
+   },
+   {
+    "role": "Staff",
+    "en": "How many games?",
+    "ja": "何ゲームですか？"
+   },
+   {
+    "role": "You",
+    "en": "Two games, please.",
+    "ja": "2ゲームお願いします。"
+   },
+   {
+    "role": "Staff",
+    "en": "Lane four is yours.",
+    "ja": "4番レーンをどうぞ。"
+   }
+  ]
+ },
+ {
+  "title": "動物園で聞く",
+  "emoji": "🦁",
+  "cat": "outing",
+  "lines": [
+   {
+    "role": "You",
+    "en": "What time is the lion feeding?",
+    "ja": "ライオンの餌やりは何時ですか？"
+   },
+   {
+    "role": "Staff",
+    "en": "At eleven and three.",
+    "ja": "11時と3時です。"
+   },
+   {
+    "role": "You",
+    "en": "Where are the elephants?",
+    "ja": "ゾウはどこですか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Near the north gate.",
+    "ja": "北門の近くです。"
+   },
+   {
+    "role": "You",
+    "en": "Is there a gift shop?",
+    "ja": "お土産屋はありますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Yes, by the exit.",
+    "ja": "はい、出口の近くに。"
+   }
+  ]
+ },
+ {
+  "title": "クリスマスを祝う",
+  "emoji": "🎄",
+  "cat": "event",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Merry Christmas!",
+    "ja": "メリークリスマス！"
+   },
+   {
+    "role": "Friend",
+    "en": "Merry Christmas! This is for you.",
+    "ja": "メリークリスマス！これ、プレゼント。"
+   },
+   {
+    "role": "You",
+    "en": "Aw, thank you!",
+    "ja": "わぁ、ありがとう！"
+   },
+   {
+    "role": "Friend",
+    "en": "Open it!",
+    "ja": "開けてみて！"
+   },
+   {
+    "role": "You",
+    "en": "It's exactly what I wanted.",
+    "ja": "ちょうどほしかったものだ。"
+   },
+   {
+    "role": "Friend",
+    "en": "I'm so glad!",
+    "ja": "よかった！"
+   }
+  ]
+ },
+ {
+  "title": "卒業をお祝いする",
+  "emoji": "🎓",
+  "cat": "event",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Congratulations on graduating!",
+    "ja": "卒業おめでとう！"
+   },
+   {
+    "role": "Friend",
+    "en": "Thank you! I can't believe it.",
+    "ja": "ありがとう！信じられないよ。"
+   },
+   {
+    "role": "You",
+    "en": "What's next for you?",
+    "ja": "これからどうするの？"
+   },
+   {
+    "role": "Friend",
+    "en": "I start a new job soon.",
+    "ja": "もうすぐ新しい仕事を始めるんだ。"
+   },
+   {
+    "role": "You",
+    "en": "That's exciting!",
+    "ja": "すごいね！"
+   },
+   {
+    "role": "Friend",
+    "en": "I'm a little nervous.",
+    "ja": "ちょっと緊張してる。"
+   }
+  ]
+ },
+ {
+  "title": "取引先にアポを取る",
+  "emoji": "📞",
+  "cat": "work",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to set up a meeting.",
+    "ja": "打ち合わせをお願いしたいのですが。"
+   },
+   {
+    "role": "Client",
+    "en": "Sure. When are you free?",
+    "ja": "いいですよ。いつが空いていますか？"
+   },
+   {
+    "role": "You",
+    "en": "How about next Monday?",
+    "ja": "来週の月曜はいかがですか？"
+   },
+   {
+    "role": "Client",
+    "en": "Morning or afternoon?",
+    "ja": "午前ですか、午後ですか？"
+   },
+   {
+    "role": "You",
+    "en": "Afternoon would be better.",
+    "ja": "午後の方が助かります。"
+   },
+   {
+    "role": "Client",
+    "en": "Let's say two o'clock.",
+    "ja": "では2時に。"
+   }
+  ]
+ },
+ {
+  "title": "仕事のやり方を教わる",
+  "emoji": "🧑‍💻",
+  "cat": "work",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Could you show me how to do this?",
+    "ja": "これのやり方を教えてもらえますか？"
+   },
+   {
+    "role": "Colleague",
+    "en": "Of course. Watch the screen.",
+    "ja": "もちろん。画面を見ていて。"
+   },
+   {
+    "role": "You",
+    "en": "What do I click first?",
+    "ja": "最初に何をクリックすれば？"
+   },
+   {
+    "role": "Colleague",
+    "en": "This button here.",
+    "ja": "ここのボタンです。"
+   },
+   {
+    "role": "You",
+    "en": "Oh, I see now.",
+    "ja": "なるほど、分かりました。"
+   },
+   {
+    "role": "Colleague",
+    "en": "You'll get used to it.",
+    "ja": "すぐ慣れますよ。"
+   }
+  ]
+ },
+ {
+  "title": "充電させてもらう",
+  "emoji": "🔋",
+  "cat": "trouble",
+  "lines": [
+   {
+    "role": "You",
+    "en": "My phone is dead. Can I charge it here?",
+    "ja": "スマホの電池が切れて。ここで充電できますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Sure, there's an outlet there.",
+    "ja": "はい、あちらにコンセントがあります。"
+   },
+   {
+    "role": "You",
+    "en": "Do you have a cable?",
+    "ja": "ケーブルはありますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Yes, you can use this one.",
+    "ja": "はい、これを使ってください。"
+   },
+   {
+    "role": "You",
+    "en": "Thank you so much.",
+    "ja": "本当に助かります。"
+   },
+   {
+    "role": "Staff",
+    "en": "No problem.",
+    "ja": "どういたしまして。"
+   }
+  ]
+ },
+ {
+  "title": "車が故障する",
+  "emoji": "🚗",
+  "cat": "trouble",
+  "lines": [
+   {
+    "role": "You",
+    "en": "My car broke down on the highway.",
+    "ja": "高速で車が故障しました。"
+   },
+   {
+    "role": "Operator",
+    "en": "Are you in a safe place?",
+    "ja": "安全な場所にいますか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, on the shoulder.",
+    "ja": "はい、路肩にいます。"
+   },
+   {
+    "role": "Operator",
+    "en": "We'll send help right away.",
+    "ja": "すぐに救援を向かわせます。"
+   },
+   {
+    "role": "You",
+    "en": "How long will it take?",
+    "ja": "どのくらいかかりますか？"
+   },
+   {
+    "role": "Operator",
+    "en": "About twenty minutes.",
+    "ja": "20分ほどです。"
+   }
+  ]
+ },
+ {
+  "title": "搭乗ゲートを確認する",
+  "emoji": "🛫",
+  "cat": "travel",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Where is gate 22?",
+    "ja": "22番ゲートはどこですか？"
+   },
+   {
+    "role": "Staff",
+    "en": "It's down that hallway.",
+    "ja": "その通路の先です。"
+   },
+   {
+    "role": "You",
+    "en": "Has boarding started?",
+    "ja": "搭乗は始まっていますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Not yet. In ten minutes.",
+    "ja": "まだです。あと10分です。"
+   },
+   {
+    "role": "You",
+    "en": "Is the flight on time?",
+    "ja": "定刻通りですか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Yes, it's on time.",
+    "ja": "はい、定刻通りです。"
+   }
+  ]
+ },
+ {
+  "title": "乗り継ぎ便を確認する",
+  "emoji": "🛂",
+  "cat": "travel",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I have a connecting flight.",
+    "ja": "乗り継ぎ便があります。"
+   },
+   {
+    "role": "Agent",
+    "en": "May I see your ticket?",
+    "ja": "チケットを拝見できますか？"
+   },
+   {
+    "role": "You",
+    "en": "Here it is.",
+    "ja": "これです。"
+   },
+   {
+    "role": "Agent",
+    "en": "Go to terminal two.",
+    "ja": "第2ターミナルへどうぞ。"
+   },
+   {
+    "role": "You",
+    "en": "Do I have enough time?",
+    "ja": "時間は足りますか？"
+   },
+   {
+    "role": "Agent",
+    "en": "Yes, you have an hour.",
+    "ja": "はい、1時間あります。"
+   }
+  ]
+ },
+ {
+  "title": "屋台で買う",
+  "emoji": "🌭",
+  "cat": "food",
+  "lines": [
+   {
+    "role": "You",
+    "en": "What do you have today?",
+    "ja": "今日は何がありますか？"
+   },
+   {
+    "role": "Vendor",
+    "en": "Hot dogs and grilled corn.",
+    "ja": "ホットドッグと焼きトウモロコシです。"
+   },
+   {
+    "role": "You",
+    "en": "I'll take a hot dog.",
+    "ja": "ホットドッグを1つください。"
+   },
+   {
+    "role": "Vendor",
+    "en": "Ketchup or mustard?",
+    "ja": "ケチャップとマスタード、どちらに？"
+   },
+   {
+    "role": "You",
+    "en": "Both, please.",
+    "ja": "両方お願いします。"
+   },
+   {
+    "role": "Vendor",
+    "en": "Here you go. Three dollars.",
+    "ja": "どうぞ。3ドルです。"
+   }
+  ]
+ },
+ {
+  "title": "寿司屋で注文する",
+  "emoji": "🍣",
+  "cat": "food",
+  "lines": [
+   {
+    "role": "Chef",
+    "en": "Welcome! What would you like?",
+    "ja": "いらっしゃい！何にしますか？"
+   },
+   {
+    "role": "You",
+    "en": "Two pieces of tuna, please.",
+    "ja": "マグロを2貫ください。"
+   },
+   {
+    "role": "Chef",
+    "en": "Anything else?",
+    "ja": "他には？"
+   },
+   {
+    "role": "You",
+    "en": "Some salmon, too.",
+    "ja": "サーモンもお願いします。"
+   },
+   {
+    "role": "Chef",
+    "en": "Would you like some tea?",
+    "ja": "お茶はいかがですか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, please.",
+    "ja": "はい、お願いします。"
+   }
+  ]
+ },
+ {
+  "title": "保険について問い合わせる",
+  "emoji": "🛡️",
+  "cat": "life",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to ask about insurance.",
+    "ja": "保険について聞きたいのですが。"
+   },
+   {
+    "role": "Staff",
+    "en": "What kind are you looking for?",
+    "ja": "どのような保険をお探しですか？"
+   },
+   {
+    "role": "You",
+    "en": "Travel insurance.",
+    "ja": "旅行保険です。"
+   },
+   {
+    "role": "Staff",
+    "en": "How long is your trip?",
+    "ja": "旅行はどのくらいですか？"
+   },
+   {
+    "role": "You",
+    "en": "Two weeks.",
+    "ja": "2週間です。"
+   },
+   {
+    "role": "Staff",
+    "en": "This plan covers that.",
+    "ja": "このプランで対応できます。"
+   }
+  ]
+ },
+ {
+  "title": "靴の修理を頼む",
+  "emoji": "👞",
+  "cat": "life",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Can you fix the heel on this shoe?",
+    "ja": "この靴のかかとを直せますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Sure, both shoes?",
+    "ja": "はい、両方ですか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, please.",
+    "ja": "はい、お願いします。"
+   },
+   {
+    "role": "Staff",
+    "en": "It'll be ready tomorrow.",
+    "ja": "明日できます。"
+   },
+   {
+    "role": "You",
+    "en": "How much will it cost?",
+    "ja": "いくらかかりますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "About fifteen dollars.",
+    "ja": "15ドルほどです。"
+   }
+  ]
+ },
+ {
+  "title": "皮膚科で相談する",
+  "emoji": "🧴",
+  "cat": "health",
+  "lines": [
+   {
+    "role": "Doctor",
+    "en": "What's bothering you?",
+    "ja": "どうされましたか？"
+   },
+   {
+    "role": "You",
+    "en": "I have a rash on my arm.",
+    "ja": "腕に発疹があります。"
+   },
+   {
+    "role": "Doctor",
+    "en": "Does it itch?",
+    "ja": "かゆみはありますか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, quite a lot.",
+    "ja": "はい、かなり。"
+   },
+   {
+    "role": "Doctor",
+    "en": "I'll prescribe a cream.",
+    "ja": "塗り薬を出しますね。"
+   },
+   {
+    "role": "You",
+    "en": "Thank you, doctor.",
+    "ja": "ありがとうございます。"
+   }
+  ]
+ },
+ {
+  "title": "血液検査を受ける",
+  "emoji": "🩸",
+  "cat": "health",
+  "lines": [
+   {
+    "role": "Nurse",
+    "en": "Please roll up your sleeve.",
+    "ja": "袖をまくってください。"
+   },
+   {
+    "role": "You",
+    "en": "Will it hurt?",
+    "ja": "痛いですか？"
+   },
+   {
+    "role": "Nurse",
+    "en": "Just a small pinch.",
+    "ja": "少しチクッとするだけです。"
+   },
+   {
+    "role": "You",
+    "en": "Okay, I'm ready.",
+    "ja": "はい、大丈夫です。"
+   },
+   {
+    "role": "Nurse",
+    "en": "All done. Press here.",
+    "ja": "終わりました。ここを押さえて。"
+   },
+   {
+    "role": "You",
+    "en": "When will I get the results?",
+    "ja": "結果はいつ分かりますか？"
+   }
+  ]
+ },
+ {
+  "title": "授業に遅刻する",
+  "emoji": "🏃",
+  "cat": "school",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'm sorry I'm late.",
+    "ja": "遅れてすみません。"
+   },
+   {
+    "role": "Teacher",
+    "en": "What happened?",
+    "ja": "どうしました？"
+   },
+   {
+    "role": "You",
+    "en": "I missed the bus.",
+    "ja": "バスに乗り遅れました。"
+   },
+   {
+    "role": "Teacher",
+    "en": "Please take your seat.",
+    "ja": "席についてください。"
+   },
+   {
+    "role": "You",
+    "en": "What did I miss?",
+    "ja": "何を逃しましたか？"
+   },
+   {
+    "role": "Teacher",
+    "en": "We just started chapter two.",
+    "ja": "ちょうど2章を始めたところです。"
+   }
+  ]
+ },
+ {
+  "title": "留学の相談をする",
+  "emoji": "✈️",
+  "cat": "school",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'm thinking about studying abroad.",
+    "ja": "留学を考えています。"
+   },
+   {
+    "role": "Advisor",
+    "en": "Where would you like to go?",
+    "ja": "どこへ行きたいですか？"
+   },
+   {
+    "role": "You",
+    "en": "Maybe Canada.",
+    "ja": "カナダかなと思っています。"
+   },
+   {
+    "role": "Advisor",
+    "en": "For how long?",
+    "ja": "どのくらいですか？"
+   },
+   {
+    "role": "You",
+    "en": "About a year.",
+    "ja": "1年ほどです。"
+   },
+   {
+    "role": "Advisor",
+    "en": "Let's look at some programs.",
+    "ja": "プログラムを見てみましょう。"
+   }
+  ]
+ },
+ {
+  "title": "電話で近況を話す",
+  "emoji": "📱",
+  "cat": "social",
+  "lines": [
+   {
+    "role": "Friend",
+    "en": "Hey! How have you been?",
+    "ja": "やあ！元気にしてた？"
+   },
+   {
+    "role": "You",
+    "en": "Pretty busy, actually.",
+    "ja": "実はけっこう忙しくて。"
+   },
+   {
+    "role": "Friend",
+    "en": "What have you been up to?",
+    "ja": "最近どうしてたの？"
+   },
+   {
+    "role": "You",
+    "en": "I started a new job.",
+    "ja": "新しい仕事を始めたんだ。"
+   },
+   {
+    "role": "Friend",
+    "en": "That's great news!",
+    "ja": "それはいいね！"
+   },
+   {
+    "role": "You",
+    "en": "We should catch up soon.",
+    "ja": "近いうちに会おうよ。"
+   }
+  ]
+ },
+ {
+  "title": "話を聞いて共感する",
+  "emoji": "🤝",
+  "cat": "social",
+  "lines": [
+   {
+    "role": "Friend",
+    "en": "Work has been so stressful.",
+    "ja": "仕事がすごくストレスで。"
+   },
+   {
+    "role": "You",
+    "en": "That sounds really tough.",
+    "ja": "それは大変だね。"
+   },
+   {
+    "role": "Friend",
+    "en": "I'm exhausted.",
+    "ja": "もうへとへとだよ。"
+   },
+   {
+    "role": "You",
+    "en": "I know how you feel.",
+    "ja": "気持ち、分かるよ。"
+   },
+   {
+    "role": "Friend",
+    "en": "Thanks for understanding.",
+    "ja": "分かってくれてありがとう。"
+   },
+   {
+    "role": "You",
+    "en": "I'm always here for you.",
+    "ja": "いつでも話聞くからね。"
+   }
+  ]
+ },
+ {
+  "title": "劇場で席を探す",
+  "emoji": "🎭",
+  "cat": "outing",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Where is seat 14B?",
+    "ja": "14Bの席はどこですか？"
+   },
+   {
+    "role": "Usher",
+    "en": "May I see your ticket?",
+    "ja": "チケットを拝見できますか？"
+   },
+   {
+    "role": "You",
+    "en": "Here it is.",
+    "ja": "これです。"
+   },
+   {
+    "role": "Usher",
+    "en": "It's the second row.",
+    "ja": "2列目です。"
+   },
+   {
+    "role": "You",
+    "en": "Thank you. When does it start?",
+    "ja": "ありがとう。何時に始まりますか？"
+   },
+   {
+    "role": "Usher",
+    "en": "In five minutes.",
+    "ja": "あと5分です。"
+   }
+  ]
+ },
+ {
+  "title": "花火大会で待ち合わせる",
+  "emoji": "🎆",
+  "cat": "outing",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Where should we meet?",
+    "ja": "どこで待ち合わせる？"
+   },
+   {
+    "role": "Friend",
+    "en": "By the station exit.",
+    "ja": "駅の出口で。"
+   },
+   {
+    "role": "You",
+    "en": "What time?",
+    "ja": "何時に？"
+   },
+   {
+    "role": "Friend",
+    "en": "Around seven.",
+    "ja": "7時ごろ。"
+   },
+   {
+    "role": "You",
+    "en": "When do the fireworks start?",
+    "ja": "花火は何時から？"
+   },
+   {
+    "role": "Friend",
+    "en": "At eight o'clock.",
+    "ja": "8時からだよ。"
+   }
+  ]
+ },
+ {
+  "title": "新人を歓迎する",
+  "emoji": "🎉",
+  "cat": "event",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Welcome to the team!",
+    "ja": "チームへようこそ！"
+   },
+   {
+    "role": "Newcomer",
+    "en": "Thank you, I'm excited.",
+    "ja": "ありがとう、わくわくしています。"
+   },
+   {
+    "role": "You",
+    "en": "Let me introduce everyone.",
+    "ja": "みんなを紹介するね。"
+   },
+   {
+    "role": "Newcomer",
+    "en": "That would be great.",
+    "ja": "助かります。"
+   },
+   {
+    "role": "You",
+    "en": "If you need anything, just ask.",
+    "ja": "何かあれば何でも聞いて。"
+   },
+   {
+    "role": "Newcomer",
+    "en": "I really appreciate it.",
+    "ja": "本当にありがとうございます。"
+   }
+  ]
+ },
+ {
+  "title": "受賞をお祝いする",
+  "emoji": "🏆",
+  "cat": "event",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Congratulations on the award!",
+    "ja": "受賞おめでとう！"
+   },
+   {
+    "role": "Friend",
+    "en": "Thank you! I'm so happy.",
+    "ja": "ありがとう！すごくうれしい。"
+   },
+   {
+    "role": "You",
+    "en": "You really deserved it.",
+    "ja": "本当にふさわしいよ。"
+   },
+   {
+    "role": "Friend",
+    "en": "I couldn't have done it alone.",
+    "ja": "一人じゃ無理だったよ。"
+   },
+   {
+    "role": "You",
+    "en": "Let's celebrate tonight.",
+    "ja": "今夜お祝いしよう。"
+   },
+   {
+    "role": "Friend",
+    "en": "Sounds perfect.",
+    "ja": "いいね。"
+   }
+  ]
+ },
+ {
+  "title": "昇給を交渉する",
+  "emoji": "💰",
+  "cat": "work",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to talk about my salary.",
+    "ja": "給料についてお話ししたいのですが。"
+   },
+   {
+    "role": "Boss",
+    "en": "Sure, have a seat.",
+    "ja": "どうぞ、座って。"
+   },
+   {
+    "role": "You",
+    "en": "I've taken on more work.",
+    "ja": "仕事量が増えました。"
+   },
+   {
+    "role": "Boss",
+    "en": "That's true. Let me consider it.",
+    "ja": "確かに。検討させてください。"
+   },
+   {
+    "role": "You",
+    "en": "Thank you for considering.",
+    "ja": "ご検討ありがとうございます。"
+   },
+   {
+    "role": "Boss",
+    "en": "I'll get back to you soon.",
+    "ja": "近いうちに返事します。"
+   }
+  ]
+ },
+ {
+  "title": "退職を申し出る",
+  "emoji": "📄",
+  "cat": "work",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I've decided to resign.",
+    "ja": "退職を決めました。"
+   },
+   {
+    "role": "Boss",
+    "en": "I'm sorry to hear that.",
+    "ja": "それは残念です。"
+   },
+   {
+    "role": "You",
+    "en": "It wasn't an easy decision.",
+    "ja": "簡単な決断ではありませんでした。"
+   },
+   {
+    "role": "Boss",
+    "en": "When is your last day?",
+    "ja": "最終出勤日はいつですか？"
+   },
+   {
+    "role": "You",
+    "en": "The end of next month.",
+    "ja": "来月末です。"
+   },
+   {
+    "role": "Boss",
+    "en": "Thank you for your hard work.",
+    "ja": "これまでお疲れさまでした。"
+   }
+  ]
+ },
+ {
+  "title": "カードの紛失を届ける",
+  "emoji": "💳",
+  "cat": "trouble",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I lost my credit card.",
+    "ja": "クレジットカードをなくしました。"
+   },
+   {
+    "role": "Operator",
+    "en": "I'll freeze it right away.",
+    "ja": "すぐに利用を止めます。"
+   },
+   {
+    "role": "You",
+    "en": "Thank you. Can I get a new one?",
+    "ja": "ありがとう。新しいカードは作れますか？"
+   },
+   {
+    "role": "Operator",
+    "en": "Yes, it'll arrive in a week.",
+    "ja": "はい、1週間で届きます。"
+   },
+   {
+    "role": "You",
+    "en": "Is there any charge?",
+    "ja": "手数料はかかりますか？"
+   },
+   {
+    "role": "Operator",
+    "en": "No, it's free.",
+    "ja": "いいえ、無料です。"
+   }
+  ]
+ },
+ {
+  "title": "予約が見つからない",
+  "emoji": "😟",
+  "cat": "trouble",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I have a reservation, but...",
+    "ja": "予約しているのですが…"
+   },
+   {
+    "role": "Staff",
+    "en": "Let me check. Your name?",
+    "ja": "お調べします。お名前は？"
+   },
+   {
+    "role": "You",
+    "en": "It's under Tanaka.",
+    "ja": "田中で取っています。"
+   },
+   {
+    "role": "Staff",
+    "en": "I don't see it here.",
+    "ja": "こちらには見当たりません。"
+   },
+   {
+    "role": "You",
+    "en": "I have the confirmation email.",
+    "ja": "確認メールがあります。"
+   },
+   {
+    "role": "Staff",
+    "en": "Let me look again.",
+    "ja": "もう一度確認します。"
+   }
+  ]
+ },
+ {
+  "title": "モーニングコールを頼む",
+  "emoji": "⏰",
+  "cat": "travel",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Could I get a wake-up call?",
+    "ja": "モーニングコールをお願いできますか？"
+   },
+   {
+    "role": "Front Desk",
+    "en": "Sure, what time?",
+    "ja": "はい、何時ですか？"
+   },
+   {
+    "role": "You",
+    "en": "At six in the morning.",
+    "ja": "朝6時にお願いします。"
+   },
+   {
+    "role": "Front Desk",
+    "en": "Room number, please?",
+    "ja": "お部屋番号は？"
+   },
+   {
+    "role": "You",
+    "en": "Room 408.",
+    "ja": "408号室です。"
+   },
+   {
+    "role": "Front Desk",
+    "en": "All set. Good night.",
+    "ja": "承知しました。おやすみなさい。"
+   }
+  ]
+ },
+ {
+  "title": "ホテルでタクシーを呼ぶ",
+  "emoji": "🚕",
+  "cat": "travel",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Could you call a taxi for me?",
+    "ja": "タクシーを呼んでもらえますか？"
+   },
+   {
+    "role": "Front Desk",
+    "en": "Of course. Where to?",
+    "ja": "もちろんです。どちらまで？"
+   },
+   {
+    "role": "You",
+    "en": "To the airport.",
+    "ja": "空港までです。"
+   },
+   {
+    "role": "Front Desk",
+    "en": "It'll be here in five minutes.",
+    "ja": "5分で参ります。"
+   },
+   {
+    "role": "You",
+    "en": "Thank you so much.",
+    "ja": "ありがとうございます。"
+   },
+   {
+    "role": "Front Desk",
+    "en": "Please wait by the entrance.",
+    "ja": "入口でお待ちください。"
+   }
+  ]
+ },
+ {
+  "title": "ケーキを予約する",
+  "emoji": "🎂",
+  "cat": "food",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to order a birthday cake.",
+    "ja": "バースデーケーキを予約したいです。"
+   },
+   {
+    "role": "Staff",
+    "en": "What size would you like?",
+    "ja": "サイズはどうしますか？"
+   },
+   {
+    "role": "You",
+    "en": "For about six people.",
+    "ja": "6人ぶんくらいで。"
+   },
+   {
+    "role": "Staff",
+    "en": "Any message on it?",
+    "ja": "メッセージはお入れしますか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, 'Happy Birthday, Mom.'",
+    "ja": "はい、「お母さんお誕生日おめでとう」で。"
+   },
+   {
+    "role": "Staff",
+    "en": "It'll be ready Friday.",
+    "ja": "金曜にできます。"
+   }
+  ]
+ },
+ {
+  "title": "ワインを選んでもらう",
+  "emoji": "🍷",
+  "cat": "food",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Could you recommend a wine?",
+    "ja": "ワインを選んでもらえますか？"
+   },
+   {
+    "role": "Waiter",
+    "en": "Red or white?",
+    "ja": "赤と白、どちらにしますか？"
+   },
+   {
+    "role": "You",
+    "en": "Red, please.",
+    "ja": "赤でお願いします。"
+   },
+   {
+    "role": "Waiter",
+    "en": "This one goes well with meat.",
+    "ja": "これはお肉に合いますよ。"
+   },
+   {
+    "role": "You",
+    "en": "I'll try it.",
+    "ja": "それにします。"
+   },
+   {
+    "role": "Waiter",
+    "en": "Excellent choice.",
+    "ja": "いいお選びです。"
+   }
+  ]
+ },
+ {
+  "title": "ごみの出し方を聞く",
+  "emoji": "🗑️",
+  "cat": "life",
+  "lines": [
+   {
+    "role": "You",
+    "en": "When is the trash collected?",
+    "ja": "ごみ収集はいつですか？"
+   },
+   {
+    "role": "Neighbor",
+    "en": "Mondays and Thursdays.",
+    "ja": "月曜と木曜です。"
+   },
+   {
+    "role": "You",
+    "en": "Where do I put it?",
+    "ja": "どこに出せばいいですか？"
+   },
+   {
+    "role": "Neighbor",
+    "en": "By the corner over there.",
+    "ja": "あの角のところに。"
+   },
+   {
+    "role": "You",
+    "en": "Do I need to separate it?",
+    "ja": "分別は必要ですか？"
+   },
+   {
+    "role": "Neighbor",
+    "en": "Yes, burnable and plastic.",
+    "ja": "はい、燃えるごみとプラスチックに。"
+   }
+  ]
+ },
+ {
+  "title": "水漏れを修理してもらう",
+  "emoji": "🚰",
+  "cat": "life",
+  "lines": [
+   {
+    "role": "You",
+    "en": "There's a leak under the sink.",
+    "ja": "流しの下が水漏れしています。"
+   },
+   {
+    "role": "Plumber",
+    "en": "Let me take a look.",
+    "ja": "見てみますね。"
+   },
+   {
+    "role": "You",
+    "en": "It started this morning.",
+    "ja": "今朝から始まりました。"
+   },
+   {
+    "role": "Plumber",
+    "en": "The pipe is loose.",
+    "ja": "パイプが緩んでいます。"
+   },
+   {
+    "role": "You",
+    "en": "Can you fix it today?",
+    "ja": "今日直せますか？"
+   },
+   {
+    "role": "Plumber",
+    "en": "Yes, it's a quick job.",
+    "ja": "はい、すぐ終わります。"
+   }
+  ]
+ },
+ {
+  "title": "整形外科で診てもらう",
+  "emoji": "🦴",
+  "cat": "health",
+  "lines": [
+   {
+    "role": "Doctor",
+    "en": "What happened?",
+    "ja": "どうされましたか？"
+   },
+   {
+    "role": "You",
+    "en": "I hurt my knee running.",
+    "ja": "走っていて膝を痛めました。"
+   },
+   {
+    "role": "Doctor",
+    "en": "Can you bend it?",
+    "ja": "曲げられますか？"
+   },
+   {
+    "role": "You",
+    "en": "A little, but it hurts.",
+    "ja": "少しは。でも痛いです。"
+   },
+   {
+    "role": "Doctor",
+    "en": "Let's take an X-ray.",
+    "ja": "レントゲンを撮りましょう。"
+   },
+   {
+    "role": "You",
+    "en": "Okay, thank you.",
+    "ja": "はい、お願いします。"
+   }
+  ]
+ },
+ {
+  "title": "アレルギー検査を受ける",
+  "emoji": "🤧",
+  "cat": "health",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like an allergy test.",
+    "ja": "アレルギー検査を受けたいです。"
+   },
+   {
+    "role": "Nurse",
+    "en": "Have you had symptoms?",
+    "ja": "症状はありましたか？"
+   },
+   {
+    "role": "You",
+    "en": "I keep sneezing.",
+    "ja": "くしゃみが止まらなくて。"
+   },
+   {
+    "role": "Nurse",
+    "en": "We'll test your blood.",
+    "ja": "血液で調べますね。"
+   },
+   {
+    "role": "You",
+    "en": "When will I know?",
+    "ja": "いつ分かりますか？"
+   },
+   {
+    "role": "Nurse",
+    "en": "In about a week.",
+    "ja": "1週間ほどです。"
+   }
+  ]
+ },
+ {
+  "title": "宿題を提出する",
+  "emoji": "📒",
+  "cat": "school",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Here's my homework.",
+    "ja": "宿題です。"
+   },
+   {
+    "role": "Teacher",
+    "en": "Thank you. Is it complete?",
+    "ja": "ありがとう。全部終わっていますか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, all of it.",
+    "ja": "はい、全部です。"
+   },
+   {
+    "role": "Teacher",
+    "en": "Did you have any trouble?",
+    "ja": "難しいところはありましたか？"
+   },
+   {
+    "role": "You",
+    "en": "Question five was hard.",
+    "ja": "5番が難しかったです。"
+   },
+   {
+    "role": "Teacher",
+    "en": "Let's go over it later.",
+    "ja": "あとで一緒に見ましょう。"
+   }
+  ]
+ },
+ {
+  "title": "進路を相談する",
+  "emoji": "🧭",
+  "cat": "school",
+  "lines": [
+   {
+    "role": "Advisor",
+    "en": "Have you thought about your future?",
+    "ja": "将来について考えましたか？"
+   },
+   {
+    "role": "You",
+    "en": "I'm not sure yet.",
+    "ja": "まだ決まっていません。"
+   },
+   {
+    "role": "Advisor",
+    "en": "What are you interested in?",
+    "ja": "何に興味がありますか？"
+   },
+   {
+    "role": "You",
+    "en": "I like science.",
+    "ja": "理科が好きです。"
+   },
+   {
+    "role": "Advisor",
+    "en": "Engineering might suit you.",
+    "ja": "工学が向いているかも。"
+   },
+   {
+    "role": "You",
+    "en": "That sounds interesting.",
+    "ja": "面白そうですね。"
+   }
+  ]
+ },
+ {
+  "title": "友達を紹介する",
+  "emoji": "🫂",
+  "cat": "social",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Mike, this is my friend Lisa.",
+    "ja": "マイク、こちら友達のリサ。"
+   },
+   {
+    "role": "Friend",
+    "en": "Nice to meet you, Lisa.",
+    "ja": "リサ、はじめまして。"
+   },
+   {
+    "role": "You",
+    "en": "Lisa just moved here.",
+    "ja": "リサは越してきたばかりなんだ。"
+   },
+   {
+    "role": "Friend",
+    "en": "Oh, where from?",
+    "ja": "そうなんだ、どこから？"
+   },
+   {
+    "role": "You",
+    "en": "From Australia.",
+    "ja": "オーストラリアから。"
+   },
+   {
+    "role": "Friend",
+    "en": "Welcome! Let's hang out.",
+    "ja": "ようこそ！今度遊ぼう。"
+   }
+  ]
+ },
+ {
+  "title": "プレゼントのお礼を言う",
+  "emoji": "💐",
+  "cat": "social",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Thank you for the gift!",
+    "ja": "プレゼントありがとう！"
+   },
+   {
+    "role": "Friend",
+    "en": "I'm glad you like it.",
+    "ja": "気に入ってくれてうれしい。"
+   },
+   {
+    "role": "You",
+    "en": "How did you know I wanted this?",
+    "ja": "ほしかったの、なんで分かったの？"
+   },
+   {
+    "role": "Friend",
+    "en": "You mentioned it once.",
+    "ja": "前に言ってたよ。"
+   },
+   {
+    "role": "You",
+    "en": "You're so thoughtful.",
+    "ja": "優しいね。"
+   },
+   {
+    "role": "Friend",
+    "en": "Anything for you.",
+    "ja": "君のためならね。"
+   }
+  ]
+ },
+ {
+  "title": "プールで受付する",
+  "emoji": "🏊",
+  "cat": "outing",
+  "lines": [
+   {
+    "role": "You",
+    "en": "One ticket for the pool, please.",
+    "ja": "プールを1人お願いします。"
+   },
+   {
+    "role": "Staff",
+    "en": "Do you have a swim cap?",
+    "ja": "水泳帽はお持ちですか？"
+   },
+   {
+    "role": "You",
+    "en": "No, can I rent one?",
+    "ja": "いいえ、借りられますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Yes, it's two dollars.",
+    "ja": "はい、2ドルです。"
+   },
+   {
+    "role": "You",
+    "en": "Where are the lockers?",
+    "ja": "ロッカーはどこですか？"
+   },
+   {
+    "role": "Staff",
+    "en": "To your left.",
+    "ja": "左手にあります。"
+   }
+  ]
+ },
+ {
+  "title": "ヨガ教室を予約する",
+  "emoji": "🧘",
+  "cat": "outing",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to join a yoga class.",
+    "ja": "ヨガ教室に参加したいです。"
+   },
+   {
+    "role": "Staff",
+    "en": "Have you done yoga before?",
+    "ja": "ヨガの経験はありますか？"
+   },
+   {
+    "role": "You",
+    "en": "No, I'm a beginner.",
+    "ja": "いいえ、初心者です。"
+   },
+   {
+    "role": "Staff",
+    "en": "The morning class is gentle.",
+    "ja": "朝のクラスが優しいですよ。"
+   },
+   {
+    "role": "You",
+    "en": "What should I bring?",
+    "ja": "何を持っていけばいいですか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Just a towel and water.",
+    "ja": "タオルとお水だけで。"
+   }
+  ]
+ },
+ {
+  "title": "ハロウィンを楽しむ",
+  "emoji": "🎃",
+  "cat": "event",
+  "lines": [
+   {
+    "role": "Friend",
+    "en": "Nice costume! What are you?",
+    "ja": "いい仮装！何の仮装？"
+   },
+   {
+    "role": "You",
+    "en": "I'm a vampire.",
+    "ja": "吸血鬼だよ。"
+   },
+   {
+    "role": "Friend",
+    "en": "Scary! Want some candy?",
+    "ja": "怖い！お菓子いる？"
+   },
+   {
+    "role": "You",
+    "en": "Trick or treat!",
+    "ja": "トリック・オア・トリート！"
+   },
+   {
+    "role": "Friend",
+    "en": "Here you go.",
+    "ja": "はい、どうぞ。"
+   },
+   {
+    "role": "You",
+    "en": "Thanks, happy Halloween!",
+    "ja": "ありがとう、ハッピーハロウィン！"
+   }
+  ]
+ },
+ {
+  "title": "お見舞いの言葉をかける",
+  "emoji": "🏥",
+  "cat": "event",
+  "lines": [
+   {
+    "role": "You",
+    "en": "How are you feeling?",
+    "ja": "具合はどう？"
+   },
+   {
+    "role": "Friend",
+    "en": "A bit better, thanks.",
+    "ja": "少し良くなったよ、ありがとう。"
+   },
+   {
+    "role": "You",
+    "en": "I brought you some flowers.",
+    "ja": "お花を持ってきたよ。"
+   },
+   {
+    "role": "Friend",
+    "en": "They're lovely.",
+    "ja": "きれいだね。"
+   },
+   {
+    "role": "You",
+    "en": "Take care and rest well.",
+    "ja": "お大事に、ゆっくり休んでね。"
+   },
+   {
+    "role": "Friend",
+    "en": "Thanks for coming.",
+    "ja": "来てくれてありがとう。"
+   }
+  ]
+ },
+ {
+  "title": "電話を取り次ぐ",
+  "emoji": "☎️",
+  "cat": "work",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Good morning, ABC Company.",
+    "ja": "おはようございます、ABC社です。"
+   },
+   {
+    "role": "Caller",
+    "en": "May I speak to Ms. Green?",
+    "ja": "グリーンさんをお願いできますか？"
+   },
+   {
+    "role": "You",
+    "en": "Who's calling, please?",
+    "ja": "どちら様でしょうか？"
+   },
+   {
+    "role": "Caller",
+    "en": "This is John from XYZ.",
+    "ja": "XYZのジョンです。"
+   },
+   {
+    "role": "You",
+    "en": "One moment, I'll transfer you.",
+    "ja": "少々お待ちください、おつなぎします。"
+   },
+   {
+    "role": "Caller",
+    "en": "Thank you.",
+    "ja": "ありがとうございます。"
+   }
+  ]
+ },
+ {
+  "title": "在宅勤務を相談する",
+  "emoji": "🏡",
+  "cat": "work",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Could I work from home on Fridays?",
+    "ja": "金曜だけ在宅勤務できますか？"
+   },
+   {
+    "role": "Boss",
+    "en": "Is there a reason?",
+    "ja": "理由はありますか？"
+   },
+   {
+    "role": "You",
+    "en": "It's a long commute.",
+    "ja": "通勤が長くて。"
+   },
+   {
+    "role": "Boss",
+    "en": "Let's try it for a month.",
+    "ja": "1か月試してみましょう。"
+   },
+   {
+    "role": "You",
+    "en": "Thank you very much.",
+    "ja": "ありがとうございます。"
+   },
+   {
+    "role": "Boss",
+    "en": "Just stay reachable.",
+    "ja": "連絡は取れるようにね。"
+   }
+  ]
+ },
+ {
+  "title": "騒音の苦情を言う",
+  "emoji": "🔊",
+  "cat": "trouble",
+  "lines": [
+   {
+    "role": "You",
+    "en": "The room next door is very loud.",
+    "ja": "隣の部屋がとてもうるさいんです。"
+   },
+   {
+    "role": "Manager",
+    "en": "I'm sorry about that.",
+    "ja": "申し訳ありません。"
+   },
+   {
+    "role": "You",
+    "en": "It's been going on for hours.",
+    "ja": "何時間も続いていて。"
+   },
+   {
+    "role": "Manager",
+    "en": "I'll ask them to keep it down.",
+    "ja": "静かにするよう伝えます。"
+   },
+   {
+    "role": "You",
+    "en": "Thank you.",
+    "ja": "お願いします。"
+   },
+   {
+    "role": "Manager",
+    "en": "Let me know if it continues.",
+    "ja": "続くようでしたらお知らせください。"
+   }
+  ]
+ },
+ {
+  "title": "迷子を案内所に届ける",
+  "emoji": "🧒",
+  "cat": "trouble",
+  "lines": [
+   {
+    "role": "You",
+    "en": "This child seems lost.",
+    "ja": "この子、迷子のようです。"
+   },
+   {
+    "role": "Staff",
+    "en": "Where did you find them?",
+    "ja": "どこで見つけましたか？"
+   },
+   {
+    "role": "You",
+    "en": "Near the entrance.",
+    "ja": "入口の近くです。"
+   },
+   {
+    "role": "Staff",
+    "en": "We'll make an announcement.",
+    "ja": "館内放送をします。"
+   },
+   {
+    "role": "You",
+    "en": "I hope they find the parents.",
+    "ja": "親が見つかるといいですね。"
+   },
+   {
+    "role": "Staff",
+    "en": "Thank you for your help.",
+    "ja": "ご協力ありがとうございます。"
+   }
+  ]
+ },
+ {
+  "title": "部屋の変更を頼む",
+  "emoji": "🛎️",
+  "cat": "travel",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Could I change rooms?",
+    "ja": "部屋を変えてもらえますか？"
+   },
+   {
+    "role": "Front Desk",
+    "en": "Is something wrong?",
+    "ja": "何か問題がありましたか？"
+   },
+   {
+    "role": "You",
+    "en": "The room is too noisy.",
+    "ja": "部屋がうるさくて。"
+   },
+   {
+    "role": "Front Desk",
+    "en": "I'll find you a quieter one.",
+    "ja": "静かな部屋をご用意します。"
+   },
+   {
+    "role": "You",
+    "en": "Thank you. I appreciate it.",
+    "ja": "ありがとうございます。"
+   },
+   {
+    "role": "Front Desk",
+    "en": "Here's your new key.",
+    "ja": "新しい鍵です。"
+   }
+  ]
+ },
+ {
+  "title": "アーリーチェックインを頼む",
+  "emoji": "🕐",
+  "cat": "travel",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Can I check in early?",
+    "ja": "早めにチェックインできますか？"
+   },
+   {
+    "role": "Front Desk",
+    "en": "What time would you like?",
+    "ja": "何時をご希望ですか？"
+   },
+   {
+    "role": "You",
+    "en": "Around noon, if possible.",
+    "ja": "できれば正午ごろに。"
+   },
+   {
+    "role": "Front Desk",
+    "en": "Let me check the room.",
+    "ja": "お部屋を確認します。"
+   },
+   {
+    "role": "You",
+    "en": "Is there an extra fee?",
+    "ja": "追加料金はかかりますか？"
+   },
+   {
+    "role": "Front Desk",
+    "en": "No, it's available now.",
+    "ja": "いいえ、今ご利用いただけます。"
+   }
+  ]
+ },
+ {
+  "title": "ベジタリアン料理を頼む",
+  "emoji": "🥗",
+  "cat": "food",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Do you have vegetarian dishes?",
+    "ja": "ベジタリアン料理はありますか？"
+   },
+   {
+    "role": "Server",
+    "en": "Yes, several options.",
+    "ja": "はい、いくつかございます。"
+   },
+   {
+    "role": "You",
+    "en": "Which do you recommend?",
+    "ja": "おすすめはどれですか？"
+   },
+   {
+    "role": "Server",
+    "en": "The vegetable curry is great.",
+    "ja": "野菜カレーがおいしいですよ。"
+   },
+   {
+    "role": "You",
+    "en": "Does it have any meat?",
+    "ja": "お肉は入っていますか？"
+   },
+   {
+    "role": "Server",
+    "en": "No, it's completely meat-free.",
+    "ja": "いいえ、お肉は一切使っていません。"
+   }
+  ]
+ },
+ {
+  "title": "辛さを調整してもらう",
+  "emoji": "🌶️",
+  "cat": "food",
+  "lines": [
+   {
+    "role": "Server",
+    "en": "How spicy would you like it?",
+    "ja": "辛さはどうしますか？"
+   },
+   {
+    "role": "You",
+    "en": "Not too spicy, please.",
+    "ja": "あまり辛くしないでください。"
+   },
+   {
+    "role": "Server",
+    "en": "Mild, then?",
+    "ja": "では、控えめに？"
+   },
+   {
+    "role": "You",
+    "en": "Yes. Can I add spice later?",
+    "ja": "はい。あとから足せますか？"
+   },
+   {
+    "role": "Server",
+    "en": "Of course, just ask.",
+    "ja": "もちろん、お声がけください。"
+   },
+   {
+    "role": "You",
+    "en": "Great, thank you.",
+    "ja": "よかった、ありがとう。"
+   }
+  ]
+ },
+ {
+  "title": "ペットを動物病院に連れて行く",
+  "emoji": "🐶",
+  "cat": "life",
+  "lines": [
+   {
+    "role": "Vet",
+    "en": "What's wrong with your dog?",
+    "ja": "ワンちゃんはどうしましたか？"
+   },
+   {
+    "role": "You",
+    "en": "He won't eat.",
+    "ja": "ごはんを食べないんです。"
+   },
+   {
+    "role": "Vet",
+    "en": "Since when?",
+    "ja": "いつからですか？"
+   },
+   {
+    "role": "You",
+    "en": "Since yesterday.",
+    "ja": "昨日からです。"
+   },
+   {
+    "role": "Vet",
+    "en": "Let me examine him.",
+    "ja": "診てみますね。"
+   },
+   {
+    "role": "You",
+    "en": "Thank you, doctor.",
+    "ja": "お願いします。"
+   }
+  ]
+ },
+ {
+  "title": "定期購読を申し込む",
+  "emoji": "📰",
+  "cat": "life",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to subscribe to the magazine.",
+    "ja": "雑誌の定期購読をしたいです。"
+   },
+   {
+    "role": "Staff",
+    "en": "Monthly or yearly?",
+    "ja": "月ぎめですか、年間ですか？"
+   },
+   {
+    "role": "You",
+    "en": "Yearly, please.",
+    "ja": "年間でお願いします。"
+   },
+   {
+    "role": "Staff",
+    "en": "It'll arrive every month.",
+    "ja": "毎月届きます。"
+   },
+   {
+    "role": "You",
+    "en": "Can I cancel anytime?",
+    "ja": "いつでも解約できますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Yes, no problem.",
+    "ja": "はい、大丈夫です。"
+   }
+  ]
+ },
+ {
+  "title": "耳鼻科で診てもらう",
+  "emoji": "👂",
+  "cat": "health",
+  "lines": [
+   {
+    "role": "Doctor",
+    "en": "What seems to be wrong?",
+    "ja": "どうされましたか？"
+   },
+   {
+    "role": "You",
+    "en": "My ear hurts.",
+    "ja": "耳が痛いんです。"
+   },
+   {
+    "role": "Doctor",
+    "en": "Which ear?",
+    "ja": "どちらの耳ですか？"
+   },
+   {
+    "role": "You",
+    "en": "The right one.",
+    "ja": "右です。"
+   },
+   {
+    "role": "Doctor",
+    "en": "Let me take a look.",
+    "ja": "診てみますね。"
+   },
+   {
+    "role": "You",
+    "en": "Is it serious?",
+    "ja": "ひどいですか？"
+   }
+  ]
+ },
+ {
+  "title": "リハビリを予約する",
+  "emoji": "🦵",
+  "cat": "health",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to book physical therapy.",
+    "ja": "リハビリの予約をしたいです。"
+   },
+   {
+    "role": "Receptionist",
+    "en": "Do you have a referral?",
+    "ja": "紹介状はありますか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, from my doctor.",
+    "ja": "はい、医師からの。"
+   },
+   {
+    "role": "Receptionist",
+    "en": "How about Tuesday mornings?",
+    "ja": "火曜の午前はいかがですか？"
+   },
+   {
+    "role": "You",
+    "en": "That works for me.",
+    "ja": "それで大丈夫です。"
+   },
+   {
+    "role": "Receptionist",
+    "en": "I'll book you in.",
+    "ja": "お取りしますね。"
+   }
+  ]
+ },
+ {
+  "title": "発表の練習を見てもらう",
+  "emoji": "🎤",
+  "cat": "school",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Could you watch my presentation?",
+    "ja": "発表の練習を見てもらえますか？"
+   },
+   {
+    "role": "Teacher",
+    "en": "Sure, go ahead.",
+    "ja": "いいですよ、どうぞ。"
+   },
+   {
+    "role": "You",
+    "en": "Was that too fast?",
+    "ja": "速すぎましたか？"
+   },
+   {
+    "role": "Teacher",
+    "en": "A little. Slow down a bit.",
+    "ja": "少しね。もう少しゆっくり。"
+   },
+   {
+    "role": "You",
+    "en": "How was the ending?",
+    "ja": "終わり方はどうでしたか？"
+   },
+   {
+    "role": "Teacher",
+    "en": "Strong. Well done.",
+    "ja": "よかったですよ。"
+   }
+  ]
+ },
+ {
+  "title": "推薦状をお願いする",
+  "emoji": "📜",
+  "cat": "school",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Could you write me a recommendation?",
+    "ja": "推薦状を書いていただけますか？"
+   },
+   {
+    "role": "Teacher",
+    "en": "Of course. What's it for?",
+    "ja": "もちろん。何のためですか？"
+   },
+   {
+    "role": "You",
+    "en": "For a scholarship.",
+    "ja": "奨学金のためです。"
+   },
+   {
+    "role": "Teacher",
+    "en": "When do you need it?",
+    "ja": "いつまでに必要ですか？"
+   },
+   {
+    "role": "You",
+    "en": "By the end of the month.",
+    "ja": "月末までです。"
+   },
+   {
+    "role": "Teacher",
+    "en": "I'll have it ready.",
+    "ja": "用意しておきますね。"
+   }
+  ]
+ },
+ {
+  "title": "出身地について話す",
+  "emoji": "🌏",
+  "cat": "social",
+  "lines": [
+   {
+    "role": "Friend",
+    "en": "Where are you from?",
+    "ja": "出身はどこ？"
+   },
+   {
+    "role": "You",
+    "en": "I'm from Kyoto.",
+    "ja": "京都だよ。"
+   },
+   {
+    "role": "Friend",
+    "en": "Oh, it's beautiful there.",
+    "ja": "いいところだよね。"
+   },
+   {
+    "role": "You",
+    "en": "Have you been?",
+    "ja": "行ったことある？"
+   },
+   {
+    "role": "Friend",
+    "en": "Once, for the temples.",
+    "ja": "お寺を見に一度ね。"
+   },
+   {
+    "role": "You",
+    "en": "You should visit again.",
+    "ja": "また来なよ。"
+   }
+  ]
+ },
+ {
+  "title": "ペットの話をする",
+  "emoji": "🐕",
+  "cat": "social",
+  "lines": [
+   {
+    "role": "Friend",
+    "en": "Do you have any pets?",
+    "ja": "ペットは飼ってる？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, a cat.",
+    "ja": "うん、猫を一匹。"
+   },
+   {
+    "role": "Friend",
+    "en": "What's its name?",
+    "ja": "名前は？"
+   },
+   {
+    "role": "You",
+    "en": "Her name is Mochi.",
+    "ja": "モチっていうんだ。"
+   },
+   {
+    "role": "Friend",
+    "en": "That's so cute!",
+    "ja": "かわいい！"
+   },
+   {
+    "role": "You",
+    "en": "She's very playful.",
+    "ja": "すごくやんちゃでね。"
+   }
+  ]
+ },
+ {
+  "title": "キャンプ場で受付する",
+  "emoji": "🏕️",
+  "cat": "outing",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I have a reservation for a campsite.",
+    "ja": "キャンプ場を予約しています。"
+   },
+   {
+    "role": "Staff",
+    "en": "May I have your name?",
+    "ja": "お名前をいただけますか？"
+   },
+   {
+    "role": "You",
+    "en": "It's Mori, for two nights.",
+    "ja": "森です、2泊で。"
+   },
+   {
+    "role": "Staff",
+    "en": "You're at site twelve.",
+    "ja": "12番サイトです。"
+   },
+   {
+    "role": "You",
+    "en": "Where can I get firewood?",
+    "ja": "薪はどこで買えますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "At the shop by the entrance.",
+    "ja": "入口の売店で。"
+   }
+  ]
+ },
+ {
+  "title": "ライブグッズを買う",
+  "emoji": "🎶",
+  "cat": "outing",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Do you have a tour T-shirt?",
+    "ja": "ツアーTシャツはありますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Yes, what size?",
+    "ja": "はい、サイズは？"
+   },
+   {
+    "role": "You",
+    "en": "Medium, please.",
+    "ja": "Mサイズで。"
+   },
+   {
+    "role": "Staff",
+    "en": "Anything else?",
+    "ja": "他には？"
+   },
+   {
+    "role": "You",
+    "en": "A poster, too.",
+    "ja": "ポスターもください。"
+   },
+   {
+    "role": "Staff",
+    "en": "That's thirty dollars.",
+    "ja": "30ドルです。"
+   }
+  ]
+ },
+ {
+  "title": "母の日に感謝を伝える",
+  "emoji": "💐",
+  "cat": "event",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Happy Mother's Day, Mom.",
+    "ja": "お母さん、母の日おめでとう。"
+   },
+   {
+    "role": "Mom",
+    "en": "Oh, thank you, dear.",
+    "ja": "あら、ありがとう。"
+   },
+   {
+    "role": "You",
+    "en": "These flowers are for you.",
+    "ja": "これ、お花だよ。"
+   },
+   {
+    "role": "Mom",
+    "en": "They're beautiful.",
+    "ja": "きれいね。"
+   },
+   {
+    "role": "You",
+    "en": "Thanks for everything.",
+    "ja": "いつもありがとう。"
+   },
+   {
+    "role": "Mom",
+    "en": "You're so sweet.",
+    "ja": "優しい子ね。"
+   }
+  ]
+ },
+ {
+  "title": "引っ越し祝いを渡す",
+  "emoji": "🏠",
+  "cat": "event",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Congratulations on your new home!",
+    "ja": "新居おめでとう！"
+   },
+   {
+    "role": "Friend",
+    "en": "Thank you! Come on in.",
+    "ja": "ありがとう！入って。"
+   },
+   {
+    "role": "You",
+    "en": "Here's a little gift.",
+    "ja": "これ、ちょっとした贈り物。"
+   },
+   {
+    "role": "Friend",
+    "en": "You didn't have to!",
+    "ja": "気を使わなくてよかったのに！"
+   },
+   {
+    "role": "You",
+    "en": "It's for your kitchen.",
+    "ja": "キッチンで使ってね。"
+   },
+   {
+    "role": "Friend",
+    "en": "I love it, thanks!",
+    "ja": "うれしい、ありがとう！"
+   }
+  ]
+ },
+ {
+  "title": "出張の手配を頼む",
+  "emoji": "✈️",
+  "cat": "work",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Could you book my business trip?",
+    "ja": "出張の手配をお願いできますか？"
+   },
+   {
+    "role": "Assistant",
+    "en": "Sure. Where to?",
+    "ja": "はい。どちらへ？"
+   },
+   {
+    "role": "You",
+    "en": "To Osaka next week.",
+    "ja": "来週、大阪へ。"
+   },
+   {
+    "role": "Assistant",
+    "en": "Flight and hotel?",
+    "ja": "飛行機とホテルですか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, both please.",
+    "ja": "はい、両方お願いします。"
+   },
+   {
+    "role": "Assistant",
+    "en": "I'll send you the details.",
+    "ja": "詳細をお送りします。"
+   }
+  ]
+ },
+ {
+  "title": "ミスを報告する",
+  "emoji": "🙇",
+  "cat": "work",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I made a mistake on the report.",
+    "ja": "報告書でミスをしてしまいました。"
+   },
+   {
+    "role": "Boss",
+    "en": "What kind of mistake?",
+    "ja": "どんなミスですか？"
+   },
+   {
+    "role": "You",
+    "en": "I used the wrong figures.",
+    "ja": "数字を間違えました。"
+   },
+   {
+    "role": "Boss",
+    "en": "Can you fix it?",
+    "ja": "直せますか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, I'll correct it now.",
+    "ja": "はい、今すぐ直します。"
+   },
+   {
+    "role": "Boss",
+    "en": "Okay. Be careful next time.",
+    "ja": "わかった。次は気をつけて。"
+   }
+  ]
+ },
+ {
+  "title": "転んでけがをする",
+  "emoji": "🩹",
+  "cat": "trouble",
+  "lines": [
+   {
+    "role": "Passerby",
+    "en": "Are you okay?",
+    "ja": "大丈夫ですか？"
+   },
+   {
+    "role": "You",
+    "en": "I fell and hurt my knee.",
+    "ja": "転んで膝をけがしました。"
+   },
+   {
+    "role": "Passerby",
+    "en": "Can you stand up?",
+    "ja": "立てますか？"
+   },
+   {
+    "role": "You",
+    "en": "I think so, slowly.",
+    "ja": "ゆっくりなら。"
+   },
+   {
+    "role": "Passerby",
+    "en": "Shall I call someone?",
+    "ja": "誰か呼びましょうか？"
+   },
+   {
+    "role": "You",
+    "en": "No, I'll be okay. Thanks.",
+    "ja": "いえ、大丈夫です。ありがとう。"
+   }
+  ]
+ },
+ {
+  "title": "請求の間違いを指摘する",
+  "emoji": "🧾",
+  "cat": "trouble",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I think there's a mistake on my bill.",
+    "ja": "請求に間違いがあると思います。"
+   },
+   {
+    "role": "Staff",
+    "en": "Let me check it.",
+    "ja": "確認しますね。"
+   },
+   {
+    "role": "You",
+    "en": "I was charged twice.",
+    "ja": "2回請求されています。"
+   },
+   {
+    "role": "Staff",
+    "en": "You're right. I'm sorry.",
+    "ja": "その通りです。申し訳ありません。"
+   },
+   {
+    "role": "You",
+    "en": "Can you refund it?",
+    "ja": "返金できますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Yes, right away.",
+    "ja": "はい、すぐに。"
+   }
+  ]
+ },
+ {
+  "title": "免税手続きをする",
+  "emoji": "🛍️",
+  "cat": "travel",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Where can I get a tax refund?",
+    "ja": "免税手続きはどこですか？"
+   },
+   {
+    "role": "Staff",
+    "en": "At counter number five.",
+    "ja": "5番カウンターです。"
+   },
+   {
+    "role": "You",
+    "en": "Here are my receipts.",
+    "ja": "レシートです。"
+   },
+   {
+    "role": "Staff",
+    "en": "May I see your passport?",
+    "ja": "パスポートを拝見できますか？"
+   },
+   {
+    "role": "You",
+    "en": "Sure, here you are.",
+    "ja": "はい、どうぞ。"
+   },
+   {
+    "role": "Staff",
+    "en": "You'll get a refund here.",
+    "ja": "こちらで返金されます。"
+   }
+  ]
+ },
+ {
+  "title": "開館時間を確認する",
+  "emoji": "🕒",
+  "cat": "travel",
+  "lines": [
+   {
+    "role": "You",
+    "en": "What time do you open?",
+    "ja": "開館は何時ですか？"
+   },
+   {
+    "role": "Staff",
+    "en": "At nine in the morning.",
+    "ja": "朝9時です。"
+   },
+   {
+    "role": "You",
+    "en": "And when do you close?",
+    "ja": "閉館は何時ですか？"
+   },
+   {
+    "role": "Staff",
+    "en": "At five in the evening.",
+    "ja": "夕方5時です。"
+   },
+   {
+    "role": "You",
+    "en": "Are you open on weekends?",
+    "ja": "週末も開いていますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Yes, every day.",
+    "ja": "はい、毎日開いています。"
+   }
+  ]
+ },
+ {
+  "title": "持ち込みできるか聞く",
+  "emoji": "🍱",
+  "cat": "food",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Can we bring our own cake?",
+    "ja": "ケーキの持ち込みはできますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Yes, that's fine.",
+    "ja": "はい、大丈夫です。"
+   },
+   {
+    "role": "You",
+    "en": "Is there a fee?",
+    "ja": "持ち込み料はかかりますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "A small charge per person.",
+    "ja": "1人につき少しいただきます。"
+   },
+   {
+    "role": "You",
+    "en": "That's okay. Thank you.",
+    "ja": "大丈夫です。ありがとう。"
+   },
+   {
+    "role": "Staff",
+    "en": "We'll keep it chilled for you.",
+    "ja": "冷やしてお預かりします。"
+   }
+  ]
+ },
+ {
+  "title": "コーヒー豆を選ぶ",
+  "emoji": "☕",
+  "cat": "food",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'm looking for coffee beans.",
+    "ja": "コーヒー豆を探しています。"
+   },
+   {
+    "role": "Staff",
+    "en": "Do you like it strong?",
+    "ja": "濃いめがお好きですか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, and not too bitter.",
+    "ja": "はい、苦すぎないのが。"
+   },
+   {
+    "role": "Staff",
+    "en": "Try this one.",
+    "ja": "これはいかがでしょう。"
+   },
+   {
+    "role": "You",
+    "en": "Can I smell it?",
+    "ja": "香りをかいでもいいですか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Of course, go ahead.",
+    "ja": "もちろん、どうぞ。"
+   }
+  ]
+ },
+ {
+  "title": "クレジットカードを作る",
+  "emoji": "💳",
+  "cat": "life",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to apply for a credit card.",
+    "ja": "クレジットカードを作りたいです。"
+   },
+   {
+    "role": "Staff",
+    "en": "Do you have ID with you?",
+    "ja": "身分証はお持ちですか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, here it is.",
+    "ja": "はい、これです。"
+   },
+   {
+    "role": "Staff",
+    "en": "Please fill out this form.",
+    "ja": "こちらにご記入ください。"
+   },
+   {
+    "role": "You",
+    "en": "When will the card arrive?",
+    "ja": "カードはいつ届きますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "In about two weeks.",
+    "ja": "2週間ほどです。"
+   }
+  ]
+ },
+ {
+  "title": "公共料金を払う",
+  "emoji": "🧾",
+  "cat": "life",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to pay this bill.",
+    "ja": "この料金を払いたいのですが。"
+   },
+   {
+    "role": "Staff",
+    "en": "Cash or card?",
+    "ja": "現金ですか、カードですか？"
+   },
+   {
+    "role": "You",
+    "en": "Cash, please.",
+    "ja": "現金でお願いします。"
+   },
+   {
+    "role": "Staff",
+    "en": "That's forty dollars.",
+    "ja": "40ドルです。"
+   },
+   {
+    "role": "You",
+    "en": "Here you are.",
+    "ja": "どうぞ。"
+   },
+   {
+    "role": "Staff",
+    "en": "Here's your receipt.",
+    "ja": "領収書です。"
+   }
+  ]
+ },
+ {
+  "title": "人間ドックを予約する",
+  "emoji": "🏥",
+  "cat": "health",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to book a health checkup.",
+    "ja": "人間ドックを予約したいです。"
+   },
+   {
+    "role": "Receptionist",
+    "en": "A full checkup?",
+    "ja": "全身の検査ですか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, please.",
+    "ja": "はい、お願いします。"
+   },
+   {
+    "role": "Receptionist",
+    "en": "Don't eat the night before.",
+    "ja": "前夜は食事を控えてください。"
+   },
+   {
+    "role": "You",
+    "en": "Got it. What time?",
+    "ja": "分かりました。何時ですか？"
+   },
+   {
+    "role": "Receptionist",
+    "en": "Please come at eight.",
+    "ja": "8時にお越しください。"
+   }
+  ]
+ },
+ {
+  "title": "カウンセリングを予約する",
+  "emoji": "🧠",
+  "cat": "health",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to talk to a counselor.",
+    "ja": "カウンセラーに相談したいです。"
+   },
+   {
+    "role": "Receptionist",
+    "en": "Is this your first time?",
+    "ja": "初めてですか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, it is.",
+    "ja": "はい、初めてです。"
+   },
+   {
+    "role": "Receptionist",
+    "en": "How about Thursday?",
+    "ja": "木曜はいかがですか？"
+   },
+   {
+    "role": "You",
+    "en": "That works for me.",
+    "ja": "それで大丈夫です。"
+   },
+   {
+    "role": "Receptionist",
+    "en": "We'll see you then.",
+    "ja": "お待ちしております。"
+   }
+  ]
+ },
+ {
+  "title": "授業の振替を頼む",
+  "emoji": "📅",
+  "cat": "school",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Can I switch to another class?",
+    "ja": "別のクラスに振り替えできますか？"
+   },
+   {
+    "role": "Teacher",
+    "en": "Which day works for you?",
+    "ja": "何曜日がいいですか？"
+   },
+   {
+    "role": "You",
+    "en": "Wednesday, if possible.",
+    "ja": "できれば水曜です。"
+   },
+   {
+    "role": "Teacher",
+    "en": "There's a class at three.",
+    "ja": "3時のクラスがありますよ。"
+   },
+   {
+    "role": "You",
+    "en": "That's perfect.",
+    "ja": "それでお願いします。"
+   },
+   {
+    "role": "Teacher",
+    "en": "I'll update the list.",
+    "ja": "名簿を直しておきます。"
+   }
+  ]
+ },
+ {
+  "title": "ノートを借りる",
+  "emoji": "📓",
+  "cat": "school",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Can I borrow your notes?",
+    "ja": "ノートを借りてもいい？"
+   },
+   {
+    "role": "Classmate",
+    "en": "Sure, which class?",
+    "ja": "いいよ、どの授業？"
+   },
+   {
+    "role": "You",
+    "en": "Yesterday's history class.",
+    "ja": "昨日の歴史の授業。"
+   },
+   {
+    "role": "Classmate",
+    "en": "I missed part of it too.",
+    "ja": "僕も一部聞き逃したよ。"
+   },
+   {
+    "role": "You",
+    "en": "I'll copy them quickly.",
+    "ja": "すぐコピーするね。"
+   },
+   {
+    "role": "Classmate",
+    "en": "No rush, take your time.",
+    "ja": "ゆっくりでいいよ。"
+   }
+  ]
+ },
+ {
+  "title": "好きな食べ物の話をする",
+  "emoji": "🍕",
+  "cat": "social",
+  "lines": [
+   {
+    "role": "Friend",
+    "en": "What's your favorite food?",
+    "ja": "好きな食べ物は何？"
+   },
+   {
+    "role": "You",
+    "en": "I love pizza.",
+    "ja": "ピザが大好き。"
+   },
+   {
+    "role": "Friend",
+    "en": "Me too! What topping?",
+    "ja": "私も！どの具が好き？"
+   },
+   {
+    "role": "You",
+    "en": "Mushroom and cheese.",
+    "ja": "きのことチーズ。"
+   },
+   {
+    "role": "Friend",
+    "en": "Let's get some sometime.",
+    "ja": "今度食べに行こうよ。"
+   },
+   {
+    "role": "You",
+    "en": "Sounds great!",
+    "ja": "いいね！"
+   }
+  ]
+ },
+ {
+  "title": "おすすめの店を聞く",
+  "emoji": "📍",
+  "cat": "social",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Do you know a good restaurant?",
+    "ja": "おすすめのお店はある？"
+   },
+   {
+    "role": "Local",
+    "en": "What kind of food?",
+    "ja": "どんな料理がいい？"
+   },
+   {
+    "role": "You",
+    "en": "Something local.",
+    "ja": "地元のものがいいな。"
+   },
+   {
+    "role": "Local",
+    "en": "There's a great spot nearby.",
+    "ja": "近くにいいお店があるよ。"
+   },
+   {
+    "role": "You",
+    "en": "How do I get there?",
+    "ja": "どう行けばいい？"
+   },
+   {
+    "role": "Local",
+    "en": "Just down this street.",
+    "ja": "この通りをまっすぐ。"
+   }
+  ]
+ },
+ {
+  "title": "ゲームセンターで遊ぶ",
+  "emoji": "🕹️",
+  "cat": "outing",
+  "lines": [
+   {
+    "role": "You",
+    "en": "How do I use the machines?",
+    "ja": "機械はどう使いますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Buy a card over there.",
+    "ja": "あちらでカードを買ってください。"
+   },
+   {
+    "role": "You",
+    "en": "How much for the card?",
+    "ja": "カードはいくらですか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Ten dollars to start.",
+    "ja": "まずは10ドルです。"
+   },
+   {
+    "role": "You",
+    "en": "Where's the claw machine?",
+    "ja": "クレーンゲームはどこですか？"
+   },
+   {
+    "role": "Staff",
+    "en": "In the back corner.",
+    "ja": "奥の角です。"
+   }
+  ]
+ },
+ {
+  "title": "植物園で聞く",
+  "emoji": "🌷",
+  "cat": "outing",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Are the roses in bloom?",
+    "ja": "バラは咲いていますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Yes, they're beautiful now.",
+    "ja": "はい、今が見頃です。"
+   },
+   {
+    "role": "You",
+    "en": "Where's the greenhouse?",
+    "ja": "温室はどこですか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Past the fountain.",
+    "ja": "噴水の先です。"
+   },
+   {
+    "role": "You",
+    "en": "Can I take pictures?",
+    "ja": "写真は撮れますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Yes, please enjoy.",
+    "ja": "はい、どうぞ。"
+   }
+  ]
+ },
+ {
+  "title": "父の日に感謝を伝える",
+  "emoji": "👔",
+  "cat": "event",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Happy Father's Day, Dad.",
+    "ja": "お父さん、父の日おめでとう。"
+   },
+   {
+    "role": "Dad",
+    "en": "Thank you, son.",
+    "ja": "ありがとう。"
+   },
+   {
+    "role": "You",
+    "en": "I got you a tie.",
+    "ja": "ネクタイを買ったよ。"
+   },
+   {
+    "role": "Dad",
+    "en": "It's very nice.",
+    "ja": "いいねこれ。"
+   },
+   {
+    "role": "You",
+    "en": "Thanks for always supporting me.",
+    "ja": "いつも応援ありがとう。"
+   },
+   {
+    "role": "Dad",
+    "en": "I'm proud of you.",
+    "ja": "自慢の子だよ。"
+   }
+  ]
+ },
+ {
+  "title": "合格をお祝いする",
+  "emoji": "🌸",
+  "cat": "event",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Congratulations on passing!",
+    "ja": "合格おめでとう！"
+   },
+   {
+    "role": "Friend",
+    "en": "Thank you! I was so nervous.",
+    "ja": "ありがとう！すごく緊張してた。"
+   },
+   {
+    "role": "You",
+    "en": "All your hard work paid off.",
+    "ja": "頑張った甲斐があったね。"
+   },
+   {
+    "role": "Friend",
+    "en": "I couldn't believe it.",
+    "ja": "信じられなかったよ。"
+   },
+   {
+    "role": "You",
+    "en": "Let's celebrate this weekend.",
+    "ja": "今週末お祝いしよう。"
+   },
+   {
+    "role": "Friend",
+    "en": "I'd love that.",
+    "ja": "ぜひ。"
+   }
+  ]
+ },
+ {
+  "title": "面談で目標を話す",
+  "emoji": "🎯",
+  "cat": "work",
+  "lines": [
+   {
+    "role": "Boss",
+    "en": "What are your goals this year?",
+    "ja": "今年の目標は？"
+   },
+   {
+    "role": "You",
+    "en": "I want to improve my skills.",
+    "ja": "スキルを伸ばしたいです。"
+   },
+   {
+    "role": "Boss",
+    "en": "Any specific area?",
+    "ja": "具体的には？"
+   },
+   {
+    "role": "You",
+    "en": "I'd like to lead a project.",
+    "ja": "プロジェクトを任されたいです。"
+   },
+   {
+    "role": "Boss",
+    "en": "Let's make a plan.",
+    "ja": "計画を立てましょう。"
+   },
+   {
+    "role": "You",
+    "en": "Thank you for the support.",
+    "ja": "ご支援ありがとうございます。"
+   }
+  ]
+ },
+ {
+  "title": "残業を断る",
+  "emoji": "🌙",
+  "cat": "work",
+  "lines": [
+   {
+    "role": "Boss",
+    "en": "Can you stay late tonight?",
+    "ja": "今夜残業できますか？"
+   },
+   {
+    "role": "You",
+    "en": "Sorry, I can't today.",
+    "ja": "すみません、今日は無理です。"
+   },
+   {
+    "role": "Boss",
+    "en": "Is everything okay?",
+    "ja": "何かありますか？"
+   },
+   {
+    "role": "You",
+    "en": "I have a prior commitment.",
+    "ja": "先約があるんです。"
+   },
+   {
+    "role": "Boss",
+    "en": "No problem. Tomorrow then?",
+    "ja": "大丈夫。じゃあ明日は？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, I can do tomorrow.",
+    "ja": "はい、明日なら大丈夫です。"
+   }
+  ]
+ },
+ {
+  "title": "エレベーターが止まる",
+  "emoji": "🛗",
+  "cat": "trouble",
+  "lines": [
+   {
+    "role": "You",
+    "en": "The elevator stopped suddenly.",
+    "ja": "エレベーターが急に止まりました。"
+   },
+   {
+    "role": "Operator",
+    "en": "Are you alone in there?",
+    "ja": "お一人ですか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, I'm stuck.",
+    "ja": "はい、閉じ込められています。"
+   },
+   {
+    "role": "Operator",
+    "en": "Stay calm. Help is coming.",
+    "ja": "落ち着いてください。今向かいます。"
+   },
+   {
+    "role": "You",
+    "en": "How long will it take?",
+    "ja": "どのくらいかかりますか？"
+   },
+   {
+    "role": "Operator",
+    "en": "Just a few minutes.",
+    "ja": "数分です。"
+   }
+  ]
+ },
+ {
+  "title": "予約に遅れると連絡する",
+  "emoji": "⏰",
+  "cat": "trouble",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'll be a little late for my reservation.",
+    "ja": "予約に少し遅れます。"
+   },
+   {
+    "role": "Staff",
+    "en": "How late will you be?",
+    "ja": "どのくらい遅れますか？"
+   },
+   {
+    "role": "You",
+    "en": "About fifteen minutes.",
+    "ja": "15分ほどです。"
+   },
+   {
+    "role": "Staff",
+    "en": "That's fine. We'll hold it.",
+    "ja": "大丈夫です。お取りしておきます。"
+   },
+   {
+    "role": "You",
+    "en": "Thank you so much.",
+    "ja": "助かります。"
+   },
+   {
+    "role": "Staff",
+    "en": "See you soon.",
+    "ja": "お待ちしております。"
+   }
+  ]
+ },
+ {
+  "title": "指定席を予約する",
+  "emoji": "🎫",
+  "cat": "travel",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like a reserved seat to Boston.",
+    "ja": "ボストンまで指定席をお願いします。"
+   },
+   {
+    "role": "Staff",
+    "en": "Window or aisle?",
+    "ja": "窓側ですか、通路側ですか？"
+   },
+   {
+    "role": "You",
+    "en": "Window, please.",
+    "ja": "窓側でお願いします。"
+   },
+   {
+    "role": "Staff",
+    "en": "What time would you like?",
+    "ja": "何時の便にしますか？"
+   },
+   {
+    "role": "You",
+    "en": "The ten o'clock train.",
+    "ja": "10時の電車で。"
+   },
+   {
+    "role": "Staff",
+    "en": "Here's your ticket.",
+    "ja": "こちらが切符です。"
+   }
+  ]
+ },
+ {
+  "title": "SIMカードを買う",
+  "emoji": "📱",
+  "cat": "travel",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like a SIM card for travel.",
+    "ja": "旅行用のSIMカードがほしいです。"
+   },
+   {
+    "role": "Staff",
+    "en": "How many days?",
+    "ja": "何日間ですか？"
+   },
+   {
+    "role": "You",
+    "en": "About a week.",
+    "ja": "1週間ほどです。"
+   },
+   {
+    "role": "Staff",
+    "en": "This plan has plenty of data.",
+    "ja": "このプランはデータがたっぷりです。"
+   },
+   {
+    "role": "You",
+    "en": "Can you set it up for me?",
+    "ja": "設定してもらえますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Sure, give me your phone.",
+    "ja": "はい、スマホをお預かりします。"
+   }
+  ]
+ },
+ {
+  "title": "食べ放題について聞く",
+  "emoji": "🍖",
+  "cat": "food",
+  "lines": [
+   {
+    "role": "You",
+    "en": "How does the buffet work?",
+    "ja": "食べ放題はどういう仕組みですか？"
+   },
+   {
+    "role": "Staff",
+    "en": "It's ninety minutes.",
+    "ja": "90分制です。"
+   },
+   {
+    "role": "You",
+    "en": "Are drinks included?",
+    "ja": "飲み物は込みですか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Soft drinks are included.",
+    "ja": "ソフトドリンクは込みです。"
+   },
+   {
+    "role": "You",
+    "en": "How much is it?",
+    "ja": "いくらですか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Twenty dollars per person.",
+    "ja": "1人20ドルです。"
+   }
+  ]
+ },
+ {
+  "title": "クーポンを使う",
+  "emoji": "🎟️",
+  "cat": "food",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Can I use this coupon?",
+    "ja": "このクーポンは使えますか？"
+   },
+   {
+    "role": "Cashier",
+    "en": "Let me check. Yes, you can.",
+    "ja": "確認します。はい、使えます。"
+   },
+   {
+    "role": "You",
+    "en": "It's ten percent off, right?",
+    "ja": "10%引きですよね？"
+   },
+   {
+    "role": "Cashier",
+    "en": "That's correct.",
+    "ja": "その通りです。"
+   },
+   {
+    "role": "You",
+    "en": "Great. Here's my card.",
+    "ja": "では、カードで。"
+   },
+   {
+    "role": "Cashier",
+    "en": "Your total is eighteen dollars.",
+    "ja": "合計18ドルです。"
+   }
+  ]
+ },
+ {
+  "title": "宅配便を送る",
+  "emoji": "📦",
+  "cat": "life",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to send this package.",
+    "ja": "この荷物を送りたいです。"
+   },
+   {
+    "role": "Staff",
+    "en": "Where to?",
+    "ja": "どちらまでですか？"
+   },
+   {
+    "role": "You",
+    "en": "To Tokyo.",
+    "ja": "東京までです。"
+   },
+   {
+    "role": "Staff",
+    "en": "When should it arrive?",
+    "ja": "いつ着くといいですか？"
+   },
+   {
+    "role": "You",
+    "en": "By tomorrow, if possible.",
+    "ja": "できれば明日までに。"
+   },
+   {
+    "role": "Staff",
+    "en": "That'll be twelve dollars.",
+    "ja": "12ドルになります。"
+   }
+  ]
+ },
+ {
+  "title": "賃貸契約を結ぶ",
+  "emoji": "📝",
+  "cat": "life",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to rent this apartment.",
+    "ja": "このアパートを借りたいです。"
+   },
+   {
+    "role": "Agent",
+    "en": "Please sign here.",
+    "ja": "こちらにサインをお願いします。"
+   },
+   {
+    "role": "You",
+    "en": "When can I move in?",
+    "ja": "いつ入居できますか？"
+   },
+   {
+    "role": "Agent",
+    "en": "From the first of next month.",
+    "ja": "来月1日からです。"
+   },
+   {
+    "role": "You",
+    "en": "Is a deposit required?",
+    "ja": "敷金は必要ですか？"
+   },
+   {
+    "role": "Agent",
+    "en": "Yes, one month's rent.",
+    "ja": "はい、家賃1か月分です。"
+   }
+  ]
+ },
+ {
+  "title": "市販薬を相談する",
+  "emoji": "💊",
+  "cat": "health",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Do you have something for a headache?",
+    "ja": "頭痛に効くものはありますか？"
+   },
+   {
+    "role": "Pharmacist",
+    "en": "How bad is it?",
+    "ja": "どのくらい痛みますか？"
+   },
+   {
+    "role": "You",
+    "en": "Mild, but it won't go away.",
+    "ja": "軽いけど、続いていて。"
+   },
+   {
+    "role": "Pharmacist",
+    "en": "This should help.",
+    "ja": "これが効きますよ。"
+   },
+   {
+    "role": "You",
+    "en": "How often do I take it?",
+    "ja": "どのくらいの間隔で飲みますか？"
+   },
+   {
+    "role": "Pharmacist",
+    "en": "Twice a day after meals.",
+    "ja": "食後に1日2回です。"
+   }
+  ]
+ },
+ {
+  "title": "歯のクリーニングを受ける",
+  "emoji": "🦷",
+  "cat": "health",
+  "lines": [
+   {
+    "role": "Dentist",
+    "en": "We'll clean your teeth today.",
+    "ja": "今日は歯のクリーニングをします。"
+   },
+   {
+    "role": "You",
+    "en": "Okay. Will it hurt?",
+    "ja": "はい。痛いですか？"
+   },
+   {
+    "role": "Dentist",
+    "en": "No, just relax.",
+    "ja": "いいえ、楽にしてください。"
+   },
+   {
+    "role": "You",
+    "en": "I haven't been in a while.",
+    "ja": "しばらく来ていなくて。"
+   },
+   {
+    "role": "Dentist",
+    "en": "You should come twice a year.",
+    "ja": "年に2回は来てくださいね。"
+   },
+   {
+    "role": "You",
+    "en": "I'll remember that.",
+    "ja": "覚えておきます。"
+   }
+  ]
+ },
+ {
+  "title": "保健室で休む",
+  "emoji": "🤒",
+  "cat": "school",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I don't feel well.",
+    "ja": "体調が悪いんです。"
+   },
+   {
+    "role": "Nurse",
+    "en": "What's wrong?",
+    "ja": "どうしました？"
+   },
+   {
+    "role": "You",
+    "en": "I have a headache.",
+    "ja": "頭が痛くて。"
+   },
+   {
+    "role": "Nurse",
+    "en": "Lie down for a while.",
+    "ja": "しばらく横になってください。"
+   },
+   {
+    "role": "You",
+    "en": "Thank you.",
+    "ja": "ありがとうございます。"
+   },
+   {
+    "role": "Nurse",
+    "en": "I'll call your teacher.",
+    "ja": "先生に連絡しますね。"
+   }
+  ]
+ },
+ {
+  "title": "部活動に入る",
+  "emoji": "🎽",
+  "cat": "school",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to join the tennis club.",
+    "ja": "テニス部に入りたいです。"
+   },
+   {
+    "role": "Senior",
+    "en": "Have you played before?",
+    "ja": "経験はありますか？"
+   },
+   {
+    "role": "You",
+    "en": "No, I'm a beginner.",
+    "ja": "いいえ、初心者です。"
+   },
+   {
+    "role": "Senior",
+    "en": "That's fine. Welcome!",
+    "ja": "大丈夫、ようこそ！"
+   },
+   {
+    "role": "You",
+    "en": "When are practices?",
+    "ja": "練習はいつですか？"
+   },
+   {
+    "role": "Senior",
+    "en": "Every day after school.",
+    "ja": "毎日放課後です。"
+   }
+  ]
+ },
+ {
+  "title": "週末の出来事を話す",
+  "emoji": "😄",
+  "cat": "social",
+  "lines": [
+   {
+    "role": "Friend",
+    "en": "How was your weekend?",
+    "ja": "週末どうだった？"
+   },
+   {
+    "role": "You",
+    "en": "I went hiking.",
+    "ja": "ハイキングに行ったよ。"
+   },
+   {
+    "role": "Friend",
+    "en": "Nice! How was it?",
+    "ja": "いいね！どうだった？"
+   },
+   {
+    "role": "You",
+    "en": "The view was amazing.",
+    "ja": "景色が最高だった。"
+   },
+   {
+    "role": "Friend",
+    "en": "I'm jealous!",
+    "ja": "うらやましい！"
+   },
+   {
+    "role": "You",
+    "en": "Let's go together next time.",
+    "ja": "今度一緒に行こう。"
+   }
+  ]
+ },
+ {
+  "title": "映画の感想を話す",
+  "emoji": "🎬",
+  "cat": "social",
+  "lines": [
+   {
+    "role": "Friend",
+    "en": "Did you like the movie?",
+    "ja": "映画どうだった？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, it was exciting.",
+    "ja": "うん、わくわくした。"
+   },
+   {
+    "role": "Friend",
+    "en": "What was your favorite part?",
+    "ja": "どこが一番よかった？"
+   },
+   {
+    "role": "You",
+    "en": "The ending surprised me.",
+    "ja": "ラストに驚いたよ。"
+   },
+   {
+    "role": "Friend",
+    "en": "Mine too!",
+    "ja": "私も！"
+   },
+   {
+    "role": "You",
+    "en": "We should see the next one.",
+    "ja": "続編も観ようよ。"
+   }
+  ]
+ },
+ {
+  "title": "音声ガイドを借りる",
+  "emoji": "🎧",
+  "cat": "outing",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Can I rent an audio guide?",
+    "ja": "音声ガイドを借りられますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Yes, which language?",
+    "ja": "はい、何語ですか？"
+   },
+   {
+    "role": "You",
+    "en": "English, please.",
+    "ja": "英語でお願いします。"
+   },
+   {
+    "role": "Staff",
+    "en": "Here you go. Five dollars.",
+    "ja": "どうぞ。5ドルです。"
+   },
+   {
+    "role": "You",
+    "en": "How do I start it?",
+    "ja": "どう操作しますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Press the number on the wall.",
+    "ja": "壁の番号を押してください。"
+   }
+  ]
+ },
+ {
+  "title": "温泉で受付する",
+  "emoji": "♨️",
+  "cat": "outing",
+  "lines": [
+   {
+    "role": "You",
+    "en": "One person for the hot spring.",
+    "ja": "温泉を1人お願いします。"
+   },
+   {
+    "role": "Staff",
+    "en": "Do you need a towel?",
+    "ja": "タオルは要りますか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, please.",
+    "ja": "はい、お願いします。"
+   },
+   {
+    "role": "Staff",
+    "en": "The bath is downstairs.",
+    "ja": "お風呂は下の階です。"
+   },
+   {
+    "role": "You",
+    "en": "Is there a time limit?",
+    "ja": "時間制限はありますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "No, take your time.",
+    "ja": "いいえ、ごゆっくり。"
+   }
+  ]
+ },
+ {
+  "title": "婚約をお祝いする",
+  "emoji": "💍",
+  "cat": "event",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I heard you got engaged!",
+    "ja": "婚約したんだって！"
+   },
+   {
+    "role": "Friend",
+    "en": "Yes, last weekend!",
+    "ja": "うん、先週末に！"
+   },
+   {
+    "role": "You",
+    "en": "Congratulations!",
+    "ja": "おめでとう！"
+   },
+   {
+    "role": "Friend",
+    "en": "Thank you so much.",
+    "ja": "ありがとう。"
+   },
+   {
+    "role": "You",
+    "en": "When's the wedding?",
+    "ja": "結婚式はいつ？"
+   },
+   {
+    "role": "Friend",
+    "en": "Maybe next spring.",
+    "ja": "来年の春かな。"
+   }
+  ]
+ },
+ {
+  "title": "誕生日プレゼントを渡す",
+  "emoji": "🎁",
+  "cat": "event",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Happy birthday! This is for you.",
+    "ja": "誕生日おめでとう！これ、プレゼント。"
+   },
+   {
+    "role": "Friend",
+    "en": "Oh, you shouldn't have!",
+    "ja": "わざわざありがとう！"
+   },
+   {
+    "role": "You",
+    "en": "Go on, open it.",
+    "ja": "開けてみて。"
+   },
+   {
+    "role": "Friend",
+    "en": "Wow, I love it!",
+    "ja": "わぁ、うれしい！"
+   },
+   {
+    "role": "You",
+    "en": "I'm glad you like it.",
+    "ja": "気に入ってくれてよかった。"
+   },
+   {
+    "role": "Friend",
+    "en": "Thank you so much.",
+    "ja": "本当にありがとう。"
+   }
+  ]
+ },
+ {
+  "title": "資料の作成を頼む",
+  "emoji": "📊",
+  "cat": "work",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Could you make the slides for the meeting?",
+    "ja": "会議の資料を作ってもらえますか？"
+   },
+   {
+    "role": "Colleague",
+    "en": "Sure. By when?",
+    "ja": "いいですよ。いつまでに？"
+   },
+   {
+    "role": "You",
+    "en": "By Thursday.",
+    "ja": "木曜までに。"
+   },
+   {
+    "role": "Colleague",
+    "en": "How many slides?",
+    "ja": "何枚くらい？"
+   },
+   {
+    "role": "You",
+    "en": "About ten.",
+    "ja": "10枚ほどで。"
+   },
+   {
+    "role": "Colleague",
+    "en": "Okay, I'll start today.",
+    "ja": "では今日から始めます。"
+   }
+  ]
+ },
+ {
+  "title": "納期を確認する",
+  "emoji": "📦",
+  "cat": "work",
+  "lines": [
+   {
+    "role": "You",
+    "en": "When will the order arrive?",
+    "ja": "注文品はいつ届きますか？"
+   },
+   {
+    "role": "Supplier",
+    "en": "By the end of the week.",
+    "ja": "今週末までです。"
+   },
+   {
+    "role": "You",
+    "en": "Can it be sooner?",
+    "ja": "もっと早くできますか？"
+   },
+   {
+    "role": "Supplier",
+    "en": "I'll check with the factory.",
+    "ja": "工場に確認します。"
+   },
+   {
+    "role": "You",
+    "en": "We need it by Wednesday.",
+    "ja": "水曜までに必要です。"
+   },
+   {
+    "role": "Supplier",
+    "en": "I'll do my best.",
+    "ja": "最善を尽くします。"
+   }
+  ]
+ },
+ {
+  "title": "電車に忘れ物をする",
+  "emoji": "📱",
+  "cat": "trouble",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I left my phone on the train.",
+    "ja": "電車にスマホを忘れました。"
+   },
+   {
+    "role": "Staff",
+    "en": "Which line was it?",
+    "ja": "何線でしたか？"
+   },
+   {
+    "role": "You",
+    "en": "The green line.",
+    "ja": "グリーンラインです。"
+   },
+   {
+    "role": "Staff",
+    "en": "What does it look like?",
+    "ja": "どんなスマホですか？"
+   },
+   {
+    "role": "You",
+    "en": "It's black with a blue case.",
+    "ja": "黒で、青いケースです。"
+   },
+   {
+    "role": "Staff",
+    "en": "We'll contact the station.",
+    "ja": "駅に連絡します。"
+   }
+  ]
+ },
+ {
+  "title": "停電について問い合わせる",
+  "emoji": "🔌",
+  "cat": "trouble",
+  "lines": [
+   {
+    "role": "You",
+    "en": "The power is out in my building.",
+    "ja": "建物が停電しています。"
+   },
+   {
+    "role": "Operator",
+    "en": "Is it the whole building?",
+    "ja": "建物全体ですか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, everything is dark.",
+    "ja": "はい、真っ暗です。"
+   },
+   {
+    "role": "Operator",
+    "en": "We're aware of the issue.",
+    "ja": "把握しております。"
+   },
+   {
+    "role": "You",
+    "en": "When will it come back?",
+    "ja": "いつ復旧しますか？"
+   },
+   {
+    "role": "Operator",
+    "en": "Within an hour.",
+    "ja": "1時間以内です。"
+   }
+  ]
+ },
+ {
+  "title": "写真スポットを聞く",
+  "emoji": "📸",
+  "cat": "travel",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Where's a good photo spot?",
+    "ja": "いい写真スポットはどこですか？"
+   },
+   {
+    "role": "Staff",
+    "en": "The bridge has a great view.",
+    "ja": "橋からの眺めがいいですよ。"
+   },
+   {
+    "role": "You",
+    "en": "How do I get there?",
+    "ja": "どう行けばいいですか？"
+   },
+   {
+    "role": "Staff",
+    "en": "It's a five-minute walk.",
+    "ja": "歩いて5分です。"
+   },
+   {
+    "role": "You",
+    "en": "Is it crowded now?",
+    "ja": "今は混んでいますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Mornings are quieter.",
+    "ja": "朝が空いています。"
+   }
+  ]
+ },
+ {
+  "title": "ホテルの朝食を聞く",
+  "emoji": "🍳",
+  "cat": "travel",
+  "lines": [
+   {
+    "role": "You",
+    "en": "What time is breakfast?",
+    "ja": "朝食は何時ですか？"
+   },
+   {
+    "role": "Front Desk",
+    "en": "From seven to ten.",
+    "ja": "7時から10時までです。"
+   },
+   {
+    "role": "You",
+    "en": "Where is it served?",
+    "ja": "どこで食べられますか？"
+   },
+   {
+    "role": "Front Desk",
+    "en": "On the second floor.",
+    "ja": "2階です。"
+   },
+   {
+    "role": "You",
+    "en": "Is it included in the room?",
+    "ja": "部屋代に含まれていますか？"
+   },
+   {
+    "role": "Front Desk",
+    "en": "Yes, it is.",
+    "ja": "はい、含まれています。"
+   }
+  ]
+ },
+ {
+  "title": "ラストオーダーを確認する",
+  "emoji": "🕙",
+  "cat": "food",
+  "lines": [
+   {
+    "role": "You",
+    "en": "When is last order?",
+    "ja": "ラストオーダーは何時ですか？"
+   },
+   {
+    "role": "Server",
+    "en": "In thirty minutes.",
+    "ja": "あと30分です。"
+   },
+   {
+    "role": "You",
+    "en": "Can we still order food?",
+    "ja": "まだ料理を頼めますか？"
+   },
+   {
+    "role": "Server",
+    "en": "Yes, of course.",
+    "ja": "はい、もちろんです。"
+   },
+   {
+    "role": "You",
+    "en": "Then two more plates, please.",
+    "ja": "では、もう2皿ください。"
+   },
+   {
+    "role": "Server",
+    "en": "Coming right up.",
+    "ja": "すぐお持ちします。"
+   }
+  ]
+ },
+ {
+  "title": "量を調整してもらう",
+  "emoji": "🍚",
+  "cat": "food",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Could I get a smaller portion?",
+    "ja": "量を少なめにできますか？"
+   },
+   {
+    "role": "Server",
+    "en": "Sure, half size?",
+    "ja": "はい、半分にしますか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes. Is it cheaper?",
+    "ja": "はい。安くなりますか？"
+   },
+   {
+    "role": "Server",
+    "en": "Yes, a little.",
+    "ja": "はい、少し。"
+   },
+   {
+    "role": "You",
+    "en": "Perfect, thank you.",
+    "ja": "よかった、ありがとう。"
+   },
+   {
+    "role": "Server",
+    "en": "I'll let the kitchen know.",
+    "ja": "厨房に伝えます。"
+   }
+  ]
+ },
+ {
+  "title": "ペットホテルを予約する",
+  "emoji": "🐾",
+  "cat": "life",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to board my dog.",
+    "ja": "犬を預けたいです。"
+   },
+   {
+    "role": "Staff",
+    "en": "For how many nights?",
+    "ja": "何泊ですか？"
+   },
+   {
+    "role": "You",
+    "en": "Three nights.",
+    "ja": "3泊です。"
+   },
+   {
+    "role": "Staff",
+    "en": "Does he have any allergies?",
+    "ja": "アレルギーはありますか？"
+   },
+   {
+    "role": "You",
+    "en": "No, none.",
+    "ja": "いいえ、ありません。"
+   },
+   {
+    "role": "Staff",
+    "en": "We'll take good care of him.",
+    "ja": "大切にお預かりします。"
+   }
+  ]
+ },
+ {
+  "title": "写真をプリントする",
+  "emoji": "🖨️",
+  "cat": "life",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to print these photos.",
+    "ja": "この写真をプリントしたいです。"
+   },
+   {
+    "role": "Staff",
+    "en": "What size?",
+    "ja": "どのサイズですか？"
+   },
+   {
+    "role": "You",
+    "en": "Postcard size, please.",
+    "ja": "はがきサイズで。"
+   },
+   {
+    "role": "Staff",
+    "en": "How many copies?",
+    "ja": "何枚ですか？"
+   },
+   {
+    "role": "You",
+    "en": "One of each.",
+    "ja": "各1枚ずつ。"
+   },
+   {
+    "role": "Staff",
+    "en": "They'll be ready in ten minutes.",
+    "ja": "10分でできます。"
+   }
+  ]
+ },
+ {
+  "title": "血圧を測ってもらう",
+  "emoji": "🩺",
+  "cat": "health",
+  "lines": [
+   {
+    "role": "Nurse",
+    "en": "Let's check your blood pressure.",
+    "ja": "血圧を測りますね。"
+   },
+   {
+    "role": "You",
+    "en": "Okay.",
+    "ja": "はい。"
+   },
+   {
+    "role": "Nurse",
+    "en": "Please relax your arm.",
+    "ja": "腕の力を抜いてください。"
+   },
+   {
+    "role": "You",
+    "en": "How is it?",
+    "ja": "どうですか？"
+   },
+   {
+    "role": "Nurse",
+    "en": "It's a little high.",
+    "ja": "少し高めです。"
+   },
+   {
+    "role": "You",
+    "en": "Should I be worried?",
+    "ja": "心配ですか？"
+   }
+  ]
+ },
+ {
+  "title": "禁煙の相談をする",
+  "emoji": "🚭",
+  "cat": "health",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I want to quit smoking.",
+    "ja": "たばこをやめたいんです。"
+   },
+   {
+    "role": "Doctor",
+    "en": "That's a great decision.",
+    "ja": "いい決断ですね。"
+   },
+   {
+    "role": "You",
+    "en": "It's been hard to stop.",
+    "ja": "なかなかやめられなくて。"
+   },
+   {
+    "role": "Doctor",
+    "en": "We can help with that.",
+    "ja": "お手伝いできますよ。"
+   },
+   {
+    "role": "You",
+    "en": "What should I do first?",
+    "ja": "まず何をすればいいですか？"
+   },
+   {
+    "role": "Doctor",
+    "en": "Let's start with a plan.",
+    "ja": "計画を立てましょう。"
+   }
+  ]
+ },
+ {
+  "title": "成績について話す",
+  "emoji": "📊",
+  "cat": "school",
+  "lines": [
+   {
+    "role": "Teacher",
+    "en": "Your grades have improved.",
+    "ja": "成績が上がりましたね。"
+   },
+   {
+    "role": "You",
+    "en": "Really? I'm glad.",
+    "ja": "本当ですか？うれしいです。"
+   },
+   {
+    "role": "Teacher",
+    "en": "Keep up the good work.",
+    "ja": "その調子で頑張って。"
+   },
+   {
+    "role": "You",
+    "en": "Which subject is weakest?",
+    "ja": "苦手な教科はどれですか？"
+   },
+   {
+    "role": "Teacher",
+    "en": "Math could use some work.",
+    "ja": "数学をもう少し。"
+   },
+   {
+    "role": "You",
+    "en": "I'll study harder.",
+    "ja": "もっと勉強します。"
+   }
+  ]
+ },
+ {
+  "title": "実験の手順を聞く",
+  "emoji": "🔬",
+  "cat": "school",
+  "lines": [
+   {
+    "role": "You",
+    "en": "What do we do first?",
+    "ja": "最初に何をしますか？"
+   },
+   {
+    "role": "Teacher",
+    "en": "Mix these two liquids.",
+    "ja": "この2つの液体を混ぜます。"
+   },
+   {
+    "role": "You",
+    "en": "How much of each?",
+    "ja": "それぞれどのくらい？"
+   },
+   {
+    "role": "Teacher",
+    "en": "Ten milliliters each.",
+    "ja": "各10ミリリットルです。"
+   },
+   {
+    "role": "You",
+    "en": "Do we need gloves?",
+    "ja": "手袋は必要ですか？"
+   },
+   {
+    "role": "Teacher",
+    "en": "Yes, always wear them.",
+    "ja": "はい、必ず着けて。"
+   }
+  ]
+ },
+ {
+  "title": "おすすめの音楽を聞く",
+  "emoji": "🎵",
+  "cat": "social",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Do you know any good music?",
+    "ja": "いい音楽知ってる？"
+   },
+   {
+    "role": "Friend",
+    "en": "What do you usually listen to?",
+    "ja": "普段は何を聞くの？"
+   },
+   {
+    "role": "You",
+    "en": "Mostly pop.",
+    "ja": "だいたいポップス。"
+   },
+   {
+    "role": "Friend",
+    "en": "You should try this band.",
+    "ja": "このバンドおすすめだよ。"
+   },
+   {
+    "role": "You",
+    "en": "I'll check them out.",
+    "ja": "聞いてみるね。"
+   },
+   {
+    "role": "Friend",
+    "en": "I'll send you a link.",
+    "ja": "リンク送るよ。"
+   }
+  ]
+ },
+ {
+  "title": "旅行の思い出を話す",
+  "emoji": "✈️",
+  "cat": "social",
+  "lines": [
+   {
+    "role": "Friend",
+    "en": "How was your trip?",
+    "ja": "旅行どうだった？"
+   },
+   {
+    "role": "You",
+    "en": "It was wonderful.",
+    "ja": "すごくよかったよ。"
+   },
+   {
+    "role": "Friend",
+    "en": "Where did you go?",
+    "ja": "どこに行ったの？"
+   },
+   {
+    "role": "You",
+    "en": "To Italy.",
+    "ja": "イタリアに。"
+   },
+   {
+    "role": "Friend",
+    "en": "What did you like most?",
+    "ja": "一番よかったのは？"
+   },
+   {
+    "role": "You",
+    "en": "The food was amazing.",
+    "ja": "料理が最高だった。"
+   }
+  ]
+ },
+ {
+  "title": "プラネタリウムで聞く",
+  "emoji": "🌌",
+  "cat": "outing",
+  "lines": [
+   {
+    "role": "You",
+    "en": "When does the show start?",
+    "ja": "上映はいつ始まりますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "In fifteen minutes.",
+    "ja": "あと15分です。"
+   },
+   {
+    "role": "You",
+    "en": "How long is it?",
+    "ja": "どのくらいの長さですか？"
+   },
+   {
+    "role": "Staff",
+    "en": "About forty minutes.",
+    "ja": "40分ほどです。"
+   },
+   {
+    "role": "You",
+    "en": "Can I choose any seat?",
+    "ja": "席は自由ですか？"
+   },
+   {
+    "role": "Staff",
+    "en": "Yes, anywhere you like.",
+    "ja": "はい、お好きな席へ。"
+   }
+  ]
+ },
+ {
+  "title": "陶芸を体験する",
+  "emoji": "🏺",
+  "cat": "outing",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'd like to try pottery.",
+    "ja": "陶芸を体験したいです。"
+   },
+   {
+    "role": "Instructor",
+    "en": "Have you done it before?",
+    "ja": "経験はありますか？"
+   },
+   {
+    "role": "You",
+    "en": "No, it's my first time.",
+    "ja": "いいえ、初めてです。"
+   },
+   {
+    "role": "Instructor",
+    "en": "I'll guide you step by step.",
+    "ja": "一つずつ教えますね。"
+   },
+   {
+    "role": "You",
+    "en": "What should I make?",
+    "ja": "何を作ればいいですか？"
+   },
+   {
+    "role": "Instructor",
+    "en": "Let's start with a cup.",
+    "ja": "カップから始めましょう。"
+   }
+  ]
+ },
+ {
+  "title": "結婚式でお祝いを言う",
+  "emoji": "🥂",
+  "cat": "event",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Congratulations on your wedding!",
+    "ja": "結婚おめでとう！"
+   },
+   {
+    "role": "Friend",
+    "en": "Thank you for coming.",
+    "ja": "来てくれてありがとう。"
+   },
+   {
+    "role": "You",
+    "en": "You both look so happy.",
+    "ja": "二人ともすごく幸せそう。"
+   },
+   {
+    "role": "Friend",
+    "en": "It means a lot to us.",
+    "ja": "そう言ってもらえてうれしい。"
+   },
+   {
+    "role": "You",
+    "en": "Wishing you all the best.",
+    "ja": "お幸せに。"
+   },
+   {
+    "role": "Friend",
+    "en": "Thank you so much.",
+    "ja": "本当にありがとう。"
+   }
+  ]
+ },
+ {
+  "title": "快気祝いを渡す",
+  "emoji": "🎁",
+  "cat": "event",
+  "lines": [
+   {
+    "role": "You",
+    "en": "I'm glad you're better now.",
+    "ja": "よくなって良かった。"
+   },
+   {
+    "role": "Friend",
+    "en": "Thank you, I feel great.",
+    "ja": "ありがとう、元気だよ。"
+   },
+   {
+    "role": "You",
+    "en": "Here's a little something.",
+    "ja": "これ、ちょっとしたものだけど。"
+   },
+   {
+    "role": "Friend",
+    "en": "You're so kind.",
+    "ja": "優しいね。"
+   },
+   {
+    "role": "You",
+    "en": "Take care of yourself.",
+    "ja": "無理しないでね。"
+   },
+   {
+    "role": "Friend",
+    "en": "I will, thanks.",
+    "ja": "うん、ありがとう。"
+   }
+  ]
+ },
+ {
+  "title": "同僚をランチに誘う",
+  "emoji": "🍱",
+  "cat": "work",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Want to grab lunch together?",
+    "ja": "一緒にランチどう？"
+   },
+   {
+    "role": "Colleague",
+    "en": "Sure, where to?",
+    "ja": "いいね、どこに？"
+   },
+   {
+    "role": "You",
+    "en": "There's a new place nearby.",
+    "ja": "近くに新しい店があるよ。"
+   },
+   {
+    "role": "Colleague",
+    "en": "What do they serve?",
+    "ja": "何のお店？"
+   },
+   {
+    "role": "You",
+    "en": "Italian food.",
+    "ja": "イタリアン。"
+   },
+   {
+    "role": "Colleague",
+    "en": "Sounds good, let's go.",
+    "ja": "いいね、行こう。"
+   }
+  ]
+ },
+ {
+  "title": "オンライン会議を始める",
+  "emoji": "💻",
+  "cat": "work",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Can everyone hear me?",
+    "ja": "皆さん聞こえますか？"
+   },
+   {
+    "role": "Colleague",
+    "en": "Yes, loud and clear.",
+    "ja": "はい、はっきり聞こえます。"
+   },
+   {
+    "role": "You",
+    "en": "Let's get started.",
+    "ja": "では始めましょう。"
+   },
+   {
+    "role": "Colleague",
+    "en": "Should I share my screen?",
+    "ja": "画面を共有しましょうか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, please go ahead.",
+    "ja": "はい、お願いします。"
+   },
+   {
+    "role": "Colleague",
+    "en": "Here's the report.",
+    "ja": "こちらが報告書です。"
+   }
+  ]
+ },
+ {
+  "title": "鍵が回らない",
+  "emoji": "🔑",
+  "cat": "trouble",
+  "lines": [
+   {
+    "role": "You",
+    "en": "My key won't turn.",
+    "ja": "鍵が回らないんです。"
+   },
+   {
+    "role": "Manager",
+    "en": "Is it the right key?",
+    "ja": "鍵は合っていますか？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, but it's stuck.",
+    "ja": "はい、でも引っかかって。"
+   },
+   {
+    "role": "Manager",
+    "en": "I'll come and check.",
+    "ja": "すぐ見に行きます。"
+   },
+   {
+    "role": "You",
+    "en": "Thank you, please hurry.",
+    "ja": "急いでもらえると助かります。"
+   },
+   {
+    "role": "Manager",
+    "en": "I'll be right there.",
+    "ja": "すぐ参ります。"
+   }
+  ]
+ },
+ {
+  "title": "エアコンの故障を伝える",
+  "emoji": "❄️",
+  "cat": "trouble",
+  "lines": [
+   {
+    "role": "You",
+    "en": "The air conditioner isn't working.",
+    "ja": "エアコンが効きません。"
+   },
+   {
+    "role": "Staff",
+    "en": "Is it making any noise?",
+    "ja": "音はしていますか？"
+   },
+   {
+    "role": "You",
+    "en": "No, nothing at all.",
+    "ja": "いいえ、まったく。"
+   },
+   {
+    "role": "Staff",
+    "en": "I'll send someone up.",
+    "ja": "係を向かわせます。"
+   },
+   {
+    "role": "You",
+    "en": "How long will it take?",
+    "ja": "どのくらいかかりますか？"
+   },
+   {
+    "role": "Staff",
+    "en": "About twenty minutes.",
+    "ja": "20分ほどです。"
+   }
+  ]
+ },
+ {
+  "title": "調子を聞く・遊びに誘う",
+  "emoji": "👋",
+  "cat": "slang",
+  "lines": [
+   {
+    "role": "Friend",
+    "en": "Hey, what's up?",
+    "ja": "やあ、調子どう？"
+   },
+   {
+    "role": "You",
+    "en": "Not much. You?",
+    "ja": "まあまあ。そっちは？"
+   },
+   {
+    "role": "Friend",
+    "en": "Same old. Wanna hang out?",
+    "ja": "いつも通り。遊ばない？（hang out=遊ぶ）"
+   },
+   {
+    "role": "You",
+    "en": "Sure, I'm down.",
+    "ja": "いいね、乗った。（I'm down=やる気・賛成）"
+   },
+   {
+    "role": "Friend",
+    "en": "Cool, let's go.",
+    "ja": "よし、行こう。"
+   },
+   {
+    "role": "You",
+    "en": "Sounds good.",
+    "ja": "いいね。"
+   }
+  ]
+ },
+ {
+  "title": "最高！とリアクションする",
+  "emoji": "🤩",
+  "cat": "slang",
+  "lines": [
+   {
+    "role": "Friend",
+    "en": "I got the job!",
+    "ja": "仕事決まったよ！"
+   },
+   {
+    "role": "You",
+    "en": "No way! That's awesome!",
+    "ja": "まじで！最高じゃん！（No way=うそでしょ）"
+   },
+   {
+    "role": "Friend",
+    "en": "I know, right?",
+    "ja": "でしょ？（I know, right?=だよね）"
+   },
+   {
+    "role": "You",
+    "en": "I'm so happy for you.",
+    "ja": "自分のことみたいにうれしい。"
+   },
+   {
+    "role": "Friend",
+    "en": "Let's celebrate!",
+    "ja": "お祝いしよう！"
+   },
+   {
+    "role": "You",
+    "en": "Heck yeah!",
+    "ja": "もちろん！（Heck yeah=やったー・もちろん）"
+   }
+  ]
+ },
+ {
+  "title": "疲れたと言う",
+  "emoji": "😩",
+  "cat": "slang",
+  "lines": [
+   {
+    "role": "Friend",
+    "en": "You look tired.",
+    "ja": "疲れてそうだね。"
+   },
+   {
+    "role": "You",
+    "en": "Yeah, I'm beat.",
+    "ja": "うん、へとへと。（beat=とても疲れた）"
+   },
+   {
+    "role": "Friend",
+    "en": "Long day?",
+    "ja": "大変な一日だった？"
+   },
+   {
+    "role": "You",
+    "en": "Totally. I'm wiped out.",
+    "ja": "ほんと。もうクタクタ。（wiped out=疲れ果てた）"
+   },
+   {
+    "role": "Friend",
+    "en": "Get some rest.",
+    "ja": "休みなよ。"
+   },
+   {
+    "role": "You",
+    "en": "I will, thanks.",
+    "ja": "そうするよ、ありがとう。"
+   }
+  ]
+ },
+ {
+  "title": "楽勝だよと言う",
+  "emoji": "👌",
+  "cat": "slang",
+  "lines": [
+   {
+    "role": "Friend",
+    "en": "Can you fix my laptop?",
+    "ja": "パソコン直せる？"
+   },
+   {
+    "role": "You",
+    "en": "Sure, piece of cake.",
+    "ja": "うん、楽勝だよ。（piece of cake=超簡単）"
+   },
+   {
+    "role": "Friend",
+    "en": "Really? Thanks!",
+    "ja": "ほんと？ありがとう！"
+   },
+   {
+    "role": "You",
+    "en": "No sweat.",
+    "ja": "全然平気。（No sweat=余裕・お安いご用）"
+   },
+   {
+    "role": "Friend",
+    "en": "You're a lifesaver.",
+    "ja": "すごく助かるよ。（lifesaver=救世主）"
+   },
+   {
+    "role": "You",
+    "en": "Anytime.",
+    "ja": "いつでもどうぞ。"
+   }
+  ]
+ },
+ {
+  "title": "軽く謝る",
+  "emoji": "🙏",
+  "cat": "slang",
+  "lines": [
+   {
+    "role": "Friend",
+    "en": "You took my charger.",
+    "ja": "充電器持ってったでしょ。"
+   },
+   {
+    "role": "You",
+    "en": "Oh, my bad.",
+    "ja": "あ、ごめんごめん。（my bad=私のミス・ごめん）"
+   },
+   {
+    "role": "Friend",
+    "en": "It's fine.",
+    "ja": "いいよ。"
+   },
+   {
+    "role": "You",
+    "en": "Here you go.",
+    "ja": "はい、返すね。"
+   },
+   {
+    "role": "Friend",
+    "en": "No worries.",
+    "ja": "気にしないで。（No worries=大丈夫）"
+   },
+   {
+    "role": "You",
+    "en": "Thanks for understanding.",
+    "ja": "ありがとう。"
+   }
+  ]
+ },
+ {
+  "title": "落ち着いてと言う",
+  "emoji": "😎",
+  "cat": "slang",
+  "lines": [
+   {
+    "role": "Friend",
+    "en": "We're going to be late!",
+    "ja": "遅れちゃうよ！"
+   },
+   {
+    "role": "You",
+    "en": "Chill, we have time.",
+    "ja": "落ち着いて、まだ時間あるよ。（chill=落ち着く）"
+   },
+   {
+    "role": "Friend",
+    "en": "Are you sure?",
+    "ja": "ほんとに？"
+   },
+   {
+    "role": "You",
+    "en": "Yeah, relax.",
+    "ja": "うん、のんびりいこう。"
+   },
+   {
+    "role": "Friend",
+    "en": "Okay, my bad.",
+    "ja": "わかった、ごめん。"
+   },
+   {
+    "role": "You",
+    "en": "We're good.",
+    "ja": "大丈夫だよ。（We're good=問題ない）"
+   }
+  ]
+ },
+ {
+  "title": "連絡してと伝える",
+  "emoji": "📱",
+  "cat": "slang",
+  "lines": [
+   {
+    "role": "Friend",
+    "en": "Let's meet up this weekend.",
+    "ja": "今週末会おうよ。"
+   },
+   {
+    "role": "You",
+    "en": "Sounds good. Hit me up.",
+    "ja": "いいね。連絡して。（hit me up=連絡して）"
+   },
+   {
+    "role": "Friend",
+    "en": "Will do.",
+    "ja": "了解。（Will do=やっとくね）"
+   },
+   {
+    "role": "You",
+    "en": "I'm free on Saturday.",
+    "ja": "土曜なら空いてる。"
+   },
+   {
+    "role": "Friend",
+    "en": "Cool, I'll text you.",
+    "ja": "じゃあメッセージ送るね。"
+   },
+   {
+    "role": "You",
+    "en": "Catch you later.",
+    "ja": "じゃあまたね。（Catch you later=またね）"
+   }
+  ]
+ },
+ {
+  "title": "お腹すいた・めっちゃ旨い",
+  "emoji": "🍔",
+  "cat": "slang",
+  "lines": [
+   {
+    "role": "Friend",
+    "en": "I'm starving.",
+    "ja": "お腹ぺこぺこ。（starving=超腹ペコ）"
+   },
+   {
+    "role": "You",
+    "en": "Me too. Let's grab a bite.",
+    "ja": "私も。軽く食べよう。（grab a bite=軽く食べる）"
+   },
+   {
+    "role": "Friend",
+    "en": "That burger place is bomb.",
+    "ja": "あのバーガー屋、めっちゃうまいよ。（bomb=最高に良い）"
+   },
+   {
+    "role": "You",
+    "en": "Let's hit it up.",
+    "ja": "行こうよ。（hit it up=行ってみる）"
+   },
+   {
+    "role": "Friend",
+    "en": "I'm so down.",
+    "ja": "大賛成。"
+   },
+   {
+    "role": "You",
+    "en": "Let's go!",
+    "ja": "行こう！"
+   }
+  ]
+ },
+ {
+  "title": "がんばってと応援する",
+  "emoji": "💪",
+  "cat": "slang",
+  "lines": [
+   {
+    "role": "Friend",
+    "en": "I have a big test today.",
+    "ja": "今日大事なテストなんだ。"
+   },
+   {
+    "role": "You",
+    "en": "Break a leg!",
+    "ja": "がんばって！（Break a leg=幸運を・がんばれ）"
+   },
+   {
+    "role": "Friend",
+    "en": "I'm so nervous.",
+    "ja": "すごく緊張する。"
+   },
+   {
+    "role": "You",
+    "en": "You got this.",
+    "ja": "きっとできるよ。（You got this=君ならできる）"
+   },
+   {
+    "role": "Friend",
+    "en": "Thanks for the support.",
+    "ja": "応援ありがとう。"
+   },
+   {
+    "role": "You",
+    "en": "Go get 'em!",
+    "ja": "行ってこい！（Go get 'em=やってこい）"
+   }
+  ]
+ },
+ {
+  "title": "冗談だよとからかう",
+  "emoji": "😆",
+  "cat": "slang",
+  "lines": [
+   {
+    "role": "Friend",
+    "en": "Did you eat my cake?!",
+    "ja": "私のケーキ食べた？！"
+   },
+   {
+    "role": "You",
+    "en": "Yeah, all of it.",
+    "ja": "うん、全部。"
+   },
+   {
+    "role": "Friend",
+    "en": "What?! Seriously?",
+    "ja": "えっ！まじで？"
+   },
+   {
+    "role": "You",
+    "en": "Just kidding!",
+    "ja": "冗談だよ！（Just kidding=冗談）"
+   },
+   {
+    "role": "Friend",
+    "en": "You got me!",
+    "ja": "だまされた！（You got me=やられた）"
+   },
+   {
+    "role": "You",
+    "en": "I'm just messing with you.",
+    "ja": "からかっただけ。（mess with you=からかう）"
+   }
+  ]
+ },
+ {
+  "title": "超盛り上がる・最高だった",
+  "emoji": "🎉",
+  "cat": "slang",
+  "lines": [
+   {
+    "role": "You",
+    "en": "How was the concert?",
+    "ja": "コンサートどうだった？"
+   },
+   {
+    "role": "Friend",
+    "en": "It was lit!",
+    "ja": "超盛り上がった！（lit=超盛り上がる）"
+   },
+   {
+    "role": "You",
+    "en": "I heard the band is great.",
+    "ja": "バンドすごいらしいね。"
+   },
+   {
+    "role": "Friend",
+    "en": "They were sick!",
+    "ja": "マジ最高だった！（sick=やばい[良い意味]）"
+   },
+   {
+    "role": "You",
+    "en": "I wish I went.",
+    "ja": "行けばよかった。"
+   },
+   {
+    "role": "Friend",
+    "en": "Next time for sure.",
+    "ja": "次は絶対行こう。"
+   }
+  ]
+ },
+ {
+  "title": "ちょっと待ってと言う",
+  "emoji": "✋",
+  "cat": "slang",
+  "lines": [
+   {
+    "role": "Friend",
+    "en": "Are you ready to go?",
+    "ja": "もう行ける？"
+   },
+   {
+    "role": "You",
+    "en": "Hold up, one sec.",
+    "ja": "ちょっと待って、すぐ。（Hold up=待って）"
+   },
+   {
+    "role": "Friend",
+    "en": "What's wrong?",
+    "ja": "どうしたの？"
+   },
+   {
+    "role": "You",
+    "en": "I can't find my keys.",
+    "ja": "鍵が見つからなくて。"
+   },
+   {
+    "role": "Friend",
+    "en": "Take your time.",
+    "ja": "ゆっくりでいいよ。"
+   },
+   {
+    "role": "You",
+    "en": "Found them! Let's go.",
+    "ja": "あった！行こう。"
+   }
+  ]
+ },
+ {
+  "title": "マジで？と驚く",
+  "emoji": "😲",
+  "cat": "slang",
+  "lines": [
+   {
+    "role": "Friend",
+    "en": "I'm moving to New York.",
+    "ja": "ニューヨークに引っ越すんだ。"
+   },
+   {
+    "role": "You",
+    "en": "For real?",
+    "ja": "マジで？（For real?=本当に？）"
+   },
+   {
+    "role": "Friend",
+    "en": "Yeah, next month.",
+    "ja": "うん、来月。"
+   },
+   {
+    "role": "You",
+    "en": "No kidding!",
+    "ja": "うそでしょ！（No kidding=冗談でしょ）"
+   },
+   {
+    "role": "Friend",
+    "en": "I'm pretty excited.",
+    "ja": "けっこうわくわくしてる。"
+   },
+   {
+    "role": "You",
+    "en": "That's huge!",
+    "ja": "すごいことじゃん！（huge=大ごと・すごい）"
+   }
+  ]
+ },
+ {
+  "title": "乗った・参加すると言う",
+  "emoji": "🙌",
+  "cat": "slang",
+  "lines": [
+   {
+    "role": "Friend",
+    "en": "We're going camping this weekend.",
+    "ja": "今週末キャンプ行くんだ。"
+   },
+   {
+    "role": "You",
+    "en": "Count me in!",
+    "ja": "私も行く！（Count me in=参加する）"
+   },
+   {
+    "role": "Friend",
+    "en": "Awesome, you're game?",
+    "ja": "やった、乗り気？（game=やる気ある）"
+   },
+   {
+    "role": "You",
+    "en": "Totally. Sounds like a plan.",
+    "ja": "もちろん。いいね、決まりだ。（Sounds like a plan=それで決まり）"
+   },
+   {
+    "role": "Friend",
+    "en": "I'll bring the tent.",
+    "ja": "テント持ってくよ。"
+   },
+   {
+    "role": "You",
+    "en": "I'll grab the snacks.",
+    "ja": "私はおやつ買ってく。"
+   }
+  ]
+ },
+ {
+  "title": "金欠だと言う",
+  "emoji": "💸",
+  "cat": "slang",
+  "lines": [
+   {
+    "role": "Friend",
+    "en": "Let's eat out tonight.",
+    "ja": "今夜外食しようよ。"
+   },
+   {
+    "role": "You",
+    "en": "I'm broke right now.",
+    "ja": "今、金欠なんだ。（broke=お金がない）"
+   },
+   {
+    "role": "Friend",
+    "en": "Oh, that's okay.",
+    "ja": "あ、大丈夫だよ。"
+   },
+   {
+    "role": "You",
+    "en": "Eating out is pricey.",
+    "ja": "外食は高くつくし。（pricey=高い）"
+   },
+   {
+    "role": "Friend",
+    "en": "Let's cook instead.",
+    "ja": "じゃあ作ろうか。"
+   },
+   {
+    "role": "You",
+    "en": "Now you're talking!",
+    "ja": "それいいね！（Now you're talking=それだよ！）"
+   }
+  ]
+ },
+ {
+  "title": "同感・わかると言う",
+  "emoji": "🤝",
+  "cat": "slang",
+  "lines": [
+   {
+    "role": "Friend",
+    "en": "Mondays are the worst.",
+    "ja": "月曜って最悪だよね。"
+   },
+   {
+    "role": "You",
+    "en": "Tell me about it.",
+    "ja": "ほんとそれ。（Tell me about it=まさに、わかる）"
+   },
+   {
+    "role": "Friend",
+    "en": "I'm always so tired.",
+    "ja": "いつも疲れてる。"
+   },
+   {
+    "role": "You",
+    "en": "Same here.",
+    "ja": "私も同じ。（Same here=同じく）"
+   },
+   {
+    "role": "Friend",
+    "en": "At least it's almost Friday.",
+    "ja": "でももうすぐ金曜だ。"
+   },
+   {
+    "role": "You",
+    "en": "I feel you.",
+    "ja": "わかるよ。（I feel you=気持ち分かる）"
+   }
+  ]
+ },
+ {
+  "title": "誘いを軽く断る",
+  "emoji": "🙅",
+  "cat": "slang",
+  "lines": [
+   {
+    "role": "Friend",
+    "en": "Want to go out tonight?",
+    "ja": "今夜出かけない？"
+   },
+   {
+    "role": "You",
+    "en": "I'll pass tonight.",
+    "ja": "今夜はやめとく。（I'll pass=遠慮する）"
+   },
+   {
+    "role": "Friend",
+    "en": "Come on, just for a bit.",
+    "ja": "ちょっとだけでも。"
+   },
+   {
+    "role": "You",
+    "en": "I'm good, thanks.",
+    "ja": "大丈夫、ありがとう。（I'm good=結構です）"
+   },
+   {
+    "role": "Friend",
+    "en": "Okay, maybe next time.",
+    "ja": "わかった、また今度ね。"
+   },
+   {
+    "role": "You",
+    "en": "Definitely. Have fun!",
+    "ja": "うん。楽しんで！"
+   }
+  ]
+ },
+ {
+  "title": "もう行かなきゃと言う",
+  "emoji": "🏃",
+  "cat": "slang",
+  "lines": [
+   {
+    "role": "You",
+    "en": "It's getting late.",
+    "ja": "遅くなってきた。"
+   },
+   {
+    "role": "Friend",
+    "en": "Yeah, I gotta run.",
+    "ja": "うん、もう行かなきゃ。（gotta run=行かなきゃ）"
+   },
+   {
+    "role": "You",
+    "en": "Let's bounce, then.",
+    "ja": "じゃあ出ようか。（Let's bounce=出よう）"
+   },
+   {
+    "role": "Friend",
+    "en": "Thanks for today.",
+    "ja": "今日ありがとう。"
+   },
+   {
+    "role": "You",
+    "en": "See ya!",
+    "ja": "じゃあね！（See ya=またね）"
+   },
+   {
+    "role": "Friend",
+    "en": "Take it easy.",
+    "ja": "またね。（Take it easy=じゃあね・無理しないで）"
+   }
+  ]
+ },
+ {
+  "title": "ハマってる・大好き",
+  "emoji": "😍",
+  "cat": "slang",
+  "lines": [
+   {
+    "role": "Friend",
+    "en": "Have you seen this show?",
+    "ja": "このドラマ見た？"
+   },
+   {
+    "role": "You",
+    "en": "Yes, I'm obsessed!",
+    "ja": "うん、ハマってる！（obsessed=夢中）"
+   },
+   {
+    "role": "Friend",
+    "en": "Same! It's so good.",
+    "ja": "私も！すごくいいよね。"
+   },
+   {
+    "role": "You",
+    "en": "I'm totally hooked.",
+    "ja": "完全にハマった。（hooked=やみつき）"
+   },
+   {
+    "role": "Friend",
+    "en": "I can't stop watching.",
+    "ja": "見るの止まらない。"
+   },
+   {
+    "role": "You",
+    "en": "Same here!",
+    "ja": "私も！"
+   }
+  ]
+ },
+ {
+  "title": "カジュアルにお礼を言う",
+  "emoji": "🙏",
+  "cat": "slang",
+  "lines": [
+   {
+    "role": "You",
+    "en": "Thanks for helping me move.",
+    "ja": "引っ越し手伝ってくれてありがとう。"
+   },
+   {
+    "role": "Friend",
+    "en": "No problem at all.",
+    "ja": "全然いいよ。"
+   },
+   {
+    "role": "You",
+    "en": "You're the best.",
+    "ja": "君、最高。（You're the best=最高だね）"
+   },
+   {
+    "role": "Friend",
+    "en": "Happy to help.",
+    "ja": "力になれてよかった。"
+   },
+   {
+    "role": "You",
+    "en": "I owe you one.",
+    "ja": "借りができたね。（I owe you one=恩に着る）"
+   },
+   {
+    "role": "Friend",
+    "en": "Just buy me a coffee.",
+    "ja": "コーヒーおごってくれれば。"
+   }
+  ]
+ }
+]
