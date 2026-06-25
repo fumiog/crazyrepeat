@@ -76,6 +76,22 @@
   @media (max-width:380px){ .home-cards{ grid-template-columns:1fr; } .home-card{ min-height:0; } }
   @media (prefers-reduced-motion: reduce){ .home-glow{ animation:none; } }
 
+  /* ── ジャンル選択画面の「← ホーム」ボタン ── */
+  .home-topbar{ width:100%; display:flex; justify-content:flex-start; margin-bottom:16px; }
+  .home-back-btn{
+    -webkit-appearance:none; appearance:none;
+    display:inline-flex; align-items:center; gap:6px;
+    padding:8px 16px; border-radius:999px;
+    border:1px solid var(--line); background:rgba(255,255,255,.03);
+    color:var(--muted); font:inherit; font-size:.82rem; letter-spacing:.03em;
+    font-family:"Noto Sans JP",sans-serif; cursor:pointer;
+    transition:background .15s ease, color .15s ease, border-color .15s ease, transform .06s ease;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .home-back-btn:hover{ background:var(--press); color:var(--text); }
+  .home-back-btn:active{ transform:translateY(1px); }
+  .home-back-btn:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+
   /* ── データ読み込み中／エラー表示（各アプリ内の全面オーバーレイ） ── */
   .data-msg{
     position:fixed; inset:0; z-index:80;
@@ -571,6 +587,7 @@
   <!-- ジャンル選択画面（起動時に表示。カードはJSで生成） -->
   <section id="genre-screen" aria-label="ジャンル選択">
     <div class="genre-inner">
+      <div class="home-topbar"><button id="w-genre-home" class="home-back-btn" type="button">← ホーム</button></div>
       <div class="genre-head">
         <div class="brand">Repeat<span class="dot">.</span></div>
         <div class="genre-title">ジャンルを選ぶ</div>
@@ -647,6 +664,7 @@
 
       <!-- ① ジャンルを選ぶ -->
       <div id="genre-view">
+        <div class="home-topbar"><button id="p-genre-home" class="home-back-btn" type="button">← ホーム</button></div>
         <div class="select-head">
           <div class="brand">Repeat<span class="tag">Phrase</span></div>
           <div class="select-title">ジャンルを選ぶ</div>
@@ -1770,6 +1788,8 @@ class PhrasePlayer {
   document.getElementById("home-phrases").addEventListener("click", openPhrases);
   document.getElementById("w-to-home").addEventListener("click", showHome);
   document.getElementById("p-to-home").addEventListener("click", showHome);
+  document.getElementById("w-genre-home").addEventListener("click", showHome);
+  document.getElementById("p-genre-home").addEventListener("click", showHome);
 })();
 </script>
 </body>
